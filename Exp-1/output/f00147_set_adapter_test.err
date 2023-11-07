@@ -1,0 +1,10 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/bitsandbytes/cextension.py:34: UserWarning: The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+  warn("The installed version of bitsandbytes was compiled without GPU support. "
+Traceback (most recent call last):
+  File "output/f00147_set_adapter_test.py", line 6, in <module>
+    test_set_adapter()
+  File "output/f00147_set_adapter_test.py", line 3, in test_set_adapter
+    set_adapter('adapter_name')
+  File "/root/Experiments/output/f00147_set_adapter.py", line 13, in set_adapter
+    PeftModel.set_adapter(adapter)
+TypeError: set_adapter() missing 1 required positional argument: 'adapter_name'

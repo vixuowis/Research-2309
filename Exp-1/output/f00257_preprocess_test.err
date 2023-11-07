@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00257_preprocess_test.py", line 14, in <module>
+    test_preprocess()
+  File "output/f00257_preprocess_test.py", line 6, in test_preprocess
+    preprocessed_data = preprocess(question, context)
+  File "/root/Experiments/output/f00257_preprocess.py", line 13, in preprocess
+    encoded_input = tokenizer.encode_plus(question, context, padding='max_length', truncation=True, max_length=512, return_tensors='pt')
+NameError: name 'tokenizer' is not defined

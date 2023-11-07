@@ -1,0 +1,4 @@
+  File "output/f00477_get_image_label_test.py", line 3
+    data = {'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=512x512 at 0x7F52AFC8AC50>, 'label': 79}
+                     ^
+SyntaxError: invalid syntax

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00673_visualize_spectrogram_test.py", line 11, in <module>
+    test_visualize_spectrogram()
+  File "output/f00673_visualize_spectrogram_test.py", line 5, in test_visualize_spectrogram
+    visualize_spectrogram(spectrogram)
+  File "/root/Experiments/output/f00673_visualize_spectrogram.py", line 6, in visualize_spectrogram
+    plt.imshow(spectrogram.T)
+AttributeError: 'list' object has no attribute 'T'

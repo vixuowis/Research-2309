@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00527_load_segformer_test.py", line 11, in <module>
+    test_load_segformer()
+  File "output/f00527_load_segformer_test.py", line 6, in test_load_segformer
+    optimizer = tf.keras.optimizers.Adam()
+NameError: name 'tf' is not defined

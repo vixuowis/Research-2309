@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00758_get_tool_description_test.py", line 8, in <module>
+    test_get_tool_description()
+  File "output/f00758_get_tool_description_test.py", line 3, in test_get_tool_description
+    assert get_tool_description('controlnet_transformer') == (controlnet_transformer.description, controlnet_transformer.name)
+  File "/root/Experiments/output/f00758_get_tool_description.py", line 15, in get_tool_description
+    return controlnet_transformer.description, controlnet_transformer.name
+NameError: name 'controlnet_transformer' is not defined

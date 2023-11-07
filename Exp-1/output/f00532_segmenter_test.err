@@ -1,0 +1,4 @@
+  File "output/f00532_segmenter_test.py", line 10
+    expected_result_1 = [{'score': None, 'label': 'wall', 'mask': <PIL.Image.Image image mode=L size=640x427 at 0x7FD5B2062690>},
+                                                                  ^
+SyntaxError: invalid syntax

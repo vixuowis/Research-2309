@@ -1,0 +1,4 @@
+  File "output/f00832_token_classification_test.py", line 6
+    expected_output = [{'entity': 'I-ORG', 'score': 0.9968, 'index': 1, 'word': 'Hu', 'start': 0, 'end': 2}, {'entity': 'I-ORG', 'sco...],
+                                                                                                                                         ^
+SyntaxError: EOL while scanning string literal

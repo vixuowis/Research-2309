@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00410_compute_metrics_test.py", line 10, in <module>
+    test_compute_metrics()
+  File "output/f00410_compute_metrics_test.py", line 8, in test_compute_metrics
+    assert compute_metrics(eval_pred) == expected_accuracy
+  File "/root/Experiments/output/f00410_compute_metrics.py", line 7, in compute_metrics
+    return accuracy.compute(predictions=predictions, references=labels)
+NameError: name 'accuracy' is not defined

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00775_enable_mixed_precision_training_test.py", line 8, in <module>
+    test_enable_mixed_precision_training()
+  File "output/f00775_enable_mixed_precision_training_test.py", line 3, in test_enable_mixed_precision_training
+    training_args = TrainingArguments(per_device_train_batch_size=4)
+TypeError: __init__() missing 1 required positional argument: 'output_dir'

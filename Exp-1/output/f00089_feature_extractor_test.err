@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00089_feature_extractor_test.py", line 7, in <module>
+    test_feature_extractor()
+  File "output/f00089_feature_extractor_test.py", line 3, in test_feature_extractor
+    audio_input = [dataset[0]['audio']['array']]
+NameError: name 'dataset' is not defined

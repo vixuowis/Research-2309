@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00408_DataCollatorForMultipleChoice_test.py", line 1, in <module>
+    from f00408_DataCollatorForMultipleChoice import *
+  File "/root/Experiments/output/f00408_DataCollatorForMultipleChoice.py", line 2, in <module>
+    @dataclass
+NameError: name 'dataclass' is not defined

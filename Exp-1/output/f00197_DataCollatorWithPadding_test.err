@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00197_DataCollatorWithPadding_test.py", line 1, in <module>
+    from f00197_DataCollatorWithPadding import *
+  File "/root/Experiments/output/f00197_DataCollatorWithPadding.py", line 4, in <module>
+    data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
+NameError: name 'tokenizer' is not defined

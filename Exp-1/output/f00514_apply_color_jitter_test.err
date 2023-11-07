@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00514_apply_color_jitter_test.py", line 1, in <module>
+    from f00514_apply_color_jitter import *
+  File "/root/Experiments/output/f00514_apply_color_jitter.py", line 2, in <module>
+    from torchvision.transforms import ColorJitter
+ModuleNotFoundError: No module named 'torchvision'

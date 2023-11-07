@@ -1,0 +1,2 @@
+from f00753_change_tool_name_and_description import *
+change_tool_name_and_description(agent)

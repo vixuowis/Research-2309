@@ -1,0 +1,4 @@
+  File "output/f00646_cleanup_text_test.py", line 2
+    >>> inputs = {"normalized_text": "àçèëíïöü"}
+    ^
+SyntaxError: invalid syntax

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "output/f00824_mobilebert_for_sequence_classification_test.py", line 1, in <module>
+    from f00824_mobilebert_for_sequence_classification import *
+  File "/root/Experiments/output/f00824_mobilebert_for_sequence_classification.py", line 9
+    def __init__(self, config):
+                              ^
+SyntaxError: unexpected EOF while parsing

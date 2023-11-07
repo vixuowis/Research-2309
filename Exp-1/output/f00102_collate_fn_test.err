@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00102_collate_fn_test.py", line 42, in <module>
+    test_collate_fn()
+  File "output/f00102_collate_fn_test.py", line 10, in test_collate_fn
+    assert collate_fn(batch) == expected_output
+  File "/root/Experiments/output/f00102_collate_fn.py", line 11, in collate_fn
+    encoding = image_processor.pad(pixel_values, return_tensors='pt')
+NameError: name 'image_processor' is not defined

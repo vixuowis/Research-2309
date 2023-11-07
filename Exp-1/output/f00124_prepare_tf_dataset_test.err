@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00124_prepare_tf_dataset_test.py", line 11, in <module>
+    test_prepare_tf_dataset()
+  File "output/f00124_prepare_tf_dataset_test.py", line 3, in test_prepare_tf_dataset
+    dataset = load_dataset('imdb', split='train[:10]')
+NameError: name 'load_dataset' is not defined

@@ -1,0 +1,4 @@
+  File "output/f00493_generate_python_code_test.py", line 12
+    assert code == expected_code, f'Expected code: {expected_code}
+                                                                 ^
+SyntaxError: EOL while scanning string literal

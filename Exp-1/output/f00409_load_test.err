@@ -1,0 +1,4 @@
+  File "output/f00409_load_test.py", line 3
+    import assert
+           ^
+SyntaxError: invalid syntax

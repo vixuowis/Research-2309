@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "output/f00856_from_pretrained_test.py", line 1, in <module>
+    from f00856_from_pretrained import *
+  File "/root/Experiments/output/f00856_from_pretrained.py", line 6
+    Load a pretrained model from a given model identifier or path.
+         ^
+SyntaxError: invalid syntax

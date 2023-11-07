@@ -1,0 +1,4 @@
+  File "output/f00244_train_model_test.py", line 10
+    def test_train_model()
+                         ^
+SyntaxError: invalid syntax

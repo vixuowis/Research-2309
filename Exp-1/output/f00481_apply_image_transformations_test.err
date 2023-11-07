@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00481_apply_image_transformations_test.py", line 1, in <module>
+    from f00481_apply_image_transformations import *
+  File "/root/Experiments/output/f00481_apply_image_transformations.py", line 2, in <module>
+    from torchvision.transforms import RandomResizedCrop, Compose, Normalize, ToTensor
+ModuleNotFoundError: No module named 'torchvision'

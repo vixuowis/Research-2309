@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00229_DataCollatorForTokenClassification_test.py", line 30, in <module>
+    test_DataCollatorForTokenClassification()
+  File "output/f00229_DataCollatorForTokenClassification_test.py", line 3, in test_DataCollatorForTokenClassification
+    tokenizer = PreTrainedTokenizer()
+NameError: name 'PreTrainedTokenizer' is not defined

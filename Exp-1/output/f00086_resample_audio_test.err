@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00086_resample_audio_test.py", line 9, in <module>
+    test_resample_audio()
+  File "output/f00086_resample_audio_test.py", line 3, in test_resample_audio
+    dataset = Dataset.from_dict({"audio": [array([1, 2, 3]), array([4, 5, 6])], "label": [0, 1]})
+NameError: name 'array' is not defined

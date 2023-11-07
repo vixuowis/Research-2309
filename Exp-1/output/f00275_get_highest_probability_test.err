@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00275_get_highest_probability_test.py", line 19, in <module>
+    test_get_highest_probability()
+  File "output/f00275_get_highest_probability_test.py", line 7, in test_get_highest_probability
+    result = get_highest_probability(outputs)
+  File "/root/Experiments/output/f00275_get_highest_probability.py", line 14, in get_highest_probability
+    answer_start_index = outputs.start_logits.argmax()
+AttributeError: 'Tensor' object has no attribute 'start_logits'

@@ -1,0 +1,8 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/bitsandbytes/cextension.py:34: UserWarning: The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+  warn("The installed version of bitsandbytes was compiled without GPU support. "
+Traceback (most recent call last):
+  File "output/f00412_train_model_test.py", line 1, in <module>
+    from f00412_train_model import *
+  File "/root/Experiments/output/f00412_train_model.py", line 2, in <module>
+    from transformers import Trainer, TrainingArguments, DataCollatorForMultipleChoice
+ImportError: cannot import name 'DataCollatorForMultipleChoice' from 'transformers' (/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/__init__.py)

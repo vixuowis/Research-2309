@@ -1,0 +1,2 @@
+from f00491_AutoModelForImageClassification.from_pretrained import *
+

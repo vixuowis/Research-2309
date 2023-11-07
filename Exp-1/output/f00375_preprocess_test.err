@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00375_preprocess_test.py", line 12, in <module>
+    test_preprocess()
+  File "output/f00375_preprocess_test.py", line 5, in test_preprocess
+    input_ids, summary_ids = preprocess(text, summary)
+  File "/root/Experiments/output/f00375_preprocess.py", line 16, in preprocess
+    input_ids = tokenizer.encode(text, truncation=True, padding='longest')
+NameError: name 'tokenizer' is not defined

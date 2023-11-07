@@ -1,0 +1,4 @@
+  File "output/f00672_generate_speech_test.py", line 3
+    import assert
+           ^
+SyntaxError: invalid syntax

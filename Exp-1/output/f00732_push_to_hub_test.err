@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00732_push_to_hub_test.py", line 9, in <module>
+    test_push_to_hub()
+  File "output/f00732_push_to_hub_test.py", line 3, in test_push_to_hub
+    model = CustomResNet50D()
+NameError: name 'CustomResNet50D' is not defined

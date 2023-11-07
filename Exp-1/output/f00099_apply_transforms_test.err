@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "output/f00099_apply_transforms_test.py", line 17, in <module>
+    test_apply_transforms()
+  File "output/f00099_apply_transforms_test.py", line 12, in test_apply_transforms
+    assert dataset[0]['text'] == 'hello'
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 2803, in __getitem__
+    return self._getitem(key)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 2788, in _getitem
+    formatted_output = format_table(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/formatting/formatting.py", line 629, in format_table
+    return formatter(pa_table, query_type=query_type)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/formatting/formatting.py", line 396, in __call__
+    return self.format_row(pa_table)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/formatting/formatting.py", line 485, in format_row
+    formatted_batch = self.format_batch(pa_table)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/formatting/formatting.py", line 515, in format_batch
+    return self.transform(batch)
+TypeError: 'dict' object is not callable

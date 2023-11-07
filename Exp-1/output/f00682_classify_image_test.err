@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 736, in convert_to_tensors
+    tensor = as_tensor(value)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 708, in as_tensor
+    return torch.tensor(value)
+ValueError: expected sequence of length 37 at dim 1 (got 100)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/f00682_classify_image_test.py", line 5, in <module>
+    result = classify_image(categories, image_url)
+  File "/root/Experiments/output/f00682_classify_image.py", line 24, in classify_image
+    inputs = tokenizer(prompt, return_tensors='pt').to(device)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2602, in __call__
+    encodings = self._call_one(text=text, text_pair=text_pair, **all_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2688, in _call_one
+    return self.batch_encode_plus(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2879, in batch_encode_plus
+    return self._batch_encode_plus(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils.py", line 744, in _batch_encode_plus
+    batch_outputs = self._batch_prepare_for_model(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils.py", line 824, in _batch_prepare_for_model
+    batch_outputs = BatchEncoding(batch_outputs, tensor_type=return_tensors)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 211, in __init__
+    self.convert_to_tensors(tensor_type=tensor_type, prepend_batch_axis=prepend_batch_axis)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 752, in convert_to_tensors
+    raise ValueError(
+ValueError: Unable to create tensor, you should probably activate truncation and/or padding with 'padding=True' 'truncation=True' to have batched tensors with the same length. Perhaps your features (`input_ids` in this case) have excessive nesting (inputs type `list` where type `int` is expected).

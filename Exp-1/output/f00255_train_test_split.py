@@ -1,0 +1,13 @@
+from typing import *
+from datasets import Dataset
+
+def train_test_split(self, test_size: float) -> Tuple[Dataset, Dataset]:
+    """Split the dataset's train split into a train and test set.
+
+    Args:
+        test_size (float): The proportion of the dataset to include in the test split.
+
+    Returns:
+        Tuple[Dataset, Dataset]: The train and test datasets."""
+    train_dataset, test_dataset = self.train_test_split(test_size)
+    return train_dataset, test_dataset

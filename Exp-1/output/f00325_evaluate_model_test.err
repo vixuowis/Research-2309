@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00325_evaluate_model_test.py", line 20, in <module>
+    test_evaluate_model()
+  File "output/f00325_evaluate_model_test.py", line 4, in test_evaluate_model
+    result = evaluate_model(trainer)
+  File "/root/Experiments/output/f00325_evaluate_model.py", line 5, in evaluate_model
+    eval_results = trainer.evaluate()
+AttributeError: 'str' object has no attribute 'evaluate'

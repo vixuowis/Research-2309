@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00860_generate_caption_test.py", line 1, in <module>
+    from f00860_generate_caption import *
+  File "/root/Experiments/output/f00860_generate_caption.py", line 6, in <module>
+    from transformers.models.fuyu.processing_fuyu import FuyuProcessor
+ModuleNotFoundError: No module named 'transformers.models.fuyu'

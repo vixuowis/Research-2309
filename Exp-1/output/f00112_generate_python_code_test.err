@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00112_generate_python_code_test.py", line 11, in <module>
+    test()
+  File "output/f00112_generate_python_code_test.py", line 9, in test
+    test_generate_python_code()
+  File "output/f00112_generate_python_code_test.py", line 5, in test_generate_python_code
+    assert generate_python_code(tokenized_datasets) == python_code
+NameError: name 'tokenized_datasets' is not defined

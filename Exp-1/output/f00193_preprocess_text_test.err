@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_preprocess_text (__main__.TestPreprocessText)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "output/f00193_preprocess_text_test.py", line 9, in test_preprocess_text
+    self.assertEqual(preprocess_text(text), expected_output)
+AssertionError: None != 'love sci fi willing put lot'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

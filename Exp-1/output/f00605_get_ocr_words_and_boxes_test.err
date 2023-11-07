@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00605_get_ocr_words_and_boxes_test.py", line 1, in <module>
+    from f00605_get_ocr_words_and_boxes import *
+  File "/root/Experiments/output/f00605_get_ocr_words_and_boxes.py", line 2, in <module>
+    import cv2
+ModuleNotFoundError: No module named 'cv2'

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00018_apply_softmax_test.py", line 1, in <module>
+    from f00018_apply_softmax import *
+  File "/root/Experiments/output/f00018_apply_softmax.py", line 7, in <module>
+    pt_predictions = apply_softmax(pt_outputs.logits)
+NameError: name 'pt_outputs' is not defined

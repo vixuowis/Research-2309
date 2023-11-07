@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "output/f00336_get_mask_token_logits_test.py", line 12, in <module>
+    test_get_mask_token_logits()
+  File "output/f00336_get_mask_token_logits_test.py", line 6, in test_get_mask_token_logits
+    mask_token_logits = get_mask_token_logits(model, inputs, mask_token_index)
+  File "/root/Experiments/output/f00336_get_mask_token_logits.py", line 16, in get_mask_token_logits
+    logits = model(**inputs).logits
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/roberta/modeling_roberta.py", line 1082, in forward
+    outputs = self.roberta(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/roberta/modeling_roberta.py", line 796, in forward
+    raise ValueError("You have to specify either input_ids or inputs_embeds")
+ValueError: You have to specify either input_ids or inputs_embeds

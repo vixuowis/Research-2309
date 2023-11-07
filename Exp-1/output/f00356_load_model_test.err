@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "output/f00356_load_model_test.py", line 29, in <module>
+    test_load_model()
+  File "output/f00356_load_model_test.py", line 5, in test_load_model
+    model = load_model(checkpoint)
+  File "/root/Experiments/output/f00356_load_model.py", line 5, in load_model
+    model = TFAutoModelForSeq2SeqLM.from_pretrained(checkpoint)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/import_utils.py", line 1124, in __getattribute__
+    requires_backends(cls, cls._backends)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/import_utils.py", line 1107, in requires_backends
+    raise ImportError(TF_IMPORT_ERROR_WITH_PYTORCH.format(name))
+ImportError: 
+TFAutoModelForSeq2SeqLM requires the TensorFlow library but it was not found in your environment.
+However, we were able to find a PyTorch installation. PyTorch classes do not begin
+with "TF", but are otherwise identically named to our TF classes.
+If you want to use PyTorch, please use those classes instead!
+
+If you really do want to use TensorFlow, please follow the instructions on the
+installation page https://www.tensorflow.org/install that match your environment.
+

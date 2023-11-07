@@ -1,0 +1,8 @@
+No model was supplied, defaulted to distilbert-base-uncased-finetuned-sst-2-english and revision af0f99b (https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english).
+Using a pipeline without specifying a model name and revision in production is not recommended.
+Traceback (most recent call last):
+  File "output/f00002_classifier_test.py", line 10, in <module>
+    test_classifier()
+  File "output/f00002_classifier_test.py", line 4, in test_classifier
+    assert classifier("We are very happy to show you the 🤗 Transformers library.") == [{'label': 'POSITIVE', 'score': 0.9998}]
+AssertionError

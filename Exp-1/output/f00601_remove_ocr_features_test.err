@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00601_remove_ocr_features_test.py", line 8, in <module>
+    test_remove_ocr_features()
+  File "output/f00601_remove_ocr_features_test.py", line 3, in test_remove_ocr_features
+    dataset = Dataset.from_dict({...})
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 900, in from_dict
+    for col, data in mapping.items():
+AttributeError: 'set' object has no attribute 'items'

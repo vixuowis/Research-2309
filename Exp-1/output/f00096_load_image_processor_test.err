@@ -1,0 +1,8 @@
+Downloading (…)rocessor_config.json:   0%|                                                                       | 0.00/160 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|████████████████████████████████████████████████████████████████| 160/160 [00:00<00:00, 21.0kB/s]
+Downloading (…)lve/main/config.json:   0%|                                                                     | 0.00/69.7k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████| 69.7k/69.7k [00:00<00:00, 219kB/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████| 69.7k/69.7k [00:00<00:00, 218kB/s]
+Traceback (most recent call last):
+  File "output/f00096_load_image_processor_test.py", line 7, in <module>
+    test_load_image_processor()
+  File "output/f00096_load_image_processor_test.py", line 5, in test_load_image_processor
+    assert isinstance(image_processor, AutoImageProcessor)
+AssertionError

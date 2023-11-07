@@ -1,0 +1,10 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/vit/feature_extraction_vit.py:28: FutureWarning: The class ViTFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use ViTImageProcessor instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "output/f00580_preprocess_images_test.py", line 16, in <module>
+    test_preprocess_images()
+  File "output/f00580_preprocess_images_test.py", line 6, in test_preprocess_images
+    result = preprocess_images(image_target, query_images)
+  File "/root/Experiments/output/f00580_preprocess_images.py", line 17, in preprocess_images
+    inputs = processor(images=image_target, query_images=query_image, return_tensors="pt")
+NameError: name 'query_image' is not defined

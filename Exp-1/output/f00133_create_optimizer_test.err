@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00133_create_optimizer_test.py", line 10, in <module>
+    test_create_optimizer()
+  File "output/f00133_create_optimizer_test.py", line 3, in test_create_optimizer
+    model = YourModel()
+NameError: name 'YourModel' is not defined

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00884_generate_transcription_test.py", line 1, in <module>
+    from f00884_generate_transcription import *
+  File "/root/Experiments/output/f00884_generate_transcription.py", line 6, in <module>
+    from transformers import NougatProcessor, VisionEncoderDecoderModel
+ImportError: cannot import name 'NougatProcessor' from 'transformers' (/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/__init__.py)

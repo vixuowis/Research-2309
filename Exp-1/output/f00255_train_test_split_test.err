@@ -1,0 +1,4 @@
+  File "output/f00255_train_test_split_test.py", line 2
+    import assert
+           ^
+SyntaxError: invalid syntax

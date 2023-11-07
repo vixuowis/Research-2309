@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00344_get_translation_test.py", line 18, in <module>
+    test_get_translation()
+  File "output/f00344_get_translation_test.py", line 16, in test_get_translation
+    assert get_translation(books, 'fr', -1) == None
+AssertionError

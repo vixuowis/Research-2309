@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00497_compile_test.py", line 1, in <module>
+    from f00497_compile import *
+  File "/root/Experiments/output/f00497_compile.py", line 2, in <module>
+    from tensorflow.keras.losses import SparseCategoricalCrossentropy
+ModuleNotFoundError: No module named 'tensorflow'

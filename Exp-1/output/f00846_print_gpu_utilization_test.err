@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00846_print_gpu_utilization_test.py", line 2, in <module>
+    print_gpu_utilization()  # Expected output: 'GPU memory occupied: 1343 MB.'
+  File "/root/Experiments/output/f00846_print_gpu_utilization.py", line 6, in print_gpu_utilization
+    tensor = torch.ones((1, 1)).to('cuda')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/cuda/__init__.py", line 247, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available

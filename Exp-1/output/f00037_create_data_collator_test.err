@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00037_create_data_collator_test.py", line 22, in <module>
+    test_create_data_collator()
+  File "output/f00037_create_data_collator_test.py", line 3, in test_create_data_collator
+    tokenizer = Tokenizer()
+NameError: name 'Tokenizer' is not defined

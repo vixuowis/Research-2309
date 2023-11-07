@@ -1,0 +1,8 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/bitsandbytes/cextension.py:34: UserWarning: The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+  warn("The installed version of bitsandbytes was compiled without GPU support. "
+Traceback (most recent call last):
+  File "output/f00145_add_adapter_test.py", line 1, in <module>
+    from f00145_add_adapter import *
+  File "/root/Experiments/output/f00145_add_adapter.py", line 5, in <module>
+    def add_adapter(self, adapter_config: AdapterConfig, adapter_name: Optional[str] = None) -> str:
+NameError: name 'AdapterConfig' is not defined

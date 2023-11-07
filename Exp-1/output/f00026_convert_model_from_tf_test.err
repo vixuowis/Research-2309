@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00026_convert_model_from_tf_test.py", line 29, in <module>
+    test_convert_model_from_tf()
+  File "output/f00026_convert_model_from_tf_test.py", line 5, in test_convert_model_from_tf
+    pt_model = convert_model_from_tf(tf_save_directory)
+  File "/root/Experiments/output/f00026_convert_model_from_tf.py", line 13, in convert_model_from_tf
+    tokenizer = AutoTokenizer.from_pretrained(tf_save_directory)
+NameError: name 'AutoTokenizer' is not defined

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/f00069_AutoImageProcessor.from_pretrained_test.py", line 1, in <module>
+    from f00069_AutoImageProcessor.from_pretrained import *
+ModuleNotFoundError: No module named 'f00069_AutoImageProcessor'

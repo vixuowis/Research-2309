@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "output/f00550_explore_data_test.py", line 1, in <module>
+    from f00550_explore_data import *
+  File "/root/Experiments/output/f00550_explore_data.py", line 15
+    print(f'Number of Objects: {len(objects['id'])}')
+                                             ^
+SyntaxError: invalid syntax

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "output/f00333_fill_in_the_blank_test.py", line 7, in <module>
+    test_fill_in_the_blank()
+  File "output/f00333_fill_in_the_blank_test.py", line 5, in test_fill_in_the_blank
+    assert fill_in_the_blank(text) == expected_result
+  File "/root/Experiments/output/f00333_fill_in_the_blank.py", line 14, in fill_in_the_blank
+    filler = pipeline('text-fill-mask')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 780, in pipeline
+    normalized_task, targeted_task, task_options = check_task(task)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 499, in check_task
+    return PIPELINE_REGISTRY.check_task(task)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1215, in check_task
+    raise KeyError(
+KeyError: "Unknown task text-fill-mask, available tasks are ['audio-classification', 'automatic-speech-recognition', 'conversational', 'depth-estimation', 'document-question-answering', 'feature-extraction', 'fill-mask', 'image-classification', 'image-segmentation', 'image-to-text', 'mask-generation', 'ner', 'object-detection', 'question-answering', 'sentiment-analysis', 'summarization', 'table-question-answering', 'text-classification', 'text-generation', 'text-to-audio', 'text-to-speech', 'text2text-generation', 'token-classification', 'translation', 'video-classification', 'visual-question-answering', 'vqa', 'zero-shot-audio-classification', 'zero-shot-classification', 'zero-shot-image-classification', 'zero-shot-object-detection', 'translation_XX_to_YY']"

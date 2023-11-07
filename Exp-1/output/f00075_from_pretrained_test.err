@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "output/f00075_from_pretrained_test.py", line 7, in <module>
+    test_from_pretrained()
+  File "output/f00075_from_pretrained_test.py", line 3, in test_from_pretrained
+    model = from_pretrained("distilbert-base-uncased")
+  File "/root/Experiments/output/f00075_from_pretrained.py", line 6, in from_pretrained
+    model = TFAutoModelForTokenClassification.from_pretrained(model_name_or_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/import_utils.py", line 1124, in __getattribute__
+    requires_backends(cls, cls._backends)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/import_utils.py", line 1107, in requires_backends
+    raise ImportError(TF_IMPORT_ERROR_WITH_PYTORCH.format(name))
+ImportError: 
+TFAutoModelForTokenClassification requires the TensorFlow library but it was not found in your environment.
+However, we were able to find a PyTorch installation. PyTorch classes do not begin
+with "TF", but are otherwise identically named to our TF classes.
+If you want to use PyTorch, please use those classes instead!
+
+If you really do want to use TensorFlow, please follow the instructions on the
+installation page https://www.tensorflow.org/install that match your environment.
+

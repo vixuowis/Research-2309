@@ -1,0 +1,8 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/bitsandbytes/cextension.py:34: UserWarning: The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+  warn("The installed version of bitsandbytes was compiled without GPU support. "
+Traceback (most recent call last):
+  File "output/f00118_create_trainer_test.py", line 12, in <module>
+    test_create_trainer()
+  File "output/f00118_create_trainer_test.py", line 3, in test_create_trainer
+    model = nn.Module()
+NameError: name 'nn' is not defined

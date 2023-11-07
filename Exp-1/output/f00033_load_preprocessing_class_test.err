@@ -1,0 +1,10 @@
+Downloading (…)okenizer_config.json:   0%|                                                                      | 0.00/28.0 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|██████████████████████████████████████████████████████████████| 28.0/28.0 [00:00<00:00, 4.46kB/s]
+Downloading (…)lve/main/config.json:   0%|                                                                       | 0.00/483 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|████████████████████████████████████████████████████████████████| 483/483 [00:00<00:00, 50.3kB/s]
+Downloading (…)solve/main/vocab.txt:   0%|                                                                      | 0.00/232k [00:00<?, ?B/s]Downloading (…)solve/main/vocab.txt: 100%|███████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 478kB/s]Downloading (…)solve/main/vocab.txt: 100%|███████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 477kB/s]
+Downloading (…)/main/tokenizer.json:   0%|                                                                      | 0.00/466k [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████████████████████████████████████████████████████████| 466k/466k [00:00<00:00, 1.78MB/s]Downloading (…)/main/tokenizer.json: 100%|██████████████████████████████████████████████████████████████| 466k/466k [00:00<00:00, 1.77MB/s]
+Traceback (most recent call last):
+  File "output/f00033_load_preprocessing_class_test.py", line 9, in <module>
+    test_load_preprocessing_class()
+  File "output/f00033_load_preprocessing_class_test.py", line 6, in test_load_preprocessing_class
+    assert isinstance(preprocessing_class, AutoTokenizer)
+AssertionError

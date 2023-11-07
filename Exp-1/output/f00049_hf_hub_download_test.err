@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "output/f00049_hf_hub_download_test.py", line 43, in <module>
+    test_hf_hub_download()
+  File "output/f00049_hf_hub_download_test.py", line 11, in test_hf_hub_download
+    hf_hub_download(repo_id, filename, cache_dir)
+  File "/root/Experiments/output/f00049_hf_hub_download.py", line 15, in hf_hub_download
+    hf_hub_download(repo_id, filename, cache_dir)
+  File "/root/Experiments/output/f00049_hf_hub_download.py", line 15, in hf_hub_download
+    hf_hub_download(repo_id, filename, cache_dir)
+  File "/root/Experiments/output/f00049_hf_hub_download.py", line 15, in hf_hub_download
+    hf_hub_download(repo_id, filename, cache_dir)
+  [Previous line repeated 995 more times]
+RecursionError: maximum recursion depth exceeded

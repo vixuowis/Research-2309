@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00305_tokenize_text_test.py", line 31, in <module>
+    test_tokenize_text()
+  File "output/f00305_tokenize_text_test.py", line 5, in test_tokenize_text
+    expected_output = torch.tensor([[101, 2023, 2003, 1037, 7099, 3793, 102]])
+NameError: name 'torch' is not defined

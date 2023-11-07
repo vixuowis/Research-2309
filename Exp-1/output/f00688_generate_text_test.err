@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/f00688_generate_text_test.py", line 2, in <module>
+    input_ids = torch.tensor([tokenizer.encode("Wikipedia was used to")])
+NameError: name 'tokenizer' is not defined

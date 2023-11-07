@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00379_DataCollatorForSeq2Seq_test.py", line 1, in <module>
+    from f00379_DataCollatorForSeq2Seq import *
+  File "/root/Experiments/output/f00379_DataCollatorForSeq2Seq.py", line 4, in <module>
+    data_collator = DataCollatorForSeq2Seq(tokenizer=tokenizer, model=checkpoint, return_tensors="tf")
+NameError: name 'tokenizer' is not defined

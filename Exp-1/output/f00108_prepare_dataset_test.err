@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00108_prepare_dataset_test.py", line 19, in <module>
+    test_prepare_dataset()
+  File "output/f00108_prepare_dataset_test.py", line 13, in test_prepare_dataset
+    processed_example = prepare_dataset(example)
+  File "/root/Experiments/output/f00108_prepare_dataset.py", line 14, in prepare_dataset
+    example.update(processor(audio=audio["array"], text=example["text"], sampling_rate=16000))
+NameError: name 'processor' is not defined

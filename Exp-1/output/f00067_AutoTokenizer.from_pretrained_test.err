@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/f00067_AutoTokenizer.from_pretrained_test.py", line 1, in <module>
+    from f00067_AutoTokenizer.from_pretrained import *
+ModuleNotFoundError: No module named 'f00067_AutoTokenizer'

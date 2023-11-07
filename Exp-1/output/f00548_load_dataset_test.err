@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00548_load_dataset_test.py", line 1, in <module>
+    from f00548_load_dataset import *
+  File "/root/Experiments/output/f00548_load_dataset.py", line 5, in <module>
+    def load_dataset(dataset_name: str, split: str = 'train') -> Dataset:
+NameError: name 'Dataset' is not defined

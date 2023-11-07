@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00456_get_audio_path_test.py", line 15, in <module>
+    test_get_audio_path()
+  File "output/f00456_get_audio_path_test.py", line 5, in test_get_audio_path
+    'array': array([-0.00024414,  0.        ,  0.        , ...,  0.00024414,
+NameError: name 'array' is not defined

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "output/f00059_pipeline_test.py", line 2, in <module>
+    transcriber = pipeline(model='openai/whisper-large-v2', return_timestamps=True)
+  File "/root/Experiments/output/f00059_pipeline.py", line 13, in pipeline
+    transcriber = pipeline(model=model, return_timestamps=return_timestamps)
+  File "/root/Experiments/output/f00059_pipeline.py", line 13, in pipeline
+    transcriber = pipeline(model=model, return_timestamps=return_timestamps)
+  File "/root/Experiments/output/f00059_pipeline.py", line 13, in pipeline
+    transcriber = pipeline(model=model, return_timestamps=return_timestamps)
+  [Previous line repeated 996 more times]
+RecursionError: maximum recursion depth exceeded

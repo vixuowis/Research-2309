@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00440_preprocess_function_test.py", line 15, in <module>
+    test_preprocess_function()
+  File "output/f00440_preprocess_function_test.py", line 8, in test_preprocess_function
+    preprocessed_example = preprocess_function(example)
+  File "/root/Experiments/output/f00440_preprocess_function.py", line 15, in preprocess_function
+    preprocessed_text = preprocess_text(text)
+NameError: name 'preprocess_text' is not defined

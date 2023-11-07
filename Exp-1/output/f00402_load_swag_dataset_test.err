@@ -1,0 +1,4 @@
+  File "output/f00402_load_swag_dataset_test.py", line 6
+    assert swag[0] == {'context': 'A person on a horse jumps over a broken down airplane.', 'endings': ['is scared of the possi...}
+                                                                                                                                  ^
+SyntaxError: EOL while scanning string literal

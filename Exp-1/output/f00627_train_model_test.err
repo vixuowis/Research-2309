@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "output/f00627_train_model_test.py", line 12, in <module>
+    test_train_model()
+  File "output/f00627_train_model_test.py", line 7, in test_train_model
+    model = train_model(model_checkpoint, id2label, label2id)
+  File "/root/Experiments/output/f00627_train_model.py", line 15, in train_model
+    model = ViltForQuestionAnswering.from_pretrained(model_checkpoint, num_labels=len(id2label), id2label=id2label, label2id=label2id)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2377, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'path/to/model_checkpoint'. Use `repo_type` argument if needed.

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00357_prepare_tf_dataset_test.py", line 23, in <module>
+    test_prepare_tf_dataset()
+  File "output/f00357_prepare_tf_dataset_test.py", line 3, in test_prepare_tf_dataset
+    tf_train_set = model.prepare_tf_dataset(
+NameError: name 'model' is not defined

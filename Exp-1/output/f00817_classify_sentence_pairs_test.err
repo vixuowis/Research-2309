@@ -1,0 +1,15 @@
+Downloading (…)lve/main/config.json:   0%|                                                                       | 0.00/818 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████████| 818/818 [00:00<00:00, 111kB/s]
+Traceback (most recent call last):
+  File "output/f00817_classify_sentence_pairs_test.py", line 21, in <module>
+    test_classify_sentence_pairs()
+  File "output/f00817_classify_sentence_pairs_test.py", line 16, in test_classify_sentence_pairs
+    results = classify_sentence_pairs(sentences)
+  File "/root/Experiments/output/f00817_classify_sentence_pairs.py", line 5, in classify_sentence_pairs
+    classifier = pipeline("pair-classification", model="sgugger/finetuned-bert-mrpc")
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 780, in pipeline
+    normalized_task, targeted_task, task_options = check_task(task)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 499, in check_task
+    return PIPELINE_REGISTRY.check_task(task)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1215, in check_task
+    raise KeyError(
+KeyError: "Unknown task pair-classification, available tasks are ['audio-classification', 'automatic-speech-recognition', 'conversational', 'depth-estimation', 'document-question-answering', 'feature-extraction', 'fill-mask', 'image-classification', 'image-segmentation', 'image-to-text', 'mask-generation', 'ner', 'object-detection', 'question-answering', 'sentiment-analysis', 'summarization', 'table-question-answering', 'text-classification', 'text-generation', 'text-to-audio', 'text-to-speech', 'text2text-generation', 'token-classification', 'translation', 'video-classification', 'visual-question-answering', 'vqa', 'zero-shot-audio-classification', 'zero-shot-classification', 'zero-shot-image-classification', 'zero-shot-object-detection', 'translation_XX_to_YY']"

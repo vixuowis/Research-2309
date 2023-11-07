@@ -1,0 +1,9 @@
+Downloading (…)rocessor_config.json:   0%|                                                                       | 0.00/215 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|████████████████████████████████████████████████████████████████| 215/215 [00:00<00:00, 34.9kB/s]
+Traceback (most recent call last):
+  File "output/f00448_load_feature_extractor_test.py", line 5, in <module>
+    test_load_feature_extractor()
+  File "output/f00448_load_feature_extractor_test.py", line 3, in test_load_feature_extractor
+    assert load_feature_extractor("stevhliu/my_awesome_minds_model") is not None
+  File "/root/Experiments/output/f00448_load_feature_extractor.py", line 12, in load_feature_extractor
+    inputs = feature_extractor(dataset[0]["audio"]["array"], sampling_rate=sampling_rate, return_tensors="pt")
+NameError: name 'dataset' is not defined

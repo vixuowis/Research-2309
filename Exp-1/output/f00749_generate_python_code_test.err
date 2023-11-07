@@ -1,0 +1,12 @@
+Downloading (…)ain/tool_config.json:   0%|                                                                       | 0.00/226 [00:00<?, ?B/s]Downloading (…)ain/tool_config.json: 100%|████████████████████████████████████████████████████████████████| 226/226 [00:00<00:00, 23.0kB/s]
+Downloading (…)ain/tool_config.json:   0%|                                                                       | 0.00/282 [00:00<?, ?B/s]Downloading (…)ain/tool_config.json: 100%|████████████████████████████████████████████████████████████████| 282/282 [00:00<00:00, 29.8kB/s]
+Downloading (…)ain/tool_config.json:   0%|                                                                       | 0.00/385 [00:00<?, ?B/s]Downloading (…)ain/tool_config.json: 100%|█████████████████████████████████████████████████████████████████| 385/385 [00:00<00:00, 325kB/s]
+Downloading (…)ain/tool_config.json:   0%|                                                                       | 0.00/450 [00:00<?, ?B/s]Downloading (…)ain/tool_config.json: 100%|█████████████████████████████████████████████████████████████████| 450/450 [00:00<00:00, 261kB/s]
+Downloading (…)_prompt_template.txt:   0%|                                                                     | 0.00/2.83k [00:00<?, ?B/s]Downloading (…)_prompt_template.txt: 100%|█████████████████████████████████████████████████████████████| 2.83k/2.83k [00:00<00:00, 320kB/s]
+Downloading (…)_prompt_template.txt:   0%|                                                                     | 0.00/2.72k [00:00<?, ?B/s]Downloading (…)_prompt_template.txt: 100%|████████████████████████████████████████████████████████████| 2.72k/2.72k [00:00<00:00, 1.40MB/s]
+Traceback (most recent call last):
+  File "output/f00749_generate_python_code_test.py", line 9, in <module>
+    test_generate_python_code()
+  File "output/f00749_generate_python_code_test.py", line 3, in test_generate_python_code
+    assert generate_python_code("Show me a tree", True) == agent.run("Show me a tree", return_code=True)
+NameError: name 'agent' is not defined

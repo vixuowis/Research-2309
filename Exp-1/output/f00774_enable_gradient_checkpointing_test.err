@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00774_enable_gradient_checkpointing_test.py", line 7, in <module>
+    test_enable_gradient_checkpointing()
+  File "output/f00774_enable_gradient_checkpointing_test.py", line 3, in test_enable_gradient_checkpointing
+    training_args = TrainingArguments(per_device_train_batch_size=1, gradient_accumulation_steps=4)
+TypeError: __init__() missing 1 required positional argument: 'output_dir'

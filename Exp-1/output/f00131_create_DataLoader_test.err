@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00131_create_DataLoader_test.py", line 12, in <module>
+    test_create_DataLoader()
+  File "output/f00131_create_DataLoader_test.py", line 3, in test_create_DataLoader
+    dataset = small_train_dataset
+NameError: name 'small_train_dataset' is not defined

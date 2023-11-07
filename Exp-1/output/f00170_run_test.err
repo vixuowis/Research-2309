@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00170_run_test.py", line 1, in <module>
+    from f00170_run import *
+  File "/root/Experiments/output/f00170_run.py", line 4, in <module>
+    def run(self, query: str, image: Optional[Union[str, bytes, Path, Image.Image]] = None) -> Any:
+NameError: name 'Path' is not defined

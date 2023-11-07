@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00258_preprocess_function_test.py", line 8, in <module>
+    preprocessed_inputs = preprocess_function(examples)
+  File "/root/Experiments/output/f00258_preprocess_function.py", line 14, in preprocess_function
+    inputs = tokenizer(
+NameError: name 'tokenizer' is not defined

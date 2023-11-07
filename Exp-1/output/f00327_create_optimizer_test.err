@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "output/f00327_create_optimizer_test.py", line 1, in <module>
+    from f00327_create_optimizer import *
+  File "/root/Experiments/output/f00327_create_optimizer.py", line 6
+    Create an optimizer with weight decay.
+           ^
+SyntaxError: invalid syntax

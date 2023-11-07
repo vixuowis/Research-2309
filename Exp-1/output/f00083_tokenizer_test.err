@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "output/f00083_tokenizer_test.py", line 8, in <module>
+    encoded_input = tokenizer(batch_sentences, padding=True, truncation=True, return_tensors='tf')
+  File "/root/Experiments/output/f00083_tokenizer.py", line 17, in tokenizer
+    encoded_input = tokenizer(batch_sentences, padding=padding, truncation=truncation, return_tensors=return_tensors)
+  File "/root/Experiments/output/f00083_tokenizer.py", line 17, in tokenizer
+    encoded_input = tokenizer(batch_sentences, padding=padding, truncation=truncation, return_tensors=return_tensors)
+  File "/root/Experiments/output/f00083_tokenizer.py", line 17, in tokenizer
+    encoded_input = tokenizer(batch_sentences, padding=padding, truncation=truncation, return_tensors=return_tensors)
+  [Previous line repeated 996 more times]
+RecursionError: maximum recursion depth exceeded

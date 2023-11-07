@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00727_load_pretrained_weights_test.py", line 1, in <module>
+    from f00727_load_pretrained_weights import *
+  File "/root/Experiments/output/f00727_load_pretrained_weights.py", line 2, in <module>
+    import timm
+ModuleNotFoundError: No module named 'timm'

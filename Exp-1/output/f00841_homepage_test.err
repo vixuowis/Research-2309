@@ -1,0 +1,4 @@
+  File "output/f00841_homepage_test.py", line 2
+    No test function provided.
+       ^
+SyntaxError: invalid syntax

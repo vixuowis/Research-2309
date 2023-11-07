@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00535_rescale_logits_test.py", line 13, in <module>
+    test_rescale_logits()
+  File "output/f00535_rescale_logits_test.py", line 8, in test_rescale_logits
+    image = Image.open('image.jpg')
+NameError: name 'Image' is not defined

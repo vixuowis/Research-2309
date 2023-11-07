@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00140_backward_test.py", line 8, in <module>
+    test_backward()
+  File "output/f00140_backward_test.py", line 5, in test_backward
+    backward(loss)
+  File "/root/Experiments/output/f00140_backward.py", line 11, in backward
+    accelerator.backward(loss)
+NameError: name 'accelerator' is not defined

@@ -1,0 +1,10 @@
+Downloading (…)rocessor_config.json:   0%|                                                                       | 0.00/272 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|████████████████████████████████████████████████████████████████| 272/272 [00:00<00:00, 30.0kB/s]
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/segformer/image_processing_segformer.py:101: FutureWarning: The `reduce_labels` parameter is deprecated and will be removed in a future version. Please use `do_reduce_labels` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "output/f00513_load_image_processor_test.py", line 15, in <module>
+    test_load_image_processor()
+  File "output/f00513_load_image_processor_test.py", line 7, in test_load_image_processor
+    assert isinstance(image_processor, AutoImageProcessor)
+AssertionError

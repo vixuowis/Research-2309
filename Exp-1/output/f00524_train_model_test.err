@@ -1,0 +1,8 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/bitsandbytes/cextension.py:34: UserWarning: The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+  warn("The installed version of bitsandbytes was compiled without GPU support. "
+Traceback (most recent call last):
+  File "output/f00524_train_model_test.py", line 9, in <module>
+    test_train_model()
+  File "output/f00524_train_model_test.py", line 3, in test_train_model
+    model = Model()
+NameError: name 'Model' is not defined

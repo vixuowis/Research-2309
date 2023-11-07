@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00373_train_test_split_test.py", line 9, in <module>
+    test_train_test_split()
+  File "output/f00373_train_test_split_test.py", line 3, in test_train_test_split
+    train_dataset, test_dataset = train_test_split(0.2)
+  File "/root/Experiments/output/f00373_train_test_split.py", line 12, in train_test_split
+    train_dataset, test_dataset = billsum.train_test_split(test_size=0.2)
+NameError: name 'billsum' is not defined

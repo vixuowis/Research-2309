@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/f00491_AutoModelForImageClassification.from_pretrained_test.py", line 1, in <module>
+    from f00491_AutoModelForImageClassification.from_pretrained import *
+ModuleNotFoundError: No module named 'f00491_AutoModelForImageClassification'

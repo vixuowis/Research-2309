@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00041_load_preprocessing_class_test.py", line 8, in <module>
+    test_load_preprocessing_class()
+  File "output/f00041_load_preprocessing_class_test.py", line 4, in test_load_preprocessing_class
+    assert isinstance(tokenizer, AutoTokenizer)
+AssertionError

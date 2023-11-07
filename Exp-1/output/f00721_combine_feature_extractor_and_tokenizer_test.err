@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00721_combine_feature_extractor_and_tokenizer_test.py", line 11, in <module>
+    test_combine_feature_extractor_and_tokenizer()
+  File "output/f00721_combine_feature_extractor_and_tokenizer_test.py", line 3, in test_combine_feature_extractor_and_tokenizer
+    feature_extractor = FeatureExtractor()
+NameError: name 'FeatureExtractor' is not defined

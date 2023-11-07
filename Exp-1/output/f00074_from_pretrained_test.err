@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00074_from_pretrained_test.py", line 1, in <module>
+    from f00074_from_pretrained import *
+  File "/root/Experiments/output/f00074_from_pretrained.py", line 4, in <module>
+    def from_pretrained(model_name_or_path: Union[str, os.PathLike], *model_args, **kwargs) -> TFAutoModelForSequenceClassification:
+NameError: name 'os' is not defined

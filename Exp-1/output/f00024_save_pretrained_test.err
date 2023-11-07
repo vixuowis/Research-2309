@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00024_save_pretrained_test.py", line 8, in <module>
+    test_save_pretrained()
+  File "output/f00024_save_pretrained_test.py", line 4, in test_save_pretrained
+    tokenizer.save_pretrained(save_directory)
+NameError: name 'tokenizer' is not defined

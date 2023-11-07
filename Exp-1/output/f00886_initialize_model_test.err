@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "output/f00886_initialize_model_test.py", line 8, in <module>
+    test_initialize_model()
+  File "output/f00886_initialize_model_test.py", line 3, in test_initialize_model
+    model = initialize_model(num_aggregation_labels=3, average_logits_per_cell=True)
+  File "/root/Experiments/output/f00886_initialize_model.py", line 15, in initialize_model
+    model = TapasForQuestionAnswering.from_pretrained("google/tapas-base", config=config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2397, in from_pretrained
+    _adapter_model_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--google--tapas-base'

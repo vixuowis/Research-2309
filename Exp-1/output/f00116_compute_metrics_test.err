@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00116_compute_metrics_test.py", line 8, in <module>
+    test_compute_metrics()
+  File "output/f00116_compute_metrics_test.py", line 3, in test_compute_metrics
+    eval_pred = (logits, labels)
+NameError: name 'logits' is not defined

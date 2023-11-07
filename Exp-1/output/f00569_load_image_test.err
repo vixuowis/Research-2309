@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00569_load_image_test.py", line 1, in <module>
+    from f00569_load_image import *
+  File "/root/Experiments/output/f00569_load_image.py", line 2, in <module>
+    import skimage
+ModuleNotFoundError: No module named 'skimage'

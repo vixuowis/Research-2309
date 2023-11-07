@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00723_from_pretrained_test.py", line 1, in <module>
+    from f00723_from_pretrained import *
+  File "/root/Experiments/output/f00723_from_pretrained.py", line 2, in <module>
+    from transformers import ResnetConfig
+ImportError: cannot import name 'ResnetConfig' from 'transformers' (/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/__init__.py)

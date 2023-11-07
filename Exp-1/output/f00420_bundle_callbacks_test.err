@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00420_bundle_callbacks_test.py", line 18, in <module>
+    test_bundle_callbacks()
+  File "output/f00420_bundle_callbacks_test.py", line 14, in test_bundle_callbacks
+    bundled_callback()
+TypeError: 'NoneType' object is not callable

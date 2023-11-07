@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00061_iterate_dataset_test.py", line 9, in <module>
+    test_iterate_dataset()
+  File "output/f00061_iterate_dataset_test.py", line 4, in test_iterate_dataset
+    dataset = torch.utils.data.TensorDataset(torch.randn(10, 3, 224, 224), torch.randint(0, 2, (10,)))
+NameError: name 'torch' is not defined

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00720_Wav2Vec2CTCTokenizer_test.py", line 1, in <module>
+    from f00720_Wav2Vec2CTCTokenizer import *
+  File "/root/Experiments/output/f00720_Wav2Vec2CTCTokenizer.py", line 4, in <module>
+    tokenizer = Wav2Vec2CTCTokenizer(vocab_file="my_vocab_file.txt")
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/wav2vec2/tokenization_wav2vec2.py", line 195, in __init__
+    with open(vocab_file, encoding="utf-8") as vocab_handle:
+FileNotFoundError: [Errno 2] No such file or directory: 'my_vocab_file.txt'

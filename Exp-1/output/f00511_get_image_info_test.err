@@ -1,0 +1,4 @@
+  File "output/f00511_get_image_info_test.py", line 3
+    image_dict = {'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=512x683 at 0x7F9B0C201F90>, 'annotation': <PIL.PngImagePlugin.PngImageFile image mode=L size=512x683 at 0x7F9B0C201DD0>, 'scene_category': 368}
+                           ^
+SyntaxError: invalid syntax

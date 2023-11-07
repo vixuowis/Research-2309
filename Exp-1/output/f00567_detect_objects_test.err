@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/f00567_detect_objects_test.py", line 2, in <module>
+    image = PIL.Image.open("path/to/image.jpg")
+NameError: name 'PIL' is not defined

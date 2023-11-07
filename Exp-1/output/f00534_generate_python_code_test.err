@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/f00534_generate_python_code_test.py", line 12, in <module>
+    test_generate_python_code()
+  File "output/f00534_generate_python_code_test.py", line 8, in test_generate_python_code
+    logits = generate_python_code(model, pixel_values)
+  File "/root/Experiments/output/f00534_generate_python_code.py", line 15, in generate_python_code
+    outputs = model(pixel_values=pixel_values)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: _forward_unimplemented() got an unexpected keyword argument 'pixel_values'

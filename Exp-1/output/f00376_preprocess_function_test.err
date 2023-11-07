@@ -1,0 +1,15 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/t5/tokenization_t5.py:220: FutureWarning: This tokenizer was incorrectly instantiated with a model max length of 512 which will be corrected in Transformers v5.
+For now, this behavior is kept to avoid breaking backwards compatibility when padding/encoding with `truncation is True`.
+- Be aware that you SHOULD NOT rely on t5-base automatically truncating your input to 512 when padding/encoding.
+- If you want to encode/pad to sequences longer than 512 you can either instantiate this tokenizer with `model_max_length` or pass `max_length` when encoding/padding.
+- To avoid this warning, please instantiate this tokenizer with `model_max_length` set to your preferred value.
+  warnings.warn(
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. If you see this, DO NOT PANIC! This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thouroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Traceback (most recent call last):
+  File "output/f00376_preprocess_function_test.py", line 28, in <module>
+    test_preprocess_function()
+  File "output/f00376_preprocess_function_test.py", line 25, in test_preprocess_function
+    result = preprocess_function(examples)
+  File "/root/Experiments/output/f00376_preprocess_function.py", line 10, in preprocess_function
+    model_inputs = tokenizer(inputs, max_length=1024, truncation=True)
+NameError: name 'tokenizer' is not defined

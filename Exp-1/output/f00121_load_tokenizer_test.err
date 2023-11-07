@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00121_load_tokenizer_test.py", line 7, in <module>
+    test_load_tokenizer()
+  File "output/f00121_load_tokenizer_test.py", line 5, in test_load_tokenizer
+    assert isinstance(tokenizer, AutoTokenizer)
+AssertionError

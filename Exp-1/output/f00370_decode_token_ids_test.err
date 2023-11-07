@@ -1,0 +1,4 @@
+  File "output/f00370_decode_token_ids_test.py", line 6
+    assert decode_token_ids(tokenizer, token_ids) == 'Les lugumes partagent les ressources avec des bactéries fixatrices d'azote.'
+                                                                                                                           ^
+SyntaxError: invalid syntax

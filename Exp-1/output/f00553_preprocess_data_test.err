@@ -1,0 +1,9 @@
+Downloading (…)rocessor_config.json:   0%|                                                                       | 0.00/274 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|████████████████████████████████████████████████████████████████| 274/274 [00:00<00:00, 26.9kB/s]
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+The `max_size` parameter is deprecated and will be removed in v4.26. Please specify in `size['longest_edge'] instead`.
+Traceback (most recent call last):
+  File "output/f00553_preprocess_data_test.py", line 15, in <module>
+    test_preprocess_data()
+  File "output/f00553_preprocess_data_test.py", line 11, in test_preprocess_data
+    assert isinstance(image_processor, AutoImageProcessor)
+AssertionError

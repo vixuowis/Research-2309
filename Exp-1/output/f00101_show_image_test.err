@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00101_show_image_test.py", line 7, in <module>
+    test_show_image()
+  File "output/f00101_show_image_test.py", line 4, in test_show_image
+    show_image(img)
+  File "/root/Experiments/output/f00101_show_image.py", line 15, in show_image
+    plt.imshow(img.permute(1, 2, 0))
+AttributeError: 'numpy.ndarray' object has no attribute 'permute'

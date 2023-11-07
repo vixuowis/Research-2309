@@ -1,0 +1,10 @@
+Downloading (…)rocessor_config.json:   0%|                                                                       | 0.00/159 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|████████████████████████████████████████████████████████████████| 159/159 [00:00<00:00, 26.1kB/s]
+Downloading (…)lve/main/config.json:   0%|                                                                     | 0.00/1.84k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████| 1.84k/1.84k [00:00<00:00, 416kB/s]
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py:380: UserWarning: Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 Transformers. Using `model.gradient_checkpointing_enable()` instead, or if you are using the `Trainer` API, pass `gradient_checkpointing=True` in your `TrainingArguments`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "output/f00088_load_feature_extractor_test.py", line 6, in <module>
+    test_load_feature_extractor()
+  File "output/f00088_load_feature_extractor_test.py", line 4, in test_load_feature_extractor
+    assert isinstance(feature_extractor, AutoFeatureExtractor)
+AssertionError

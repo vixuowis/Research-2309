@@ -1,0 +1,4 @@
+  File "output/f00242_PushToHubCallback_test.py", line 2
+    import assert
+           ^
+SyntaxError: invalid syntax

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "output/f00014_tokenizer_test.py", line 4, in <module>
+    pt_batch = tokenizer(texts, padding=True, truncation=True, max_length=512, return_tensors="pt")
+  File "/root/Experiments/output/f00014_tokenizer.py", line 6, in tokenizer
+    pt_batch = tokenizer(texts, padding=padding, truncation=truncation, max_length=max_length, return_tensors=return_tensors)
+  File "/root/Experiments/output/f00014_tokenizer.py", line 6, in tokenizer
+    pt_batch = tokenizer(texts, padding=padding, truncation=truncation, max_length=max_length, return_tensors=return_tensors)
+  File "/root/Experiments/output/f00014_tokenizer.py", line 6, in tokenizer
+    pt_batch = tokenizer(texts, padding=padding, truncation=truncation, max_length=max_length, return_tensors=return_tensors)
+  [Previous line repeated 996 more times]
+RecursionError: maximum recursion depth exceeded

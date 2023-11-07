@@ -1,0 +1,4 @@
+  File "output/f00650_count_speakers_test.py", line 6
+    def test_count_speakers(unittest.TestCase):
+                                    ^
+SyntaxError: invalid syntax

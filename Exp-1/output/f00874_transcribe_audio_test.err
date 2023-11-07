@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00874_transcribe_audio_test.py", line 26, in <module>
+    test_transcribe_audio()
+  File "output/f00874_transcribe_audio_test.py", line 4, in test_transcribe_audio
+    model = Wav2Vec2ForCTC()
+NameError: name 'Wav2Vec2ForCTC' is not defined

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "output/f00431_train_test_split_test.py", line 12, in <module>
+    test_train_test_split()
+  File "output/f00431_train_test_split_test.py", line 4, in test_train_test_split
+    train_dataset, test_dataset = train_test_split(dataset, test_size=0.2)
+  File "/root/Experiments/output/f00431_train_test_split.py", line 16, in train_test_split
+    train_dataset = dataset.train_test_split(test_size=test_size)['train']
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 557, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/fingerprint.py", line 511, in wrapper
+    out = func(dataset, *args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 4445, in train_test_split
+    raise ValueError(
+ValueError: With n_samples=1, test_size=0.2 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.

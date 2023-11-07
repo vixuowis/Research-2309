@@ -1,0 +1,13 @@
+Downloading (…)rocessor_config.json:   0%|                                                                       | 0.00/445 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|████████████████████████████████████████████████████████████████| 445/445 [00:00<00:00, 42.9kB/s]
+Downloading (…)okenizer_config.json:   0%|                                                                       | 0.00/351 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|████████████████████████████████████████████████████████████████| 351/351 [00:00<00:00, 30.0kB/s]
+Downloading (…)solve/main/vocab.txt:   0%|                                                                      | 0.00/232k [00:00<?, ?B/s]Downloading (…)solve/main/vocab.txt: 100%|███████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 456kB/s]Downloading (…)solve/main/vocab.txt: 100%|███████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 455kB/s]
+Downloading (…)/main/tokenizer.json:   0%|                                                                      | 0.00/712k [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████████████████████████████████████████████████████████| 712k/712k [00:00<00:00, 2.07MB/s]Downloading (…)/main/tokenizer.json: 100%|██████████████████████████████████████████████████████████████| 712k/712k [00:00<00:00, 2.07MB/s]
+Downloading (…)cial_tokens_map.json:   0%|                                                                       | 0.00/125 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|████████████████████████████████████████████████████████████████| 125/125 [00:00<00:00, 65.8kB/s]
+Traceback (most recent call last):
+  File "output/f00634_generate_python_code_test.py", line 4, in <module>
+    result = generate_python_code(example)
+  File "/root/Experiments/output/f00634_generate_python_code.py", line 9, in generate_python_code
+    image = Image.open(example['image_id'])
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'image.jpg'

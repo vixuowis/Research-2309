@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00111_tokenize_function_test.py", line 16, in <module>
+    test_tokenize_function()
+  File "output/f00111_tokenize_function_test.py", line 9, in test_tokenize_function
+    tokenized_examples = tokenize_function(examples)
+  File "/root/Experiments/output/f00111_tokenize_function.py", line 14, in tokenize_function
+    return tokenizer(examples["text"], padding="max_length", truncation=True)
+NameError: name 'tokenizer' is not defined

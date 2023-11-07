@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00442_compute_metrics_test.py", line 9, in <module>
+    test_compute_metrics()
+  File "output/f00442_compute_metrics_test.py", line 7, in test_compute_metrics
+    assert compute_metrics(eval_pred) == 1.0
+  File "/root/Experiments/output/f00442_compute_metrics.py", line 5, in compute_metrics
+    predictions = np.argmax(eval_pred.predictions, axis=1)
+AttributeError: 'dict' object has no attribute 'predictions'

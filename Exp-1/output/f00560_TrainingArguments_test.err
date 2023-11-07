@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "output/f00560_TrainingArguments_test.py", line 2, in <module>
+    training_args = create_training_arguments(
+  File "/root/Experiments/output/f00560_TrainingArguments.py", line 5, in create_training_arguments
+    return TrainingArguments(
+  File "<string>", line 114, in __init__
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/training_args.py", line 1410, in __post_init__
+    raise ValueError(
+ValueError: FP16 Mixed precision training with AMP or APEX (`--fp16`) and FP16 half precision evaluation (`--fp16_full_eval`) can only be used on CUDA or NPU devices.

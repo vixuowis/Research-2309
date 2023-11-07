@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00163_push_to_hub_callback_test.py", line 1, in <module>
+    from f00163_push_to_hub_callback import *
+  File "/root/Experiments/output/f00163_push_to_hub_callback.py", line 4, in <module>
+    push_to_hub_callback = PushToHubCallback(output_dir="./your_model_save_path", tokenizer=tokenizer, hub_model_id="your-username/my-awesome-model")
+NameError: name 'tokenizer' is not defined

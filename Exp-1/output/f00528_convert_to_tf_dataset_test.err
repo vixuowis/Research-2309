@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00528_convert_to_tf_dataset_test.py", line 16, in <module>
+    test_convert_to_tf_dataset()
+  File "output/f00528_convert_to_tf_dataset_test.py", line 9, in test_convert_to_tf_dataset
+    tf_train_dataset = convert_to_tf_dataset(train_ds, columns, shuffle, batch_size)
+  File "/root/Experiments/output/f00528_convert_to_tf_dataset.py", line 7, in convert_to_tf_dataset
+    tf_dataset = dataset.to_tf_dataset(
+AttributeError: 'ellipsis' object has no attribute 'to_tf_dataset'

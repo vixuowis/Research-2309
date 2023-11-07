@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00051_create_pipeline_test.py", line 1, in <module>
+    from f00051_create_pipeline import *
+  File "/root/Experiments/output/f00051_create_pipeline.py", line 4, in <module>
+    def create_pipeline(task: str) -> Pipeline:
+NameError: name 'Pipeline' is not defined

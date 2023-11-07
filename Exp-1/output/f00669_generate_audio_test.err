@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00669_generate_audio_test.py", line 16, in <module>
+    test_generate_audio()
+  File "output/f00669_generate_audio_test.py", line 6, in test_generate_audio
+    output = generate_audio(text, speaker_embeddings)
+  File "/root/Experiments/output/f00669_generate_audio.py", line 14, in generate_audio
+    audio = np.array([-6.82714235e-05, -4.26525949e-04, 1.06134125e-04, ..., -1.22392643e-03, -7.76011671e-04, 3.29112721e-04], dtype=float32)
+NameError: name 'float32' is not defined

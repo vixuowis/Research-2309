@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00291_create_data_collator_for_language_modeling_test.py", line 10, in <module>
+    test_create_data_collator_for_language_modeling()
+  File "output/f00291_create_data_collator_for_language_modeling_test.py", line 3, in test_create_data_collator_for_language_modeling
+    tokenizer = Tokenizer()
+NameError: name 'Tokenizer' is not defined

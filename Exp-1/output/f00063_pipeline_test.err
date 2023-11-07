@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "output/f00063_pipeline_test.py", line 10, in <module>
+    test_pipeline()
+  File "output/f00063_pipeline_test.py", line 3, in test_pipeline
+    classifier = pipeline(model='facebook/bart-large-mnli')
+  File "/root/Experiments/output/f00063_pipeline.py", line 7, in pipeline
+    return pipeline(model)
+  File "/root/Experiments/output/f00063_pipeline.py", line 7, in pipeline
+    return pipeline(model)
+  File "/root/Experiments/output/f00063_pipeline.py", line 7, in pipeline
+    return pipeline(model)
+  [Previous line repeated 995 more times]
+RecursionError: maximum recursion depth exceeded

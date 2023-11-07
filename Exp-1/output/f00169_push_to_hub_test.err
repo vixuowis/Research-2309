@@ -1,0 +1,4 @@
+  File "output/f00169_push_to_hub_test.py", line 3
+    import assert
+           ^
+SyntaxError: invalid syntax

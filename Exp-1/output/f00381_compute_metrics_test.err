@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00381_compute_metrics_test.py", line 16, in <module>
+    main()
+  File "output/f00381_compute_metrics_test.py", line 12, in main
+    test_compute_metrics()
+  File "output/f00381_compute_metrics_test.py", line 6, in test_compute_metrics
+    eval_pred = (predictions, labels)
+NameError: name 'predictions' is not defined

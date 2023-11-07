@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00625_preprocess_data_test.py", line 2, in <module>
+    dataset = Dataset({'question': ['What is the capital of France?', 'Who wrote Harry Potter?'],
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 673, in __init__
+    self._data: Table = _check_table(arrow_table)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 636, in _check_table
+    raise TypeError(f"Expected a pyarrow.Table or a datasets.table.Table object, but got {table}.")
+TypeError: Expected a pyarrow.Table or a datasets.table.Table object, but got {'question': ['What is the capital of France?', 'Who wrote Harry Potter?'], 'question_type': ['factoid', 'yesno'], 'question_id': [1, 2], 'image_id': [1001, 1002], 'answer_type': ['entity', 'person'], 'label.ids': [[1, 2, 3], [4, 5]], 'label.weights': [0.2, 0.8]}.

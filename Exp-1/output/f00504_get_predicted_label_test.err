@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00504_get_predicted_label_test.py", line 16, in <module>
+    test_get_predicted_label()
+  File "output/f00504_get_predicted_label_test.py", line 3, in test_get_predicted_label
+    logits = torch.tensor([[0.1, 0.2, 0.7]])
+NameError: name 'torch' is not defined

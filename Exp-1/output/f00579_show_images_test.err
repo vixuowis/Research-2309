@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00579_show_images_test.py", line 29, in <module>
+    test_show_images()
+  File "output/f00579_show_images_test.py", line 4, in test_show_images
+    image_target = load_image('target.jpg')
+NameError: name 'load_image' is not defined

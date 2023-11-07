@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00773_enable_gradient_accumulation_test.py", line 9, in <module>
+    test_enable_gradient_accumulation()
+  File "output/f00773_enable_gradient_accumulation_test.py", line 3, in test_enable_gradient_accumulation
+    training_args = TrainingArguments(per_device_train_batch_size=1, **default_args)
+NameError: name 'default_args' is not defined

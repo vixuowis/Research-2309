@@ -1,0 +1,4 @@
+  File "output/f00367_decode_token_ids_test.py", line 6
+    assert decode_token_ids(tokenizer, token_ids) == 'Les lignées partagent des ressources avec des bactéries enfixant l'azote.'
+                                                                                                                         ^
+SyntaxError: invalid syntax

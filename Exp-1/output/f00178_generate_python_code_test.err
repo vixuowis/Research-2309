@@ -1,0 +1,4 @@
+  File "output/f00178_generate_python_code_test.py", line 5
+    def test_generate_python_code(unittest.TestCase):
+                                          ^
+SyntaxError: invalid syntax

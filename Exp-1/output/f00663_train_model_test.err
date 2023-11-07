@@ -1,0 +1,10 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/bitsandbytes/cextension.py:34: UserWarning: The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+  warn("The installed version of bitsandbytes was compiled without GPU support. "
+Traceback (most recent call last):
+  File "output/f00663_train_model_test.py", line 14, in <module>
+    test_train_model()
+  File "output/f00663_train_model_test.py", line 3, in test_train_model
+    trainer = Trainer()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/trainer.py", line 360, in __init__
+    raise RuntimeError("`Trainer` requires either a `model` or `model_init` argument")
+RuntimeError: `Trainer` requires either a `model` or `model_init` argument

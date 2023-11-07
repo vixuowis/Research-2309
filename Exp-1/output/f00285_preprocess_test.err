@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00285_preprocess_test.py", line 10, in <module>
+    test_preprocess()
+  File "output/f00285_preprocess_test.py", line 3, in test_preprocess
+    assert preprocess('Hello, world!') == 'Hello, world!'
+  File "/root/Experiments/output/f00285_preprocess.py", line 16, in preprocess
+    tokenized_text = tokenizer.encode(text, add_special_tokens=True)
+NameError: name 'tokenizer' is not defined

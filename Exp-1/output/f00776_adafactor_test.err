@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/f00776_adafactor_test.py", line 2, in <module>
+    training_args = TrainingArguments(per_device_train_batch_size=4, optim="adafactor", **default_args)
+NameError: name 'TrainingArguments' is not defined

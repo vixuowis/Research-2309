@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00217_get_predicted_class_label_test.py", line 1, in <module>
+    from f00217_get_predicted_class_label import *
+  File "/root/Experiments/output/f00217_get_predicted_class_label.py", line 5, in <module>
+    def get_predicted_class_label(logits: torch.Tensor, model: PreTrainedModel) -> str:
+NameError: name 'torch' is not defined

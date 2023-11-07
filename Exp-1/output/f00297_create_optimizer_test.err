@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00297_create_optimizer_test.py", line 1, in <module>
+    from f00297_create_optimizer import *
+  File "/root/Experiments/output/f00297_create_optimizer.py", line 4, in <module>
+    def create_optimizer(learning_rate: float, weight_decay_rate: float, epsilon: float = 1e-8) -> tf.keras.optimizers.Optimizer:
+NameError: name 'tf' is not defined

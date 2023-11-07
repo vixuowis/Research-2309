@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00652_create_speaker_embedding_test.py", line 1, in <module>
+    from f00652_create_speaker_embedding import *
+  File "/root/Experiments/output/f00652_create_speaker_embedding.py", line 4, in <module>
+    from speechbrain.pretrained import EncoderClassifier
+ModuleNotFoundError: No module named 'speechbrain'

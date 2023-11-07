@@ -1,0 +1,20 @@
+F
+======================================================================
+FAIL: test_fibonacci (__main__.TestFibonacci)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "output/f00174_fibonacci_test.py", line 9, in test_fibonacci
+    self.assertEqual(fibonacci(1), [0, 1])
+AssertionError: Lists differ: [0] != [0, 1]
+
+Second list contains 1 additional elements.
+First extra element 1:
+1
+
+- [0]
++ [0, 1]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

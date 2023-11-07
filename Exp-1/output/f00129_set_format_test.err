@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00129_set_format_test.py", line 8, in <module>
+    test_set_format()
+  File "output/f00129_set_format_test.py", line 4, in test_set_format
+    set_format("torch")
+  File "/root/Experiments/output/f00129_set_format.py", line 5, in set_format
+    dataset.set_format(format_type)
+NameError: name 'dataset' is not defined

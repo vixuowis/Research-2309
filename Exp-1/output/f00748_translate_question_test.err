@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00748_translate_question_test.py", line 1, in <module>
+    from f00748_translate_question import *
+  File "/root/Experiments/output/f00748_translate_question.py", line 2, in <module>
+    from translator import translator
+ModuleNotFoundError: No module named 'translator'

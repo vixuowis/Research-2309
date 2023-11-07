@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00022_save_model_test.py", line 9, in <module>
+    test_all()
+  File "output/f00022_save_model_test.py", line 7, in test_all
+    test_save_model()
+  File "output/f00022_save_model_test.py", line 3, in test_save_model
+    assert save_model(model, tokenizer, save_directory) == None
+NameError: name 'model' is not defined

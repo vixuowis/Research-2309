@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00153_save_and_load_adapter_test.py", line 11, in <module>
+    test_save_and_load_adapter()
+  File "output/f00153_save_and_load_adapter_test.py", line 4, in test_save_and_load_adapter
+    model = AutoModelForCausalLM()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 416, in __init__
+    raise EnvironmentError(
+OSError: AutoModelForCausalLM is designed to be instantiated using the `AutoModelForCausalLM.from_pretrained(pretrained_model_name_or_path)` or `AutoModelForCausalLM.from_config(config)` methods.

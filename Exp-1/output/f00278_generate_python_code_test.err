@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00278_generate_python_code_test.py", line 7, in <module>
+    test_generate_python_code()
+  File "output/f00278_generate_python_code_test.py", line 3, in test_generate_python_code
+    assert generate_python_code(inputs) == outputs
+NameError: name 'inputs' is not defined

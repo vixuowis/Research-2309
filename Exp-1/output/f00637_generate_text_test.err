@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00637_generate_text_test.py", line 13, in <module>
+    test_generate_text()
+  File "output/f00637_generate_text_test.py", line 3, in test_generate_text
+    image = PIL.Image.open("image.jpg")
+NameError: name 'PIL' is not defined

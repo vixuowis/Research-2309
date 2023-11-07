@@ -1,0 +1,13 @@
+Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
+Traceback (most recent call last):
+  File "output/f00185_generate_text_test.py", line 12, in <module>
+    test_generate_text()
+  File "output/f00185_generate_text_test.py", line 8, in test_generate_text
+    generated_text = generate_text(model_inputs)
+  File "/root/Experiments/output/f00185_generate_text.py", line 9, in generate_text
+    generated_ids = model.generate(**model_inputs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/generation/utils.py", line 1455, in generate
+    batch_size = inputs_tensor.shape[0]
+AttributeError: 'list' object has no attribute 'shape'

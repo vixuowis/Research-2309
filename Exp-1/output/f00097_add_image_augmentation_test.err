@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00097_add_image_augmentation_test.py", line 1, in <module>
+    from f00097_add_image_augmentation import *
+  File "/root/Experiments/output/f00097_add_image_augmentation.py", line 2, in <module>
+    from torchvision.transforms import RandomResizedCrop, ColorJitter, Compose
+ModuleNotFoundError: No module named 'torchvision'

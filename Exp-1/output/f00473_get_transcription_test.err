@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00473_get_transcription_test.py", line 9, in <module>
+    test_get_transcription()
+  File "output/f00473_get_transcription_test.py", line 4, in test_get_transcription
+    processor = Processor()
+NameError: name 'Processor' is not defined

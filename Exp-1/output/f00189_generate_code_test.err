@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00189_generate_code_test.py", line 11, in <module>
+    test_generate_code()
+  File "output/f00189_generate_code_test.py", line 3, in test_generate_code
+    model = YourPretrainedModel()
+NameError: name 'YourPretrainedModel' is not defined

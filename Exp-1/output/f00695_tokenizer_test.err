@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "output/f00695_tokenizer_test.py", line 1, in <module>
+    from f00695_tokenizer import *
+  File "/root/Experiments/output/f00695_tokenizer.py", line 9
+    Tokenize the text:
+             ^
+SyntaxError: invalid syntax

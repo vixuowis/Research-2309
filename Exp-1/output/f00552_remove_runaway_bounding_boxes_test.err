@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00552_remove_runaway_bounding_boxes_test.py", line 3, in <module>
+    "train": Dataset.from_dict({...}),
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/arrow_dataset.py", line 900, in from_dict
+    for col, data in mapping.items():
+AttributeError: 'set' object has no attribute 'items'

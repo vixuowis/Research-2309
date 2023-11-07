@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00693_generate_python_code_test.py", line 11, in <module>
+    test_generate_python_code()
+  File "output/f00693_generate_python_code_test.py", line 6, in test_generate_python_code
+    generated_code = generate_python_code(model, tokenizer, encoded_zh)
+  File "/root/Experiments/output/f00693_generate_python_code.py", line 6, in generate_python_code
+    generated_tokens = model.generate(**encoded_zh, forced_bos_token_id=tokenizer.get_lang_id("en"))
+AttributeError: 'GPT2Tokenizer' object has no attribute 'get_lang_id'

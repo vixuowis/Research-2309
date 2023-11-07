@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00343_train_test_split_test.py", line 12, in <module>
+    test_train_test_split()
+  File "output/f00343_train_test_split_test.py", line 5, in test_train_test_split
+    assert len(train_set) == 4
+AssertionError

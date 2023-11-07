@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00649_select_speaker_test.py", line 9, in <module>
+    test_select_speaker()
+  File "output/f00649_select_speaker_test.py", line 3, in test_select_speaker
+    assert select_speaker(1) == True
+  File "/root/Experiments/output/f00649_select_speaker.py", line 14, in select_speaker
+    return 100 <= speaker_counts[speaker_id] <= 400
+NameError: name 'speaker_counts' is not defined

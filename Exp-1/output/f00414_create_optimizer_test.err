@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "output/f00414_create_optimizer_test.py", line 10, in <module>
+    test_create_optimizer()
+  File "output/f00414_create_optimizer_test.py", line 6, in test_create_optimizer
+    optimizer, schedule = create_optimizer(init_lr, num_warmup_steps, num_train_steps)
+  File "/root/Experiments/output/f00414_create_optimizer.py", line 15, in create_optimizer
+    optimizer = AdamWeightDecay(learning_rate=init_lr, weight_decay_rate=0.01, epsilon=1e-6, exclude_from_weight_decay=['layer_norm', 'bias'])
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/dummy_tf_objects.py", line 2949, in __init__
+    requires_backends(self, ["tf"])
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/import_utils.py", line 1107, in requires_backends
+    raise ImportError(TF_IMPORT_ERROR_WITH_PYTORCH.format(name))
+ImportError: 
+AdamWeightDecay requires the TensorFlow library but it was not found in your environment.
+However, we were able to find a PyTorch installation. PyTorch classes do not begin
+with "TF", but are otherwise identically named to our TF classes.
+If you want to use PyTorch, please use those classes instead!
+
+If you really do want to use TensorFlow, please follow the instructions on the
+installation page https://www.tensorflow.org/install that match your environment.
+

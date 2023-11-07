@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00125_generate_python_code_test.py", line 1, in <module>
+    from f00125_generate_python_code import *
+  File "/root/Experiments/output/f00125_generate_python_code.py", line 2, in <module>
+    from transformers import Adam
+ImportError: cannot import name 'Adam' from 'transformers' (/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/__init__.py)

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00249_get_predicted_token_class_test.py", line 11, in <module>
+    test_get_predicted_token_class()
+  File "output/f00249_get_predicted_token_class_test.py", line 9, in test_get_predicted_token_class
+    assert output == expected_output, f'Expected: {expected_output}, Got: {output}'
+AssertionError: Expected: ['O', 'O', 'B-location'], Got: ['I-location', 'I-location', 'I-location']

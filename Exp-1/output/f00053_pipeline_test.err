@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "output/f00053_pipeline_test.py", line 9, in <module>
+    test_transcriber()
+  File "output/f00053_pipeline_test.py", line 4, in test_transcriber
+    result = transcriber('https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac')
+  File "/root/Experiments/output/f00053_pipeline.py", line 17, in transcriber
+    result = transcriber(url)
+  File "/root/Experiments/output/f00053_pipeline.py", line 17, in transcriber
+    result = transcriber(url)
+  File "/root/Experiments/output/f00053_pipeline.py", line 17, in transcriber
+    result = transcriber(url)
+  [Previous line repeated 990 more times]
+  File "/root/Experiments/output/f00053_pipeline.py", line 16, in transcriber
+    transcriber = pipeline(model=model)
+  File "/root/Experiments/output/f00053_pipeline.py", line 15, in pipeline
+    def transcriber(url: str) -> Dict[str, str]:
+  File "/root/miniconda3/envs/py38/lib/python3.8/typing.py", line 258, in inner
+    return cached(*args, **kwds)
+  File "/root/miniconda3/envs/py38/lib/python3.8/typing.py", line 723, in __hash__
+    return hash((self.__origin__, self.__args__))
+RecursionError: maximum recursion depth exceeded while calling a Python object

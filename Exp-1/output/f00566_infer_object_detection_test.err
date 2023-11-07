@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/f00566_infer_object_detection_test.py", line 3, in <module>
+    result = infer_object_detection(url)
+  File "/root/Experiments/output/f00566_infer_object_detection.py", line 7, in infer_object_detection
+    image = Image.open(requests.get(url, stream=True).raw)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x7efbb1270a40>

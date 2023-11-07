@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "output/f00152_train_model_test.py", line 1, in <module>
+    from f00152_train_model import *
+  File "/root/Experiments/output/f00152_train_model.py", line 5
+    trainer = Trainer(model=model, ...)
+                                   ^
+SyntaxError: positional argument follows keyword argument

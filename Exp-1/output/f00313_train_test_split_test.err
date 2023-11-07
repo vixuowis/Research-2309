@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/f00313_train_test_split_test.py", line 11, in <module>
+    test_train_test_split()
+  File "output/f00313_train_test_split_test.py", line 3, in test_train_test_split
+    dataset = Dataset()
+TypeError: __init__() missing 1 required positional argument: 'arrow_table'

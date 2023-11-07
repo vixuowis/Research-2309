@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/f00890_create_table_dataset_test.py", line 5, in <module>
+    train_dataloader = create_table_dataset(tsv_path, table_csv_path, tokenizer)
+NameError: name 'tokenizer' is not defined

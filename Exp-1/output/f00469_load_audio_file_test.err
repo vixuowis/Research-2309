@@ -1,0 +1,30 @@
+Downloading builder script:   0%|                                                                              | 0.00/5.95k [00:00<?, ?B/s]Downloading builder script: 100%|█████████████████████████████████████████████████████████████████████| 5.95k/5.95k [00:00<00:00, 7.73MB/s]
+Downloading readme:   0%|                                                                                      | 0.00/5.29k [00:00<?, ?B/s]Downloading readme: 100%|█████████████████████████████████████████████████████████████████████████████| 5.29k/5.29k [00:00<00:00, 8.57MB/s]
+Traceback (most recent call last):
+  File "output/f00469_load_audio_file_test.py", line 8, in <module>
+    test_load_audio_file()
+  File "output/f00469_load_audio_file_test.py", line 3, in test_load_audio_file
+    dataset = load_dataset("PolyAI/minds14", "en-US", split="train")
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/load.py", line 2153, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 954, in download_and_prepare
+    self._download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1717, in _download_and_prepare
+    super()._download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1027, in _download_and_prepare
+    split_generators = self._split_generators(dl_manager, **split_generators_kwargs)
+  File "/root/.cache/huggingface/modules/datasets_modules/datasets/PolyAI--minds14/65c7e0f3be79e18a6ffaf879a083daf706312d421ac90d25718459cbf3c42696/minds14.py", line 132, in _split_generators
+    archive_path = dl_manager.download_and_extract(self.config.data_url)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/download/download_manager.py", line 565, in download_and_extract
+    return self.extract(self.download(url_or_urls))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/download/download_manager.py", line 428, in download
+    downloaded_path_or_paths = map_nested(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/utils/py_utils.py", line 456, in map_nested
+    return function(data_struct)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/download/download_manager.py", line 454, in _download
+    return cached_path(url_or_filename, download_config=download_config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/utils/file_utils.py", line 182, in cached_path
+    output_path = get_from_cache(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/utils/file_utils.py", line 601, in get_from_cache
+    raise ConnectionError(f"Couldn't reach {url} (error {response.status_code})")
+ConnectionError: Couldn't reach https://www.dropbox.com/s/e2us0hcs3ilr20e/MInDS-14.zip?dl=1 (error 503)
