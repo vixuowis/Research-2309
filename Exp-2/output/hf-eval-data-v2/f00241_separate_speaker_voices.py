@@ -1,0 +1,35 @@
+# function_import --------------------
+
+from asteroid.models import ConvTasNet
+
+# function_code --------------------
+
+def separate_speaker_voices(wavs):
+    """
+    This function separates speaker voices from mixed sound using the pretrained model 'ConvTasNet_Libri3Mix_sepclean_8k'.
+
+    Args:
+        wavs (numpy.ndarray): A numpy array of mixed audio signals.
+
+    Returns:
+        numpy.ndarray: A numpy array of separated audio signals.
+    """
+    model = ConvTasNet.from_pretrained("JorisCos/ConvTasNet_Libri3Mix_sepclean_8k")
+    separated_audio = model.separate(wavs)
+    return separated_audio
+
+# test_function_code --------------------
+
+def test_separate_speaker_voices():
+    """
+    This function tests the 'separate_speaker_voices' function by using a sample mixed audio signal.
+    """
+    # Load a sample mixed audio signal
+    wavs = np.random.rand(8000)
+    separated_audio = separate_speaker_voices(wavs)
+    assert isinstance(separated_audio, np.ndarray), "The output should be a numpy array."
+    assert separated_audio.shape == wavs.shape, "The output should have the same shape as the input."
+
+# call_test_function_code --------------------
+
+test_separate_speaker_voices()
