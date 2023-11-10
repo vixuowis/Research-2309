@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00197_generate_toy_robot_image.py", line 4, in <module>
+    from controlnet_aux import MLSDdetector
+ModuleNotFoundError: No module named 'controlnet_aux'

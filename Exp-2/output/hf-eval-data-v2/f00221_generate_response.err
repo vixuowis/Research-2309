@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00221_generate_response.py", line 8, in <module>
+    def generate_response(user_input: str, chat_history: torch.Tensor) -> Tuple[str, torch.Tensor]:
+NameError: name 'Tuple' is not defined

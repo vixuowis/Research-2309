@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00192_detect_tables_in_image.py", line 68, in <module>
+    test_detect_tables_in_image()
+  File "output/hf-eval-data-v2/f00192_detect_tables_in_image.py", line 54, in test_detect_tables_in_image
+    detected_tables = detect_tables_in_image(image_path)
+  File "output/hf-eval-data-v2/f00192_detect_tables_in_image.py", line 22, in detect_tables_in_image
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file 'test_image.jpg'

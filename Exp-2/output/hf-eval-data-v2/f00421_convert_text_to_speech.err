@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00421_convert_text_to_speech.py", line 3, in <module>
+    from fairseq.checkpoint_utils import load_model_ensemble_and_task_from_hf_hub
+ModuleNotFoundError: No module named 'fairseq'

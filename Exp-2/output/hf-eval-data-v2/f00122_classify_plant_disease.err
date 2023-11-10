@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00122_classify_plant_disease.py", line 3, in <module>
+    import clip
+ModuleNotFoundError: No module named 'clip'

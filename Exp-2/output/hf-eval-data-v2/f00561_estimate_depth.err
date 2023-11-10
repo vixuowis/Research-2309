@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00561_estimate_depth.py", line 36, in <module>
+    test_estimate_depth()
+  File "output/hf-eval-data-v2/f00561_estimate_depth.py", line 29, in test_estimate_depth
+    sample_image = np.random.rand(100, 100, 3)
+NameError: name 'np' is not defined

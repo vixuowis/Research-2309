@@ -1,0 +1,50 @@
+Downloading builder script:   0%|                                        | 0.00/19.2k [00:00<?, ?B/s]Downloading builder script: 100%|███████████████████████████████| 19.2k/19.2k [00:00<00:00, 19.8MB/s]
+Downloading readme:   0%|                                                  | 0.00/167 [00:00<?, ?B/s]Downloading readme: 100%|████████████████████████████████████████████| 167/167 [00:00<00:00, 654kB/s]
+Repo card metadata block was not found. Setting CardData to empty.
+HF google storage unreachable. Downloading and preparing it from source
+Downloading data:   0%|                                                  | 0.00/1.21M [00:00<?, ?B/s]Downloading data:   1%|▌                                         | 16.4k/1.21M [00:00<00:08, 134kB/s]Downloading data:   4%|█▊                                        | 51.2k/1.21M [00:00<00:05, 206kB/s]Downloading data:   8%|███▌                                       | 100k/1.21M [00:00<00:03, 308kB/s]Downloading data:  13%|█████▍                                     | 155k/1.21M [00:00<00:02, 385kB/s]Downloading data:  22%|█████████▌                                 | 269k/1.21M [00:00<00:01, 610kB/s]Downloading data:  34%|██████████████▌                            | 409k/1.21M [00:00<00:00, 843kB/s]Downloading data:  52%|█████████████████████▋                    | 624k/1.21M [00:00<00:00, 1.24MB/s]Downloading data:  78%|████████████████████████████████▌         | 939k/1.21M [00:00<00:00, 1.81MB/s]Downloading data: 100%|█████████████████████████████████████████| 1.21M/1.21M [00:00<00:00, 1.27MB/s]
+Generating session1 split: 0 examples [00:00, ? examples/s]Generating session1 split: 0 examples [00:00, ? examples/s]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/audio.py", line 91, in encode_example
+    import soundfile as sf  # soundfile is a dependency of librosa, needed to decode audio files.
+ModuleNotFoundError: No module named 'soundfile'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1693, in _prepare_split_single
+    example = self.info.features.encode_example(record) if self.info.features is not None else record
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/features.py", line 1852, in encode_example
+    return encode_nested_example(self, example)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/features.py", line 1229, in encode_nested_example
+    {
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/features.py", line 1230, in <dictcomp>
+    k: encode_nested_example(sub_schema, sub_obj, level=level + 1)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/features.py", line 1284, in encode_nested_example
+    return schema.encode_example(obj) if obj is not None else None
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/audio.py", line 93, in encode_example
+    raise ImportError("To support encoding audio data, please install 'soundfile'.") from err
+ImportError: To support encoding audio data, please install 'soundfile'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00536_emotion_recognition.py", line 51, in <module>
+    test_emotion_recognition()
+  File "output/hf-eval-data-v2/f00536_emotion_recognition.py", line 36, in test_emotion_recognition
+    result = emotion_recognition(test_audio_file)
+  File "output/hf-eval-data-v2/f00536_emotion_recognition.py", line 20, in emotion_recognition
+    dataset = load_dataset('anton-l/superb_demo', 'er', split='session1')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/load.py", line 2153, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 954, in download_and_prepare
+    self._download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1717, in _download_and_prepare
+    super()._download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1049, in _download_and_prepare
+    self._prepare_split(split_generator, **prepare_split_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1555, in _prepare_split
+    for job_id, done, content in self._prepare_split_single(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1712, in _prepare_split_single
+    raise DatasetGenerationError("An error occurred while generating the dataset") from e
+datasets.builder.DatasetGenerationError: An error occurred while generating the dataset

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00852_generate_image_from_text.py", line 4, in <module>
+    from controlnet_aux import OpenposeDetector
+ModuleNotFoundError: No module named 'controlnet_aux'

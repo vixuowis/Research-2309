@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00541_predict_survival.py", line 43, in <module>
+    test_predict_survival()
+  File "output/hf-eval-data-v2/f00541_predict_survival.py", line 36, in test_predict_survival
+    predictions = predict_survival('test_data.csv')
+  File "output/hf-eval-data-v2/f00541_predict_survival.py", line 21, in predict_survival
+    model = joblib.load(model_file)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'model.joblib'

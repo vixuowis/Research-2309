@@ -1,0 +1,4 @@
+  File "output/hf-eval-data-v2/f00821_load_model_and_play_soccer.py", line 23
+    !mlagents-load-from-hf --repo-id=repo_id --local-dir=local_dir
+    ^
+SyntaxError: invalid syntax

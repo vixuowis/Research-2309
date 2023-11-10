@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00006_generate_image_description.py", line 3, in <module>
+    from transformers import GenerativeImage2TextModel
+ImportError: cannot import name 'GenerativeImage2TextModel' from 'transformers' (/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/__init__.py)

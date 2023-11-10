@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00879_translate_english_to_french.py", line 37, in <module>
+    test_translate_english_to_french()
+  File "output/hf-eval-data-v2/f00879_translate_english_to_french.py", line 31, in test_translate_english_to_french
+    translated_text = translate_english_to_french(sample_text)
+  File "output/hf-eval-data-v2/f00879_translate_english_to_french.py", line 17, in translate_english_to_french
+    tokenizer = T5Tokenizer.from_pretrained('t5-3b')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1813, in from_pretrained
+    resolved_vocab_files[file_id] = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1390, in hf_hub_download
+    with FileLock(lock_path):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/filelock/_api.py", line 262, in __enter__
+    self.acquire()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/filelock/_api.py", line 220, in acquire
+    self._acquire()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/filelock/_unix.py", line 39, in _acquire
+    fd = os.open(self.lock_file, open_flags, self._context.mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--t5-3b/blobs/4e28ff6ebdf584f5372d9de68867399142435d9a.lock'

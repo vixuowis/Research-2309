@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00678_tokenize_chinese_text.py", line 35, in <module>
+    test_tokenize_chinese_text()
+  File "output/hf-eval-data-v2/f00678_tokenize_chinese_text.py", line 29, in test_tokenize_chinese_text
+    tokens = tokenize_chinese_text(sample_text)
+  File "output/hf-eval-data-v2/f00678_tokenize_chinese_text.py", line 18, in tokenize_chinese_text
+    model = AutoModel.from_pretrained('ckiplab/bert-base-chinese-ws')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 494, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--ckiplab--bert-base-chinese-ws'

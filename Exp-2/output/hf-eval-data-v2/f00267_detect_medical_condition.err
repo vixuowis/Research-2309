@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00267_detect_medical_condition.py", line 38, in <module>
+    test_detect_medical_condition()
+  File "output/hf-eval-data-v2/f00267_detect_medical_condition.py", line 33, in test_detect_medical_condition
+    detected_condition = detect_medical_condition(sample_image, sample_question)
+  File "output/hf-eval-data-v2/f00267_detect_medical_condition.py", line 18, in detect_medical_condition
+    model = AutoModelForSeq2SeqLM.from_pretrained('microsoft/git-large-textvqa')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    raise ValueError(
+ValueError: Unrecognized configuration class <class 'transformers.models.git.configuration_git.GitConfig'> for this kind of AutoModel: AutoModelForSeq2SeqLM.
+Model type should be one of BartConfig, BigBirdPegasusConfig, BlenderbotConfig, BlenderbotSmallConfig, EncoderDecoderConfig, FSMTConfig, GPTSanJapaneseConfig, LEDConfig, LongT5Config, M2M100Config, MarianConfig, MBartConfig, MT5Config, MvpConfig, NllbMoeConfig, PegasusConfig, PegasusXConfig, PLBartConfig, ProphetNetConfig, SwitchTransformersConfig, T5Config, UMT5Config, XLMProphetNetConfig.

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00622_translate_speech_to_speech.py", line 4, in <module>
+    import torchaudio
+ModuleNotFoundError: No module named 'torchaudio'

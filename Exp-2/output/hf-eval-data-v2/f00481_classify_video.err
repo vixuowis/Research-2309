@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00481_classify_video.py", line 40, in <module>
+    test_classify_video()
+  File "output/hf-eval-data-v2/f00481_classify_video.py", line 35, in test_classify_video
+    predicted_class = classify_video(video)
+  File "output/hf-eval-data-v2/f00481_classify_video.py", line 21, in classify_video
+    inputs = processor(video, return_tensors='pt')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_processing_utils.py", line 546, in __call__
+    return self.preprocess(images, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 320, in preprocess
+    videos = [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 321, in <listcomp>
+    [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 322, in <listcomp>
+    self._preprocess_image(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 219, in _preprocess_image
+    image = self.resize(image=image, size=size, resample=resample, input_data_format=input_data_format)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 168, in resize
+    return resize(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_transforms.py", line 326, in resize
+    do_rescale = _rescale_for_pil_conversion(image)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_transforms.py", line 150, in _rescale_for_pil_conversion
+    raise ValueError(
+ValueError: The image to be converted to a PIL image contains values outside the range [0, 1], got [-4.121241822681137, 4.2155595731397035] which cannot be converted to uint8.

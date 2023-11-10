@@ -1,0 +1,37 @@
+Downloading (…)lve/main/config.json:   0%|                               | 0.00/1.45k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|███████████████████████| 1.45k/1.45k [00:00<00:00, 235kB/s]
+Downloading (…)olve/main/vocab.json:   0%|                                | 0.00/964k [00:00<?, ?B/s]Downloading (…)olve/main/vocab.json: 100%|████████████████████████| 964k/964k [00:00<00:00, 1.13MB/s]Downloading (…)olve/main/vocab.json: 100%|████████████████████████| 964k/964k [00:00<00:00, 1.13MB/s]
+Downloading (…)olve/main/merges.txt:   0%|                                | 0.00/345k [00:00<?, ?B/s]Downloading (…)olve/main/merges.txt: 100%|████████████████████████| 345k/345k [00:00<00:00, 2.75MB/s]Downloading (…)olve/main/merges.txt: 100%|████████████████████████| 345k/345k [00:00<00:00, 2.73MB/s]
+Downloading pytorch_model.bin:   0%|                                      | 0.00/350M [00:00<?, ?B/s]Downloading pytorch_model.bin:   3%|▊                            | 10.5M/350M [00:01<01:01, 5.49MB/s]Downloading pytorch_model.bin:   6%|█▋                           | 21.0M/350M [00:02<00:36, 9.08MB/s]Downloading pytorch_model.bin:   9%|██▌                          | 31.5M/350M [00:03<00:32, 9.67MB/s]Downloading pytorch_model.bin:  12%|███▍                         | 41.9M/350M [00:05<00:36, 8.43MB/s]Downloading pytorch_model.bin:  15%|████▎                        | 52.4M/350M [00:06<00:37, 8.01MB/s]Downloading pytorch_model.bin:  18%|█████▏                       | 62.9M/350M [00:07<00:35, 8.15MB/s]Downloading pytorch_model.bin:  21%|██████                       | 73.4M/350M [00:08<00:31, 8.72MB/s]Downloading pytorch_model.bin:  24%|██████▉                      | 83.9M/350M [00:09<00:27, 9.53MB/s]Downloading pytorch_model.bin:  27%|███████▊                     | 94.4M/350M [00:10<00:23, 10.9MB/s]Downloading pytorch_model.bin:  30%|████████▉                     | 105M/350M [00:10<00:20, 12.2MB/s]Downloading pytorch_model.bin:  33%|█████████▉                    | 115M/350M [00:11<00:18, 12.5MB/s]Downloading pytorch_model.bin:  36%|██████████▊                   | 126M/350M [00:12<00:16, 13.3MB/s]Downloading pytorch_model.bin:  39%|███████████▋                  | 136M/350M [00:13<00:15, 14.0MB/s]Downloading pytorch_model.bin:  42%|████████████▌                 | 147M/350M [00:13<00:14, 13.9MB/s]Downloading pytorch_model.bin:  45%|█████████████▍                | 157M/350M [00:14<00:15, 12.7MB/s]Downloading pytorch_model.bin:  48%|██████████████▎               | 168M/350M [00:15<00:13, 13.1MB/s]Downloading pytorch_model.bin:  51%|███████████████▎              | 178M/350M [00:16<00:12, 13.7MB/s]Downloading pytorch_model.bin:  54%|████████████████▏             | 189M/350M [00:16<00:11, 13.5MB/s]Downloading pytorch_model.bin:  57%|█████████████████             | 199M/350M [00:17<00:10, 13.9MB/s]Downloading pytorch_model.bin:  60%|█████████████████▉            | 210M/350M [00:18<00:10, 13.6MB/s]Downloading pytorch_model.bin:  63%|██████████████████▊           | 220M/350M [00:19<00:09, 13.8MB/s]Downloading pytorch_model.bin:  66%|███████████████████▊          | 231M/350M [00:19<00:08, 14.2MB/s]Downloading pytorch_model.bin:  69%|████████████████████▋         | 241M/350M [00:20<00:07, 14.8MB/s]Downloading pytorch_model.bin:  72%|█████████████████████▌        | 252M/350M [00:21<00:06, 15.2MB/s]Downloading pytorch_model.bin:  75%|██████████████████████▍       | 262M/350M [00:21<00:05, 15.6MB/s]Downloading pytorch_model.bin:  78%|███████████████████████▎      | 273M/350M [00:22<00:04, 15.6MB/s]Downloading pytorch_model.bin:  81%|████████████████████████▏     | 283M/350M [00:23<00:04, 15.4MB/s]Downloading pytorch_model.bin:  84%|█████████████████████████▏    | 294M/350M [00:23<00:03, 15.6MB/s]Downloading pytorch_model.bin:  87%|██████████████████████████    | 304M/350M [00:24<00:02, 15.6MB/s]Downloading pytorch_model.bin:  90%|██████████████████████████▉   | 315M/350M [00:25<00:02, 15.4MB/s]Downloading pytorch_model.bin:  93%|███████████████████████████▊  | 325M/350M [00:25<00:01, 15.8MB/s]Downloading pytorch_model.bin:  96%|████████████████████████████▋ | 336M/350M [00:26<00:00, 15.8MB/s]Downloading pytorch_model.bin:  99%|█████████████████████████████▋| 346M/350M [00:27<00:00, 15.3MB/s]Downloading pytorch_model.bin: 100%|██████████████████████████████| 350M/350M [00:27<00:00, 15.3MB/s]Downloading pytorch_model.bin: 100%|██████████████████████████████| 350M/350M [00:27<00:00, 12.7MB/s]
+Downloading (…)neration_config.json:   0%|                                 | 0.00/311 [00:00<?, ?B/s]Downloading (…)neration_config.json: 100%|██████████████████████████| 311/311 [00:00<00:00, 52.6kB/s]
+A decoder-only architecture is being used, but right-padding was detected! For correct generation results, please set `padding_side='left'` when initializing the tokenizer.
+This is a friendly reminder - the current text generation call will exceed the model's predefined maximum length (512). Depending on the model, you may observe exceptions, performance degradation, or nothing at all.
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00140_respond_to_message.py", line 39, in <module>
+    test_respond_to_message()
+  File "output/hf-eval-data-v2/f00140_respond_to_message.py", line 34, in test_respond_to_message
+    response = respond_to_message(input_message)
+  File "output/hf-eval-data-v2/f00140_respond_to_message.py", line 22, in respond_to_message
+    output = model.generate(tokenized_input, max_length=1000, pad_token_id=tokenizer.eos_token_id)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/generation/utils.py", line 1681, in generate
+    return self.beam_search(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/generation/utils.py", line 3020, in beam_search
+    outputs = self(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/blenderbot_small/modeling_blenderbot_small.py", line 1547, in forward
+    outputs = self.model.decoder(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/blenderbot_small/modeling_blenderbot_small.py", line 991, in forward
+    positions = self.embed_positions(input_shape, past_key_values_length)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/blenderbot_small/modeling_blenderbot_small.py", line 122, in forward
+    return super().forward(positions)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/sparse.py", line 162, in forward
+    return F.embedding(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/functional.py", line 2210, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+IndexError: index out of range in self

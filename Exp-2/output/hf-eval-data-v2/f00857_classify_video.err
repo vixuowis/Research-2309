@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00857_classify_video.py", line 40, in <module>
+    test_classify_video()
+  File "output/hf-eval-data-v2/f00857_classify_video.py", line 34, in test_classify_video
+    classification_result = classify_video(video_path)
+  File "output/hf-eval-data-v2/f00857_classify_video.py", line 18, in classify_video
+    video_classifier = AutoModelForVideoClassification.from_pretrained('lmazzon70/videomae-large-finetuned-kinetics-finetuned-rwf2000-epochs8-batch8-kl-torch2')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 494, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--lmazzon70--videomae-large-finetuned-kinetics-finetuned-rwf2000-epochs8-batch8-kl-torch2'

@@ -9,10 +9,10 @@ count=0
 
 # 遍历文件夹，找到后缀为 _test.py 的文件
 for file in ${input_folder}/*.py; do
-    # 检查计数器是否达到 N 个文件
-    if [ ${count} -ge 5 ]; then
-        break
-    fi
+    # # 检查计数器是否达到 N 个文件
+    # if [ ${count} -ge 5 ]; then
+    #     break
+    # fi
 
     # 提取文件名前缀
     prefix=$(basename ${file} .py)

@@ -1,0 +1,23 @@
+Some weights of the model checkpoint at bert-base-chinese were not used when initializing BertForMaskedLM: ['cls.seq_relationship.weight', 'bert.pooler.dense.weight', 'bert.pooler.dense.bias', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00892_fill_mask_chinese.py", line 33, in <module>
+    test_fill_mask_chinese()
+  File "output/hf-eval-data-v2/f00892_fill_mask_chinese.py", line 28, in test_fill_mask_chinese
+    result = fill_mask_chinese(text)
+  File "output/hf-eval-data-v2/f00892_fill_mask_chinese.py", line 18, in fill_mask_chinese
+    result = fill_mask(text)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 239, in __call__
+    outputs = super().__call__(inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 97, in preprocess
+    self.ensure_exactly_one_mask_token(model_inputs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 91, in ensure_exactly_one_mask_token
+    self._ensure_exactly_one_mask_token(input_ids)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 79, in _ensure_exactly_one_mask_token
+    raise PipelineException(
+transformers.pipelines.base.PipelineException: No mask_token ([MASK]) found on the input

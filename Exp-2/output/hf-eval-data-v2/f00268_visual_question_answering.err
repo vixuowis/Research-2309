@@ -1,0 +1,21 @@
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00268_visual_question_answering.py", line 35, in <module>
+    test_visual_question_answering()
+  File "output/hf-eval-data-v2/f00268_visual_question_answering.py", line 30, in test_visual_question_answering
+    answer = visual_question_answering(image_path, question)
+  File "output/hf-eval-data-v2/f00268_visual_question_answering.py", line 19, in visual_question_answering
+    answer = vqa_model(image_path, question)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/visual_question_answering.py", line 114, in __call__
+    results = super().__call__(inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/visual_question_answering.py", line 118, in preprocess
+    image = load_image(inputs["image"], timeout=timeout)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_utils.py", line 301, in load_image
+    image = PIL.Image.open(image)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file 'test_image.jpg'

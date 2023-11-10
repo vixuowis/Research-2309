@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00488_analyze_sentiment.py", line 42, in <module>
+    test_analyze_sentiment()
+  File "output/hf-eval-data-v2/f00488_analyze_sentiment.py", line 38, in test_analyze_sentiment
+    assert result[0]['label'] in ['POSITIVE', 'NEGATIVE', 'NEUTRAL']
+AssertionError

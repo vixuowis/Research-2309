@@ -1,0 +1,28 @@
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_utils.py", line 308, in load_image
+    b64 = base64.b64decode(image, validate=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/base64.py", line 86, in b64decode
+    raise binascii.Error('Non-base64 digit found')
+binascii.Error: Non-base64 digit found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00832_get_image_caption.py", line 37, in <module>
+    test_get_image_caption()
+  File "output/hf-eval-data-v2/f00832_get_image_caption.py", line 32, in test_get_image_caption
+    answer = get_image_caption(image_path, question)
+  File "output/hf-eval-data-v2/f00832_get_image_caption.py", line 20, in get_image_caption
+    answer = vqa_pipeline(image_path, question)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/visual_question_answering.py", line 114, in __call__
+    results = super().__call__(inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/visual_question_answering.py", line 118, in preprocess
+    image = load_image(inputs["image"], timeout=timeout)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_utils.py", line 311, in load_image
+    raise ValueError(
+ValueError: Incorrect image source. Must be a valid URL starting with `http://` or `https://`, a valid path to an image file, or a base64 encoded string. Got path_to_test_image.jpg. Failed with Non-base64 digit found

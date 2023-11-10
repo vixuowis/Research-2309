@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00467_detect_license_plate.py", line 3, in <module>
+    import yolov5
+ModuleNotFoundError: No module named 'yolov5'

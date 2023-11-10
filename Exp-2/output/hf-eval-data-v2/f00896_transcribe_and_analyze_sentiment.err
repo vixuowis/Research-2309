@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00896_transcribe_and_analyze_sentiment.py", line 5, in <module>
+    from sentiment_analysis_model import SentimentAnalysisModel
+ModuleNotFoundError: No module named 'sentiment_analysis_model'

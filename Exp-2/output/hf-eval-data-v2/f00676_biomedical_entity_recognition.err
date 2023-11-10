@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00676_biomedical_entity_recognition.py", line 46, in <module>
+    test_biomedical_entity_recognition()
+  File "output/hf-eval-data-v2/f00676_biomedical_entity_recognition.py", line 41, in test_biomedical_entity_recognition
+    assert 'entities' in result, 'Result should contain recognized entities.'
+AssertionError: Result should contain recognized entities.

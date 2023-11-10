@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00370_generate_image.py", line 5, in <module>
+    from diffusers.utils import load_image
+ModuleNotFoundError: No module named 'diffusers'

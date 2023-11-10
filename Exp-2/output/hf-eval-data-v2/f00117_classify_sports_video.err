@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00117_classify_sports_video.py", line 61, in <module>
+    test_classify_sports_video()
+  File "output/hf-eval-data-v2/f00117_classify_sports_video.py", line 51, in test_classify_sports_video
+    outputs = classify_sports_video(video_path)
+  File "output/hf-eval-data-v2/f00117_classify_sports_video.py", line 22, in classify_sports_video
+    video = load_video(video_path)
+NameError: name 'load_video' is not defined

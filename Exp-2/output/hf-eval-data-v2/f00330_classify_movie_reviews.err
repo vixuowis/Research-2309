@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00330_classify_movie_reviews.py", line 39, in <module>
+    test_classify_movie_reviews()
+  File "output/hf-eval-data-v2/f00330_classify_movie_reviews.py", line 32, in test_classify_movie_reviews
+    predictions = classify_movie_reviews('test_data.csv')
+  File "output/hf-eval-data-v2/f00330_classify_movie_reviews.py", line 18, in classify_movie_reviews
+    model = joblib.load('model.joblib')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'model.joblib'

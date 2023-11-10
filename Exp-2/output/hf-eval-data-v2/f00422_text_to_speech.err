@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/espnet/kan-bayashi_jvs_tts_finetune_jvs001_jsut_vits_raw_phn_jaconv_pyopenjta-truncated-178804/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 271, in hf_raise_for_status
+    raise EntryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.EntryNotFoundError: 404 Client Error. (Request ID: Root=1-654d9ae0-71a539a1610adb717d029bb5;3d4c4673-8908-4cec-b068-e7a99f0d8478)
+
+Entry Not Found for url: https://huggingface.co/espnet/kan-bayashi_jvs_tts_finetune_jvs001_jsut_vits_raw_phn_jaconv_pyopenjta-truncated-178804/resolve/main/config.json.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00422_text_to_speech.py", line 35, in <module>
+    test_text_to_speech()
+  File "output/hf-eval-data-v2/f00422_text_to_speech.py", line 30, in test_text_to_speech
+    text_to_speech(text)
+  File "output/hf-eval-data-v2/f00422_text_to_speech.py", line 17, in text_to_speech
+    model = AutoModelForCausalLM.from_pretrained('espnet/kan-bayashi_jvs_tts_finetune_jvs001_jsut_vits_raw_phn_jaconv_pyopenjta-truncated-178804')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 527, in from_pretrained
+    config, kwargs = AutoConfig.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 1023, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 620, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 675, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 480, in cached_file
+    raise EnvironmentError(
+OSError: espnet/kan-bayashi_jvs_tts_finetune_jvs001_jsut_vits_raw_phn_jaconv_pyopenjta-truncated-178804 does not appear to have a file named config.json. Checkout 'https://huggingface.co/espnet/kan-bayashi_jvs_tts_finetune_jvs001_jsut_vits_raw_phn_jaconv_pyopenjta-truncated-178804/main' for available files.

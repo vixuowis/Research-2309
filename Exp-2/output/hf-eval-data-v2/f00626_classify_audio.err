@@ -1,0 +1,18 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py:380: UserWarning: Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 Transformers. Using `model.gradient_checkpointing_enable()` instead, or if you are using the `Trainer` API, pass `gradient_checkpointing=True` in your `TrainingArguments`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00626_classify_audio.py", line 41, in <module>
+    test_classify_audio()
+  File "output/hf-eval-data-v2/f00626_classify_audio.py", line 34, in test_classify_audio
+    result = classify_audio(test_audio)
+  File "output/hf-eval-data-v2/f00626_classify_audio.py", line 21, in classify_audio
+    result = classifier(audio_input)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/audio_classification.py", line 136, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/audio_classification.py", line 154, in preprocess
+    with open(inputs, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'test.wav'

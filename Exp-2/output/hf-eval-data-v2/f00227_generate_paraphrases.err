@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00227_generate_paraphrases.py", line 3, in <module>
+    from parrot import Parrot
+ModuleNotFoundError: No module named 'parrot'

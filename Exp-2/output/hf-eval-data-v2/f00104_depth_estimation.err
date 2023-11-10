@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00104_depth_estimation.py", line 56, in <module>
+    test_depth_estimation()
+  File "output/hf-eval-data-v2/f00104_depth_estimation.py", line 43, in test_depth_estimation
+    image = torch.load('sample_image.pt')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 791, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 271, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 252, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'sample_image.pt'

@@ -1,0 +1,33 @@
+Downloading (…)lve/main/config.json:   0%|                                 | 0.00/807 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|███████████████████████████| 807/807 [00:00<00:00, 229kB/s]
+Downloading pytorch_model.bin:   0%|                                     | 0.00/18.1M [00:00<?, ?B/s]Downloading pytorch_model.bin:  58%|████████████████▏           | 10.5M/18.1M [00:02<00:01, 4.52MB/s]Downloading pytorch_model.bin: 100%|████████████████████████████| 18.1M/18.1M [00:02<00:00, 6.81MB/s]Downloading pytorch_model.bin: 100%|████████████████████████████| 18.1M/18.1M [00:02<00:00, 6.25MB/s]
+Downloading (…)okenizer_config.json:   0%|                                 | 0.00/398 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|███████████████████████████| 398/398 [00:00<00:00, 144kB/s]
+Downloading spiece.model:   0%|                                          | 0.00/4.31M [00:00<?, ?B/s]Downloading spiece.model: 100%|█████████████████████████████████| 4.31M/4.31M [00:00<00:00, 15.3MB/s]Downloading spiece.model: 100%|█████████████████████████████████| 4.31M/4.31M [00:00<00:00, 15.2MB/s]
+Downloading (…)cial_tokens_map.json:   0%|                                | 0.00/74.0 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|█████████████████████████| 74.0/74.0 [00:00<00:00, 102kB/s]
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. If you see this, DO NOT PANIC! This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thouroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:473: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+The model 'MT5Model' is not supported for text-generation. Supported models are ['BartForCausalLM', 'BertLMHeadModel', 'BertGenerationDecoder', 'BigBirdForCausalLM', 'BigBirdPegasusForCausalLM', 'BioGptForCausalLM', 'BlenderbotForCausalLM', 'BlenderbotSmallForCausalLM', 'BloomForCausalLM', 'CamembertForCausalLM', 'LlamaForCausalLM', 'CodeGenForCausalLM', 'CpmAntForCausalLM', 'CTRLLMHeadModel', 'Data2VecTextForCausalLM', 'ElectraForCausalLM', 'ErnieForCausalLM', 'FalconForCausalLM', 'GitForCausalLM', 'GPT2LMHeadModel', 'GPT2LMHeadModel', 'GPTBigCodeForCausalLM', 'GPTNeoForCausalLM', 'GPTNeoXForCausalLM', 'GPTNeoXJapaneseForCausalLM', 'GPTJForCausalLM', 'LlamaForCausalLM', 'MarianForCausalLM', 'MBartForCausalLM', 'MegaForCausalLM', 'MegatronBertForCausalLM', 'MptForCausalLM', 'MusicgenForCausalLM', 'MvpForCausalLM', 'OpenLlamaForCausalLM', 'OpenAIGPTLMHeadModel', 'OPTForCausalLM', 'PegasusForCausalLM', 'PLBartForCausalLM', 'ProphetNetForCausalLM', 'QDQBertLMHeadModel', 'ReformerModelWithLMHead', 'RemBertForCausalLM', 'RobertaForCausalLM', 'RobertaPreLayerNormForCausalLM', 'RoCBertForCausalLM', 'RoFormerForCausalLM', 'RwkvForCausalLM', 'Speech2Text2ForCausalLM', 'TransfoXLLMHeadModel', 'TrOCRForCausalLM', 'XGLMForCausalLM', 'XLMWithLMHeadModel', 'XLMProphetNetForCausalLM', 'XLMRobertaForCausalLM', 'XLMRobertaXLForCausalLM', 'XLNetLMHeadModel', 'XmodForCausalLM'].
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00342_generate_welcome_email.py", line 40, in <module>
+    test_generate_welcome_email()
+  File "output/hf-eval-data-v2/f00342_generate_welcome_email.py", line 34, in test_generate_welcome_email
+    generated_email = generate_welcome_email()
+  File "output/hf-eval-data-v2/f00342_generate_welcome_email.py", line 22, in generate_welcome_email
+    generated_email = text_generator(seed_text, max_length=150)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/text_generation.py", line 205, in __call__
+    return super().__call__(text_inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1147, in run_single
+    model_outputs = self.forward(model_inputs, **forward_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1046, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/text_generation.py", line 268, in _forward
+    generated_sequence = self.model.generate(input_ids=input_ids, attention_mask=attention_mask, **generate_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/generation/utils.py", line 1408, in generate
+    self._validate_model_class()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/generation/utils.py", line 1203, in _validate_model_class
+    raise TypeError(exception_message)
+TypeError: The current model class (MT5Model) is not compatible with `.generate()`, as it doesn't have a language model head. Please use one of the following classes instead: {'MT5ForConditionalGeneration'}

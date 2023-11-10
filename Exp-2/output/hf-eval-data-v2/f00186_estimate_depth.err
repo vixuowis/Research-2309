@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00186_estimate_depth.py", line 50, in <module>
+    test_estimate_depth()
+  File "output/hf-eval-data-v2/f00186_estimate_depth.py", line 42, in test_estimate_depth
+    outputs = estimate_depth(image_path)
+  File "output/hf-eval-data-v2/f00186_estimate_depth.py", line 19, in estimate_depth
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'test_image.jpg'

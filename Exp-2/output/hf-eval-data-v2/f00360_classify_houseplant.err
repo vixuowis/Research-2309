@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00360_classify_houseplant.py", line 40, in <module>
+    test_classify_houseplant()
+  File "output/hf-eval-data-v2/f00360_classify_houseplant.py", line 35, in test_classify_houseplant
+    result = classify_houseplant(url)
+  File "output/hf-eval-data-v2/f00360_classify_houseplant.py", line 19, in classify_houseplant
+    image = Image.open(requests.get(url, stream=True).raw)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x7f2b279d0b30>

@@ -1,0 +1,1 @@
+`vision_config_dict` is provided which will be used to initialize `ChineseCLIPVisionConfig`. The value `vision_config["model_type"]` will be overriden.

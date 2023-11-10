@@ -1,0 +1,49 @@
+Downloading (…)rocessor_config.json:   0%|               | 0.00/271 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|████████| 271/271 [00:00<00:00, 46.4kB/s]
+Downloading (…)lve/main/config.json:   0%|               | 0.00/725 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|█████████| 725/725 [00:00<00:00, 168kB/s]
+Downloading pytorch_model.bin:   0%|                    | 0.00/377M [00:00<?, ?B/s]Downloading pytorch_model.bin:   3%|▎           | 10.5M/377M [00:24<14:13, 429kB/s]Downloading pytorch_model.bin:   3%|▎           | 10.5M/377M [00:43<14:13, 429kB/s]Downloading pytorch_model.bin:   6%|▋           | 21.0M/377M [00:53<15:12, 390kB/s]Downloading pytorch_model.bin:   6%|▋           | 21.0M/377M [01:03<15:12, 390kB/s]Downloading pytorch_model.bin:   8%|█           | 31.5M/377M [01:37<19:17, 299kB/s]Downloading pytorch_model.bin:   8%|█           | 31.5M/377M [01:53<19:17, 299kB/s]Downloading pytorch_model.bin:  11%|█▎          | 41.9M/377M [02:14<18:59, 294kB/s]Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(43130124 bytes read, 333794177 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(43130124 bytes read, 333794177 more expected)', IncompleteRead(43130124 bytes read, 333794177 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00030_video_classification.py", line 43, in <module>
+    test_video_classification()
+  File "output/hf-eval-data-v2/f00030_video_classification.py", line 38, in test_video_classification
+    loss = video_classification(video)
+  File "output/hf-eval-data-v2/f00030_video_classification.py", line 21, in video_classification
+    model = VideoMAEForPreTraining.from_pretrained('MCG-NJU/videomae-base')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(43130124 bytes read, 333794177 more expected)', IncompleteRead(43130124 bytes read, 333794177 more expected))
+Downloading pytorch_model.bin:  11%|█▎          | 41.9M/377M [02:18<18:26, 303kB/s]

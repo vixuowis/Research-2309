@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00532_download_and_load_model.py", line 35, in <module>
+    test_download_and_load_model()
+  File "output/hf-eval-data-v2/f00532_download_and_load_model.py", line 30, in test_download_and_load_model
+    model_path = download_and_load_model(repo_id)
+  File "output/hf-eval-data-v2/f00532_download_and_load_model.py", line 17, in download_and_load_model
+    model_path = hf_hub_download(repo_id=repo_id)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+TypeError: hf_hub_download() missing 1 required positional argument: 'filename'

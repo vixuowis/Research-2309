@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00708_detect_voice_activity.py", line 3, in <module>
+    from pyannote.audio import Pipeline
+ModuleNotFoundError: No module named 'pyannote'

@@ -1,0 +1,26 @@
+Downloading (…)rocessor_config.json:   0%|                                 | 0.00/284 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|██████████████████████████| 284/284 [00:00<00:00, 64.7kB/s]
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+The `max_size` parameter is deprecated and will be removed in v4.26. Please specify in `size['longest_edge'] instead`.
+Downloading (…)lve/main/config.json:   0%|                               | 0.00/4.54k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████████████████| 4.54k/4.54k [00:00<00:00, 1.11MB/s]
+Downloading model.safetensors:   0%|                                      | 0.00/161M [00:00<?, ?B/s]Downloading model.safetensors:   7%|█▉                           | 10.5M/161M [00:01<00:24, 6.05MB/s]Downloading model.safetensors:  13%|███▊                         | 21.0M/161M [00:02<00:14, 9.65MB/s]Downloading model.safetensors:  20%|█████▋                       | 31.5M/161M [00:02<00:10, 12.1MB/s]Downloading model.safetensors:  26%|███████▌                     | 41.9M/161M [00:03<00:08, 13.8MB/s]Downloading model.safetensors:  33%|█████████▍                   | 52.4M/161M [00:04<00:07, 14.8MB/s]Downloading model.safetensors:  39%|███████████▎                 | 62.9M/161M [00:04<00:06, 15.8MB/s]Downloading model.safetensors:  46%|█████████████▏               | 73.4M/161M [00:05<00:05, 16.1MB/s]Downloading model.safetensors:  52%|███████████████▏             | 83.9M/161M [00:05<00:04, 16.9MB/s]Downloading model.safetensors:  59%|█████████████████            | 94.4M/161M [00:06<00:03, 17.0MB/s]Downloading model.safetensors:  65%|███████████████████▌          | 105M/161M [00:07<00:03, 17.5MB/s]Downloading model.safetensors:  72%|█████████████████████▌        | 115M/161M [00:07<00:02, 17.5MB/s]Downloading model.safetensors:  78%|███████████████████████▍      | 126M/161M [00:08<00:02, 17.3MB/s]Downloading model.safetensors:  85%|█████████████████████████▍    | 136M/161M [00:08<00:01, 17.2MB/s]Downloading model.safetensors:  91%|███████████████████████████▍  | 147M/161M [00:09<00:00, 14.3MB/s]Downloading model.safetensors:  98%|█████████████████████████████▎| 157M/161M [00:10<00:00, 15.3MB/s]Downloading model.safetensors: 100%|██████████████████████████████| 161M/161M [00:10<00:00, 15.5MB/s]Downloading model.safetensors: 100%|██████████████████████████████| 161M/161M [00:10<00:00, 14.9MB/s]
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00191_detect_objects_in_image.py", line 53, in <module>
+    test_detect_objects_in_image()
+  File "output/hf-eval-data-v2/f00191_detect_objects_in_image.py", line 43, in test_detect_objects_in_image
+    outputs = detect_objects_in_image(sample_image_url)
+  File "output/hf-eval-data-v2/f00191_detect_objects_in_image.py", line 25, in detect_objects_in_image
+    model = DeformableDetrForObjectDetection.from_pretrained('SenseTime/deformable-detr')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2954, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/deformable_detr/modeling_deformable_detr.py", line 1840, in __init__
+    self.model = DeformableDetrModel(config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/deformable_detr/modeling_deformable_detr.py", line 1480, in __init__
+    backbone = DeformableDetrConvEncoder(config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/deformable_detr/modeling_deformable_detr.py", line 397, in __init__
+    requires_backends(self, ["timm"])
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/import_utils.py", line 1112, in requires_backends
+    raise ImportError("".join(failed))
+ImportError: 
+DeformableDetrConvEncoder requires the timm library but it was not found in your environment. You can install it with pip:
+`pip install timm`. Please note that you may need to restart your runtime after installation.
+

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00742_detect_objects.py", line 48, in <module>
+    test_detect_objects()
+  File "output/hf-eval-data-v2/f00742_detect_objects.py", line 41, in test_detect_objects
+    outputs = detect_objects(image_path)
+  File "output/hf-eval-data-v2/f00742_detect_objects.py", line 19, in detect_objects
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'http://images.cocodataset.org/val2017/000000039769.jpg'

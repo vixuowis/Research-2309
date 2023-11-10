@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00670_classify_product_image.py", line 58, in <module>
+    test_classify_product_image()
+  File "output/hf-eval-data-v2/f00670_classify_product_image.py", line 53, in test_classify_product_image
+    predicted_category = classify_product_image(image_url, category_labels)
+  File "output/hf-eval-data-v2/f00670_classify_product_image.py", line 20, in classify_product_image
+    model = ChineseCLIPModel.from_pretrained('OFA-Sys/chinese-clip-vit-large-patch14')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2377, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--OFA-Sys--chinese-clip-vit-large-patch14'

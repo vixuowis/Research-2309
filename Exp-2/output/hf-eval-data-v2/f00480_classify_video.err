@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00480_classify_video.py", line 43, in <module>
+    test_classify_video()
+  File "output/hf-eval-data-v2/f00480_classify_video.py", line 38, in test_classify_video
+    predicted_class = classify_video(video_path)
+  File "output/hf-eval-data-v2/f00480_classify_video.py", line 19, in classify_video
+    video_frames = load_video_frames(video_path)
+NameError: name 'load_video_frames' is not defined

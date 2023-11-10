@@ -1,0 +1,77 @@
+Downloading (…)ve/main/spiece.model:   0%|                                | 0.00/792k [00:00<?, ?B/s]Downloading (…)ve/main/spiece.model: 100%|████████████████████████| 792k/792k [00:09<00:00, 87.0kB/s]Downloading (…)ve/main/spiece.model: 100%|████████████████████████| 792k/792k [00:09<00:00, 86.9kB/s]
+Downloading (…)okenizer_config.json:   0%|                               | 0.00/2.32k [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|███████████████████████| 2.32k/2.32k [00:00<00:00, 544kB/s]
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. If you see this, DO NOT PANIC! This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thouroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Downloading (…)lve/main/config.json:   0%|                               | 0.00/1.21k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|███████████████████████| 1.21k/1.21k [00:00<00:00, 345kB/s]
+'(ReadTimeoutError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out. (read timeout=10.0)"), '(Request ID: 834c17b9-698d-4189-945a-7780e1707f6f)')' thrown while requesting GET https://cdn-lfs.huggingface.co/t5-small/bd944e5f1b3ad9b70dd9d00010a517059e19265671076b8b0a4a58d9491842bc?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1699806517&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTgwNjUxN319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby90NS1zbWFsbC9iZDk0NGU1ZjFiM2FkOWI3MGRkOWQwMDAxMGE1MTcwNTllMTkyNjU2NzEwNzZiOGIwYTRhNThkOTQ5MTg0MmJjP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=WcnYIwIUzhC8sGFRDuiO4qLzeYIPbWexyt%7EsenYwcnAu%7E9FzgijR2qRJzhu4R-R2fIdfR6HmBYPt0zN69YM5rygQrKbQZp8Y8K70viw3ywqBfDnM157P4LiiG5RcJ9pXiD2oQKLXhIAOivnK6eUKak1GFhVF2iKHusLUzQVWVs-rYoO5KSxPzlSPMAn84kOT97nXlPl8OIxDnGkwipNcx41r2D%7E%7EJodaWUtfMV0Evid5GkMOV%7EOo2iv4FM25PlLyVjafTjgaDmRtnIwGMMvOa4kcNAzc40-RBQ3RsAr5YWNnxXDTUoKlPsHKn2glgkDS4CHNiCp%7ES%7EiJwY-ewHEdog__&Key-Pair-Id=KVTP0A1DKRTAX
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 776, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1041, in _prepare_proxy
+    conn.connect()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 783, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 469, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 513, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 778, in urlopen
+    self._raise_timeout(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 370, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out. (read timeout=10.0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00137_translate_research_summary.py", line 37, in <module>
+    test_translate_research_summary()
+  File "output/hf-eval-data-v2/f00137_translate_research_summary.py", line 32, in test_translate_research_summary
+    translated_summary = translate_research_summary(research_summary)
+  File "output/hf-eval-data-v2/f00137_translate_research_summary.py", line 18, in translate_research_summary
+    model = T5Model.from_pretrained('t5-small')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2773, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 515, in http_get
+    r = _request_wrapper(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 452, in _request_wrapper
+    return http_backoff(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 274, in http_backoff
+    raise err
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 258, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out. (read timeout=10.0)"), '(Request ID: 834c17b9-698d-4189-945a-7780e1707f6f)')

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00577_detect_toxic_comment.py", line 38, in <module>
+    test_detect_toxic_comment()
+  File "output/hf-eval-data-v2/f00577_detect_toxic_comment.py", line 32, in test_detect_toxic_comment
+    assert isinstance(result, dict), 'The result should be a dictionary.'
+AssertionError: The result should be a dictionary.

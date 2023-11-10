@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00666_classify_image.py", line 48, in <module>
+    test_classify_image()
+  File "output/hf-eval-data-v2/f00666_classify_image.py", line 40, in test_classify_image
+    result = classify_image(image_path, categories)
+  File "output/hf-eval-data-v2/f00666_classify_image.py", line 23, in classify_image
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file 'test_image.jpg'

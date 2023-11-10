@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00692_translate_property_description.py", line 4, in <module>
+    from optimum.onnxruntime import ORTModelForSeq2SeqLM
+ModuleNotFoundError: No module named 'optimum'

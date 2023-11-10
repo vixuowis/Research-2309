@@ -1,0 +1,11 @@
+Downloading pytorch_model.bin:   0%|                                     | 0.00/45.8M [00:00<?, ?B/s]Downloading pytorch_model.bin:  23%|██████▋                      | 10.5M/45.8M [00:56<03:08, 187kB/s]Downloading pytorch_model.bin:  46%|█████████████▎               | 21.0M/45.8M [01:02<01:03, 388kB/s]Downloading pytorch_model.bin:  69%|███████████████████▉         | 31.5M/45.8M [01:06<00:22, 644kB/s]Downloading pytorch_model.bin:  69%|███████████████████▉         | 31.5M/45.8M [01:19<00:22, 644kB/s]Downloading pytorch_model.bin:  92%|██████████████████████████▌  | 41.9M/45.8M [02:11<00:13, 294kB/s]Downloading pytorch_model.bin:  92%|██████████████████████████▌  | 41.9M/45.8M [02:30<00:13, 294kB/s]Downloading pytorch_model.bin: 100%|█████████████████████████████| 45.8M/45.8M [03:01<00:00, 199kB/s]Downloading pytorch_model.bin: 100%|█████████████████████████████| 45.8M/45.8M [03:01<00:00, 253kB/s]
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00132_get_hot_chocolate_shops_and_prices.py", line 47, in <module>
+    test_get_hot_chocolate_shops_and_prices()
+  File "output/hf-eval-data-v2/f00132_get_hot_chocolate_shops_and_prices.py", line 43, in test_get_hot_chocolate_shops_and_prices
+    assert get_hot_chocolate_shops_and_prices(table, queries) == expected_output
+  File "output/hf-eval-data-v2/f00132_get_hot_chocolate_shops_and_prices.py", line 27, in get_hot_chocolate_shops_and_prices
+    answered_shops = [table[row_idx][0] for row_idx in outputs['answer_coordinates'][0][:, 0]]
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/generic.py", line 384, in __getitem__
+    return inner_dict[k]
+KeyError: 'answer_coordinates'

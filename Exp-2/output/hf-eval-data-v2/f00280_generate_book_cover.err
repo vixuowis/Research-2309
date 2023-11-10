@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00280_generate_book_cover.py", line 5, in <module>
+    from controlnet_aux import NormalBaeDetector
+ModuleNotFoundError: No module named 'controlnet_aux'

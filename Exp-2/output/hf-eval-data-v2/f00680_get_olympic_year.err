@@ -1,0 +1,8 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/generation/utils.py:1260: UserWarning: Using the model-agnostic default `max_length` (=20) to control thegeneration length. We recommend setting `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00680_get_olympic_year.py", line 41, in <module>
+    test_get_olympic_year()
+  File "output/hf-eval-data-v2/f00680_get_olympic_year.py", line 36, in test_get_olympic_year
+    assert get_olympic_year('beijing') == '2008'
+AssertionError

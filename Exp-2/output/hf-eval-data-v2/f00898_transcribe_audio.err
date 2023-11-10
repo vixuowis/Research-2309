@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00898_transcribe_audio.py", line 49, in <module>
+    test_transcribe_audio()
+  File "output/hf-eval-data-v2/f00898_transcribe_audio.py", line 36, in test_transcribe_audio
+    audio_data = load_sample_audio_data()
+NameError: name 'load_sample_audio_data' is not defined

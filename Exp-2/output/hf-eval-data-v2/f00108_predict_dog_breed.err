@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00108_predict_dog_breed.py", line 43, in <module>
+    test_predict_dog_breed()
+  File "output/hf-eval-data-v2/f00108_predict_dog_breed.py", line 37, in test_predict_dog_breed
+    predicted_breed = predict_dog_breed(image_url)
+  File "output/hf-eval-data-v2/f00108_predict_dog_breed.py", line 19, in predict_dog_breed
+    image = Image.open(requests.get(image_url, stream=True).raw)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x7f1d66805720>

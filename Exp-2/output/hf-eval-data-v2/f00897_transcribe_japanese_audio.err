@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00897_transcribe_japanese_audio.py", line 3, in <module>
+    from huggingsound import SpeechRecognitionModel
+ModuleNotFoundError: No module named 'huggingsound'

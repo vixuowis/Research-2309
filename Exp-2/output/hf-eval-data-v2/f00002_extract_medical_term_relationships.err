@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00002_extract_medical_term_relationships.py", line 44, in <module>
+    test_extract_medical_term_relationships()
+  File "output/hf-eval-data-v2/f00002_extract_medical_term_relationships.py", line 40, in test_extract_medical_term_relationships
+    assert not torch.equal(embedding1, embedding2), 'Embeddings for different terms should not be the same.'
+NameError: name 'torch' is not defined

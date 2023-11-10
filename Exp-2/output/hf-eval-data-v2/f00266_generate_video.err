@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00266_generate_video.py", line 4, in <module>
+    from diffusers import DiffusionPipeline, DPMSolverMultistepScheduler
+ModuleNotFoundError: No module named 'diffusers'

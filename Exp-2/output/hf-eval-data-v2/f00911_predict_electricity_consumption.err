@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00911_predict_electricity_consumption.py", line 38, in <module>
+    test_predict_electricity_consumption()
+  File "output/hf-eval-data-v2/f00911_predict_electricity_consumption.py", line 30, in test_predict_electricity_consumption
+    X_train = np.random.rand(100, 10)
+NameError: name 'np' is not defined

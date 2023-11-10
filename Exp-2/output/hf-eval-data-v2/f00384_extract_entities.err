@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00384_extract_entities.py", line 37, in <module>
+    test_extract_entities()
+  File "output/hf-eval-data-v2/f00384_extract_entities.py", line 31, in test_extract_entities
+    assert 'John Doe' in [entity['word'] for entity in result]
+AssertionError

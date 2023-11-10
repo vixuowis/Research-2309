@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00873_korean_question_answering.py", line 34, in <module>
+    test_korean_question_answering()
+  File "output/hf-eval-data-v2/f00873_korean_question_answering.py", line 30, in test_korean_question_answering
+    assert korean_question_answering(question, context) == '대한민국'
+AssertionError

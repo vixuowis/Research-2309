@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00242_translate_speech.py", line 39, in <module>
+    test_translate_speech()
+  File "output/hf-eval-data-v2/f00242_translate_speech.py", line 35, in test_translate_speech
+    assert output_audio is not None, 'Translation failed.'
+AssertionError: Translation failed.

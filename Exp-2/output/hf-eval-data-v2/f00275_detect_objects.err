@@ -1,0 +1,25 @@
+Downloading (…)rocessor_config.json:   0%|                                 | 0.00/274 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|██████████████████████████| 274/274 [00:00<00:00, 49.7kB/s]
+The `max_size` parameter is deprecated and will be removed in v4.26. Please specify in `size['longest_edge'] instead`.
+Downloading (…)lve/main/config.json:   0%|                               | 0.00/4.38k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|███████████████████████| 4.38k/4.38k [00:00<00:00, 725kB/s]
+Downloading model.safetensors:   0%|                                      | 0.00/243M [00:00<?, ?B/s]Downloading model.safetensors:   4%|█▎                           | 10.5M/243M [00:02<00:46, 4.98MB/s]Downloading model.safetensors:   9%|██▌                          | 21.0M/243M [00:03<00:29, 7.43MB/s]Downloading model.safetensors:  13%|███▊                         | 31.5M/243M [00:03<00:23, 8.97MB/s]Downloading model.safetensors:  17%|█████                        | 41.9M/243M [00:04<00:19, 10.3MB/s]Downloading model.safetensors:  22%|██████▎                      | 52.4M/243M [00:05<00:17, 11.1MB/s]Downloading model.safetensors:  26%|███████▌                     | 62.9M/243M [00:06<00:15, 11.6MB/s]Downloading model.safetensors:  30%|████████▊                    | 73.4M/243M [00:07<00:14, 12.0MB/s]Downloading model.safetensors:  35%|██████████                   | 83.9M/243M [00:07<00:12, 12.3MB/s]Downloading model.safetensors:  39%|███████████▎                 | 94.4M/243M [00:08<00:11, 12.6MB/s]Downloading model.safetensors:  43%|████████████▉                 | 105M/243M [00:09<00:11, 12.4MB/s]Downloading model.safetensors:  48%|██████████████▎               | 115M/243M [00:10<00:10, 12.7MB/s]Downloading model.safetensors:  52%|███████████████▌              | 126M/243M [00:11<00:09, 12.7MB/s]Downloading model.safetensors:  56%|████████████████▊             | 136M/243M [00:12<00:08, 12.9MB/s]Downloading model.safetensors:  60%|██████████████████▏           | 147M/243M [00:12<00:07, 12.8MB/s]Downloading model.safetensors:  65%|███████████████████▍          | 157M/243M [00:14<00:07, 11.2MB/s]Downloading model.safetensors:  69%|████████████████████▋         | 168M/243M [00:14<00:06, 11.5MB/s]Downloading model.safetensors:  73%|██████████████████████        | 178M/243M [00:15<00:05, 11.9MB/s]Downloading model.safetensors:  78%|███████████████████████▎      | 189M/243M [00:16<00:04, 12.3MB/s]Downloading model.safetensors:  82%|████████████████████████▌     | 199M/243M [00:17<00:03, 12.4MB/s]Downloading model.safetensors:  86%|█████████████████████████▉    | 210M/243M [00:18<00:02, 12.5MB/s]Downloading model.safetensors:  91%|███████████████████████████▏  | 220M/243M [00:18<00:01, 12.7MB/s]Downloading model.safetensors:  95%|████████████████████████████▌ | 231M/243M [00:19<00:00, 12.8MB/s]Downloading model.safetensors:  99%|█████████████████████████████▊| 241M/243M [00:20<00:00, 12.8MB/s]Downloading model.safetensors: 100%|██████████████████████████████| 243M/243M [00:20<00:00, 12.9MB/s]Downloading model.safetensors: 100%|██████████████████████████████| 243M/243M [00:20<00:00, 11.7MB/s]
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00275_detect_objects.py", line 47, in <module>
+    test_detect_objects()
+  File "output/hf-eval-data-v2/f00275_detect_objects.py", line 40, in test_detect_objects
+    outputs = detect_objects(url)
+  File "output/hf-eval-data-v2/f00275_detect_objects.py", line 25, in detect_objects
+    model = DetrForObjectDetection.from_pretrained('facebook/detr-resnet-101')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2954, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/detr/modeling_detr.py", line 1498, in __init__
+    self.model = DetrModel(config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/detr/modeling_detr.py", line 1330, in __init__
+    backbone = DetrConvEncoder(config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/detr/modeling_detr.py", line 344, in __init__
+    requires_backends(self, ["timm"])
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/import_utils.py", line 1112, in requires_backends
+    raise ImportError("".join(failed))
+ImportError: 
+DetrConvEncoder requires the timm library but it was not found in your environment. You can install it with pip:
+`pip install timm`. Please note that you may need to restart your runtime after installation.
+

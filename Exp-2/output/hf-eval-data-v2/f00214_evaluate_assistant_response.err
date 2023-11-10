@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00214_evaluate_assistant_response.py", line 3, in <module>
+    from sentence_transformers import CrossEncoder
+ModuleNotFoundError: No module named 'sentence_transformers'

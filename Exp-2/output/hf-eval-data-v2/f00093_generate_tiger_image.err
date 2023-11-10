@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00093_generate_tiger_image.py", line 5, in <module>
+    from diffusers import StableDiffusionDepth2ImgPipeline
+ModuleNotFoundError: No module named 'diffusers'

@@ -1,0 +1,8 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/marian/tokenization_marian.py:194: UserWarning: Recommended: pip install sacremoses.
+  warnings.warn("Recommended: pip install sacremoses.")
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00878_translate_english_to_french.py", line 33, in <module>
+    test_translate_english_to_french()
+  File "output/hf-eval-data-v2/f00878_translate_english_to_french.py", line 27, in test_translate_english_to_french
+    assert translate_english_to_french('Hello, how are you?') == 'Bonjour, comment ça va?'
+AssertionError

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00160_keyword_spotting.py", line 40, in <module>
+    test_keyword_spotting()
+  File "output/hf-eval-data-v2/f00160_keyword_spotting.py", line 30, in test_keyword_spotting
+    predictions = keyword_spotting(audio_file_path)
+  File "output/hf-eval-data-v2/f00160_keyword_spotting.py", line 19, in keyword_spotting
+    keyword_predictions = classifier(audio_file_path, top_k=top_k)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/audio_classification.py", line 136, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/audio_classification.py", line 154, in preprocess
+    with open(inputs, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'sample_audio.wav'

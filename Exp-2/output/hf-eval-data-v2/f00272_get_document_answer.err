@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00272_get_document_answer.py", line 6, in <module>
+    import pytesseract
+ModuleNotFoundError: No module named 'pytesseract'

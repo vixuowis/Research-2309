@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00568_upscale_image.py", line 53, in <module>
+    test_upscale_image()
+  File "output/hf-eval-data-v2/f00568_upscale_image.py", line 45, in test_upscale_image
+    upscale_image(test_image_path)
+  File "output/hf-eval-data-v2/f00568_upscale_image.py", line 20, in upscale_image
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file 'test_image.jpg'

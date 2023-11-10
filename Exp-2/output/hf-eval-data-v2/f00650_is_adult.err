@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00650_is_adult.py", line 43, in <module>
+    test_is_adult()
+  File "output/hf-eval-data-v2/f00650_is_adult.py", line 38, in test_is_adult
+    assert is_adult(adult_image_url) == True
+  File "output/hf-eval-data-v2/f00650_is_adult.py", line 21, in is_adult
+    image = Image.open(BytesIO(response.content))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x7fbb91afdd60>

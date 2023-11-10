@@ -1,0 +1,4 @@
+  File "output/hf-eval-data-v2/f00165_predict_house_price.py", line 8
+    def predict_house_price(feat_1, feat_2, feat_3, ..., feat_n):
+                                                    ^
+SyntaxError: invalid syntax

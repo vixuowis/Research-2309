@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00460_estimate_depth.py", line 4, in <module>
+    from torchvision.transforms import Compose, Resize, ToTensor, Normalize
+ModuleNotFoundError: No module named 'torchvision'

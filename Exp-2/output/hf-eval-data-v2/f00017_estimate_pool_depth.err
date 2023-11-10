@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00017_estimate_pool_depth.py", line 48, in <module>
+    test_estimate_pool_depth()
+  File "output/hf-eval-data-v2/f00017_estimate_pool_depth.py", line 35, in test_estimate_pool_depth
+    test_photo = load_test_photo()
+NameError: name 'load_test_photo' is not defined

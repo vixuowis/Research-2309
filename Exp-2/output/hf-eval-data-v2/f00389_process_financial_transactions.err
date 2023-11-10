@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00389_process_financial_transactions.py", line 42, in <module>
+    test_process_financial_transactions()
+  File "output/hf-eval-data-v2/f00389_process_financial_transactions.py", line 34, in test_process_financial_transactions
+    transaction_data = pd.DataFrame({'date': ['2021-01-01', '2021-01-02', '2021-01-03', '2021-01-04', '2021-01-05'], 'transaction': [1, 2, 3, 4, 5], 'monetary_value': [100, 200, 300, 400, 500]})
+NameError: name 'pd' is not defined

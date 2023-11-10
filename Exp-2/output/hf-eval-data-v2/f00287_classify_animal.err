@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/laion/CLIP-convnext_large_d_320.laion2B-s29B-b131K-ft/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 271, in hf_raise_for_status
+    raise EntryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.EntryNotFoundError: 404 Client Error. (Request ID: Root=1-654d80e1-75c7f1d37d5cf9b51a40abf4;71217428-ea01-4719-9986-a4da923a9cf4)
+
+Entry Not Found for url: https://huggingface.co/laion/CLIP-convnext_large_d_320.laion2B-s29B-b131K-ft/resolve/main/config.json.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00287_classify_animal.py", line 40, in <module>
+    test_classify_animal()
+  File "output/hf-eval-data-v2/f00287_classify_animal.py", line 32, in test_classify_animal
+    result = classify_animal(test_image_path)
+  File "output/hf-eval-data-v2/f00287_classify_animal.py", line 18, in classify_animal
+    image_classifier = pipeline('image-classification', model='laion/CLIP-convnext_large_d_320.laion2B-s29B-b131K-ft')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 741, in pipeline
+    config = AutoConfig.from_pretrained(model, _from_pipeline=task, **hub_kwargs, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 1023, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 620, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 675, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 480, in cached_file
+    raise EnvironmentError(
+OSError: laion/CLIP-convnext_large_d_320.laion2B-s29B-b131K-ft does not appear to have a file named config.json. Checkout 'https://huggingface.co/laion/CLIP-convnext_large_d_320.laion2B-s29B-b131K-ft/main' for available files.

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00638_generate_image_from_text.py", line 3, in <module>
+    from diffusers import StableDiffusionInpaintPipeline
+ModuleNotFoundError: No module named 'diffusers'

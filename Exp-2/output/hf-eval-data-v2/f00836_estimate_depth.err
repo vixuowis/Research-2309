@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00836_estimate_depth.py", line 48, in <module>
+    test_estimate_depth()
+  File "output/hf-eval-data-v2/f00836_estimate_depth.py", line 38, in test_estimate_depth
+    expected_result = np.array([...])
+NameError: name 'np' is not defined

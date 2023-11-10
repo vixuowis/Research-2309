@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00471_detect_potholes.py", line 3, in <module>
+    from ultralyticsplus import YOLO, render_result
+ModuleNotFoundError: No module named 'ultralyticsplus'

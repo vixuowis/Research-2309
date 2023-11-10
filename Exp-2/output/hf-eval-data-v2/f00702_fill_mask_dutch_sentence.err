@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00702_fill_mask_dutch_sentence.py", line 40, in <module>
+    test_fill_mask_dutch_sentence()
+  File "output/hf-eval-data-v2/f00702_fill_mask_dutch_sentence.py", line 34, in test_fill_mask_dutch_sentence
+    output_text = fill_mask_dutch_sentence(input_text)
+  File "output/hf-eval-data-v2/f00702_fill_mask_dutch_sentence.py", line 18, in fill_mask_dutch_sentence
+    model = AutoModel.from_pretrained('GroNLP/bert-base-dutch-cased')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2773, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1417, in hf_hub_download
+    with temp_file_manager() as temp_file:
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 540, in NamedTemporaryFile
+    (fd, name) = _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 250, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/tmp4b6yytjq'

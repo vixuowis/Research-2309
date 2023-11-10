@@ -1,0 +1,26 @@
+Downloading (…)lve/main/config.json:   0%|                               | 0.00/1.20k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|███████████████████████| 1.20k/1.20k [00:00<00:00, 184kB/s]
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 11406.55 MB. The target location /root/autodl-tmp/.cache/huggingface/hub only has 0.68 MB free disk space.
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 11406.55 MB. The target location /root/autodl-tmp/.cache/huggingface/hub/models--t5-3b/blobs only has 0.68 MB free disk space.
+  warnings.warn(
+Downloading pytorch_model.bin:   0%|                                     | 0.00/11.4G [00:00<?, ?B/s]Downloading pytorch_model.bin:   0%|                            | 10.5M/11.4G [00:01<31:21, 6.06MB/s]Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00503_generate_positive_review.py", line 38, in <module>
+    test_generate_positive_review()
+  File "output/hf-eval-data-v2/f00503_generate_positive_review.py", line 33, in test_generate_positive_review
+    review = generate_positive_review(book_summary)
+  File "output/hf-eval-data-v2/f00503_generate_positive_review.py", line 17, in generate_positive_review
+    model = T5ForConditionalGeneration.from_pretrained('t5-3b')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 554, in http_get
+    temp_file.write(chunk)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 473, in func_wrapper
+    return func(*args, **kwargs)
+OSError: [Errno 28] No space left on device
+Downloading pytorch_model.bin:   0%|                            | 10.5M/11.4G [00:01<32:55, 5.77MB/s]

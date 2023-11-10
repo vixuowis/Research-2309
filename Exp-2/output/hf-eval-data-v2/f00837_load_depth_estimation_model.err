@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00837_load_depth_estimation_model.py", line 32, in <module>
+    test_load_depth_estimation_model()
+  File "output/hf-eval-data-v2/f00837_load_depth_estimation_model.py", line 28, in test_load_depth_estimation_model
+    assert isinstance(model, AutoModel), 'The returned object is not an instance of AutoModel.'
+AssertionError: The returned object is not an instance of AutoModel.

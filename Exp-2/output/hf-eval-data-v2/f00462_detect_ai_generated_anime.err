@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00462_detect_ai_generated_anime.py", line 47, in <module>
+    test_detect_ai_generated_anime()
+  File "output/hf-eval-data-v2/f00462_detect_ai_generated_anime.py", line 40, in test_detect_ai_generated_anime
+    result = detect_ai_generated_anime(sample_image_path)
+  File "output/hf-eval-data-v2/f00462_detect_ai_generated_anime.py", line 19, in detect_ai_generated_anime
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'path_to_sample_image.jpg'

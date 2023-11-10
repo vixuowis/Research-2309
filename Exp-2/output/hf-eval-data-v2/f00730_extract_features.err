@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00730_extract_features.py", line 37, in <module>
+    test_extract_features()
+  File "output/hf-eval-data-v2/f00730_extract_features.py", line 33, in test_extract_features
+    assert isinstance(feature_matrix, torch.Tensor), 'The output should be a torch.Tensor.'
+NameError: name 'torch' is not defined

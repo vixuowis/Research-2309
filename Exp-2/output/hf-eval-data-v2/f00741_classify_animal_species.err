@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00741_classify_animal_species.py", line 55, in <module>
+    test_classify_animal_species()
+  File "output/hf-eval-data-v2/f00741_classify_animal_species.py", line 48, in test_classify_animal_species
+    result = classify_animal_species(test_image_path)
+  File "output/hf-eval-data-v2/f00741_classify_animal_species.py", line 20, in classify_animal_species
+    image = Image.open(animal_image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'path_to_test_image'

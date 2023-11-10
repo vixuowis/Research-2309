@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00664_classify_video.py", line 44, in <module>
+    test_classify_video()
+  File "output/hf-eval-data-v2/f00664_classify_video.py", line 39, in test_classify_video
+    predicted_class = classify_video(video_path)
+  File "output/hf-eval-data-v2/f00664_classify_video.py", line 20, in classify_video
+    video = get_video_frames(video_path)
+NameError: name 'get_video_frames' is not defined

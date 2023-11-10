@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00631_classify_co2_emissions.py", line 46, in <module>
+    test_classify_co2_emissions()
+  File "output/hf-eval-data-v2/f00631_classify_co2_emissions.py", line 40, in test_classify_co2_emissions
+    predictions = classify_co2_emissions(data_file, model_file, config_file)
+  File "output/hf-eval-data-v2/f00631_classify_co2_emissions.py", line 22, in classify_co2_emissions
+    model = joblib.load(model_file)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'test_model.joblib'

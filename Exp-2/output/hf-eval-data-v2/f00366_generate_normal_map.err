@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00366_generate_normal_map.py", line 5, in <module>
+    from diffusers import StableDiffusionControlNetPipeline, ControlNetModel, UniPCMultistepScheduler
+ModuleNotFoundError: No module named 'diffusers'

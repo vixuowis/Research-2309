@@ -1,0 +1,21 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:659: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
+  warnings.warn(
+Downloading sklearn_model.joblib:   0%|                                   | 0.00/113k [00:00<?, ?B/s]Downloading sklearn_model.joblib: 100%|████████████████████████████| 113k/113k [00:00<00:00, 321kB/s]Downloading sklearn_model.joblib: 100%|████████████████████████████| 113k/113k [00:00<00:00, 321kB/s]
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00086_predict_recidivism.py", line 43, in <module>
+    test_predict_recidivism()
+  File "output/hf-eval-data-v2/f00086_predict_recidivism.py", line 37, in test_predict_recidivism
+    predictions = predict_recidivism(X_test)
+  File "output/hf-eval-data-v2/f00086_predict_recidivism.py", line 22, in predict_recidivism
+    model = joblib.load(cached_download(hf_hub_url(REPO_ID, FILENAME)))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "/root/miniconda3/envs/py38/lib/python3.8/pickle.py", line 1212, in load
+    dispatch[key[0]](self)
+  File "/root/miniconda3/envs/py38/lib/python3.8/pickle.py", line 1537, in load_stack_global
+    self.append(self.find_class(module, name))
+  File "/root/miniconda3/envs/py38/lib/python3.8/pickle.py", line 1579, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'imodels'

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00335_predict_fish_weight.py", line 3, in <module>
+    from skops.hub_utils import download
+ModuleNotFoundError: No module named 'skops'

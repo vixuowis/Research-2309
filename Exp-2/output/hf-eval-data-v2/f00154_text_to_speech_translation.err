@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00154_text_to_speech_translation.py", line 3, in <module>
+    from fairseq import hub_utils
+ModuleNotFoundError: No module named 'fairseq'

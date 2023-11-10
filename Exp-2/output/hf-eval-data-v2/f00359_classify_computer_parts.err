@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00359_classify_computer_parts.py", line 57, in <module>
+    test_classify_computer_parts()
+  File "output/hf-eval-data-v2/f00359_classify_computer_parts.py", line 49, in test_classify_computer_parts
+    shutil.copyfileobj(response.raw, f)
+NameError: name 'shutil' is not defined

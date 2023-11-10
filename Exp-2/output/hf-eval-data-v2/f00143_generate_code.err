@@ -1,0 +1,4 @@
+  File "output/hf-eval-data-v2/f00143_generate_code.py", line 33
+    expected_output = 'def factorial(n):
+                                       ^
+SyntaxError: EOL while scanning string literal

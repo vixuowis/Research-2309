@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00116_generate_image_from_text.py", line 4, in <module>
+    from diffusers.utils import load_image
+ModuleNotFoundError: No module named 'diffusers'

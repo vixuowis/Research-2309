@@ -1,0 +1,49 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/modeling_auto.py:1479: FutureWarning: The class `AutoModelWithLMHead` is deprecated and will be removed in a future version. Please use `AutoModelForCausalLM` for causal language models, `AutoModelForMaskedLM` for masked language models and `AutoModelForSeq2SeqLM` for encoder-decoder models.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/output-small/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1344, in hf_hub_download
+    raise head_call_error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-654da478-363dbc4d21af8bf057191b19;68d6107e-62c6-4f76-b990-f5c8b9efe1c5)
+
+Repository Not Found for url: https://huggingface.co/output-small/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00510_generate_response.py", line 39, in <module>
+    test_generate_response()
+  File "output/hf-eval-data-v2/f00510_generate_response.py", line 34, in test_generate_response
+    response = generate_response(user_input)
+  File "output/hf-eval-data-v2/f00510_generate_response.py", line 19, in generate_response
+    model = AutoModelWithLMHead.from_pretrained('output-small')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/modeling_auto.py", line 1485, in from_pretrained
+    return super().from_pretrained(pretrained_model_name_or_path, *model_args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 494, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 450, in cached_file
+    raise EnvironmentError(
+OSError: output-small is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`

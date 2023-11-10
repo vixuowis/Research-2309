@@ -1,0 +1,15 @@
+Downloading (…)lve/main/config.json:   0%|                                 | 0.00/956 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|███████████████████████████| 956/956 [00:00<00:00, 174kB/s]
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00103_estimate_depth.py", line 49, in <module>
+    test_estimate_depth()
+  File "output/hf-eval-data-v2/f00103_estimate_depth.py", line 41, in test_estimate_depth
+    depth_map = estimate_depth(test_image_path)
+  File "output/hf-eval-data-v2/f00103_estimate_depth.py", line 21, in estimate_depth
+    depth_estimator = pipeline('cv-depth-estimation', model='sayakpaul/glpn-nyu-finetuned-diode-221215-093747')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 780, in pipeline
+    normalized_task, targeted_task, task_options = check_task(task)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 499, in check_task
+    return PIPELINE_REGISTRY.check_task(task)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1215, in check_task
+    raise KeyError(
+KeyError: "Unknown task cv-depth-estimation, available tasks are ['audio-classification', 'automatic-speech-recognition', 'conversational', 'depth-estimation', 'document-question-answering', 'feature-extraction', 'fill-mask', 'image-classification', 'image-segmentation', 'image-to-text', 'mask-generation', 'ner', 'object-detection', 'question-answering', 'sentiment-analysis', 'summarization', 'table-question-answering', 'text-classification', 'text-generation', 'text-to-audio', 'text-to-speech', 'text2text-generation', 'token-classification', 'translation', 'video-classification', 'visual-question-answering', 'vqa', 'zero-shot-audio-classification', 'zero-shot-classification', 'zero-shot-image-classification', 'zero-shot-object-detection', 'translation_XX_to_YY']"

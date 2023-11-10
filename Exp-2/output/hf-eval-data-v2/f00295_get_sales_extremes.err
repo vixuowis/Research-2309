@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00295_get_sales_extremes.py", line 39, in <module>
+    test_get_sales_extremes()
+  File "output/hf-eval-data-v2/f00295_get_sales_extremes.py", line 32, in test_get_sales_extremes
+    sales_data_table = pd.DataFrame({'Product': ['A', 'B', 'C', 'D', 'E'], 'Sales': [100, 200, 300, 400, 500]})
+NameError: name 'pd' is not defined

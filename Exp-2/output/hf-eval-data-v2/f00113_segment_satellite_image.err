@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00113_segment_satellite_image.py", line 53, in <module>
+    test_segment_satellite_image()
+  File "output/hf-eval-data-v2/f00113_segment_satellite_image.py", line 46, in test_segment_satellite_image
+    result = segment_satellite_image(test_image_path)
+  File "output/hf-eval-data-v2/f00113_segment_satellite_image.py", line 19, in segment_satellite_image
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'test_image.jpg'

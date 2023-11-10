@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00046_get_total_sales.py", line 42, in <module>
+    test_get_total_sales()
+  File "output/hf-eval-data-v2/f00046_get_total_sales.py", line 34, in test_get_total_sales
+    sales_data_table = pd.DataFrame({'Product': ['A', 'B', 'C'], 'Sales': [100, 200, 300], 'Week': ['1', '1', '1']})
+NameError: name 'pd' is not defined

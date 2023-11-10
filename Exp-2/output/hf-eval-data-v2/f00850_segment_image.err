@@ -1,0 +1,24 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/segformer/feature_extraction_segformer.py:28: FutureWarning: The class SegformerFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use SegformerImageProcessor instead.
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/segformer/image_processing_segformer.py:101: FutureWarning: The `reduce_labels` parameter is deprecated and will be removed in a future version. Please use `do_reduce_labels` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00850_segment_image.py", line 40, in <module>
+    test_segment_image()
+  File "output/hf-eval-data-v2/f00850_segment_image.py", line 35, in test_segment_image
+    output = segment_image(image_path)
+  File "output/hf-eval-data-v2/f00850_segment_image.py", line 20, in segment_image
+    model = SegformerForSemanticSegmentation.from_pretrained('nvidia/segformer-b5-finetuned-cityscapes-1024-1024')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1417, in hf_hub_download
+    with temp_file_manager() as temp_file:
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 540, in NamedTemporaryFile
+    (fd, name) = _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 250, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/tmpc7e4q475'

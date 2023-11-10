@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00643_text_to_video.py", line 40, in <module>
+    test_text_to_video()
+  File "output/hf-eval-data-v2/f00643_text_to_video.py", line 35, in test_text_to_video
+    assert output is not None, 'The output video is None.'
+AssertionError: The output video is None.

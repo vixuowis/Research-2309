@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00256_extract_features.py", line 7, in <module>
+    def extract_features(input_text: str) -> torch.Tensor:
+NameError: name 'torch' is not defined

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00007_generate_image_description.py", line 36, in <module>
+    test_generate_image_description()
+  File "output/hf-eval-data-v2/f00007_generate_image_description.py", line 28, in test_generate_image_description
+    test_image = Image.open('test_image.jpg')
+NameError: name 'Image' is not defined

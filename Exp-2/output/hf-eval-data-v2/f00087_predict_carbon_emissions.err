@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00087_predict_carbon_emissions.py", line 71, in <module>
+    test_predict_carbon_emissions()
+  File "output/hf-eval-data-v2/f00087_predict_carbon_emissions.py", line 64, in test_predict_carbon_emissions
+    assert predictions is not None, 'The predictions should not be None.'
+AssertionError: The predictions should not be None.

@@ -1,0 +1,12 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py:479: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py:640: FutureWarning: The `use_auth_token` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00677_extract_company_names.py", line 40, in <module>
+    test_extract_company_names()
+  File "output/hf-eval-data-v2/f00677_extract_company_names.py", line 35, in test_extract_company_names
+    assert set(extract_company_names(review)) == set(expected_output), 'Test failed!'
+  File "output/hf-eval-data-v2/f00677_extract_company_names.py", line 23, in extract_company_names
+    if output['entity'] == 'company':
+TypeError: string indices must be integers

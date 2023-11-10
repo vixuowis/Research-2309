@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00584_identify_entities.py", line 3, in <module>
+    from flair.data import Sentence
+ModuleNotFoundError: No module named 'flair'

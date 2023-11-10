@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00470_image_segmentation.py", line 48, in <module>
+    test_image_segmentation()
+  File "output/hf-eval-data-v2/f00470_image_segmentation.py", line 43, in test_image_segmentation
+    result = image_segmentation(image_path, task)
+  File "output/hf-eval-data-v2/f00470_image_segmentation.py", line 19, in image_segmentation
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file 'test_image.jpg'

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00029_analyze_security_footage.py", line 3, in <module>
+    from transformers import XClipModel
+ImportError: cannot import name 'XClipModel' from 'transformers' (/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/__init__.py)

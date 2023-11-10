@@ -1,0 +1,32 @@
+Downloading (…)lve/main/config.json:   0%|                                 | 0.00/958 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|███████████████████████████| 958/958 [00:00<00:00, 142kB/s]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1648, in _chmod_and_replace
+    tmp_file.touch()
+  File "/root/miniconda3/envs/py38/lib/python3.8/pathlib.py", line 1278, in touch
+    fd = self._raw_open(flags, mode)
+  File "/root/miniconda3/envs/py38/lib/python3.8/pathlib.py", line 1087, in _raw_open
+    return self._accessor.open(self, flags, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--sayakpaul--glpn-kitti-finetuned-diode/tmp_2743f922-88fe-4a30-841c-07e9a2b5f53f'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00562_estimate_depth.py", line 55, in <module>
+    test_estimate_depth()
+  File "output/hf-eval-data-v2/f00562_estimate_depth.py", line 45, in test_estimate_depth
+    depth_map = estimate_depth(test_image_path)
+  File "output/hf-eval-data-v2/f00562_estimate_depth.py", line 21, in estimate_depth
+    model = AutoModel.from_pretrained('sayakpaul/glpn-kitti-finetuned-diode')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 494, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1440, in hf_hub_download
+    _chmod_and_replace(temp_file.name, blob_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1652, in _chmod_and_replace
+    tmp_file.unlink()
+  File "/root/miniconda3/envs/py38/lib/python3.8/pathlib.py", line 1325, in unlink
+    self._accessor.unlink(self)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/autodl-tmp/.cache/huggingface/hub/models--sayakpaul--glpn-kitti-finetuned-diode/tmp_2743f922-88fe-4a30-841c-07e9a2b5f53f'

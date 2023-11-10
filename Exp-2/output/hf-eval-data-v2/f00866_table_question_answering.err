@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00866_table_question_answering.py", line 54, in <module>
+    test_table_question_answering()
+  File "output/hf-eval-data-v2/f00866_table_question_answering.py", line 41, in test_table_question_answering
+    table = pd.DataFrame({'Salesperson': ['John Doe', 'Jane Doe'], 'Region': ['West', 'East'], 'Sales': [500, 600]})
+NameError: name 'pd' is not defined

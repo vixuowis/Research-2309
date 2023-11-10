@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00784_translate_russian_to_english.py", line 37, in <module>
+    test_translate_russian_to_english()
+  File "output/hf-eval-data-v2/f00784_translate_russian_to_english.py", line 31, in test_translate_russian_to_english
+    translation = translate_russian_to_english(sample_text)
+  File "output/hf-eval-data-v2/f00784_translate_russian_to_english.py", line 17, in translate_russian_to_english
+    tokenizer = AutoTokenizer.from_pretrained('Helsinki-NLP/opus-mt-ru-en')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 686, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 519, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--Helsinki-NLP--opus-mt-ru-en'

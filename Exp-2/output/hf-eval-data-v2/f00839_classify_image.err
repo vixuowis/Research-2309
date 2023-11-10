@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00839_classify_image.py", line 48, in <module>
+    test_classify_image()
+  File "output/hf-eval-data-v2/f00839_classify_image.py", line 42, in test_classify_image
+    result = classify_image(image_url)
+  File "output/hf-eval-data-v2/f00839_classify_image.py", line 20, in classify_image
+    image = Image.open(requests.get(image_url, stream=True).raw)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3280, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x7f9d840f4360>

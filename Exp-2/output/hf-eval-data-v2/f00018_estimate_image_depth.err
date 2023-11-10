@@ -1,0 +1,49 @@
+Downloading (…)rocessor_config.json:   0%|                                     | 0.00/285 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|██████████████████████████████| 285/285 [00:00<00:00, 50.8kB/s]
+Downloading (…)lve/main/config.json:   0%|                                     | 0.00/942 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|███████████████████████████████| 942/942 [00:00<00:00, 237kB/s]
+Downloading pytorch_model.bin:   0%|                                         | 0.00/1.37G [00:00<?, ?B/s]Downloading pytorch_model.bin:   1%|▎                                | 10.5M/1.37G [00:25<55:20, 409kB/s]Downloading pytorch_model.bin:   1%|▎                                | 10.5M/1.37G [00:44<55:20, 409kB/s]Downloading pytorch_model.bin:   2%|▌                                | 21.0M/1.37G [00:49<53:04, 423kB/s]Downloading pytorch_model.bin:   2%|▌                                | 21.0M/1.37G [01:04<53:04, 423kB/s]Downloading pytorch_model.bin:   2%|▊                                | 31.5M/1.37G [01:13<51:20, 434kB/s]Downloading pytorch_model.bin:   2%|▊                                | 31.5M/1.37G [01:24<51:20, 434kB/s]Downloading pytorch_model.bin:   3%|█                                | 41.9M/1.37G [01:39<52:57, 417kB/s]Downloading pytorch_model.bin:   3%|█                                | 41.9M/1.37G [01:54<52:57, 417kB/s]Downloading pytorch_model.bin:   4%|█▎                               | 52.4M/1.37G [02:01<49:35, 442kB/s]Downloading pytorch_model.bin:   4%|█▎                               | 52.4M/1.37G [02:14<49:35, 442kB/s]Downloading pytorch_model.bin:   5%|█▌                               | 62.9M/1.37G [02:36<57:21, 379kB/s]Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(64681531 bytes read, 1302899634 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(64681531 bytes read, 1302899634 more expected)', IncompleteRead(64681531 bytes read, 1302899634 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00018_estimate_image_depth.py", line 58, in <module>
+    test_estimate_image_depth()
+  File "output/hf-eval-data-v2/f00018_estimate_image_depth.py", line 53, in test_estimate_image_depth
+    result = estimate_image_depth(sample_image_url)
+  File "output/hf-eval-data-v2/f00018_estimate_image_depth.py", line 31, in estimate_image_depth
+    model = DPTForDepthEstimation.from_pretrained('Intel/dpt-large')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(64681531 bytes read, 1302899634 more expected)', IncompleteRead(64681531 bytes read, 1302899634 more expected))
+Downloading pytorch_model.bin:   5%|█▌                               | 62.9M/1.37G [02:40<55:23, 393kB/s]

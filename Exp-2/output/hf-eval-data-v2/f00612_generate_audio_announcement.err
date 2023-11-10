@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00612_generate_audio_announcement.py", line 6, in <module>
+    import soundfile as sf
+ModuleNotFoundError: No module named 'soundfile'

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00830_generate_ad_video.py", line 4, in <module>
+    from modelscope.pipelines import pipeline
+ModuleNotFoundError: No module named 'modelscope'

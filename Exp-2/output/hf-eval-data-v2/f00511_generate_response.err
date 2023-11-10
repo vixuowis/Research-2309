@@ -1,0 +1,28 @@
+Downloading (…)okenizer_config.json:   0%|                               | 0.00/2.36k [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|███████████████████████| 2.36k/2.36k [00:00<00:00, 587kB/s]
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.42 MB. The target location /root/autodl-tmp/.cache/huggingface/hub only has 0.66 MB free disk space.
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 2.42 MB. The target location /root/autodl-tmp/.cache/huggingface/hub/models--microsoft--GODEL-v1_1-base-seq2seq/blobs only has 0.66 MB free disk space.
+  warnings.warn(
+Downloading (…)/main/tokenizer.json:   0%|                               | 0.00/2.42M [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████████████████| 2.42M/2.42M [00:01<00:00, 2.25MB/s]Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00511_generate_response.py", line 46, in <module>
+    test_generate_response()
+  File "output/hf-eval-data-v2/f00511_generate_response.py", line 40, in test_generate_response
+    response = generate_response(instruction, knowledge, dialog)
+  File "output/hf-eval-data-v2/f00511_generate_response.py", line 19, in generate_response
+    tokenizer = AutoTokenizer.from_pretrained('microsoft/GODEL-v1_1-base-seq2seq')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 736, in from_pretrained
+    return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1813, in from_pretrained
+    resolved_vocab_files[file_id] = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 554, in http_get
+    temp_file.write(chunk)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 473, in func_wrapper
+    return func(*args, **kwargs)
+OSError: [Errno 28] No space left on device
+Downloading (…)/main/tokenizer.json: 100%|██████████████████████| 2.42M/2.42M [00:01<00:00, 2.22MB/s]

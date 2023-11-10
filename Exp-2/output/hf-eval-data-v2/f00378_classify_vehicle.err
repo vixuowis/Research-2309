@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00378_classify_vehicle.py", line 40, in <module>
+    test_classify_vehicle()
+  File "output/hf-eval-data-v2/f00378_classify_vehicle.py", line 29, in test_classify_vehicle
+    image = Image.open('test_image.jpg')
+NameError: name 'Image' is not defined

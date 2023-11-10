@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00179_generate_video_from_text.py", line 44, in <module>
+    test_generate_video_from_text()
+  File "output/hf-eval-data-v2/f00179_generate_video_from_text.py", line 40, in test_generate_video_from_text
+    assert video is not None, 'The generated video is None.'
+AssertionError: The generated video is None.

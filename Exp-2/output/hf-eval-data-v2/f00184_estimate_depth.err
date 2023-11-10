@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00184_estimate_depth.py", line 7, in <module>
+    def estimate_depth(model_name: str, drone_footage: np.ndarray) -> np.ndarray:
+NameError: name 'np' is not defined

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00908_predict_digit_category.py", line 54, in <module>
+    test_predict_digit_category()
+  File "output/hf-eval-data-v2/f00908_predict_digit_category.py", line 40, in test_predict_digit_category
+    X = np.random.rand(100, 10)
+NameError: name 'np' is not defined

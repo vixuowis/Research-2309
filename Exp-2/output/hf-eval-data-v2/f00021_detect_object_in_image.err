@@ -1,0 +1,65 @@
+Downloading (…)rocessor_config.json:   0%|                                     | 0.00/392 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|██████████████████████████████| 392/392 [00:00<00:00, 54.3kB/s]
+Downloading (…)okenizer_config.json:   0%|                                     | 0.00/775 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|███████████████████████████████| 775/775 [00:00<00:00, 143kB/s]
+Downloading (…)olve/main/vocab.json:   0%|                                   | 0.00/1.06M [00:00<?, ?B/s]Downloading (…)olve/main/vocab.json: 100%|███████████████████████████| 1.06M/1.06M [00:02<00:00, 455kB/s]Downloading (…)olve/main/vocab.json: 100%|███████████████████████████| 1.06M/1.06M [00:02<00:00, 455kB/s]
+Downloading (…)olve/main/merges.txt:   0%|                                    | 0.00/525k [00:00<?, ?B/s]Downloading (…)olve/main/merges.txt: 100%|████████████████████████████| 525k/525k [00:00<00:00, 1.14MB/s]Downloading (…)olve/main/merges.txt: 100%|████████████████████████████| 525k/525k [00:00<00:00, 1.13MB/s]
+Downloading (…)cial_tokens_map.json:   0%|                                     | 0.00/460 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|███████████████████████████████| 460/460 [00:00<00:00, 394kB/s]
+Downloading (…)lve/main/config.json:   0%|                                   | 0.00/4.42k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|███████████████████████████| 4.42k/4.42k [00:00<00:00, 975kB/s]
+Downloading pytorch_model.bin:   0%|                                          | 0.00/613M [00:00<?, ?B/s]Downloading pytorch_model.bin:   2%|▌                                 | 10.5M/613M [00:22<21:41, 463kB/s]Downloading pytorch_model.bin:   2%|▌                                 | 10.5M/613M [00:34<21:41, 463kB/s]Downloading pytorch_model.bin:   3%|█▏                                | 21.0M/613M [00:35<15:57, 618kB/s]Downloading pytorch_model.bin:   3%|█▏                                | 21.0M/613M [00:54<15:57, 618kB/s]Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 814, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 799, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 879, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 715, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00021_detect_object_in_image.py", line 49, in <module>
+    test_detect_object_in_image()
+  File "output/hf-eval-data-v2/f00021_detect_object_in_image.py", line 42, in test_detect_object_in_image
+    results = detect_object_in_image(url, texts)
+  File "output/hf-eval-data-v2/f00021_detect_object_in_image.py", line 22, in detect_object_in_image
+    model = OwlViTForObjectDetection.from_pretrained('google/owlvit-base-patch32')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Downloading pytorch_model.bin:   3%|█▏                                | 21.0M/613M [01:02<29:38, 333kB/s]

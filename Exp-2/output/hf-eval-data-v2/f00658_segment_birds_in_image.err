@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00658_segment_birds_in_image.py", line 57, in <module>
+    test_segment_birds_in_image()
+  File "output/hf-eval-data-v2/f00658_segment_birds_in_image.py", line 50, in test_segment_birds_in_image
+    segmented_image = segment_birds_in_image(image_url)
+  File "output/hf-eval-data-v2/f00658_segment_birds_in_image.py", line 21, in segment_birds_in_image
+    processor = AutoImageProcessor.from_pretrained('facebook/mask2former-swin-tiny-coco-instance')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/image_processing_auto.py", line 344, in from_pretrained
+    config_dict, _ = ImageProcessingMixin.get_image_processor_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_processing_utils.py", line 329, in get_image_processor_dict
+    resolved_image_processor_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--facebook--mask2former-swin-tiny-coco-instance'

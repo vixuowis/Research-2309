@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00572_classify_video.py", line 40, in <module>
+    test_classify_video()
+  File "output/hf-eval-data-v2/f00572_classify_video.py", line 34, in test_classify_video
+    categories = classify_video(video_path)
+  File "output/hf-eval-data-v2/f00572_classify_video.py", line 20, in classify_video
+    video_classifier = VideoClassificationPipeline(model='hf-tiny-model-private/tiny-random-VideoMAEForVideoClassification')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/video_classification.py", line 35, in __init__
+    super().__init__(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 776, in __init__
+    framework, model = infer_framework_load_model(model, config=model.config)
+AttributeError: 'str' object has no attribute 'config'

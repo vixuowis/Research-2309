@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00328_detect_spoken_language.py", line 3, in <module>
+    from speechbrain.pretrained import EncoderClassifier, load_audio
+ModuleNotFoundError: No module named 'speechbrain'

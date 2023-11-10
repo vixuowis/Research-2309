@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00362_detect_table_structure.py", line 48, in <module>
+    test_detect_table_structure()
+  File "output/hf-eval-data-v2/f00362_detect_table_structure.py", line 34, in test_detect_table_structure
+    table_image = PIL.Image.open('sample_table_image.jpg')
+NameError: name 'PIL' is not defined
