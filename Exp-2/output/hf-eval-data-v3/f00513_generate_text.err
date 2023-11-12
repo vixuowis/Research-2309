@@ -1,0 +1,8 @@
+2023-11-12 03:15:02.519504: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 03:15:02.562249: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 03:15:03.236351: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00513_generate_text.py", line 3, in <module>
+    from transformers import TextGenerationPipeline, Bloom7b1Model
+ImportError: cannot import name 'Bloom7b1Model' from 'transformers' (/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/__init__.py)

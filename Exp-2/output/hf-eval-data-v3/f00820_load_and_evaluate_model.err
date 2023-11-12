@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00820_load_and_evaluate_model.py", line 47, in <module>
+    test_load_and_evaluate_model()
+  File "./f00820_load_and_evaluate_model.py", line 40, in test_load_and_evaluate_model
+    mean_reward, std_reward = load_and_evaluate_model(checkpoint, kwargs, env_name, n_envs, n_eval_episodes, deterministic)
+  File "./f00820_load_and_evaluate_model.py", line 25, in load_and_evaluate_model
+    model = DQN.load(load_from_hub(checkpoint), **kwargs)
+TypeError: load_from_hub() missing 1 required positional argument: 'filename'

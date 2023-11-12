@@ -1,0 +1,48 @@
+{'code': "###Instruction: I would like to create an application where users may listen to translations of English sentences. I need a Text-to-Speech model to support this functionality.\n###Output: <<<domain>>>: Audio Text-to-Speech\n<<<api_call>>>: pipeline('text-to-speech', model='mio/Artoria')\n<<<api_provider>>>: ESPnet\n<<<explanation>>>: 1. Import the 'pipeline' function from the transformers library.\n2. Create a Text-to-Speech pipeline using the 'text-to-speech' mode and specify the model as 'mio/Artoria'.\n3. This model will convert the provided text input into speech output, which can be used in your application to give users an auditory experience of their translations.\n<<<code>>>: from transformers import pipeline\ntts = pipeline('text-to-speech', model='mio/Artoria')\naudio = tts('This is an example sentence.') # Replace with input text\n", 'api_call': "pipeline('text-to-speech', model='mio/Artoria')", 'provider': 'ESPnet', 'api_data': {'domain': 'Audio Text-to-Speech', 'framework': 'ESPnet', 'functionality': 'Text-to-Speech', 'api_name': 'mio/Artoria', 'api_call': "pipeline('text-to-speech', model='mio/Artoria')", 'api_arguments': ['text'], 'python_environment_requirements': ['transformers'], 'example_code': "from transformers import pipeline; tts = pipeline('text-to-speech', model='mio/Artoria'); tts('s')", 'performance': {'dataset': 'fate', 'accuracy': 'Not provided'}, 'description': 'This model was trained by mio using fate recipe in espnet. It is a text-to-speech model that can convert text input into speech output.'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/mio/Artoria/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 271, in hf_raise_for_status
+    raise EntryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.EntryNotFoundError: 404 Client Error. (Request ID: Root=1-654d28c9-6222e8f47b4d01ed485ed591;910b8bed-f4de-4935-9d9c-283985fa7883)
+
+Entry Not Found for url: https://huggingface.co/mio/Artoria/resolve/main/config.json.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00153_text_to_speech.py", line 33, in <module>
+    test_text_to_speech()
+  File "output/hf-eval-data-v2/f00153_text_to_speech.py", line 28, in test_text_to_speech
+    audio = text_to_speech(sample_text)
+  File "output/hf-eval-data-v2/f00153_text_to_speech.py", line 17, in text_to_speech
+    tts = pipeline('text-to-speech', model='mio/Artoria')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 741, in pipeline
+    config = AutoConfig.from_pretrained(model, _from_pipeline=task, **hub_kwargs, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 1023, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 620, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 675, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 480, in cached_file
+    raise EnvironmentError(
+OSError: mio/Artoria does not appear to have a file named config.json. Checkout 'https://huggingface.co/mio/Artoria/main' for available files.

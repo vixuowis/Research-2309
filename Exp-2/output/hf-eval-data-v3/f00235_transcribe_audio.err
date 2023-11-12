@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00235_transcribe_audio.py", line 43, in <module>
+    test_transcribe_audio()
+  File "./f00235_transcribe_audio.py", line 38, in test_transcribe_audio
+    assert isinstance(transcription, str), 'The transcription should be a string.'
+AssertionError: The transcription should be a string.

@@ -1,0 +1,19 @@
+2023-11-12 06:43:54.559155: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 06:43:54.600671: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 06:43:55.263816: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading pipeline components...:   0%|                                                                                    | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|████████████▋                                                               | 1/6 [00:08<00:43,  8.76s/it]Loading pipeline components...:  33%|█████████████████████████▎                                                  | 2/6 [00:08<00:14,  3.69s/it]Loading pipeline components...:  50%|██████████████████████████████████████                                      | 3/6 [00:09<00:07,  2.41s/it]Loading pipeline components...: 100%|████████████████████████████████████████████████████████████████████████████| 6/6 [00:13<00:00,  1.58s/it]Loading pipeline components...: 100%|████████████████████████████████████████████████████████████████████████████| 6/6 [00:13<00:00,  2.21s/it]
+Traceback (most recent call last):
+  File "./f00638_generate_image_from_text.py", line 44, in <module>
+    test_generate_image_from_text()
+  File "./f00638_generate_image_from_text.py", line 37, in test_generate_image_from_text
+    generate_image_from_text('A beautiful landscape with a waterfall and a sunset')
+  File "./f00638_generate_image_from_text.py", line 28, in generate_image_from_text
+    output_image = pipe(prompt=prompt, image=image, mask_image=mask_image).images[0]
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion_inpaint.py", line 1049, in __call__
+    init_image = self.image_processor.preprocess(image, height=height, width=width)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/image_processor.py", line 269, in preprocess
+    f"Input is in incorrect format: {[type(i) for i in image]}. Currently, we only support {', '.join(supported_formats)}"
+TypeError: 'NoneType' object is not iterable

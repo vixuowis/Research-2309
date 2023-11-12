@@ -1,0 +1,23 @@
+WARNING ⚠️ Ultralytics settings reset to default values. This may be due to a possible problem with your settings or a recent ultralytics package update. 
+View settings with 'yolo settings' or at '/root/.config/Ultralytics/settings.yaml'
+Update settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'.
+Downloading (…)lve/main/config.json:   0%|                                                                          | 0.00/80.0 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████████████████████████████████████████████████████████████| 80.0/80.0 [00:00<00:00, 7.16kB/s]
+Downloading best.pt:   0%|                                                                                         | 0.00/42.1M [00:00<?, ?B/s]Downloading best.pt:  25%|███████████████████▉                                                            | 10.5M/42.1M [00:01<00:05, 5.30MB/s]Downloading best.pt:  50%|███████████████████████████████████████▊                                        | 21.0M/42.1M [00:02<00:02, 8.85MB/s]Downloading best.pt:  75%|███████████████████████████████████████████████████████████▋                    | 31.5M/42.1M [00:03<00:00, 11.0MB/s]Downloading best.pt: 100%|███████████████████████████████████████████████████████████████████████████████▌| 41.9M/42.1M [00:03<00:00, 12.8MB/s]Downloading best.pt: 100%|████████████████████████████████████████████████████████████████████████████████| 42.1M/42.1M [00:03<00:00, 10.8MB/s]
+Traceback (most recent call last):
+  File "./f00467_detect_license_plate.py", line 51, in <module>
+    test_detect_license_plate()
+  File "./f00467_detect_license_plate.py", line 45, in test_detect_license_plate
+    assert detect_license_plate('path/to/authorized_vehicle.jpg', authorized_vehicles) == 'Access granted'
+  File "./f00467_detect_license_plate.py", line 25, in detect_license_plate
+    results = model(img_path, size=640)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/yolov5/models/common.py", line 691, in forward
+    im, f = Image.open(requests.get(im, stream=True).raw if str(im).startswith('http') else im), im
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'path/to/authorized_vehicle.jpg'

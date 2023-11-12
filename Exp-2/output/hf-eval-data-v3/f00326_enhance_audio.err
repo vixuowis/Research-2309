@@ -1,0 +1,27 @@
+Downloading (…)ain/hyperparams.yaml:   0%|                                                                         | 0.00/4.83k [00:00<?, ?B/s]Downloading (…)ain/hyperparams.yaml: 100%|█████████████████████████████████████████████████████████████████| 4.83k/4.83k [00:00<00:00, 724kB/s]
+Downloading encoder.ckpt:   0%|                                                                                    | 0.00/17.3k [00:00<?, ?B/s]Downloading encoder.ckpt: 100%|███████████████████████████████████████████████████████████████████████████| 17.3k/17.3k [00:00<00:00, 67.6kB/s]Downloading encoder.ckpt: 100%|███████████████████████████████████████████████████████████████████████████| 17.3k/17.3k [00:00<00:00, 67.5kB/s]
+Downloading masknet.ckpt:   0%|                                                                                     | 0.00/113M [00:00<?, ?B/s]Downloading masknet.ckpt:   9%|███████▏                                                                     | 10.5M/113M [00:11<01:49, 931kB/s]Downloading masknet.ckpt:  19%|██████████████▎                                                              | 21.0M/113M [00:23<01:44, 877kB/s]Downloading masknet.ckpt:  28%|█████████████████████▍                                                       | 31.5M/113M [00:34<01:28, 922kB/s]Downloading masknet.ckpt:  28%|█████████████████████▍                                                       | 31.5M/113M [00:45<01:28, 922kB/s]Downloading masknet.ckpt:  37%|████████████████████████████▌                                                | 41.9M/113M [00:48<01:25, 831kB/s]Downloading masknet.ckpt:  37%|████████████████████████████▌                                                | 41.9M/113M [01:05<01:25, 831kB/s]Downloading masknet.ckpt:  46%|███████████████████████████████████▊                                         | 52.4M/113M [01:13<01:37, 621kB/s]Downloading masknet.ckpt:  46%|███████████████████████████████████▊                                         | 52.4M/113M [01:25<01:37, 621kB/s]Downloading masknet.ckpt:  56%|██████████████████████████████████████████▉                                  | 62.9M/113M [01:55<02:01, 411kB/s]Downloading masknet.ckpt:  56%|██████████████████████████████████████████▉                                  | 62.9M/113M [02:15<02:01, 411kB/s]Downloading masknet.ckpt:  65%|██████████████████████████████████████████████████                           | 73.4M/113M [02:20<01:34, 415kB/s]Downloading masknet.ckpt:  65%|██████████████████████████████████████████████████                           | 73.4M/113M [02:35<01:34, 415kB/s]Downloading masknet.ckpt:  74%|█████████████████████████████████████████████████████████▏                   | 83.9M/113M [03:15<01:36, 301kB/s]Downloading masknet.ckpt:  74%|█████████████████████████████████████████████████████████▏                   | 83.9M/113M [03:35<01:36, 301kB/s]Downloading masknet.ckpt:  82%|███████████████████████████████████████████████████████████████▏             | 92.7M/113M [04:59<01:53, 177kB/s]Traceback (most recent call last):
+  File "./f00326_enhance_audio.py", line 62, in <module>
+    print(test_enhance_audio())
+  File "./f00326_enhance_audio.py", line 51, in test_enhance_audio
+    enhance_audio(input_file, output_file)
+  File "./f00326_enhance_audio.py", line 26, in enhance_audio
+    model = separator.from_hparams(source='speechbrain/sepformer-wham16k-enhancement', savedir='pretrained_models/sepformer-wham16k-enhancement')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/speechbrain/pretrained/interfaces.py", line 430, in from_hparams
+    run_on_main(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/speechbrain/utils/distributed.py", line 61, in run_on_main
+    func(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/speechbrain/utils/parameter_transfer.py", line 247, in collect_files
+    path = fetch(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/speechbrain/pretrained/fetching.py", line 161, in fetch
+    fetched_file = huggingface_hub.hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 557, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 112839555 but has size 92684356 (masknet.ckpt).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+Downloading masknet.ckpt:  82%|███████████████████████████████████████████████████████████████▏             | 92.7M/113M [04:59<01:05, 310kB/s]

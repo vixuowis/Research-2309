@@ -1,0 +1,9 @@
+Some weights of the model checkpoint at deepset/roberta-base-squad2-covid were not used when initializing RobertaForQuestionAnswering: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+- This IS expected if you are initializing RobertaForQuestionAnswering from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForQuestionAnswering from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "./f00777_get_covid_answer.py", line 39, in <module>
+    test_get_covid_answer()
+  File "./f00777_get_covid_answer.py", line 31, in test_get_covid_answer
+    assert get_covid_answer(question, context) == 'The most common symptoms of COVID-19 include fever, dry cough, and shortness of breath. Some patients may also experience fatigue, headache, and muscle pain.'
+AssertionError

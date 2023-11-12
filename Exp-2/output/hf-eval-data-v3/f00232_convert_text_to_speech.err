@@ -1,0 +1,75 @@
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /root/nltk_data...
+[nltk_data]   Unzipping taggers/averaged_perceptron_tagger.zip.
+[nltk_data] Downloading package cmudict to /root/nltk_data...
+[nltk_data]   Unzipping corpora/cmudict.zip.
+Fetching 6 files:   0%|                                                                                                  | 0/6 [00:00<?, ?it/s]
+Downloading (…)rain/feats_stats.npz:   0%|                                                                         | 0.00/1.40k [00:00<?, ?B/s][ADownloading (…)rain/feats_stats.npz: 100%|████████████████████████████████████████████████████████████████| 1.40k/1.40k [00:00<00:00, 98.5kB/s]
+
+Downloading (…)5a12a4ff1c/meta.yaml:   0%|                                                                           | 0.00/295 [00:00<?, ?B/s][ADownloading (…)5a12a4ff1c/meta.yaml: 100%|████████████████████████████████████████████████████████████████████| 295/295 [00:00<00:00, 63.2kB/s]
+
+Downloading (…)4ff1c/.gitattributes:   0%|                                                                           | 0.00/690 [00:00<?, ?B/s][ADownloading (…)4ff1c/.gitattributes: 100%|████████████████████████████████████████████████████████████████████| 690/690 [00:00<00:00, 66.7kB/s]
+Fetching 6 files:  17%|███████████████                                                                           | 1/6 [00:01<00:07,  1.42s/it]
+Downloading (…)2p_phone/config.yaml:   0%|                                                                         | 0.00/4.52k [00:00<?, ?B/s][ADownloading (…)2p_phone/config.yaml: 100%|█████████████████████████████████████████████████████████████████| 4.52k/4.52k [00:00<00:00, 384kB/s]
+
+Downloading (…)5a12a4ff1c/README.md:   0%|                                                                         | 0.00/2.42k [00:00<?, ?B/s][ADownloading (…)5a12a4ff1c/README.md: 100%|█████████████████████████████████████████████████████████████████| 2.42k/2.42k [00:00<00:00, 270kB/s]
+Fetching 6 files:  33%|██████████████████████████████                                                            | 2/6 [00:01<00:02,  1.55it/s]
+Downloading 199epoch.pth:   0%|                                                                                     | 0.00/107M [00:00<?, ?B/s][A
+Downloading 199epoch.pth:  10%|███████▍                                                                    | 10.5M/107M [00:02<00:24, 4.02MB/s][A
+Downloading 199epoch.pth:  20%|██████████████▊                                                             | 21.0M/107M [00:04<00:17, 5.03MB/s][A
+Downloading 199epoch.pth:  29%|██████████████████████▎                                                     | 31.5M/107M [00:05<00:12, 6.30MB/s][A
+Downloading 199epoch.pth:  39%|█████████████████████████████▋                                              | 41.9M/107M [00:07<00:11, 5.86MB/s][A
+Downloading 199epoch.pth:  49%|█████████████████████████████████████▏                                      | 52.4M/107M [00:09<00:08, 6.15MB/s][A
+Downloading 199epoch.pth:  59%|████████████████████████████████████████████▌                               | 62.9M/107M [00:10<00:06, 6.56MB/s][A
+Downloading 199epoch.pth:  68%|████████████████████████████████████████████████████                        | 73.4M/107M [00:12<00:05, 6.23MB/s][A
+Downloading 199epoch.pth:  78%|███████████████████████████████████████████████████████████▍                | 83.9M/107M [00:14<00:03, 6.09MB/s][A
+Downloading 199epoch.pth:  88%|██████████████████████████████████████████████████████████████████▊         | 94.4M/107M [00:15<00:02, 6.05MB/s][A
+Downloading 199epoch.pth:  98%|███████████████████████████████████████████████████████████████████████████▎ | 105M/107M [00:16<00:00, 6.83MB/s][A
+Downloading 199epoch.pth: 100%|█████████████████████████████████████████████████████████████████████████████| 107M/107M [00:17<00:00, 6.60MB/s][ADownloading 199epoch.pth: 100%|█████████████████████████████████████████████████████████████████████████████| 107M/107M [00:17<00:00, 6.16MB/s]
+Fetching 6 files:  67%|████████████████████████████████████████████████████████████                              | 4/6 [00:20<00:12,  6.05s/it]Fetching 6 files: 100%|██████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:20<00:00,  3.34s/it]
+WARNING:root:Using make_pad_mask with a list of lengths is not tracable. If you try to trace this function with type(lengths) == list, please change the type of lengths to torch.LongTensor.
+WARNING:root:Using make_pad_mask with a list of lengths is not tracable. If you try to trace this function with type(lengths) == list, please change the type of lengths to torch.LongTensor.
+Fetching 6 files:   0%|                                                                                                  | 0/6 [00:00<?, ?it/s]Fetching 6 files: 100%|████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 4211.15it/s]
+WARNING:root:Using make_pad_mask with a list of lengths is not tracable. If you try to trace this function with type(lengths) == list, please change the type of lengths to torch.LongTensor.
+WARNING:root:Using make_pad_mask with a list of lengths is not tracable. If you try to trace this function with type(lengths) == list, please change the type of lengths to torch.LongTensor.
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/api/models/espnet/other_model/revision/main
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./f00232_convert_text_to_speech.py", line 50, in <module>
+    test_convert_text_to_speech()
+  File "./f00232_convert_text_to_speech.py", line 43, in test_convert_text_to_speech
+    convert_text_to_speech('春江潮水连海平，海上明月共潮生', model_name='espnet/other_model')
+  File "./f00232_convert_text_to_speech.py", line 24, in convert_text_to_speech
+    text2speech = Text2Speech.from_pretrained(model_name)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/espnet2/bin/tts_inference.py", line 277, in from_pretrained
+    kwargs.update(**d.download_and_unpack(model_tag))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/espnet_model_zoo/downloader.py", line 382, in download_and_unpack
+    cache_dir = self.huggingface_download(name=name, version=version, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/espnet_model_zoo/downloader.py", line 267, in huggingface_download
+    return snapshot_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/_snapshot_download.py", line 189, in snapshot_download
+    repo_info = api.repo_info(repo_id=repo_id, repo_type=repo_type, revision=revision, token=token)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/hf_api.py", line 1888, in repo_info
+    return method(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/hf_api.py", line 1698, in model_info
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-654f4a14-2b6a95da4a1763b52f5d386d;e2eaabc5-bf1d-4cde-9666-e7bdc8e9f934)
+
+Repository Not Found for url: https://huggingface.co/api/models/espnet/other_model/revision/main.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.

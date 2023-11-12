@@ -1,0 +1,62 @@
+2023-11-12 02:52:26.677398: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 02:52:26.719413: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 02:52:27.335736: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Downloading (…)lve/main/config.json:   0%|                                                                         | 0.00/1.20k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|████████████████████████████████████████████████████████████████| 1.20k/1.20k [00:00<00:00, 92.9kB/s]
+Downloading pytorch_model.bin:   0%|                                                                               | 0.00/11.4G [00:00<?, ?B/s]Downloading pytorch_model.bin:   0%|                                                                      | 10.5M/11.4G [00:01<29:53, 6.36MB/s]Downloading pytorch_model.bin:   0%|▏                                                                     | 21.0M/11.4G [00:02<18:12, 10.4MB/s]Downloading pytorch_model.bin:   0%|▏                                                                     | 31.5M/11.4G [00:03<16:35, 11.4MB/s]Downloading pytorch_model.bin:   0%|▎                                                                     | 41.9M/11.4G [00:05<27:12, 6.96MB/s]Downloading pytorch_model.bin:   0%|▎                                                                     | 52.4M/11.4G [00:07<28:44, 6.58MB/s]Downloading pytorch_model.bin:   1%|▍                                                                     | 62.9M/11.4G [00:09<32:42, 5.78MB/s]Downloading pytorch_model.bin:   1%|▍                                                                     | 73.4M/11.4G [00:10<27:34, 6.85MB/s]Downloading pytorch_model.bin:   1%|▌                                                                     | 83.9M/11.4G [00:11<26:02, 7.24MB/s]Downloading pytorch_model.bin:   1%|▌                                                                     | 94.4M/11.4G [00:12<21:37, 8.72MB/s]Downloading pytorch_model.bin:   1%|▋                                                                      | 105M/11.4G [00:12<18:23, 10.2MB/s]Downloading pytorch_model.bin:   1%|▋                                                                      | 115M/11.4G [00:13<16:09, 11.6MB/s]Downloading pytorch_model.bin:   1%|▊                                                                      | 126M/11.4G [00:14<18:15, 10.3MB/s]Downloading pytorch_model.bin:   1%|▊                                                                      | 136M/11.4G [00:17<28:50, 6.51MB/s]Downloading pytorch_model.bin:   1%|▉                                                                    | 147M/11.4G [00:29<1:21:13, 2.31MB/s]Downloading pytorch_model.bin:   1%|▉                                                                    | 157M/11.4G [00:33<1:21:53, 2.29MB/s]Downloading pytorch_model.bin:   1%|█                                                                    | 168M/11.4G [00:38<1:20:01, 2.34MB/s]Downloading pytorch_model.bin:   2%|█                                                                    | 178M/11.4G [00:43<1:27:50, 2.13MB/s]Downloading pytorch_model.bin:   2%|█▏                                                                   | 189M/11.4G [00:45<1:11:17, 2.62MB/s]Downloading pytorch_model.bin:   2%|█▏                                                                     | 199M/11.4G [00:47<56:17, 3.32MB/s]Downloading pytorch_model.bin:   2%|█▎                                                                     | 210M/11.4G [00:48<48:19, 3.86MB/s]Downloading pytorch_model.bin:   2%|█▎                                                                     | 220M/11.4G [00:51<47:15, 3.95MB/s]Downloading pytorch_model.bin:   2%|█▎                                                                     | 220M/11.4G [01:07<47:15, 3.95MB/s]Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 444, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 567, in read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 525, in _fp_read
+    data = self._fp.read(chunk_amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 628, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 593, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 449, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.")
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00503_generate_positive_review.py", line 42, in <module>
+    test_generate_positive_review()
+  File "./f00503_generate_positive_review.py", line 35, in test_generate_positive_review
+    review = generate_positive_review(book_summary)
+  File "./f00503_generate_positive_review.py", line 20, in generate_positive_review
+    model = T5ForConditionalGeneration.from_pretrained('t5-3b')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Downloading pytorch_model.bin:   2%|█▎                                                                     | 220M/11.4G [01:07<57:34, 3.24MB/s]

@@ -1,0 +1,52 @@
+{'code': '###Instruction: I am a climate change agency, looking to have my research summaries translated into Chinese for international audiences.\n###Output: <<<domain>>>: Natural Language Processing Text2Text Generation\n<<<api_call>>>: T5Model.from_pretrained(\'t5-small\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. We import the necessary libraries, which are T5Tokenizer and T5Model from transformers.\n2. We create an instance of the tokenizer and the model by using the from_pretrained method and specifying the \'t5-small\' name. This loads a pre-trained T5 model, which is capable of performing a wide variety of NLP tasks, including translation.\n3. We prepare the input text and encode it using the tokenizer. The input_ids should contain the research summary that needs to be translated from English to Chinese.\n4. We then pass the input_ids to the model, which will generate the translation in Chinese.\n5. The decoder_input_ids should be initialized with the translated text.\n<<<code>>>: from transformers import T5Tokenizer, T5Model\n\ntokenizer = T5Tokenizer.from_pretrained(\'t5-small\')\nmodel = T5Model.from_pretrained(\'t5-small\')\nresearch_summary = "Summarizing climate change research..."\ninput_text = f"translate English to Chinese: {research_summary}"\ninput_ids = tokenizer(input_text, return_tensors=\'pt\').input_ids\ndecoded_text = model.generate(input_ids)\ntranslated_summary = tokenizer.batch_decode(decoded_text, skip_special_tokens=True)\n', 'api_call': "T5Model.from_pretrained('t5-small')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text2Text Generation', 'framework': 'Hugging Face Transformers', 'functionality': ['Translation', 'Summarization', 'Question Answering', 'Text Classification', 'Text Regression'], 'api_name': 't5-small', 'api_call': "T5Model.from_pretrained('t5-small')", 'api_arguments': {'input_ids': 'input tokenized text', 'decoder_input_ids': 'input tokenized text for decoder'}, 'python_environment_requirements': ['transformers'], 'example_code': "from transformers import T5Tokenizer, T5Model\ntokenizer = T5Tokenizer.from_pretrained('t5-small')\nmodel = T5Model.from_pretrained('t5-small')\ninput_ids = tokenizer('Studies have been shown that owning a dog is good for you', return_tensors='pt').input_ids\ndecoder_input_ids = tokenizer('Studies show that', return_tensors='pt').input_ids\noutputs = model(input_ids=input_ids, decoder_input_ids=decoder_input_ids)\nlast_hidden_states = outputs.last_hidden_state", 'performance': {'dataset': 'c4', 'accuracy': 'See research paper, Table 14 for full results'}, 'description': 'T5-Small is a Text-To-Text Transfer Transformer (T5) model with 60 million parameters. It is designed to perform a variety of NLP tasks, including machine translation, document summarization, question answering, and classification tasks. The model is pre-trained on the Colossal Clean Crawled Corpus (C4) and can be fine-tuned for specific tasks.'}}
+
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 778, in urlopen
+    self._raise_timeout(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 370, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out. (read timeout=10.0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00137_translate_research_summary.py", line 37, in <module>
+    test_translate_research_summary()
+  File "output/hf-eval-data-v2/f00137_translate_research_summary.py", line 32, in test_translate_research_summary
+    translated_summary = translate_research_summary(research_summary)
+  File "output/hf-eval-data-v2/f00137_translate_research_summary.py", line 18, in translate_research_summary
+    model = T5Model.from_pretrained('t5-small')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2773, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 515, in http_get
+    r = _request_wrapper(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 452, in _request_wrapper
+    return http_backoff(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 274, in http_backoff
+    raise err
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 258, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out. (read timeout=10.0)"), '(Request ID: 834c17b9-698d-4189-945a-7780e1707f6f)')

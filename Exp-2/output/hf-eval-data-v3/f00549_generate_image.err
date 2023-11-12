@@ -1,0 +1,4 @@
+  File "./f00549_generate_image.py", line 24
+    image.save(f'{prompt.replace(' ', '_')}_sign.png')
+                                       ^
+SyntaxError: invalid syntax

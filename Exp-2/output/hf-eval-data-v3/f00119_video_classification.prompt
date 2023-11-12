@@ -1,0 +1,51 @@
+{'code': "###Instruction: We need to classify videos showing different actions for our new video moderation system.\n###Output: <<<domain>>>: Computer Vision Video Classification\n<<<api_call>>>: VideoMAEForPreTraining.from_pretrained('MCG-NJU/videomae-base-short-ssv2')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the required libraries: VideoMAEImageProcessor and VideoMAEForPreTraining from transformers, numpy, and torch.\n2. Load the VideoMAE pretrained model using the VideoMAEForPreTraining.from_pretrained() function with the provided model name.\n3. Using the VideoMAE example code as a guide, preprocess your video into a list of numpy arrays, one for each frame of the video.\n4. Create a VideoMAEImageProcessor instance using the from_pretrained() method.\n5. Process the video frames using the processor instance and obtain the pixel_values.\n6. Configure and prepare the model using the provided example code and video-specific parameters.\n7. Pass the processed video to the model and evaluate the output, which can be used to classify the action in the video.\n<<<code>>>: from transformers import VideoMAEImageProcessor, VideoMAEForPreTraining\nimport numpy as np\nimport torch\nnum_frames = 16\nvideo = list(np.random.randn(16, 3, 224, 224))\nprocessor = VideoMAEImageProcessor.from_pretrained('MCG-NJU/videomae-base-short-ssv2')\nmodel = VideoMAEForPreTraining.from_pretrained('MCG-NJU/videomae-base-short-ssv2')\npixel_values = processor(video, return_tensors='pt').pixel_values\nnum_patches_per_frame = (model.config.image_size // model.config.patch_size) ** 2\nseq_length = (num_frames // model.config.tubelet_size) * num_patches_per_frame\nbool_masked_pos = torch.randint(0, 2, (1, seq_length)).bool()\noutputs = model(pixel_values, bool_masked_pos=bool_masked_pos)\nloss = outputs.loss\n", 'api_call': "VideoMAEForPreTraining.from_pretrained('MCG-NJU/videomae-base-short-ssv2')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Video Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Video Classification', 'api_name': 'videomae-base-short-ssv2', 'api_call': "VideoMAEForPreTraining.from_pretrained('MCG-NJU/videomae-base-short-ssv2')", 'api_arguments': ['video', 'return_tensors'], 'python_environment_requirements': ['transformers', 'numpy', 'torch'], 'example_code': 'from transformers import VideoMAEImageProcessor, VideoMAEForPreTraining\nimport numpy as np\nimport torch\nnum_frames = 16\nvideo = list(np.random.randn(16, 3, 224, 224))\nprocessor = VideoMAEImageProcessor.from_pretrained(MCG-NJU/videomae-base-short-ssv2)\nmodel = VideoMAEForPreTraining.from_pretrained(MCG-NJU/videomae-base-short-ssv2)\npixel_values = processor(video, return_tensors=pt).pixel_values\nnum_patches_per_frame = (model.config.image_size // model.config.patch_size) ** 2\nseq_length = (num_frames // model.config.tubelet_size) * num_patches_per_frame\nbool_masked_pos = torch.randint(0, 2, (1, seq_length)).bool()\noutputs = model(pixel_values, bool_masked_pos=bool_masked_pos)\nloss = outputs.loss', 'performance': {'dataset': 'Something-Something-v2', 'accuracy': 'N/A'}, 'description': 'VideoMAE is an extension of Masked Autoencoders (MAE) to video. The architecture of the model is very similar to that of a standard Vision Transformer (ViT), with a decoder on top for predicting pixel values for masked patches. Videos are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds fixed sinus/cosinus position embeddings before feeding the sequence to the layers of the Transformer encoder. By pre-training the model, it learns an inner representation of videos that can then be used to extract features useful for downstream tasks: if you have a dataset of labeled videos for instance, you can train a standard classifier by placing a linear layer on top of the pre-trained encoder. One typically places a linear layer on top of the [CLS] token, as the last hidden state of this token can be seen as a representation of an entire video.'}}
+
+
+
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(76418352 bytes read, 300505949 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(76418352 bytes read, 300505949 more expected)', IncompleteRead(76418352 bytes read, 300505949 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00119_video_classification.py", line 42, in <module>
+    test_video_classification()
+  File "output/hf-eval-data-v2/f00119_video_classification.py", line 37, in test_video_classification
+    loss = video_classification(video)
+  File "output/hf-eval-data-v2/f00119_video_classification.py", line 21, in video_classification
+    model = VideoMAEForPreTraining.from_pretrained('MCG-NJU/videomae-base-short-ssv2')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(76418352 bytes read, 300505949 more expected)', IncompleteRead(76418352 bytes read, 300505949 more expected))
+

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00105_estimate_depth.py", line 56, in <module>
+    test_estimate_depth()
+  File "./f00105_estimate_depth.py", line 44, in test_estimate_depth
+    depth = estimate_depth(test_image_path)
+  File "./f00105_estimate_depth.py", line 23, in estimate_depth
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'https://placekitten.com/200/300'

@@ -1,0 +1,52 @@
+{'code': '###Instruction: Identify an object within an image based on textual description. For example, find a dog in the image.\n###Output: <<<domain>>>: Computer Vision Object Detection\n<<<api_call>>>: OwlViTForObjectDetection.from_pretrained(\'google/owlvit-base-patch32\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import required libraries: OwlViTProcessor and OwlViTForObjectDetection from transformers, Image from PIL, and requests.\n2. Download the image from the provided URL using the requests library and open it with PIL\'s Image module.\n3. Load the OwlViTForObjectDetection model and OwlViTProcessor from Hugging Face.\n4. Define the text query "a photo of a dog" as the object you want to identify in the image.\n5. Use the OwlViTProcessor to pre-process the text query and the image, converting them into tensors compatible with the OwlViTForObjectDetection model.\n6. Pass the processed inputs to the model to obtain object detection results.\n7. Post-process the results to get object detection information for the specified text query in the image.\n<<<code>>>: import requests\nfrom PIL import Image\nimport torch\nfrom transformers import OwlViTProcessor, OwlViTForObjectDetection\n\nprocessor = OwlViTProcessor.from_pretrained(\'google/owlvit-base-patch32\')\nmodel = OwlViTForObjectDetection.from_pretrained(\'google/owlvit-base-patch32\')\n\nurl = "http://images.cocodataset.org/val2017/000000039769.jpg"\nimage = Image.open(requests.get(url, stream=True).raw)\ntexts = ["a photo of a dog"]\n\ninputs = processor(text=texts, images=image, return_tensors=\'pt\')\noutputs = model(**inputs)\ntarget_sizes = torch.Tensor([image.size[::-1]])\n\nresults = processor.post_process(outputs=outputs, target_sizes=target_sizes)\n', 'api_call': "OwlViTForObjectDetection.from_pretrained('google/owlvit-base-patch32')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Object Detection', 'framework': 'Hugging Face Transformers', 'functionality': 'zero-shot-object-detection', 'api_name': 'google/owlvit-base-patch32', 'api_call': "OwlViTForObjectDetection.from_pretrained('google/owlvit-base-patch32')", 'api_arguments': {'texts': 'List of text queries', 'images': 'Image to be processed'}, 'python_environment_requirements': 'transformers', 'example_code': 'import requests\nfrom PIL import Image\nimport torch\nfrom transformers import OwlViTProcessor, OwlViTForObjectDetection\nprocessor = OwlViTProcessor.from_pretrained(google/owlvit-base-patch32)\nmodel = OwlViTForObjectDetection.from_pretrained(google/owlvit-base-patch32)\nurl = http://images.cocodataset.org/val2017/000000039769.jpg\nimage = Image.open(requests.get(url, stream=True).raw)\ntexts = [[a photo of a cat, a photo of a dog]]\ninputs = processor(text=texts, images=image, return_tensors=pt)\noutputs = model(**inputs)\ntarget_sizes = torch.Tensor([image.size[::-1]])\nresults = processor.post_process(outputs=outputs, target_sizes=target_sizes)', 'performance': {'dataset': 'COCO and OpenImages', 'accuracy': 'Not specified'}, 'description': 'OWL-ViT is a zero-shot text-conditioned object detection model that uses CLIP as its multi-modal backbone, with a ViT-like Transformer to get visual features and a causal language model to get the text features. The model can be used to query an image with one or multiple text queries.'}}
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 879, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 715, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00021_detect_object_in_image.py", line 49, in <module>
+    test_detect_object_in_image()
+  File "output/hf-eval-data-v2/f00021_detect_object_in_image.py", line 42, in test_detect_object_in_image
+    results = detect_object_in_image(url, texts)
+  File "output/hf-eval-data-v2/f00021_detect_object_in_image.py", line 22, in detect_object_in_image
+    model = OwlViTForObjectDetection.from_pretrained('google/owlvit-base-patch32')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+

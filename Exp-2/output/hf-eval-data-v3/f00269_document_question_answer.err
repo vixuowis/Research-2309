@@ -1,0 +1,7 @@
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /DataIntelligenceTeam/eurocorpV4/resolve/main/adapter_config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 78781111-c090-4f47-9f66-6c80a8d5820f)')' thrown while requesting HEAD https://huggingface.co/DataIntelligenceTeam/eurocorpV4/resolve/main/adapter_config.json
+Traceback (most recent call last):
+  File "./f00269_document_question_answer.py", line 55, in <module>
+    test_document_question_answer()
+  File "./f00269_document_question_answer.py", line 41, in test_document_question_answer
+    assert isinstance(document_question_answer(document_text1), np.ndarray)
+AssertionError

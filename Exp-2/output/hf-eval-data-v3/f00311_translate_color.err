@@ -1,0 +1,7 @@
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. If you see this, DO NOT PANIC! This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thouroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+Traceback (most recent call last):
+  File "./f00311_translate_color.py", line 35, in <module>
+    test_translate_color()
+  File "./f00311_translate_color.py", line 28, in test_translate_color
+    assert translate_color('red') == 'rosso'
+AssertionError

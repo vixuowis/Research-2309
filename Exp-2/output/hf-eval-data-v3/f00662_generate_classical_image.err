@@ -1,0 +1,15 @@
+2023-11-12 07:29:10.363270: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 07:29:10.405588: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 07:29:11.100182: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading pipeline components...:   0%|                                                                                    | 0/2 [00:00<?, ?it/s]Loading pipeline components...:  50%|██████████████████████████████████████                                      | 1/2 [00:00<00:00,  3.23it/s]Loading pipeline components...: 100%|████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  5.65it/s]
+Traceback (most recent call last):
+  File "./f00662_generate_classical_image.py", line 35, in <module>
+    test_generate_classical_image()
+  File "./f00662_generate_classical_image.py", line 29, in test_generate_classical_image
+    generated_image = generate_classical_image()
+  File "./f00662_generate_classical_image.py", line 18, in generate_classical_image
+    generated_image = pipeline.generate_image()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/configuration_utils.py", line 137, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DDPMPipeline' object has no attribute 'generate_image'

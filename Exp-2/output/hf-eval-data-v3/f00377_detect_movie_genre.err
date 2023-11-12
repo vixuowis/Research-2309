@@ -1,0 +1,15 @@
+2023-11-11 23:19:32.785600: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-11 23:19:32.847901: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-11 23:19:33.691543: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[23:19:34] /github/workspace/src/video/video_reader.cc:83: ERROR opening: path/to/video_file.mp4, No such file or directory
+Traceback (most recent call last):
+  File "./f00377_detect_movie_genre.py", line 51, in <module>
+    print(test_detect_movie_genre())
+  File "./f00377_detect_movie_genre.py", line 39, in test_detect_movie_genre
+    assert detect_movie_genre('path/to/video_file.mp4') == 'Expected Genre'
+  File "./f00377_detect_movie_genre.py", line 23, in detect_movie_genre
+    videoreader = VideoReader(video_filename)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/decord/video_reader.py", line 57, in __init__
+    raise RuntimeError("Error reading " + uri + "...")
+RuntimeError: Error reading path/to/video_file.mp4...

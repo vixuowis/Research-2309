@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00630_predict_potential_employee.py", line 58, in <module>
+    test_predict_potential_employee()
+  File "./f00630_predict_potential_employee.py", line 50, in test_predict_potential_employee
+    predictions = predict_potential_employee(123)
+  File "./f00630_predict_potential_employee.py", line 22, in predict_potential_employee
+    model = joblib.load('model.joblib')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'model.joblib'

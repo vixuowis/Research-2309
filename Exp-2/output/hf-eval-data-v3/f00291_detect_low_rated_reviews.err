@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "./f00291_detect_low_rated_reviews.py", line 23, in detect_low_rated_reviews
+    return int(result[0]['label'][-1]) < 3
+ValueError: invalid literal for int() with base 10: 's'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00291_detect_low_rated_reviews.py", line 38, in <module>
+    test_detect_low_rated_reviews()
+  File "./f00291_detect_low_rated_reviews.py", line 31, in test_detect_low_rated_reviews
+    assert detect_low_rated_reviews('I love this product!') == False
+  File "./f00291_detect_low_rated_reviews.py", line 25, in detect_low_rated_reviews
+    raise ValueError('Unexpected result from sentiment analysis model')
+ValueError: Unexpected result from sentiment analysis model

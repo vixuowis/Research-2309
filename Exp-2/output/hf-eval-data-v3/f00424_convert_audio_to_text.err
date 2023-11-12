@@ -1,0 +1,24 @@
+2023-11-12 00:28:54.621092: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 00:28:54.664900: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 00:28:55.300178: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Some weights of the model checkpoint at facebook/wav2vec2-base-960h were not used when initializing Wav2Vec2ForCTC: ['wav2vec2.encoder.pos_conv_embed.conv.weight_v', 'wav2vec2.encoder.pos_conv_embed.conv.weight_g']
+- This IS expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Wav2Vec2ForCTC from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of Wav2Vec2ForCTC were not initialized from the model checkpoint at facebook/wav2vec2-base-960h and are newly initialized: ['wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original0', 'wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original1', 'wav2vec2.masked_spec_embed']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+It is strongly recommended to pass the ``sampling_rate`` argument to this function. Failing to do so can result in silent errors that might be hard to debug.
+Traceback (most recent call last):
+  File "./f00424_convert_audio_to_text.py", line 60, in <module>
+    test_convert_audio_to_text()
+  File "./f00424_convert_audio_to_text.py", line 45, in test_convert_audio_to_text
+    transcription = convert_audio_to_text('path/to/valid/audio/file')
+  File "./f00424_convert_audio_to_text.py", line 25, in convert_audio_to_text
+    input_values = processor(audio_file_path, return_tensors='pt', padding='longest').input_values
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/wav2vec2/processing_wav2vec2.py", line 93, in __call__
+    inputs = self.feature_extractor(audio, *args, sampling_rate=sampling_rate, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/wav2vec2/feature_extraction_wav2vec2.py", line 199, in __call__
+    padded_inputs = self.pad(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/feature_extraction_sequence_utils.py", line 169, in pad
+    raise ValueError(
+ValueError: type of path/to/valid/audio/file unknown: <class 'str'>. Should be one of a python, numpy, pytorch or tensorflow object.

@@ -1,0 +1,22 @@
+{'code': '###Instruction: A group of students are doing a project on European capitals. They need to know the capital city of Germany.\n###Output: <<<domain>>>: Natural Language Processing Question Answering\n<<<api_call>>>: pipeline(\'question-answering\', model=\'deepset/roberta-large-squad2\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the \'pipeline\' function from the transformers library.\n2. Create a question answering model by passing \'question-answering\' and the model name \'deepset/roberta-large-squad2\' to the pipeline function.\n3. Pass the question and related context to the model.\n4. The model will return the answer to the provided question based on the given context.\n<<<code>>>: from transformers import pipeline\nnlp = pipeline(\'question-answering\', model=\'deepset/roberta-large-squad2\')\nquestion = "What is the capital of Germany?"\ncontext = "Berlin is the capital of Germany."\nanswer = nlp({\'question\': question, \'context\': context})\ncapital_of_germany = answer[\'answer\']\n', 'api_call': "pipeline('question-answering', model='deepset/roberta-large-squad2')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Question Answering', 'framework': 'Hugging Face Transformers', 'functionality': 'Question Answering', 'api_name': 'deepset/roberta-large-squad2', 'api_call': "pipeline('question-answering', model='deepset/roberta-large-squad2')", 'api_arguments': ['question', 'context'], 'python_environment_requirements': ['transformers'], 'example_code': "from transformers import pipeline; nlp = pipeline('question-answering', model='deepset/roberta-large-squad2'); nlp({'question': 'What is the capital of Germany?', 'context': 'Berlin is the capital of Germany.'})", 'performance': {'dataset': 'squad_v2', 'accuracy': 'Not provided'}, 'description': 'A pre-trained RoBERTa model for question answering tasks, specifically trained on the SQuAD v2 dataset. It can be used to answer questions based on a given context.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00590_get_capital_of_germany.py", line 32, in <module>
+    test_get_capital_of_germany()
+  File "output/hf-eval-data-v2/f00590_get_capital_of_germany.py", line 28, in test_get_capital_of_germany
+    assert get_capital_of_germany() == 'Berlin'
+  File "output/hf-eval-data-v2/f00590_get_capital_of_germany.py", line 15, in get_capital_of_germany
+    nlp = pipeline('question-answering', model='deepset/roberta-large-squad2')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--deepset--roberta-large-squad2'

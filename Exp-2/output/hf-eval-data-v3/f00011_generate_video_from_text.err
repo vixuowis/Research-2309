@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "./f00011_generate_video_from_text.py", line 4, in <module>
+    from diffusers import DiffusionPipeline, DPMSolverMultistepScheduler, export_to_video
+ImportError: cannot import name 'export_to_video' from 'diffusers' (/root/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/__init__.py)

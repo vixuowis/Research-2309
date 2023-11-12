@@ -1,0 +1,4 @@
+huggingface_hub
+PIL
+tensorflow
+numpy

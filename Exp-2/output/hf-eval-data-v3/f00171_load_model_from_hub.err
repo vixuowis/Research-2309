@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00171_load_model_from_hub.py", line 33, in <module>
+    test_load_model_from_hub()
+  File "./f00171_load_model_from_hub.py", line 27, in test_load_model_from_hub
+    model = load_model_from_hub(repo_id='sb3/ppo-CartPole-v1', filename='pretrained_model.zip')
+  File "./f00171_load_model_from_hub.py", line 18, in load_model_from_hub
+    model = load_from_hub(repo_id=repo_id, filename=filename)
+TypeError: 'module' object is not callable

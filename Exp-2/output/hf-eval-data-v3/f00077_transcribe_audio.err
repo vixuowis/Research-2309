@@ -1,0 +1,61 @@
+Downloading builder script:   0%|                                                                                  | 0.00/26.7k [00:00<?, ?B/s]Downloading builder script: 100%|██████████████████████████████████████████████████████████████████████████| 26.7k/26.7k [00:00<00:00, 322kB/s]
+Downloading metadata:   0%|                                                                                         | 0.00/174k [00:00<?, ?B/s]Downloading metadata:  15%|████████████▎                                                                    | 26.6k/174k [00:00<00:00, 231kB/s]Downloading metadata:  29%|███████████████████████▊                                                         | 51.2k/174k [00:00<00:00, 208kB/s]Downloading metadata:  66%|██████████████████████████████████████████████████████▍                           | 116k/174k [00:00<00:00, 349kB/s]Downloading metadata: 100%|██████████████████████████████████████████████████████████████████████████████████| 174k/174k [00:00<00:00, 394kB/s]
+Downloading readme:   0%|                                                                                          | 0.00/62.4k [00:00<?, ?B/s]Downloading readme:  43%|██████████████████████████████████▉                                               | 26.6k/62.4k [00:00<00:00, 161kB/s]Downloading readme: 100%|██████████████████████████████████████████████████████████████████████████████████| 62.4k/62.4k [00:00<00:00, 254kB/s]
+/root/.cache/huggingface/modules/datasets_modules/datasets/common_voice/220833898d6a60c50f621126e51fb22eb2dfe5244392c70dccd8e6e2f055f4bf/common_voice.py:634: FutureWarning: 
+            This version of the Common Voice dataset is deprecated.
+            You can download the latest one with
+            >>> load_dataset("mozilla-foundation/common_voice_11_0", "en")
+            
+  warnings.warn(
+Downloading data: 0.00B [00:00, ?B/s]Downloading data: 243B [00:00, 746kB/s]
+Generating train split:   0%|                                                                                 | 0/18541 [00:00<?, ? examples/s]Generating train split:   0%|                                                                                 | 0/18541 [00:00<?, ? examples/s]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/tarfile.py", line 2578, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tarfile.py", line 1283, in fromtarfile
+    obj = cls.frombuf(buf, tarfile.encoding, tarfile.errors)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tarfile.py", line 1221, in frombuf
+    raise TruncatedHeaderError("truncated header")
+tarfile.TruncatedHeaderError: truncated header
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1676, in _prepare_split_single
+    for key, record in generator:
+  File "/root/.cache/huggingface/modules/datasets_modules/datasets/common_voice/220833898d6a60c50f621126e51fb22eb2dfe5244392c70dccd8e6e2f055f4bf/common_voice.py", line 774, in _generate_examples
+    for path, f in archive_iterator:
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/download/download_manager.py", line 158, in __iter__
+    yield from self.generator(*self.args, **self.kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/download/download_manager.py", line 211, in _iter_from_path
+    yield from cls._iter_tar(f)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/download/download_manager.py", line 166, in _iter_tar
+    stream = tarfile.open(fileobj=f, mode="r|*")
+  File "/root/miniconda3/envs/py38/lib/python3.8/tarfile.py", line 1813, in open
+    t = cls(name, filemode, stream, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tarfile.py", line 1694, in __init__
+    self.firstmember = self.next()
+  File "/root/miniconda3/envs/py38/lib/python3.8/tarfile.py", line 2596, in next
+    raise ReadError(str(e))
+tarfile.ReadError: truncated header
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./f00077_transcribe_audio.py", line 48, in <module>
+    test_transcribe_audio()
+  File "./f00077_transcribe_audio.py", line 38, in test_transcribe_audio
+    dataset = load_dataset('common_voice', 'zh-CN', split='train[:1]')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/load.py", line 2153, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 954, in download_and_prepare
+    self._download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1717, in _download_and_prepare
+    super()._download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1049, in _download_and_prepare
+    self._prepare_split(split_generator, **prepare_split_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1555, in _prepare_split
+    for job_id, done, content in self._prepare_split_single(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1712, in _prepare_split_single
+    raise DatasetGenerationError("An error occurred while generating the dataset") from e
+datasets.builder.DatasetGenerationError: An error occurred while generating the dataset

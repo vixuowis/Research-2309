@@ -1,0 +1,12 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/pyannote/audio/core/io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch_audiomentations/utils/io.py:27: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+Traceback (most recent call last):
+  File "./f00320_detect_overlapping_speech.py", line 42, in <module>
+    test_detect_overlapping_speech()
+  File "./f00320_detect_overlapping_speech.py", line 35, in test_detect_overlapping_speech
+    overlapping_speech_segments = detect_overlapping_speech(audio_file, access_token)
+  File "./f00320_detect_overlapping_speech.py", line 19, in detect_overlapping_speech
+    output = pipeline(audio_file)
+TypeError: 'NoneType' object is not callable

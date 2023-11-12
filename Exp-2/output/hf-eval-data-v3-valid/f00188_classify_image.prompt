@@ -1,0 +1,47 @@
+{'code': "###Instruction: Help us create an AI solution to automatically label images taken by a security camera.\n###Output: <<<domain>>>: Computer Vision Image Classification\n<<<api_call>>>: RegNetForImageClassification.from_pretrained('zuppif/regnet-y-040')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the required libraries: AutoFeatureExtractor and RegNetForImageClassification from the transformers library, torch from the torch library, and load_dataset from the datasets library.\n2. Load the pretrained RegNetForImageClassification model using the 'zuppif/regnet-y-040' identifier.\n3. Use the AutoFeatureExtractor to extract the features from the images captured by the security camera.\n4. Pass the extracted features into the pretrained RegNet model to obtain the classification logits.\n5. Find the predicted label by selecting the category with the highest logit value.\n6. With the predicted label, you can now properly classify and label images captured by the security camera.\n<<<code>>>: from transformers import AutoFeatureExtractor, RegNetForImageClassification\nimport torch\nmodel = RegNetForImageClassification.from_pretrained('zuppif/regnet-y-040')\nfeature_extractor = AutoFeatureExtractor.from_pretrained('zuppif/regnet-y-040')\ninputs = feature_extractor(security_camera_image, return_tensors='pt')\nwith torch.no_grad():\n    logits = model(**inputs).logits\npredicted_label = logits.argmax(-1).item()\nprint(model.config.id2label[predicted_label])\n", 'api_call': "RegNetForImageClassification.from_pretrained('zuppif/regnet-y-040')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Image Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Image Classification', 'api_name': 'facebook/regnet-y-008', 'api_call': "RegNetForImageClassification.from_pretrained('zuppif/regnet-y-040')", 'api_arguments': {'pretrained_model_name_or_path': 'zuppif/regnet-y-040'}, 'python_environment_requirements': {'transformers': 'AutoFeatureExtractor, RegNetForImageClassification', 'torch': 'torch', 'datasets': 'load_dataset'}, 'example_code': 'from transformers import AutoFeatureExtractor, RegNetForImageClassification\nimport torch\nfrom datasets import load_dataset\ndataset = load_dataset(huggingface/cats-image)\nimage = dataset[test][image][0]\nfeature_extractor = AutoFeatureExtractor.from_pretrained(zuppif/regnet-y-040)\nmodel = RegNetForImageClassification.from_pretrained(zuppif/regnet-y-040)\ninputs = feature_extractor(image, return_tensors=pt)\nwith torch.no_grad():\n... logits = model(**inputs).logits\npredicted_label = logits.argmax(-1).item()\nprint(model.config.id2label[predicted_label])', 'performance': {'dataset': 'imagenet-1k', 'accuracy': 'Not provided'}, 'description': 'RegNet model trained on imagenet-1k. It was introduced in the paper Designing Network Design Spaces and first released in this repository.'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/zuppif/regnet-y-040/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1344, in hf_hub_download
+    raise head_call_error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-654d2e0d-15347ee323b25b7064b6a36b;6fc478a8-4a1d-46d8-b4be-a7a7d6d6dd88)
+
+Repository Not Found for url: https://huggingface.co/zuppif/regnet-y-040/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00188_classify_image.py", line 58, in <module>
+    test_classify_image()
+  File "output/hf-eval-data-v2/f00188_classify_image.py", line 51, in test_classify_image
+    predicted_label = classify_image(test_image_url)
+  File "output/hf-eval-data-v2/f00188_classify_image.py", line 22, in classify_image
+    model = RegNetForImageClassification.from_pretrained('zuppif/regnet-y-040')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2377, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 450, in cached_file
+    raise EnvironmentError(
+OSError: zuppif/regnet-y-040 is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`

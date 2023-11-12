@@ -1,0 +1,20 @@
+{'code': "###Instruction: I want to know the depth information of an image for a robot navigation project.\n###Output: <<<domain>>>: Computer Vision Depth Estimation\n<<<api_call>>>: AutoModel.from_pretrained('sayakpaul/glpn-nyu-finetuned-diode-221116-062619')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the AutoModel class from the transformers package provided by Hugging Face.\n2. Use the from_pretrained method of the AutoModel class to load the pre-trained model 'sayakpaul/glpn-nyu-finetuned-diode-221116-062619'. This model has been fine-tuned for depth estimation tasks which are useful for robot navigation applications.\n3. Once you have the depth estimation model, you can process the input image to obtain depth information.\n4. Preprocess the input image to be compatible with the model's input format.\n5. Use the model to perform depth prediction on the preprocessed image.\n6. Extract the depth information from the model's output and utilize this information for your robot navigation project.\n<<<code>>>: from transformers import AutoModel\nimport torch\n\nmodel = AutoModel.from_pretrained('sayakpaul/glpn-nyu-finetuned-diode-221116-062619')\npreprocessed_image = preprocess_input_image(image_path)\ndepth_prediction = model(torch.tensor(preprocessed_image).unsqueeze(0))\ndepth_information = extract_depth_info(depth_prediction)\n", 'api_call': "AutoModel.from_pretrained('sayakpaul/glpn-nyu-finetuned-diode-221116-062619')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Depth Estimation', 'framework': 'Hugging Face Transformers', 'functionality': 'Depth Estimation', 'api_name': 'glpn-nyu-finetuned-diode-221116-062619', 'api_call': "AutoModel.from_pretrained('sayakpaul/glpn-nyu-finetuned-diode-221116-062619')", 'api_arguments': 'None', 'python_environment_requirements': 'Transformers 4.24.0, Pytorch 1.13.0+cu117, Tokenizers 0.13.2', 'example_code': 'None', 'performance': {'dataset': 'diode-subset', 'accuracy': {'Loss': 0.548, 'Rmse': 'nan'}}, 'description': 'This model is a fine-tuned version of vinvino02/glpn-nyu on the diode-subset dataset.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00648_get_depth_information.py", line 38, in <module>
+    test_get_depth_information()
+  File "output/hf-eval-data-v2/f00648_get_depth_information.py", line 33, in test_get_depth_information
+    depth_information = get_depth_information(sample_image_path)
+  File "output/hf-eval-data-v2/f00648_get_depth_information.py", line 19, in get_depth_information
+    model = AutoModel.from_pretrained('sayakpaul/glpn-nyu-finetuned-diode-221116-062619')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 494, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--sayakpaul--glpn-nyu-finetuned-diode-221116-062619'

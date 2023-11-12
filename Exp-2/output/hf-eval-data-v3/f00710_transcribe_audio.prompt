@@ -1,0 +1,52 @@
+{'code': "###Instruction: A company developing an application for transcribing customer service calls requires a model that can understand spoken language.\n###Output: <<<domain>>>: Audio Automatic Speech Recognition\n<<<api_call>>>: WhisperForConditionalGeneration.from_pretrained('openai/whisper-medium')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the necessary classes from the transformers library, including the WhisperProcessor and WhisperForConditionalGeneration.\n2. Load the pre-trained 'openai/whisper-medium' model using the from_pretrained method of the WhisperForConditionalGeneration class.\n3. Use the WhisperProcessor to preprocess the audio sample, converting it to input features that the model can handle.\n4. Pass the input features to the model to generate a predicted transcription.\n5. Decode the prediction back to human-readable text using the batch_decode method of the WhisperProcessor.\n6. This process can be applied to customer service call recordings, allowing the app to create transcriptions for further analysis or documentation.\n<<<code>>>: from transformers import WhisperProcessor, WhisperForConditionalGeneration\nfrom datasets import load_dataset\n\nprocessor = WhisperProcessor.from_pretrained('openai/whisper-medium')\nmodel = WhisperForConditionalGeneration.from_pretrained('openai/whisper-medium')\n\nsample_audio_file = 'audio_file_path.wav'\n# Replace 'audio_file_path.wav' with the path to your audio file\nsample = {'array': lib_cap_path, 'sampling_rate': 16000}\ninput_features = processor(sample['array'], sampling_rate=sample['sampling_rate'], return_tensors='pt').input_features\npredicted_ids = model.generate(input_features)\ntranscription = processor.batch_decode(predicted_ids, skip_special_tokens=True)", 'api_call': "WhisperForConditionalGeneration.from_pretrained('openai/whisper-medium')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Audio Automatic Speech Recognition', 'framework': 'Hugging Face Transformers', 'functionality': 'Transcription and Translation', 'api_name': 'openai/whisper-medium', 'api_call': "WhisperForConditionalGeneration.from_pretrained('openai/whisper-medium')", 'api_arguments': ['sample', 'sampling_rate', 'language', 'task', 'skip_special_tokens'], 'python_environment_requirements': ['transformers', 'datasets'], 'example_code': 'from transformers import WhisperProcessor, WhisperForConditionalGeneration\nfrom datasets import load_dataset\n\nprocessor = WhisperProcessor.from_pretrained(openai/whisper-medium)\nmodel = WhisperForConditionalGeneration.from_pretrained(openai/whisper-medium)\n\nmodel.config.forced_decoder_ids = None\n\nds = load_dataset(hf-internal-testing/librispeech_asr_dummy, clean, split=validation)\nsample = ds[0][audio]\ninput_features = processor(sample[array], sampling_rate=sample[sampling_rate], return_tensors=pt).input_features\n\npredicted_ids = model.generate(input_features)\ntranscription = processor.batch_decode(predicted_ids, skip_special_tokens=True)', 'performance': {'dataset': [{'name': 'LibriSpeech (clean)', 'accuracy': 2.9}, {'name': 'LibriSpeech (other)', 'accuracy': 5.9}, {'name': 'Common Voice 11.0', 'accuracy': 53.87}]}, 'description': 'Whisper is a pre-trained model for automatic speech recognition (ASR) and speech translation. Trained on 680k hours of labelled data, Whisper models demonstrate a strong ability to generalise to many datasets and domains without the need for fine-tuning. It is a Transformer-based encoder-decoder model and was trained on either English-only data or multilingual data.'}}
+
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 879, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(1294336 bytes read, 23048183549 more expected)', IncompleteRead(1294336 bytes read, 23048183549 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00710_transcribe_audio.py", line 54, in <module>
+    test_transcribe_audio()
+  File "output/hf-eval-data-v2/f00710_transcribe_audio.py", line 43, in test_transcribe_audio
+    ds = load_dataset('librispeech_asr', 'clean', split='validation')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/load.py", line 2153, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 954, in download_and_prepare
+    self._download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1717, in _download_and_prepare
+    super()._download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1027, in _download_and_prepare
+    split_generators = self._split_generators(dl_manager, **split_generators_kwargs)
+  File "/root/.cache/huggingface/modules/datasets_modules/datasets/librispeech_asr/cff5df6e7955c80a67f80e27e7e655de71c689e2d2364bece785b972acb37fe7/librispeech_asr.py", line 117, in _split_generators
+    archive_path = dl_manager.download(_DL_URLS[self.config.name])
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/download/download_manager.py", line 428, in download
+    downloaded_path_or_paths = map_nested(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/utils/py_utils.py", line 464, in map_nested
+    mapped = [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/utils/py_utils.py", line 465, in <listcomp>
+    _single_map_nested((function, obj, types, None, True, None))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/utils/py_utils.py", line 367, in _single_map_nested
+    return function(data_struct)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/download/download_manager.py", line 454, in _download
+    return cached_path(url_or_filename, download_config=download_config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/utils/file_utils.py", line 182, in cached_path
+    output_path = get_from_cache(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/utils/file_utils.py", line 644, in get_from_cache
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/utils/file_utils.py", line 419, in http_get
+    for chunk in response.iter_content(chunk_size=1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(1294336 bytes read, 23048183549 more expected)', IncompleteRead(1294336 bytes read, 23048183549 more expected))
+

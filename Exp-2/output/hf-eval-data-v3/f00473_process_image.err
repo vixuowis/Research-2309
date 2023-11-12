@@ -1,0 +1,16 @@
+2023-11-12 00:55:41.835769: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 00:55:41.878349: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 00:55:42.544046: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/controlnet_aux/mediapipe_face/mediapipe_face_common.py:7: UserWarning: The module 'mediapipe' is not installed. The package will have limited functionality. Please install it using the command: pip install 'mediapipe'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00473_process_image.py", line 46, in <module>
+    test_process_image()
+  File "./f00473_process_image.py", line 40, in test_process_image
+    process_image('input_image.png', 'output_image.png')
+  File "./f00473_process_image.py", line 24, in process_image
+    image = load_image(input_image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/utils/loading_utils.py", line 26, in load_image
+    raise ValueError(
+ValueError: Incorrect path or url, URLs must start with `http://` or `https://`, and input_image.png is not a valid path

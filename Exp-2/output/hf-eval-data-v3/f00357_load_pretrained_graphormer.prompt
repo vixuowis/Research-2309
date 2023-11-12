@@ -1,0 +1,47 @@
+{'code': "###Instruction: Our company focuses on predicting molecular properties. We need the best model to tackle this problem for our project. We heard about Graphormer and want to start with a pretrained model.\n###Output: <<<domain>>>: Multimodal Graph Machine Learning\n<<<api_call>>>: AutoModel.from_pretrained('graphormer-base-pcqm4mv1')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. You will need to import AutoModel from the transformers library provided by Hugging Face.\n2. We will load the 'graphormer-base-pcqm4mv1' model which is a graph Transformer model pretrained on the PCQM4M-LSC dataset. This dataset has been used to perform quantum property predictions on molecular graphs, which makes it suitable for your purpose.\n3. Use the model to create a Graphormer instance, which can be used for molecule property predictions or fine-tuned on other tasks.\n4. The pretrained Graphormer model has achieved 1st place in the KDD CUP 2021 for quantum prediction, making it a strong foundation for your company's project.\n<<<code>>>: from transformers import AutoModel\nmodel = AutoModel.from_pretrained('graphormer-base-pcqm4mv1')\n", 'api_call': "AutoModel.from_pretrained('graphormer-base-pcqm4mv1')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Graph Machine Learning', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'graphormer-base-pcqm4mv1', 'api_call': "AutoModel.from_pretrained('graphormer-base-pcqm4mv1')", 'api_arguments': ['model_name'], 'python_environment_requirements': ['transformers'], 'example_code': 'See the Graph Classification with Transformers tutorial', 'performance': {'dataset': 'PCQM4M-LSC', 'accuracy': '1st place on the KDD CUP 2021 (quantum prediction track)'}, 'description': 'The Graphormer is a graph Transformer model, pretrained on PCQM4M-LSC, and which got 1st place on the KDD CUP 2021 (quantum prediction track). Developed by Microsoft, this model should be used for graph classification tasks or graph representation tasks; the most likely associated task is molecule modeling. It can either be used as such, or finetuned on downstream tasks.'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/graphormer-base-pcqm4mv1/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1344, in hf_hub_download
+    raise head_call_error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-654d8f5d-46a781337c3e3b0f30f25a22;3a7bd891-c984-4791-a425-0d75c86653ed)
+
+Repository Not Found for url: https://huggingface.co/graphormer-base-pcqm4mv1/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00357_load_pretrained_graphormer.py", line 33, in <module>
+    test_load_pretrained_graphormer()
+  File "output/hf-eval-data-v2/f00357_load_pretrained_graphormer.py", line 28, in test_load_pretrained_graphormer
+    model = load_pretrained_graphormer()
+  File "output/hf-eval-data-v2/f00357_load_pretrained_graphormer.py", line 17, in load_pretrained_graphormer
+    model = AutoModel.from_pretrained(model_name)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 494, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 450, in cached_file
+    raise EnvironmentError(
+OSError: graphormer-base-pcqm4mv1 is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`

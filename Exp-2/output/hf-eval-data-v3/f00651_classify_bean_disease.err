@@ -1,0 +1,35 @@
+2023-11-12 07:08:06.971536: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 07:08:07.013792: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 07:08:07.668782: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Downloading (…)lve/main/config.json:   0%|                                                                           | 0.00/662 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|████████████████████████████████████████████████████████████████████| 662/662 [00:00<00:00, 52.1kB/s]
+Downloading pytorch_model.bin:   0%|                                                                                | 0.00/787k [00:00<?, ?B/s]Downloading pytorch_model.bin: 100%|█████████████████████████████████████████████████████████████████████████| 787k/787k [00:00<00:00, 927kB/s]Downloading pytorch_model.bin: 100%|█████████████████████████████████████████████████████████████████████████| 787k/787k [00:00<00:00, 925kB/s]
+Downloading (…)rocessor_config.json:   0%|                                                                           | 0.00/259 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|████████████████████████████████████████████████████████████████████| 259/259 [00:00<00:00, 75.1kB/s]
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_utils.py", line 308, in load_image
+    b64 = base64.b64decode(image, validate=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/base64.py", line 86, in b64decode
+    raise binascii.Error('Non-base64 digit found')
+binascii.Error: Non-base64 digit found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00651_classify_bean_disease.py", line 39, in <module>
+    test_classify_bean_disease()
+  File "./f00651_classify_bean_disease.py", line 31, in test_classify_bean_disease
+    result = classify_bean_disease(test_image_path)
+  File "./f00651_classify_bean_disease.py", line 21, in classify_bean_disease
+    result = classifier(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/image_classification.py", line 106, in __call__
+    return super().__call__(images, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/image_classification.py", line 109, in preprocess
+    image = load_image(image, timeout=timeout)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_utils.py", line 311, in load_image
+    raise ValueError(
+ValueError: Incorrect image source. Must be a valid URL starting with `http://` or `https://`, a valid path to an image file, or a base64 encoded string. Got path/to/test_image.jpg. Failed with Non-base64 digit found

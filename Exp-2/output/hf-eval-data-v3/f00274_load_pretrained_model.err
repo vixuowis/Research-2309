@@ -1,0 +1,40 @@
+Downloading (…)lve/main/config.json:   0%|                                                                           | 0.00/956 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████████████| 956/956 [00:00<00:00, 146kB/s]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://cdn-lfs.huggingface.co/repos/2b/e9/2be9d22213a4707ee4ad8078530f0b3b32bf912c9e55c8ffd3e6b0d38465b33f/4d3d931ac6178dcec2fc5df66221b0ef5bf7e2ca622712c84e6ecb14e13f6ad0?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699956497&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk1NjQ5N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy8yYi9lOS8yYmU5ZDIyMjEzYTQ3MDdlZTRhZDgwNzg1MzBmMGIzYjMyYmY5MTJjOWU1NWM4ZmZkM2U2YjBkMzg0NjViMzNmLzRkM2Q5MzFhYzYxNzhkY2VjMmZjNWRmNjYyMjFiMGVmNWJmN2UyY2E2MjI3MTJjODRlNmVjYjE0ZTEzZjZhZDA~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=WxESU32A4R3Mr1xk4hc3~NBJ35Z3IwqQlL2juXZmTDEQae7Vcaq3pM8R1mXb2z4S2rIw3motrLwF-ud18pmjuM5DvkGEmb8pIFplLh8wsmq6nlLUzdjZle4h3UHjglV5~L5P3hblaVrKczn77UkYlKsy~pgefur3SmA~oYG5xC3WALmGtAUXGDSkX1hGI0auOITBE0I9VK6QE4519BAKfRtQhI5QorelNyUFcuWvt9uBVcUT3PfqCz0YE41CHjOyfr-kaMrVKG5I~TH5VeBK1QkQ0Ae5aJt-1DvU9yVNTskavxDIHRVMcqxsRO2xnNrMlZGF9SLcr-tObjWTg9bzzg__&Key-Pair-Id=KVTP0A1DKRTAX
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 524, in http_get
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 303, in hf_raise_for_status
+    raise HfHubHTTPError(str(e), response=response) from e
+huggingface_hub.utils._errors.HfHubHTTPError: 503 Server Error: Service Unavailable for url: https://cdn-lfs.huggingface.co/repos/2b/e9/2be9d22213a4707ee4ad8078530f0b3b32bf912c9e55c8ffd3e6b0d38465b33f/4d3d931ac6178dcec2fc5df66221b0ef5bf7e2ca622712c84e6ecb14e13f6ad0?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699956497&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk1NjQ5N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy8yYi9lOS8yYmU5ZDIyMjEzYTQ3MDdlZTRhZDgwNzg1MzBmMGIzYjMyYmY5MTJjOWU1NWM4ZmZkM2U2YjBkMzg0NjViMzNmLzRkM2Q5MzFhYzYxNzhkY2VjMmZjNWRmNjYyMjFiMGVmNWJmN2UyY2E2MjI3MTJjODRlNmVjYjE0ZTEzZjZhZDA~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=WxESU32A4R3Mr1xk4hc3~NBJ35Z3IwqQlL2juXZmTDEQae7Vcaq3pM8R1mXb2z4S2rIw3motrLwF-ud18pmjuM5DvkGEmb8pIFplLh8wsmq6nlLUzdjZle4h3UHjglV5~L5P3hblaVrKczn77UkYlKsy~pgefur3SmA~oYG5xC3WALmGtAUXGDSkX1hGI0auOITBE0I9VK6QE4519BAKfRtQhI5QorelNyUFcuWvt9uBVcUT3PfqCz0YE41CHjOyfr-kaMrVKG5I~TH5VeBK1QkQ0Ae5aJt-1DvU9yVNTskavxDIHRVMcqxsRO2xnNrMlZGF9SLcr-tObjWTg9bzzg__&Key-Pair-Id=KVTP0A1DKRTAX
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00274_load_pretrained_model.py", line 32, in <module>
+    test_load_pretrained_model()
+  File "./f00274_load_pretrained_model.py", line 26, in test_load_pretrained_model
+    model = load_pretrained_model('sayakpaul/glpn-nyu-finetuned-diode-221122-082237')
+  File "./f00274_load_pretrained_model.py", line 17, in load_pretrained_model
+    model = AutoModel.from_pretrained(model_name)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 492, in cached_file
+    raise EnvironmentError(f"There was a specific connection error when trying to load {path_or_repo_id}:\n{err}")
+OSError: There was a specific connection error when trying to load sayakpaul/glpn-nyu-finetuned-diode-221122-082237:
+503 Server Error: Service Unavailable for url: https://cdn-lfs.huggingface.co/repos/2b/e9/2be9d22213a4707ee4ad8078530f0b3b32bf912c9e55c8ffd3e6b0d38465b33f/4d3d931ac6178dcec2fc5df66221b0ef5bf7e2ca622712c84e6ecb14e13f6ad0?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699956497&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk1NjQ5N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy8yYi9lOS8yYmU5ZDIyMjEzYTQ3MDdlZTRhZDgwNzg1MzBmMGIzYjMyYmY5MTJjOWU1NWM4ZmZkM2U2YjBkMzg0NjViMzNmLzRkM2Q5MzFhYzYxNzhkY2VjMmZjNWRmNjYyMjFiMGVmNWJmN2UyY2E2MjI3MTJjODRlNmVjYjE0ZTEzZjZhZDA~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=WxESU32A4R3Mr1xk4hc3~NBJ35Z3IwqQlL2juXZmTDEQae7Vcaq3pM8R1mXb2z4S2rIw3motrLwF-ud18pmjuM5DvkGEmb8pIFplLh8wsmq6nlLUzdjZle4h3UHjglV5~L5P3hblaVrKczn77UkYlKsy~pgefur3SmA~oYG5xC3WALmGtAUXGDSkX1hGI0auOITBE0I9VK6QE4519BAKfRtQhI5QorelNyUFcuWvt9uBVcUT3PfqCz0YE41CHjOyfr-kaMrVKG5I~TH5VeBK1QkQ0Ae5aJt-1DvU9yVNTskavxDIHRVMcqxsRO2xnNrMlZGF9SLcr-tObjWTg9bzzg__&Key-Pair-Id=KVTP0A1DKRTAX

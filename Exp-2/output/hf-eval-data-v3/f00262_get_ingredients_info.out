@@ -1,0 +1,1 @@
+Test failed. Error in getting ingredients info: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /Salesforce/blip2-opt-2.7b/resolve/main/preprocessor_config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: c9e7a4ff-07e6-4e93-b135-88af3f4cdf88)')

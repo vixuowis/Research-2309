@@ -1,0 +1,51 @@
+{'code': "###Instruction: I need technology that can analyze images and estimate their depth in a single camera.\n###Output: <<<domain>>>: Computer Vision Depth Estimation\n<<<api_call>>>: DPTForDepthEstimation.from_pretrained('Intel/dpt-large')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. First, we import the necessary modules from the transformers library, such as the DPTImageProcessor and DPTForDepthEstimation; additionally, we import other necessary libraries like torch, numpy, and PIL (Python Imaging Library).\n2. We load the 'Intel/dpt-large' model using the DPTForDepthEstimation.from_pretrained() function. This model is specifically designed for monocular depth estimation, which means it can analyze images and estimate their depth with the help of a single camera.\n3. Using the DPTImageProcessor, we preprocess the image before passing it to the depth estimation model.\n4. We then pass the processed image to the model and obtain the depth prediction as the output.\n5. The output is then formatted into an interpretable format, and depth information is extracted.\n<<<code>>>: from transformers import DPTImageProcessor, DPTForDepthEstimation\nimport torch\nimport numpy as np\nfrom PIL import Image\nimport requests\nurl = 'http://images.cocodataset.org/val2017/000000039769.jpg'\nimage = Image.open(requests.get(url, stream=True).raw)\nprocessor = DPTImageProcessor.from_pretrained('Intel/dpt-large')\nmodel = DPTForDepthEstimation.from_pretrained('Intel/dpt-large')\ninputs = processor(images=image, return_tensors='pt')\nwith torch.no_grad():\n    outputs = model(**inputs)\n    predicted_depth = outputs.predicted_depth\nprediction = torch.nn.functional.interpolate(predicted_depth.unsqueeze(1), size=image.size[::-1], mode='bicubic', align_corners=False)\noutput = prediction.squeeze().cpu().numpy()\nformatted = (output * 255 / np.max(output)).astype('uint8')\ndepth = Image.fromarray(formatted)\n", 'api_call': "DPTForDepthEstimation.from_pretrained('Intel/dpt-large')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Depth Estimation', 'framework': 'Hugging Face Transformers', 'functionality': 'Monocular Depth Estimation', 'api_name': 'Intel/dpt-large', 'api_call': "DPTForDepthEstimation.from_pretrained('Intel/dpt-large')", 'api_arguments': {'pretrained_model_name_or_path': 'Intel/dpt-large'}, 'python_environment_requirements': ['transformers'], 'example_code': 'from transformers import DPTImageProcessor, DPTForDepthEstimation\nimport torch\nimport numpy as np\nfrom PIL import Image\nimport requests\nurl = http://images.cocodataset.org/val2017/000000039769.jpg\nimage = Image.open(requests.get(url, stream=True).raw)\nprocessor = DPTImageProcessor.from_pretrained(Intel/dpt-large)\nmodel = DPTForDepthEstimation.from_pretrained(Intel/dpt-large)\ninputs = processor(images=image, return_tensors=pt)\nwith torch.no_grad():\n outputs = model(**inputs)\n predicted_depth = outputs.predicted_depth\nprediction = torch.nn.functional.interpolate(\n predicted_depth.unsqueeze(1),\n size=image.size[::-1],\n mode=bicubic,\n align_corners=False,\n)\noutput = prediction.squeeze().cpu().numpy()\nformatted = (output * 255 / np.max(output)).astype(uint8)\ndepth = Image.fromarray(formatted)', 'performance': {'dataset': 'MIX 6', 'accuracy': '10.82'}, 'description': 'Dense Prediction Transformer (DPT) model trained on 1.4 million images for monocular depth estimation. Introduced in the paper Vision Transformers for Dense Prediction by Ranftl et al. (2021). DPT uses the Vision Transformer (ViT) as backbone and adds a neck + head on top for monocular depth estimation.'}}
+
+
+
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(64681531 bytes read, 1302899634 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(64681531 bytes read, 1302899634 more expected)', IncompleteRead(64681531 bytes read, 1302899634 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00018_estimate_image_depth.py", line 58, in <module>
+    test_estimate_image_depth()
+  File "output/hf-eval-data-v2/f00018_estimate_image_depth.py", line 53, in test_estimate_image_depth
+    result = estimate_image_depth(sample_image_url)
+  File "output/hf-eval-data-v2/f00018_estimate_image_depth.py", line 31, in estimate_image_depth
+    model = DPTForDepthEstimation.from_pretrained('Intel/dpt-large')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(64681531 bytes read, 1302899634 more expected)', IncompleteRead(64681531 bytes read, 1302899634 more expected))
+

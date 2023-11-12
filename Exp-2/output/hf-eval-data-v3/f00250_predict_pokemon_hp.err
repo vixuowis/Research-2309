@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00250_predict_pokemon_hp.py", line 61, in <module>
+    test_predict_pokemon_hp()
+  File "./f00250_predict_pokemon_hp.py", line 37, in test_predict_pokemon_hp
+    assert isinstance(predicted_hp, float)
+AssertionError

@@ -1,0 +1,29 @@
+{'code': '###Instruction: Our client is involved in a sports organization, and they require a solution to classify sports videos efficiently.\n###Output: <<<domain>>>: Computer Vision Video Classification\n<<<api_call>>>: TimesformerForVideoClassification.from_pretrained(\'facebook/timesformer-hr-finetuned-k600\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. We first import the necessary classes from the transformers package. This includes the TimesformerForVideoClassification model for video classification and AutoImageProcessor for processing video frames.\n2. We then use the from_pretrained method of the TimesformerForVideoClassification class to load the pre-trained model \'facebook/timesformer-hr-finetuned-k600\'. This model has been trained on the Kinetics-600 dataset, making it suitable for sports video classification.\n3. We load a list of video frames (16 frames, each with dimensions 3x448x448) as numpy arrays and use the AutoImageProcessor to preprocess the frames before feeding them into the model.\n4. The model then processes the video frames and provides a list of logits as output, from which we extract the highest probability class as the predicted class for the sports video.\n<<<code>>>: from transformers import AutoImageProcessor, TimesformerForVideoClassification\nimport numpy as np\nimport torch\n\n# Load video data (a list of numpy arrays representing the video frames)\n# Replace "video" with the real video frames data\nvideo = list(np.random.randn(16, 3, 448, 448))\n\nprocessor = AutoImageProcessor.from_pretrained(\'facebook/timesformer-hr-finetuned-k600\')\nmodel = TimesformerForVideoClassification.from_pretrained(\'facebook/timesformer-hr-finetuned-k600\')\n\ninputs = processor(images=video, return_tensors=\'pt\')\nwith torch.no_grad():\n  outputs = model(**inputs)\n  logits = outputs.logits\n\npredicted_class_idx = logits.argmax(-1).item()\nprint("Predicted class:", model.config.id2label[predicted_class_idx])', 'api_call': "TimesformerForVideoClassification.from_pretrained('facebook/timesformer-hr-finetuned-k600')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Video Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Video Classification', 'api_name': 'facebook/timesformer-hr-finetuned-k600', 'api_call': "TimesformerForVideoClassification.from_pretrained('facebook/timesformer-hr-finetuned-k600')", 'api_arguments': {'images': 'video', 'return_tensors': 'pt'}, 'python_environment_requirements': ['transformers', 'numpy', 'torch'], 'example_code': 'from transformers import AutoImageProcessor, TimesformerForVideoClassification\nimport numpy as np\nimport torch\nvideo = list(np.random.randn(16, 3, 448, 448))\nprocessor = AutoImageProcessor.from_pretrained(facebook/timesformer-hr-finetuned-k600)\nmodel = TimesformerForVideoClassification.from_pretrained(facebook/timesformer-hr-finetuned-k600)\ninputs = processor(images=video, return_tensors=pt)\nwith torch.no_grad():\n  outputs = model(**inputs)\n  logits = outputs.logits\npredicted_class_idx = logits.argmax(-1).item()\nprint(Predicted class:, model.config.id2label[predicted_class_idx])', 'performance': {'dataset': 'Kinetics-600', 'accuracy': 'Not provided'}, 'description': 'TimeSformer model pre-trained on Kinetics-600. It was introduced in the paper TimeSformer: Is Space-Time Attention All You Need for Video Understanding? by Tong et al. and first released in this repository. The model can be used for video classification into one of the 600 possible Kinetics-600 labels.'}}
+
+
+
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00284_classify_sports_video.py", line 42, in <module>
+    test_classify_sports_video()
+  File "output/hf-eval-data-v2/f00284_classify_sports_video.py", line 37, in test_classify_sports_video
+    predicted_class = classify_sports_video(video)
+  File "output/hf-eval-data-v2/f00284_classify_sports_video.py", line 22, in classify_sports_video
+    inputs = processor(images=video, return_tensors='pt')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_processing_utils.py", line 546, in __call__
+    return self.preprocess(images, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 320, in preprocess
+    videos = [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 321, in <listcomp>
+    [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 322, in <listcomp>
+    self._preprocess_image(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 219, in _preprocess_image
+    image = self.resize(image=image, size=size, resample=resample, input_data_format=input_data_format)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 168, in resize
+    return resize(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_transforms.py", line 326, in resize
+    do_rescale = _rescale_for_pil_conversion(image)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_transforms.py", line 150, in _rescale_for_pil_conversion
+    raise ValueError(
+ValueError: The image to be converted to a PIL image contains values outside the range [0, 1], got [-5.26742431582042, 4.792650828383429] which cannot be converted to uint8.

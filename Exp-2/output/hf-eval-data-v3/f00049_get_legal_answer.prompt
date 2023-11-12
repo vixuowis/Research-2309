@@ -1,0 +1,17 @@
+{'code': "###Instruction: We want to make sure clarify some questions about the legal implications of a new partnership contract for a real estate development project.\n###Input: We hereby grant the Licensee the exclusive right to develop, construct, operate and promote the Project, as well as to manage the daily operations of the Licensed Facilities during the Term. In consideration for the grant of the License, the Licensee shall pay to the Licensor the full amount of Ten Million (10,000,000) Dollars within thirty (30) days after the execution hereof.\n###Output: <<<domain>>>: Natural Language Processing Question Answering\n<<<api_call>>>: AutoModelForQuestionAnswering.from_pretrained('Rakib/roberta-base-on-cuad')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. First, we should import the necessary classes from the transformers package: AutoTokenizer and AutoModelForQuestionAnswering.\n2. Next, we should create the tokenizer and the model using the from_pretrained method and the model name 'Rakib/roberta-base-on-cuad'.\n3. This model has been trained for question answering tasks on legal documents using the CUAD dataset. It's designed to extract answers from legal contracts and documents.\n4. With the tokenizer and model, we can tokenize the input text and use the model to answer any questions about the legal implications of the partnership contract in the real estate development project.\n<<<code>>>: from transformers import AutoTokenizer, AutoModelForQuestionAnswering\ntokenizer = AutoTokenizer.from_pretrained('Rakib/roberta-base-on-cuad')\nmodel = AutoModelForQuestionAnswering.from_pretrained('Rakib/roberta-base-on-cuad')\n", 'api_call': "AutoModelForQuestionAnswering.from_pretrained('Rakib/roberta-base-on-cuad')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Question Answering', 'framework': 'Hugging Face Transformers', 'functionality': 'Question Answering', 'api_name': 'Rakib/roberta-base-on-cuad', 'api_call': "AutoModelForQuestionAnswering.from_pretrained('Rakib/roberta-base-on-cuad')", 'api_arguments': {'tokenizer': 'AutoTokenizer.from_pretrained(Rakib/roberta-base-on-cuad)'}, 'python_environment_requirements': {'transformers': 'latest'}, 'example_code': {'import': 'from transformers import AutoTokenizer, AutoModelForQuestionAnswering', 'tokenizer': 'tokenizer = AutoTokenizer.from_pretrained(Rakib/roberta-base-on-cuad)', 'model': 'model = AutoModelForQuestionAnswering.from_pretrained(Rakib/roberta-base-on-cuad)'}, 'performance': {'dataset': 'cuad', 'accuracy': '46.6%'}, 'description': 'This model is trained for the task of Question Answering on Legal Documents using the CUAD dataset. It is based on the RoBERTa architecture and can be used to extract answers from legal contracts and documents.'}}
+
+
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00049_get_legal_answer.py", line 42, in <module>
+    test_get_legal_answer()
+  File "output/hf-eval-data-v2/f00049_get_legal_answer.py", line 36, in test_get_legal_answer
+    answer = get_legal_answer(question, context)
+  File "output/hf-eval-data-v2/f00049_get_legal_answer.py", line 24, in get_legal_answer
+    answer_start = torch.argmax(outputs.start_logits)
+NameError: name 'torch' is not defined

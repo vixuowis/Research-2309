@@ -1,0 +1,58 @@
+Downloading (…)0c79f/.gitattributes:   0%|                                                                           | 0.00/737 [00:00<?, ?B/s]Downloading (…)0c79f/.gitattributes: 100%|████████████████████████████████████████████████████████████████████| 737/737 [00:00<00:00, 66.7kB/s]
+Downloading (…)_Pooling/config.json:   0%|                                                                           | 0.00/190 [00:00<?, ?B/s]Downloading (…)_Pooling/config.json: 100%|████████████████████████████████████████████████████████████████████| 190/190 [00:00<00:00, 16.6kB/s]
+Downloading (…)b353b0c79f/README.md:   0%|                                                                         | 0.00/7.34k [00:00<?, ?B/s]Downloading (…)b353b0c79f/README.md: 100%|████████████████████████████████████████████████████████████████| 7.34k/7.34k [00:00<00:00, 3.76MB/s]
+Downloading (…)53b0c79f/config.json:   0%|                                                                           | 0.00/612 [00:00<?, ?B/s]Downloading (…)53b0c79f/config.json: 100%|█████████████████████████████████████████████████████████████████████| 612/612 [00:00<00:00, 331kB/s]
+Downloading (…)ce_transformers.json:   0%|                                                                           | 0.00/116 [00:00<?, ?B/s]Downloading (…)ce_transformers.json: 100%|████████████████████████████████████████████████████████████████████| 116/116 [00:00<00:00, 61.6kB/s]
+Downloading (…)79f/data_config.json:   0%|                                                                         | 0.00/39.3k [00:00<?, ?B/s]Downloading (…)79f/data_config.json: 100%|█████████████████████████████████████████████████████████████████| 39.3k/39.3k [00:00<00:00, 174kB/s]Downloading (…)79f/data_config.json: 100%|█████████████████████████████████████████████████████████████████| 39.3k/39.3k [00:00<00:00, 173kB/s]
+Downloading pytorch_model.bin:   0%|                                                                               | 0.00/90.9M [00:00<?, ?B/s]Downloading pytorch_model.bin:  12%|████████▏                                                              | 10.5M/90.9M [00:37<04:48, 279kB/s]Downloading pytorch_model.bin:  17%|████████████▎                                                          | 15.8M/90.9M [00:40<02:51, 439kB/s]Downloading pytorch_model.bin:  17%|████████████▎                                                          | 15.8M/90.9M [00:40<03:10, 394kB/s]
+Downloading (…)nce_bert_config.json:   0%|                                                                          | 0.00/53.0 [00:00<?, ?B/s]Downloading (…)nce_bert_config.json: 100%|██████████████████████████████████████████████████████████████████| 53.0/53.0 [00:00<00:00, 4.74kB/s]
+Downloading (…)cial_tokens_map.json:   0%|                                                                           | 0.00/112 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|████████████████████████████████████████████████████████████████████| 112/112 [00:00<00:00, 52.7kB/s]
+Downloading (…)0c79f/tokenizer.json:   0%|                                                                          | 0.00/466k [00:00<?, ?B/s]Downloading (…)0c79f/tokenizer.json: 100%|███████████████████████████████████████████████████████████████████| 466k/466k [00:01<00:00, 435kB/s]Downloading (…)0c79f/tokenizer.json: 100%|███████████████████████████████████████████████████████████████████| 466k/466k [00:01<00:00, 435kB/s]
+Downloading (…)okenizer_config.json:   0%|                                                                           | 0.00/535 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|█████████████████████████████████████████████████████████████████████| 535/535 [00:00<00:00, 270kB/s]
+Downloading (…)c79f/train_script.py:   0%|                                                                         | 0.00/13.2k [00:00<?, ?B/s]Downloading (…)c79f/train_script.py: 100%|████████████████████████████████████████████████████████████████| 13.2k/13.2k [00:00<00:00, 5.68MB/s]
+Downloading (…)b353b0c79f/vocab.txt:   0%|                                                                          | 0.00/232k [00:00<?, ?B/s]Downloading (…)b353b0c79f/vocab.txt: 100%|███████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 924kB/s]Downloading (…)b353b0c79f/vocab.txt: 100%|███████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 920kB/s]
+Downloading (…)3b0c79f/modules.json:   0%|                                                                           | 0.00/349 [00:00<?, ?B/s]Downloading (…)3b0c79f/modules.json: 100%|█████████████████████████████████████████████████████████████████████| 349/349 [00:00<00:00, 166kB/s]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 488, in load_state_dict
+    return torch.load(checkpoint_file, map_location=map_location)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 993, in load
+    with _open_zipfile_reader(opened_file) as opened_zipfile:
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 447, in __init__
+    super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 492, in load_state_dict
+    if f.read(7) == "version":
+  File "/root/miniconda3/envs/py38/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 64: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00151_calculate_review_similarity.py", line 38, in <module>
+    test_calculate_review_similarity()
+  File "./f00151_calculate_review_similarity.py", line 31, in test_calculate_review_similarity
+    similarity_matrix = calculate_review_similarity(reviews)
+  File "./f00151_calculate_review_similarity.py", line 18, in calculate_review_similarity
+    model = SentenceTransformer('flax-sentence-embeddings/all_datasets_v4_MiniLM-L6')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/SentenceTransformer.py", line 95, in __init__
+    modules = self._load_sbert_model(model_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/SentenceTransformer.py", line 840, in _load_sbert_model
+    module = module_class.load(os.path.join(model_path, module_config['path']))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/models/Transformer.py", line 137, in load
+    return Transformer(model_name_or_path=input_path, **config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/models/Transformer.py", line 29, in __init__
+    self._load_model(model_name_or_path, config, cache_dir)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/models/Transformer.py", line 49, in _load_model
+    self.auto_model = AutoModel.from_pretrained(model_name_or_path, config=config, cache_dir=cache_dir)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2883, in from_pretrained
+    state_dict = load_state_dict(resolved_archive_file)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 504, in load_state_dict
+    raise OSError(
+OSError: Unable to load weights from pytorch checkpoint file for '/root/.cache/torch/sentence_transformers/flax-sentence-embeddings_all_datasets_v4_MiniLM-L6/pytorch_model.bin' at '/root/.cache/torch/sentence_transformers/flax-sentence-embeddings_all_datasets_v4_MiniLM-L6/pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.

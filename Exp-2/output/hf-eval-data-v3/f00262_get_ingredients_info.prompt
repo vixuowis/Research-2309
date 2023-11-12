@@ -1,0 +1,27 @@
+{'code': '###Instruction: A food delivery app wants to help users understand ingredients in the food item by analyzing the images. We need a solution to process the food images and give textual information about the items.\n###Output: <<<domain>>>: Multimodal Image-to-Text\n<<<api_call>>>: Blip2ForConditionalGeneration.from_pretrained(\'Salesforce/blip2-opt-2.7b\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the necessary classes from transformers and PIL packages. This includes BlipProcessor and Blip2ForConditionalGeneration for processing images and generating text descriptions.\n2. Use the from_pretrained method to load the pretrained \'Salesforce/blip2-opt-2.7b\' model.\n3. Load the input image from the URL or the food item\'s image file and convert it to RGB format.\n4. Prepare the inputs using BlipProcessor, which processes the image and any input questions.\n5. Generate a textual output using Blip2ForConditionalGeneration.\n6. Decode the output to get a human-readable response.\n<<<code>>>: from transformers import BlipProcessor, Blip2ForConditionalGeneration\nfrom PIL import Image\nimport requests\n\nprocessor = BlipProcessor.from_pretrained(\'Salesforce/blip2-opt-2.7b\')\nmodel = Blip2ForConditionalGeneration.from_pretrained(\'Salesforce/blip2-opt-2.7b\')\nimg_url = \'https://path/to/food_image.jpg\'  # Replace with the image URL\nquestion = "What are the ingredients of this dish?"\n\nraw_image = Image.open(requests.get(img_url, stream=True).raw).convert(\'RGB\')\ninputs = processor(raw_image, question, return_tensors=\'pt\')\nout = model.generate(**inputs)\ningredient_info = processor.decode(out[0], skip_special_tokens=True)\n', 'api_call': "Blip2ForConditionalGeneration.from_pretrained('Salesforce/blip2-opt-2.7b')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Image-to-Text', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'blip2-opt-2.7b', 'api_call': "Blip2ForConditionalGeneration.from_pretrained('Salesforce/blip2-opt-2.7b')", 'api_arguments': {'img_url': 'https://storage.googleapis.com/sfr-vision-language-research/BLIP/demo.jpg', 'question': 'how many dogs are in the picture?'}, 'python_environment_requirements': ['transformers', 'PIL', 'requests'], 'example_code': {'import_requests': 'import requests', 'import_PIL': 'from PIL import Image', 'import_transformers': 'from transformers import BlipProcessor, Blip2ForConditionalGeneration', 'load_processor': "processor = BlipProcessor.from_pretrained('Salesforce/blip2-opt-2.7b')", 'load_model': "model = Blip2ForConditionalGeneration.from_pretrained('Salesforce/blip2-opt-2.7b')", 'load_image': "raw_image = Image.open(requests.get(img_url, stream=True).raw).convert('RGB')", 'process_inputs': "inputs = processor(raw_image, question, return_tensors='pt')", 'generate_output': 'out = model.generate(**inputs)', 'decode_output': 'print(processor.decode(out[0], skip_special_tokens=True))'}, 'performance': {'dataset': 'LAION', 'accuracy': 'Not specified'}, 'description': 'BLIP-2 model, leveraging OPT-2.7b (a large language model with 2.7 billion parameters). It was introduced in the paper BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models by Li et al. and first released in this repository. The goal for the model is to predict the next text token, given the query embeddings and the previous text. This allows the model to be used for tasks like image captioning, visual question answering (VQA), and chat-like conversations by feeding the image and the previous conversation as prompt to the model.'}}
+
+
+
+
+
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'GPT2Tokenizer'. 
+The class this function is called from is 'BertTokenizerFast'.
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00262_get_ingredients_info.py", line 42, in <module>
+    test_get_ingredients_info()
+  File "output/hf-eval-data-v2/f00262_get_ingredients_info.py", line 38, in test_get_ingredients_info
+    print(get_ingredients_info(img_url, question))
+  File "output/hf-eval-data-v2/f00262_get_ingredients_info.py", line 21, in get_ingredients_info
+    processor = BlipProcessor.from_pretrained('Salesforce/blip2-opt-2.7b')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/processing_utils.py", line 226, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/processing_utils.py", line 270, in _get_arguments_from_pretrained
+    args.append(attribute_class.from_pretrained(pretrained_model_name_or_path, **kwargs))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1854, in from_pretrained
+    return cls._from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2017, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/bert/tokenization_bert_fast.py", line 235, in __init__
+    normalizer_state = json.loads(self.backend_tokenizer.normalizer.__getstate__())
+AttributeError: 'NoneType' object has no attribute '__getstate__'

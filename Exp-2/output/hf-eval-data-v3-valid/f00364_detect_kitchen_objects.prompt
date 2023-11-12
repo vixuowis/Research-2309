@@ -1,0 +1,52 @@
+{'code': '###Instruction: In a kitchen, as a robot chef, we need to identify different objects such as fruits and dishes.\n###Output: <<<domain>>>: Computer Vision Object Detection\n<<<api_call>>>: OwlViTForObjectDetection.from_pretrained(\'google/owlvit-large-patch14\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. To detect different objects in a kitchen, we import the necessary classes from the torch and transformers packages. This includes OwlViTProcessor for processing the image and OwlViTForObjectDetection for the object detection model.\n2. We use the from_pretrained method to load the pre-trained model \'google/owlvit-large-patch14\'. This model has been trained for zero-shot text-conditioned object detection tasks.\n3. We load the image data from a file or gather it in real-time from the robot\'s camera.\n4. We formulate text queries for the objects we want to detect, such as "a photo of a fruit" or "a photo of a dish". The model then processes these text queries in combination with the image provided to identify the specified objects.\n5. The model then returns the bounding boxes, scores, and labels for the detected objects, which can be filtered by a score threshold to show only the most confident detections.\n<<<code>>>: from PIL import Image\nimport torch\nfrom transformers import OwlViTProcessor, OwlViTForObjectDetection\nprocessor = OwlViTProcessor.from_pretrained(\'google/owlvit-large-patch14\')\nmodel = OwlViTForObjectDetection.from_pretrained(\'google/owlvit-large-patch14\')\nimage = Image.open(\'kitchen_image.jpg\')\ntexts = [["a photo of a fruit", "a photo of a dish"]]\ninputs = processor(text=texts, images=image, return_tensors=\'pt\')\noutputs = model(**inputs)\ntarget_sizes = torch.Tensor([image.size[::-1]])\nresults = processor.post_process(outputs=outputs, target_sizes=target_sizes)\nscore_threshold = 0.1\n\nfor i in range(len(texts)):\n    boxes, scores, labels = results[i]["boxes"], results[i]["scores"], results[i]["labels"]\n    for box, score, label in zip(boxes, scores, labels):\n        box = [round(i, 2) for i in box.tolist()]\n        if score >= score_threshold:\n            print(f"Detected {texts[0][label]} with confidence {round(score.item(), 3)} at location {box}")', 'api_call': "OwlViTForObjectDetection.from_pretrained('google/owlvit-large-patch14')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Object Detection', 'framework': 'Hugging Face Transformers', 'functionality': 'zero-shot-object-detection', 'api_name': 'google/owlvit-large-patch14', 'api_call': "OwlViTForObjectDetection.from_pretrained('google/owlvit-large-patch14')", 'api_arguments': {'model_name': 'google/owlvit-large-patch14'}, 'python_environment_requirements': ['torch', 'transformers', 'PIL', 'requests'], 'example_code': ['import requests', 'from PIL import Image', 'import torch', 'from transformers import OwlViTProcessor, OwlViTForObjectDetection', 'processor = OwlViTProcessor.from_pretrained(google/owlvit-large-patch14)', 'model = OwlViTForObjectDetection.from_pretrained(google/owlvit-large-patch14)', 'url = http://images.cocodataset.org/val2017/000000039769.jpg', 'image = Image.open(requests.get(url, stream=True).raw)', 'texts = [[a photo of a cat, a photo of a dog]', 'inputs = processor(text=texts, images=image, return_tensors=pt)', 'outputs = model(**inputs)', 'target_sizes = torch.Tensor([image.size[::-1]])', 'results = processor.post_process(outputs=outputs, target_sizes=target_sizes)', 'i = 0', 'text = texts[i]', 'boxes, scores, labels = results[i][boxes], results[i][scores], results[i][labels]', 'score_threshold = 0.1', 'for box, score, label in zip(boxes, scores, labels):', ' box = [round(i, 2) for i in box.tolist()]', ' if score >= score_threshold:', ' print(fDetected {text[label]} with confidence {round(score.item(), 3)} at location {box})'], 'performance': {'dataset': 'COCO', 'accuracy': 'Not specified'}, 'description': 'OWL-ViT is a zero-shot text-conditioned object detection model that can be used to query an image with one or multiple text queries. It uses CLIP as its multi-modal backbone, with a ViT-like Transformer to get visual features and a causal language model to get the text features. OWL-ViT is trained on publicly available image-caption data and fine-tuned on publicly available object detection datasets such as COCO and OpenImages.'}}
+
+
+
+
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(1715044587 bytes read, 20710010 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(1715044587 bytes read, 20710010 more expected)', IncompleteRead(1715044587 bytes read, 20710010 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00364_detect_kitchen_objects.py", line 46, in <module>
+    test_detect_kitchen_objects()
+  File "output/hf-eval-data-v2/f00364_detect_kitchen_objects.py", line 42, in test_detect_kitchen_objects
+    detect_kitchen_objects('test_image.jpg', 0.1)
+  File "output/hf-eval-data-v2/f00364_detect_kitchen_objects.py", line 21, in detect_kitchen_objects
+    model = OwlViTForObjectDetection.from_pretrained('google/owlvit-large-patch14')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(1715044587 bytes read, 20710010 more expected)', IncompleteRead(1715044587 bytes read, 20710010 more expected))
+

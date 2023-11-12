@@ -1,0 +1,52 @@
+{'code': "###Instruction: I have a list of comments related to stocks. Check the overall sentiment towards each stock.\n###Output: <<<domain>>>: Natural Language Processing Text Classification\n<<<api_call>>>: pipeline('text-classification', model='zhayunduo/roberta-base-stocktwits-finetuned', tokenizer='RobertaTokenizer')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the relevant libraries: transformers for the model, and pandas to deal with the list of comments.\n2. Use the pipeline function from Hugging Face Transformers to load the model 'zhayunduo/roberta-base-stocktwits-finetuned' and its accompanying tokenizer 'RobertaTokenizer'.\n3. The loaded model has been fine-tuned on sentiment classification for stock-related comments.\n4. Use the model to predict the sentiment towards each stock in the list of comments and display the results.\n<<<code>>>: from transformers import pipeline\nimport pandas as pd\n\nstock_comments = pd.Series(['Stock A is going up!', 'Looks like it\\'s time to sell Stock B.', 'I wouldn\\'t invest in Stock C right now.'])\n\nclassifier = pipeline('text-classification', model='zhayunduo/roberta-base-stocktwits-finetuned', tokenizer='RobertaTokenizer')\nsentiment_results = classifier(stock_comments.tolist())\n\nprint(sentiment_results)", 'api_call': "RobertaForSequenceClassification.from_pretrained('zhayunduo/roberta-base-stocktwits-finetuned')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Sentiment Inferencing for stock-related comments', 'api_name': 'zhayunduo/roberta-base-stocktwits-finetuned', 'api_call': "RobertaForSequenceClassification.from_pretrained('zhayunduo/roberta-base-stocktwits-finetuned')", 'api_arguments': {'model': 'RobertaForSequenceClassification', 'tokenizer': 'RobertaTokenizer'}, 'python_environment_requirements': ['transformers'], 'example_code': "from transformers import RobertaForSequenceClassification, RobertaTokenizer\nfrom transformers import pipeline\nimport pandas as pd\nimport emoji\ntokenizer_loaded = RobertaTokenizer.from_pretrained('zhayunduo/roberta-base-stocktwits-finetuned')\nmodel_loaded = RobertaForSequenceClassification.from_pretrained('zhayunduo/roberta-base-stocktwits-finetuned')\nnlp = pipeline(text-classification, model=model_loaded, tokenizer=tokenizer_loaded)\nsentences = pd.Series(['just buy','just sell it','entity rocket to the sky!','go down','even though it is going up, I still think it will not keep this trend in the near future'])\nsentences = list(sentences)\nresults = nlp(sentences)\nprint(results)", 'performance': {'dataset': 'stocktwits', 'accuracy': 0.9343}, 'description': "This model is fine-tuned with roberta-base model on 3,200,000 comments from stocktwits, with the user-labeled tags 'Bullish' or 'Bearish'."}}
+
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/RobertaTokenizer/resolve/main/tokenizer_config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1344, in hf_hub_download
+    raise head_call_error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-654d9302-111136e228c0b343194d2a1b;f6031e2f-57b9-4c00-9e02-f2ae36475dca)
+
+Repository Not Found for url: https://huggingface.co/RobertaTokenizer/resolve/main/tokenizer_config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00381_stock_sentiment_analysis.py", line 38, in <module>
+    test_stock_sentiment_analysis()
+  File "output/hf-eval-data-v2/f00381_stock_sentiment_analysis.py", line 29, in test_stock_sentiment_analysis
+    sentiment_results = stock_sentiment_analysis(stock_comments)
+  File "output/hf-eval-data-v2/f00381_stock_sentiment_analysis.py", line 18, in stock_sentiment_analysis
+    classifier = pipeline('text-classification', model='zhayunduo/roberta-base-stocktwits-finetuned', tokenizer='RobertaTokenizer')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 921, in pipeline
+    tokenizer = AutoTokenizer.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 686, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 519, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 450, in cached_file
+    raise EnvironmentError(
+OSError: RobertaTokenizer is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`

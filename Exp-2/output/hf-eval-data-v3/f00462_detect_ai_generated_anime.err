@@ -1,0 +1,14 @@
+2023-11-12 00:51:54.882613: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 00:51:54.924876: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 00:51:55.788782: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00462_detect_ai_generated_anime.py", line 52, in <module>
+    test_detect_ai_generated_anime()
+  File "./f00462_detect_ai_generated_anime.py", line 33, in test_detect_ai_generated_anime
+    result = detect_ai_generated_anime('path_to_human_created_anime_art.jpg')
+  File "./f00462_detect_ai_generated_anime.py", line 21, in detect_ai_generated_anime
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'path_to_human_created_anime_art.jpg'

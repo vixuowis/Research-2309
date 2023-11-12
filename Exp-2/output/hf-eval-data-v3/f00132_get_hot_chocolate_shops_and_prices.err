@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00132_get_hot_chocolate_shops_and_prices.py", line 52, in <module>
+    test_get_hot_chocolate_shops_and_prices()
+  File "./f00132_get_hot_chocolate_shops_and_prices.py", line 41, in test_get_hot_chocolate_shops_and_prices
+    assert get_hot_chocolate_shops_and_prices(table, queries) == expected_output
+  File "./f00132_get_hot_chocolate_shops_and_prices.py", line 29, in get_hot_chocolate_shops_and_prices
+    answered_shops = [table[row_idx][0] for row_idx in outputs['answer_coordinates'][0][:, 0]]
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/generic.py", line 384, in __getitem__
+    return inner_dict[k]
+KeyError: 'answer_coordinates'

@@ -1,0 +1,52 @@
+{'code': "###Instruction: We are a company that wants to expand globally. We need to translate our website content from English to Italian.\n###Output: <<<domain>>>: Natural Language Processing Translation\n<<<api_call>>>: pipeline('translation_en_to_it', model='Helsinki-NLP/opus-mt-en-it')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the pipeline function from the transformers library provided by Hugging Face.\n2. Use the pipeline function to create a translation model that can translate from English to Italian using the provided model name 'Helsinki-NLP/opus-mt-en-it'.\n3. Once you have the model, you can pass in English text as input to the model, and it will output the translated Italian text.\n4. Use this translation model to translate your website content from English to Italian.\n<<<code>>>: from transformers import pipeline\ntranslator = pipeline('translation_en_to_it', model='Helsinki-NLP/opus-mt-en-it')\nitalian_text = translator('Welcome to our website. Discover our products and services.')\n", 'api_call': "pipeline('translation_en_to_it', model='Helsinki-NLP/opus-mt-en-it')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Translation', 'framework': 'Hugging Face Transformers', 'functionality': 'Translation', 'api_name': 'Helsinki-NLP/opus-mt-en-it', 'api_call': "pipeline('translation_en_to_it', model='Helsinki-NLP/opus-mt-en-it')", 'api_arguments': {'source_language': 'en', 'target_language': 'it'}, 'python_environment_requirements': ['transformers'], 'example_code': "from transformers import pipeline; translator = pipeline('translation_en_to_it', model='Helsinki-NLP/opus-mt-en-it'); translator('Hello, world!')", 'performance': {'dataset': 'opus', 'accuracy': {'newssyscomb2009.en.it': {'BLEU': 30.9, 'chr-F': 0.606}, 'newstest2009.en.it': {'BLEU': 31.9, 'chr-F': 0.604}, 'Tatoeba.en.it': {'BLEU': 48.2, 'chr-F': 0.695}}}, 'description': 'A Transformer-based English to Italian translation model trained on the OPUS dataset. This model can be used for translation tasks using the Hugging Face Transformers library.'}}
+
+  File "output/hf-eval-data-v2/f00504_translate_english_to_italian.py", line 28, in test_translate_english_to_italian
+    italian_text = translate_english_to_italian(english_text)
+  File "output/hf-eval-data-v2/f00504_translate_english_to_italian.py", line 17, in translate_english_to_italian
+    translator = pipeline('translation_en_to_italian', model='Helsinki-NLP/opus-mt-en-it')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 824, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model Helsinki-NLP/opus-mt-en-it with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForSeq2SeqLM'>, <class 'transformers.models.marian.modeling_marian.MarianMTModel'>). See the original errors:
+
+while loading with AutoModelForSeq2SeqLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 554, in http_get
+    temp_file.write(chunk)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 473, in func_wrapper
+    return func(*args, **kwargs)
+OSError: [Errno 28] No space left on device
+
+while loading with MarianMTModel, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 554, in http_get
+    temp_file.write(chunk)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 473, in func_wrapper
+    return func(*args, **kwargs)
+OSError: [Errno 28] No space left on device
+
+
+

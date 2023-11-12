@@ -1,0 +1,63 @@
+Downloading (…)5dded/.gitattributes:   0%|                                                                         | 0.00/1.18k [00:00<?, ?B/s]Downloading (…)5dded/.gitattributes: 100%|████████████████████████████████████████████████████████████████| 1.18k/1.18k [00:00<00:00, 97.4kB/s]
+Downloading (…)_Pooling/config.json:   0%|                                                                           | 0.00/190 [00:00<?, ?B/s]Downloading (…)_Pooling/config.json: 100%|████████████████████████████████████████████████████████████████████| 190/190 [00:00<00:00, 16.2kB/s]
+Downloading (…)4d81d5dded/README.md:   0%|                                                                         | 0.00/10.6k [00:00<?, ?B/s]Downloading (…)4d81d5dded/README.md: 100%|████████████████████████████████████████████████████████████████| 10.6k/10.6k [00:00<00:00, 5.71MB/s]
+Downloading (…)81d5dded/config.json:   0%|                                                                           | 0.00/573 [00:00<?, ?B/s]Downloading (…)81d5dded/config.json: 100%|█████████████████████████████████████████████████████████████████████| 573/573 [00:00<00:00, 286kB/s]
+Downloading (…)ce_transformers.json:   0%|                                                                           | 0.00/116 [00:00<?, ?B/s]Downloading (…)ce_transformers.json: 100%|████████████████████████████████████████████████████████████████████| 116/116 [00:00<00:00, 71.9kB/s]
+Downloading (…)ded/data_config.json:   0%|                                                                         | 0.00/39.3k [00:00<?, ?B/s]Downloading (…)ded/data_config.json: 100%|█████████████████████████████████████████████████████████████████| 39.3k/39.3k [00:00<00:00, 415kB/s]
+Downloading pytorch_model.bin:   0%|                                                                                | 0.00/134M [00:00<?, ?B/s]Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 444, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 567, in read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 533, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 628, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 593, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 449, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.")
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00610_sentence_similarity.py", line 34, in <module>
+    test_sentence_similarity()
+  File "./f00610_sentence_similarity.py", line 27, in test_sentence_similarity
+    similarity_matrix = sentence_similarity(sentences)
+  File "./f00610_sentence_similarity.py", line 18, in sentence_similarity
+    model = SentenceTransformer('sentence-transformers/all-MiniLM-L12-v2')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/SentenceTransformer.py", line 87, in __init__
+    snapshot_download(model_name_or_path,
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/util.py", line 491, in snapshot_download
+    path = cached_download(**cached_download_args)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 808, in cached_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Downloading pytorch_model.bin:   0%|                                                                                | 0.00/134M [00:11<?, ?B/s]

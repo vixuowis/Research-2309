@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00294_get_max_goal_scorer.py", line 35, in <module>
+    test_get_max_goal_scorer()
+  File "./f00294_get_max_goal_scorer.py", line 28, in test_get_max_goal_scorer
+    assert get_max_goal_scorer('What player scored the most goals?', 'Player,Goals\nA,2\nB,3\nC,1') == 'B'
+  File "./f00294_get_max_goal_scorer.py", line 20, in get_max_goal_scorer
+    inputs = tokenizer(question, table, return_tensors='pt')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 630, in __call__
+    assert isinstance(table, pd.DataFrame), "Table must be of type pd.DataFrame"
+AssertionError: Table must be of type pd.DataFrame

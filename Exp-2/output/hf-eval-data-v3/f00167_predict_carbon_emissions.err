@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00167_predict_carbon_emissions.py", line 50, in <module>
+    test_predict_carbon_emissions()
+  File "./f00167_predict_carbon_emissions.py", line 37, in test_predict_carbon_emissions
+    predictions = predict_carbon_emissions('sample_data.csv')
+  File "./f00167_predict_carbon_emissions.py", line 22, in predict_carbon_emissions
+    model = joblib.load('model.joblib')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'model.joblib'

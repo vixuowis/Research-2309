@@ -1,0 +1,24 @@
+WARNING ⚠️ Ultralytics settings reset to defaults. 
+This is normal and may be due to a recent ultralytics package update, but may have overwritten previous settings. 
+You may view and update settings directly in '/root/.config/Ultralytics/settings.yaml'
+Downloading (…)lve/main/config.json:   0%|                                                                                       | 0.00/161 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|████████████████████████████████████████████████████████████████████████████████| 161/161 [00:00<00:00, 14.3kB/s]
+Downloading best.pt:   0%|                                                                                                     | 0.00/6.23M [00:00<?, ?B/s]Downloading best.pt: 100%|█████████████████████████████████████████████████████████████████████████████████████████████| 6.23M/6.23M [00:00<00:00, 112MB/s]2023-11-12 17:51:08.038341: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 17:51:08.093489: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 17:51:08.955665: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+
+Ultralytics YOLOv8.0.21 🚀 Python-3.8.18 torch-2.1.0+cu121 CUDA:0 (NVIDIA GeForce RTX 3090, 24260MiB)
+Model summary (fused): 168 layers, 3006428 parameters, 0 gradients, 8.1 GFLOPs
+Found https://github.com/ultralytics/yolov5/raw/master/data/images/zidane.jpg locally at zidane.jpg
+image 1/1 /root/Research-0922/Exp-2/output/hf-eval-data-v3/zidane.jpg: 384x640 1 ct, 79.1ms
+Speed: 2.0ms pre-process, 79.1ms inference, 2.4ms postprocess per image at shape (1, 3, 640, 640)
+Traceback (most recent call last):
+  File "./f00848_detect_players.py", line 43, in <module>
+    print(test_detect_players())
+  File "./f00848_detect_players.py", line 37, in test_detect_players
+    assert isinstance(detected_players, list), 'The result should be a list.'
+AssertionError: The result should be a list.
+Sentry is attempting to send 2 pending events
+Waiting up to 2 seconds
+Press Ctrl-C to quit
+11/12/2023 17:51:16 - WARNING - urllib3.connectionpool -   Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1131)'))': /api/4504521592406016/envelope/

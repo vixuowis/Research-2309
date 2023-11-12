@@ -1,0 +1,22 @@
+{'code': '###Instruction: Our client is a media organization that wants to extract named entities from a large collection of news articles in order to identify key people and places\n###Output: <<<domain>>>: Natural Language Processing Token Classification\n<<<api_call>>>: pipeline(\'ner\', model=\'dslim/bert-base-NER-uncased\')\n<<<api_provider>>>: Transformers\n<<<explanation>>>: 1. Import the pipeline function from the transformers library provided by Hugging Face.\n2. Use the pipeline function to create a named entity recognition (NER) model.\n3. Specify the model \'dslim/bert-base-NER-uncased\' to be loaded. This model has been trained to perform named entity recognition on uncased text, which means it can recognize entities such as person names, locations, and organizations even in lowercased text.\n4. The created NER model can then be used to process the news articles to extract named entities. This will allow the media organization to efficiently identify and analyze key people, places, and organizations featured across the articles.\n<<<code>>>: from transformers import pipeline\nner_model = pipeline(\'ner\', model=\'dslim/bert-base-NER-uncased\')\nnews_article = "Large parts of Los Angeles have been hit by power outages with electricity provider Southern California Edison pointing at high winds as the cause for the disruption. Thousands of residents..."\nentities = ner_model(news_article)', 'api_call': "pipeline('ner', model='dslim/bert-base-NER-uncased')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Token Classification', 'framework': 'Transformers', 'functionality': 'Named Entity Recognition', 'api_name': 'dslim/bert-base-NER-uncased', 'api_call': "pipeline('ner', model='dslim/bert-base-NER-uncased')", 'api_arguments': {}, 'python_environment_requirements': {'transformers': '>=4.0.0'}, 'example_code': "nlp('My name is John and I live in New York.')", 'performance': {'dataset': '', 'accuracy': ''}, 'description': 'A pretrained BERT model for Named Entity Recognition (NER) on uncased text. It can be used to extract entities such as person names, locations, and organizations from text.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00579_extract_named_entities.py", line 35, in <module>
+    test_extract_named_entities()
+  File "output/hf-eval-data-v2/f00579_extract_named_entities.py", line 28, in test_extract_named_entities
+    entities = extract_named_entities(news_article)
+  File "output/hf-eval-data-v2/f00579_extract_named_entities.py", line 17, in extract_named_entities
+    ner_model = pipeline('ner', model='dslim/bert-base-NER-uncased')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--dslim--bert-base-NER-uncased'

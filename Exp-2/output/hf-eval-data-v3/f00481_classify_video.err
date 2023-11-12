@@ -1,0 +1,28 @@
+2023-11-12 02:40:42.175705: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 02:40:42.228585: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 02:40:43.061744: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00481_classify_video.py", line 41, in <module>
+    test_classify_video()
+  File "./f00481_classify_video.py", line 35, in test_classify_video
+    predicted_class = classify_video(video)
+  File "./f00481_classify_video.py", line 21, in classify_video
+    inputs = processor(video, return_tensors='pt')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_processing_utils.py", line 546, in __call__
+    return self.preprocess(images, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 320, in preprocess
+    videos = [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 321, in <listcomp>
+    [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 322, in <listcomp>
+    self._preprocess_image(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 219, in _preprocess_image
+    image = self.resize(image=image, size=size, resample=resample, input_data_format=input_data_format)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 168, in resize
+    return resize(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_transforms.py", line 326, in resize
+    do_rescale = _rescale_for_pil_conversion(image)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_transforms.py", line 150, in _rescale_for_pil_conversion
+    raise ValueError(
+ValueError: The image to be converted to a PIL image contains values outside the range [0, 1], got [-4.049192008977429, 4.545699724453936] which cannot be converted to uint8.

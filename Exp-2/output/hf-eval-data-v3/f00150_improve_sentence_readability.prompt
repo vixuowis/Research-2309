@@ -1,0 +1,21 @@
+{'code': '### Instruction: I teach at a school, in a natural language processing subject and I want to improve the readability and grammaticality of the provided sentence by suggesting the best replacement for the masked part.\n### Output: <<<domain>>>: Natural Language Processing Fill-Mask\n<<<api_call>>>: DebertaModel.from_pretrained(\'microsoft/deberta-v2-xlarge\')\n<<<api_provider>>>: Transformers\n<<<explanation>>>:  1. Import necessary components from the transformers library, including DebertaTokenizer and DebertaModel.\n2. Instantiate the tokenizer and the model using \'microsoft/deberta-v2-xlarge\'.\n3. Prepare the sentence with the masked token ([MASK]).\n4. Apply the tokenizer to prepare the input text for the model.\n5. Pass the tokenized input to the DebertaModel.\n6. Decode the predictions to obtain the best replacement for the masked part of the sentence.\n7. Return the improved sentence.\n<<<code>>>: from transformers import DebertaTokenizer, DebertaModel\ntokenizer = DebertaTokenizer.from_pretrained(\'microsoft/deberta-v2-xlarge\')\nmodel = DebertaModel.from_pretrained(\'microsoft/deberta-v2-xlarge\')\nsentence = "The cat was chasing its [MASK]."\ninput_text = tokenizer(sentence, return_tensors=\'pt\')\noutput = model(**input_text)\npredicted_token = tokenizer.decode(output.logits.argmax(-1)[:, -1].item())\nimproved_sentence = sentence.replace("[MASK]", predicted_token)\n', 'api_call': "DebertaModel.from_pretrained('microsoft/deberta-v2-xlarge')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Fill-Mask', 'framework': 'Transformers', 'functionality': 'Fill-Mask', 'api_name': 'microsoft/deberta-v2-xlarge', 'api_call': "DebertaModel.from_pretrained('microsoft/deberta-v2-xlarge')", 'api_arguments': 'Mask token: [MASK]', 'python_environment_requirements': 'PyTorch, TensorFlow', 'example_code': 'This model can be loaded on the Inference API on-demand.', 'performance': {'dataset': [{'name': 'SQuAD 1.1', 'accuracy': '95.8/90.8'}, {'name': 'SQuAD 2.0', 'accuracy': '91.4/88.9'}, {'name': 'MNLI-m/mm', 'accuracy': '91.7/91.6'}, {'name': 'SST-2', 'accuracy': '97.5'}, {'name': 'QNLI', 'accuracy': '95.8'}, {'name': 'CoLA', 'accuracy': '71.1'}, {'name': 'RTE', 'accuracy': '93.9'}, {'name': 'MRPC', 'accuracy': '92.0/94.2'}, {'name': 'QQP', 'accuracy': '92.3/89.8'}, {'name': 'STS-B', 'accuracy': '92.9/92.9'}]}, 'description': 'DeBERTa improves the BERT and RoBERTa models using disentangled attention and enhanced mask decoder. It outperforms BERT and RoBERTa on majority of NLU tasks with 80GB training data. This is the DeBERTa V2 xlarge model with 24 layers, 1536 hidden size. The total parameters are 900M and it is trained with 160GB raw data.'}}
+
+
+
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'DebertaV2Tokenizer'. 
+The class this function is called from is 'DebertaTokenizer'.
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00150_improve_sentence_readability.py", line 37, in <module>
+    test_improve_sentence_readability()
+  File "output/hf-eval-data-v2/f00150_improve_sentence_readability.py", line 32, in test_improve_sentence_readability
+    improved_sentence = improve_sentence_readability(sentence)
+  File "output/hf-eval-data-v2/f00150_improve_sentence_readability.py", line 17, in improve_sentence_readability
+    tokenizer = DebertaTokenizer.from_pretrained('microsoft/deberta-v2-xlarge')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1854, in from_pretrained
+    return cls._from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2017, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/deberta/tokenization_deberta.py", line 223, in __init__
+    with open(vocab_file, encoding="utf-8") as vocab_handle:
+TypeError: expected str, bytes or os.PathLike object, not NoneType

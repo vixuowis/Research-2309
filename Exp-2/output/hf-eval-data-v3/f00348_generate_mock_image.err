@@ -1,0 +1,18 @@
+2023-11-11 20:13:57.697828: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-11 20:13:57.740686: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-11 20:13:58.440411: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading pipeline components...:   0%|                                                                                    | 0/7 [00:00<?, ?it/s]`text_config_dict` is provided which will be used to initialize `CLIPTextConfig`. The value `text_config["id2label"]` will be overriden.
+`text_config_dict` is provided which will be used to initialize `CLIPTextConfig`. The value `text_config["bos_token_id"]` will be overriden.
+`text_config_dict` is provided which will be used to initialize `CLIPTextConfig`. The value `text_config["eos_token_id"]` will be overriden.
+Loading pipeline components...:  14%|██████████▊                                                                 | 1/7 [00:00<00:02,  2.96it/s]Loading pipeline components...:  29%|█████████████████████▋                                                      | 2/7 [00:00<00:01,  4.22it/s]Loading pipeline components...:  86%|█████████████████████████████████████████████████████████████████▏          | 6/7 [00:00<00:00,  9.30it/s]Loading pipeline components...: 100%|████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00,  8.88it/s]
+Traceback (most recent call last):
+  File "./f00348_generate_mock_image.py", line 43, in <module>
+    test_generate_mock_image()
+  File "./f00348_generate_mock_image.py", line 36, in test_generate_mock_image
+    assert isinstance(generate_mock_image(description1), type)
+  File "./f00348_generate_mock_image.py", line 24, in generate_mock_image
+    mock_image = pipe.generate_from_text(description)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/configuration_utils.py", line 137, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'StableDiffusionPipeline' object has no attribute 'generate_from_text'

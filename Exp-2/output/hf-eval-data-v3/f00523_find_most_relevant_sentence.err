@@ -1,0 +1,71 @@
+Downloading (…)13eb5/.gitattributes:   0%|                                                                           | 0.00/737 [00:00<?, ?B/s]Downloading (…)13eb5/.gitattributes: 100%|████████████████████████████████████████████████████████████████████| 737/737 [00:00<00:00, 66.1kB/s]
+Downloading (…)_Pooling/config.json:   0%|                                                                           | 0.00/190 [00:00<?, ?B/s]Downloading (…)_Pooling/config.json: 100%|████████████████████████████████████████████████████████████████████| 190/190 [00:00<00:00, 16.3kB/s]
+Downloading (…)a99d213eb5/README.md:   0%|                                                                         | 0.00/8.66k [00:00<?, ?B/s]Downloading (…)a99d213eb5/README.md: 100%|████████████████████████████████████████████████████████████████| 8.66k/8.66k [00:00<00:00, 4.30MB/s]
+Downloading (…)9d213eb5/config.json:   0%|                                                                           | 0.00/571 [00:00<?, ?B/s]Downloading (…)9d213eb5/config.json: 100%|█████████████████████████████████████████████████████████████████████| 571/571 [00:00<00:00, 303kB/s]
+Downloading (…)ce_transformers.json:   0%|                                                                           | 0.00/116 [00:00<?, ?B/s]Downloading (…)ce_transformers.json: 100%|████████████████████████████████████████████████████████████████████| 116/116 [00:00<00:00, 86.9kB/s]
+Downloading (…)eb5/data_config.json:   0%|                                                                         | 0.00/25.5k [00:00<?, ?B/s]Downloading (…)eb5/data_config.json: 100%|█████████████████████████████████████████████████████████████████| 25.5k/25.5k [00:00<00:00, 613kB/s]
+'(MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /sentence-transformers/multi-qa-mpnet-base-dot-v1/9e1e76b7a067f72e49c7f571cd8e811f7a1567bec49f17e5eaaea899e7bc2c9e?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699984954&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk4NDk1NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9zZW50ZW5jZS10cmFuc2Zvcm1lcnMvbXVsdGktcWEtbXBuZXQtYmFzZS1kb3QtdjEvOWUxZTc2YjdhMDY3ZjcyZTQ5YzdmNTcxY2Q4ZTgxMWY3YTE1NjdiZWM0OWYxN2U1ZWFhZWE4OTllN2JjMmM5ZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=oeTkCbLLuDJA0qlCiq2teSKxwcYY4jDcOwS74q9WC06z~wc-rT9ZHG5CiKEKCU7py2uRTXDGD85rZ~RNGf13mZLH1scsubrypVqm5rZxUvrZVteHp~AEQ0ZZckuauVtwW0HTc1aZYMkln9KNFzw4oTIvz2pLqsyBXMGY8abNhY7kAKhrKgX97SrN8C2F9W4dXW7Mnvz8htLr2KJGfKenP-i1IU6seBWHp24o3uEgGhBpj9iziduplK9Klc-1VWsM~n0FcjHuWlsAduBEeP65p19SAwtAwfiW8Ym43gELUJ7vbjKP4e8~j6GZ-nWQrluKiNvzKmP~~JKmD4GYPdH8OA__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 5f94ab65-bbb6-4daa-a282-0bc1895df85b)')' thrown while requesting GET https://cdn-lfs.huggingface.co/sentence-transformers/multi-qa-mpnet-base-dot-v1/9e1e76b7a067f72e49c7f571cd8e811f7a1567bec49f17e5eaaea899e7bc2c9e?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699984954&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk4NDk1NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9zZW50ZW5jZS10cmFuc2Zvcm1lcnMvbXVsdGktcWEtbXBuZXQtYmFzZS1kb3QtdjEvOWUxZTc2YjdhMDY3ZjcyZTQ5YzdmNTcxY2Q4ZTgxMWY3YTE1NjdiZWM0OWYxN2U1ZWFhZWE4OTllN2JjMmM5ZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=oeTkCbLLuDJA0qlCiq2teSKxwcYY4jDcOwS74q9WC06z%7Ewc-rT9ZHG5CiKEKCU7py2uRTXDGD85rZ%7ERNGf13mZLH1scsubrypVqm5rZxUvrZVteHp%7EAEQ0ZZckuauVtwW0HTc1aZYMkln9KNFzw4oTIvz2pLqsyBXMGY8abNhY7kAKhrKgX97SrN8C2F9W4dXW7Mnvz8htLr2KJGfKenP-i1IU6seBWHp24o3uEgGhBpj9iziduplK9Klc-1VWsM%7En0FcjHuWlsAduBEeP65p19SAwtAwfiW8Ym43gELUJ7vbjKP4e8%7Ej6GZ-nWQrluKiNvzKmP%7E%7EJKmD4GYPdH8OA__&Key-Pair-Id=KVTP0A1DKRTAX
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 712, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1012, in _prepare_proxy
+    conn.connect()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /sentence-transformers/multi-qa-mpnet-base-dot-v1/9e1e76b7a067f72e49c7f571cd8e811f7a1567bec49f17e5eaaea899e7bc2c9e?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699984954&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk4NDk1NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9zZW50ZW5jZS10cmFuc2Zvcm1lcnMvbXVsdGktcWEtbXBuZXQtYmFzZS1kb3QtdjEvOWUxZTc2YjdhMDY3ZjcyZTQ5YzdmNTcxY2Q4ZTgxMWY3YTE1NjdiZWM0OWYxN2U1ZWFhZWE4OTllN2JjMmM5ZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=oeTkCbLLuDJA0qlCiq2teSKxwcYY4jDcOwS74q9WC06z~wc-rT9ZHG5CiKEKCU7py2uRTXDGD85rZ~RNGf13mZLH1scsubrypVqm5rZxUvrZVteHp~AEQ0ZZckuauVtwW0HTc1aZYMkln9KNFzw4oTIvz2pLqsyBXMGY8abNhY7kAKhrKgX97SrN8C2F9W4dXW7Mnvz8htLr2KJGfKenP-i1IU6seBWHp24o3uEgGhBpj9iziduplK9Klc-1VWsM~n0FcjHuWlsAduBEeP65p19SAwtAwfiW8Ym43gELUJ7vbjKP4e8~j6GZ-nWQrluKiNvzKmP~~JKmD4GYPdH8OA__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00523_find_most_relevant_sentence.py", line 35, in <module>
+    test_find_most_relevant_sentence()
+  File "./f00523_find_most_relevant_sentence.py", line 28, in test_find_most_relevant_sentence
+    assert find_most_relevant_sentence('What is the main purpose of photosynthesis?', ['Photosynthesis is the process used by plants to convert light energy into chemical energy to fuel their growth.', 'The Eiffel Tower is a famous landmark in Paris.', 'Photosynthesis also produces oxygen as a byproduct, which is necessary for life on Earth.']) == 'Photosynthesis is the process used by plants to convert light energy into chemical energy to fuel their growth.'
+  File "./f00523_find_most_relevant_sentence.py", line 18, in find_most_relevant_sentence
+    model = SentenceTransformer('sentence-transformers/multi-qa-mpnet-base-dot-v1')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/SentenceTransformer.py", line 87, in __init__
+    snapshot_download(model_name_or_path,
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/util.py", line 491, in snapshot_download
+    path = cached_download(**cached_download_args)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 808, in cached_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 515, in http_get
+    r = _request_wrapper(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 452, in _request_wrapper
+    return http_backoff(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 274, in http_backoff
+    raise err
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 258, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /sentence-transformers/multi-qa-mpnet-base-dot-v1/9e1e76b7a067f72e49c7f571cd8e811f7a1567bec49f17e5eaaea899e7bc2c9e?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699984954&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk4NDk1NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9zZW50ZW5jZS10cmFuc2Zvcm1lcnMvbXVsdGktcWEtbXBuZXQtYmFzZS1kb3QtdjEvOWUxZTc2YjdhMDY3ZjcyZTQ5YzdmNTcxY2Q4ZTgxMWY3YTE1NjdiZWM0OWYxN2U1ZWFhZWE4OTllN2JjMmM5ZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=oeTkCbLLuDJA0qlCiq2teSKxwcYY4jDcOwS74q9WC06z~wc-rT9ZHG5CiKEKCU7py2uRTXDGD85rZ~RNGf13mZLH1scsubrypVqm5rZxUvrZVteHp~AEQ0ZZckuauVtwW0HTc1aZYMkln9KNFzw4oTIvz2pLqsyBXMGY8abNhY7kAKhrKgX97SrN8C2F9W4dXW7Mnvz8htLr2KJGfKenP-i1IU6seBWHp24o3uEgGhBpj9iziduplK9Klc-1VWsM~n0FcjHuWlsAduBEeP65p19SAwtAwfiW8Ym43gELUJ7vbjKP4e8~j6GZ-nWQrluKiNvzKmP~~JKmD4GYPdH8OA__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 5f94ab65-bbb6-4daa-a282-0bc1895df85b)')

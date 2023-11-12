@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "./f00154_text_to_speech_translation.py", line 6, in <module>
+    from fairseq.models.text_to_speech import CodeHiFiGANVocoder
+ImportError: cannot import name 'CodeHiFiGANVocoder' from 'fairseq.models.text_to_speech' (/root/miniconda3/envs/py38/lib/python3.8/site-packages/fairseq/models/text_to_speech/__init__.py)

@@ -1,0 +1,52 @@
+{'code': '###Instruction: As a researcher, I am trying to find an answer to my question in a table containing information about animals and their characteristics.\n###Output: <<<domain>>>: Natural Language Processing Table Question Answering\n<<<api_call>>>: AutoModelForSeq2SeqLM.from_pretrained(\'neulab/omnitab-large-finetuned-wtq\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the necessary libraries, including \'AutoTokenizer\', \'AutoModelForSeq2SeqLM\', and \'pd\' from the relevant packages.\n2. Instantiate the tokenizer and model using the \'neulab/omnitab-large-finetuned-wtq\' checkpoint.\n3. Define the table data in a Pandas DataFrame with information about animals and their characteristics. For example, the table might include columns for \'Animal\', \'Habitat\', and \'Average Lifespan\'.\n4. Specify the question to be answered, which relates to the information present in the table.\n5. Use the tokenizer to create an encoding of the table and the query.\n6. Use the model to generate an output based on the encoding.\n7. Decode the output to get the final answer to the question.\n<<<code>>>: from transformers import AutoTokenizer, AutoModelForSeq2SeqLM\nimport pandas as pd\ntokenizer = AutoTokenizer.from_pretrained(\'neulab/omnitab-large-finetuned-wtq\')\nmodel = AutoModelForSeq2SeqLM.from_pretrained(\'neulab/omnitab-large-finetuned-wtq\')\ndata = {\n    \'Animal\': [\'Tiger\', \'Lion\', \'Giraffe\', \'Elephant\'],\n    \'Habitat\': [\'Forest\', \'Grassland\', \'Savanna\', \'Savanna\'],\n    \'Average Lifespan\': [10, 12, 25, 50],\n}\ntable = pd.DataFrame.from_dict(data)\nquery = "What is the average lifespan of a giraffe?"\nencoding = tokenizer(table=table, query=query, return_tensors=\'pt\')\noutputs = model.generate(**encoding)\nprint(tokenizer.batch_decode(outputs, skip_special_tokens=True))', 'api_call': "AutoModelForSeq2SeqLM.from_pretrained('neulab/omnitab-large-finetuned-wtq')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Table Question Answering', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'neulab/omnitab-large-finetuned-wtq', 'api_call': "AutoModelForSeq2SeqLM.from_pretrained('neulab/omnitab-large-finetuned-wtq')", 'api_arguments': {'table': 'pd.DataFrame', 'query': 'str'}, 'python_environment_requirements': {'transformers': 'AutoTokenizer, AutoModelForSeq2SeqLM', 'pandas': 'pd'}, 'example_code': 'from transformers import AutoTokenizer, AutoModelForSeq2SeqLM\nimport pandas as pd\ntokenizer = AutoTokenizer.from_pretrained(neulab/omnitab-large-finetuned-wtq)\nmodel = AutoModelForSeq2SeqLM.from_pretrained(neulab/omnitab-large-finetuned-wtq)\ndata = {\n year: [1896, 1900, 1904, 2004, 2008, 2012],\n city: [athens, paris, st. louis, athens, beijing, london]\n}\ntable = pd.DataFrame.from_dict(data)\nquery = In which year did beijing host the Olympic Games?\nencoding = tokenizer(table=table, query=query, return_tensors=pt)\noutputs = model.generate(**encoding)\nprint(tokenizer.batch_decode(outputs, skip_special_tokens=True))', 'performance': {'dataset': 'wikitablequestions', 'accuracy': None}, 'description': 'OmniTab is a table-based QA model proposed in OmniTab: Pretraining with Natural and Synthetic Data for Few-shot Table-based Question Answering. The original Github repository is https://github.com/jzbjyb/OmniTab.'}}
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 879, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 715, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00129_get_answer_from_table.py", line 44, in <module>
+    test_get_answer_from_table()
+  File "output/hf-eval-data-v2/f00129_get_answer_from_table.py", line 38, in test_get_answer_from_table
+    answer = get_answer_from_table(table, query)
+  File "output/hf-eval-data-v2/f00129_get_answer_from_table.py", line 20, in get_answer_from_table
+    model = AutoModelForSeq2SeqLM.from_pretrained('neulab/omnitab-large-finetuned-wtq')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+

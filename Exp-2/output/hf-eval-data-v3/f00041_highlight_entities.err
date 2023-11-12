@@ -1,0 +1,4 @@
+  File "./f00041_highlight_entities.py", line 49
+    assert highlight_entities('Responsable des ventes, vous travaillerez au sein d'une équipe dynamique dans l'agence de Lyon.') == 'Responsable des ventes, vous travaillerez au sein d'une équipe dynamique dans l'agence de [Lyon].'
+                                                                                   ^
+SyntaxError: invalid syntax

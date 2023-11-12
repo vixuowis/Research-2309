@@ -1,0 +1,24 @@
+{'code': "###Instruction: I need to create a system that can answer questions related to a document provided. The system should use a pre-trained model.\n###Output: <<<domain>>>: Multimodal Document Question Answer\n<<<api_call>>>: AutoModelForDocumentQuestionAnswering.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. To create a question-answering system, first, import the necessary libraries: AutoTokenizer and AutoModelForDocumentQuestionAnswering from the transformers package by Hugging Face.\n2. Load the pre-trained model 'tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa' using the AutoModelForDocumentQuestionAnswering.from_pretrained() method.\n3. Load the corresponding tokenizer using the AutoTokenizer.from_pretrained() method to tokenize the input document and question.\n4. Use the tokenizer to encode the input document and question, then pass the encoded input to the model to get the answer.\n<<<code>>>: from transformers import AutoTokenizer, AutoModelForDocumentQuestionAnswering\nmodel = AutoModelForDocumentQuestionAnswering.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')\ntokenizer = AutoTokenizer.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')\ninput_dict = tokenizer(question, document, return_tensors='pt')\noutput = model(**input_dict)\nanswer = tokenizer.convert_ids_to_tokens(output['answer_ids'][0])\n", 'api_call': "AutoModelForDocumentQuestionAnswering.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Document Question Answer', 'framework': 'Hugging Face Transformers', 'functionality': 'Document Question Answering', 'api_name': 'layoutlmv2-base-uncased-finetuned-infovqa', 'api_call': "AutoModelForDocumentQuestionAnswering.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')", 'api_arguments': {}, 'python_environment_requirements': {'transformers': '4.12.2', 'pytorch': '1.8.0+cu101', 'datasets': '1.14.0', 'tokenizers': '0.10.3'}, 'example_code': '', 'performance': {'dataset': 'unknown', 'accuracy': {'Loss': 2.087}}, 'description': 'This model is a fine-tuned version of microsoft/layoutlmv2-base-uncased on an unknown dataset.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00645_document_question_answer.py", line 40, in <module>
+    test_document_question_answer()
+  File "output/hf-eval-data-v2/f00645_document_question_answer.py", line 34, in test_document_question_answer
+    answer = document_question_answer(question, document)
+  File "output/hf-eval-data-v2/f00645_document_question_answer.py", line 18, in document_question_answer
+    model = AutoModelForDocumentQuestionAnswering.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2954, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/layoutlmv2/modeling_layoutlmv2.py", line 1292, in __init__
+    self.layoutlmv2 = LayoutLMv2Model(config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/layoutlmv2/modeling_layoutlmv2.py", line 715, in __init__
+    requires_backends(self, "detectron2")
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/import_utils.py", line 1112, in requires_backends
+    raise ImportError("".join(failed))
+ImportError: 
+LayoutLMv2Model requires the detectron2 library but it was not found in your environment. Checkout the instructions on the
+installation page: https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+

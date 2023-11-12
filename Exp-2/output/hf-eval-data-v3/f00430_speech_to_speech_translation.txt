@@ -1,0 +1,4 @@
+fairseq
+torchaudio
+huggingface_hub
+IPython

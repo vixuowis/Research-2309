@@ -1,0 +1,25 @@
+{'code': "###Instruction: Our company is exploring the Chinese market and we need to communicate effectively with our clients. Help me create a generic Chinese response.\n\n###Output: <<<domain>>>: Natural Language Processing Fill-Mask\n<<<api_call>>>: pipeline('fill-mask', model='bert-base-chinese')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the necessary libraries, which are 'pipeline' from transformers.\n2. Use the 'pipeline' function from transformers to load the model 'bert-base-chinese'. This model has been trained on Chinese texts and can be used for masked language modeling tasks.\n3. Create a simple text in Chinese with a masked token.\n4. The model will predict the most appropriate word to fill in the masked token in the Chinese text.\n<<<code>>>: from transformers import pipeline\nfill_mask = pipeline('fill-mask', model='bert-base-chinese')\ntext = '我们很高兴与您合作，希望我们的<mask>能为您带来便利。'\nresult = fill_mask(text)\n", 'api_call': "AutoModelForMaskedLM.from_pretrained('bert-base-chinese')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Fill-Mask', 'framework': 'Hugging Face Transformers', 'functionality': 'Masked Language Modeling', 'api_name': 'bert-base-chinese', 'api_call': "AutoModelForMaskedLM.from_pretrained('bert-base-chinese')", 'api_arguments': {'pretrained_model_name': 'bert-base-chinese'}, 'python_environment_requirements': {'transformers': 'from transformers import AutoTokenizer, AutoModelForMaskedLM'}, 'example_code': 'tokenizer = AutoTokenizer.from_pretrained(bert-base-chinese)\nmodel = AutoModelForMaskedLM.from_pretrained(bert-base-chinese)', 'performance': {'dataset': '[More Information Needed]', 'accuracy': '[More Information Needed]'}, 'description': 'This model has been pre-trained for Chinese, training and random input masking has been applied independently to word pieces (as in the original BERT paper). It can be used for masked language modeling.'}}
+
+Some weights of the model checkpoint at bert-base-chinese were not used when initializing BertForMaskedLM: ['cls.seq_relationship.weight', 'bert.pooler.dense.weight', 'bert.pooler.dense.bias', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00892_fill_mask_chinese.py", line 33, in <module>
+    test_fill_mask_chinese()
+  File "output/hf-eval-data-v2/f00892_fill_mask_chinese.py", line 28, in test_fill_mask_chinese
+    result = fill_mask_chinese(text)
+  File "output/hf-eval-data-v2/f00892_fill_mask_chinese.py", line 18, in fill_mask_chinese
+    result = fill_mask(text)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 239, in __call__
+    outputs = super().__call__(inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 97, in preprocess
+    self.ensure_exactly_one_mask_token(model_inputs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 91, in ensure_exactly_one_mask_token
+    self._ensure_exactly_one_mask_token(input_ids)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 79, in _ensure_exactly_one_mask_token
+    raise PipelineException(
+transformers.pipelines.base.PipelineException: No mask_token ([MASK]) found on the input

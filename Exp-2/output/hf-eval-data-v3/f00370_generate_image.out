@@ -1,0 +1,2 @@
+Loading base model ()...Done.
+Removing last two layers (global_pool & classifier).

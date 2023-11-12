@@ -1,0 +1,18 @@
+{'code': "###Instruction: Determine the keyword spoken in a recorded audio file.\n###Output: <<<domain>>>: Audio Audio Classification\n<<<api_call>>>: pipeline('audio-classification', model='superb/hubert-base-superb-ks')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the required modules, namely 'datasets' and 'pipeline' from the transformers library provided by Hugging Face.\n2. Load the pre-trained 'superb/hubert-base-superb-ks' model using the pipeline function. This model specializes in keyword spotting in speech audio sampled at 16kHz.\n3. Use the created classifier to process the recorded audio file. Make sure the audio file is also sampled at 16kHz.\n4. The classifier will return the model's predictions for the top keywords in the audio file.\n<<<code>>>: from transformers import pipeline\nclassifier = pipeline('audio-classification', model='superb/hubert-base-superb-ks')\nkeyword_predictions = classifier(audio_file_path, top_k=5)\n", 'api_call': "pipeline('audio-classification', model='superb/hubert-base-superb-ks')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Audio Audio Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'superb/hubert-base-superb-ks', 'api_call': "pipeline('audio-classification', model='superb/hubert-base-superb-ks')", 'api_arguments': ['file', 'top_k'], 'python_environment_requirements': ['datasets', 'transformers', 'torchaudio'], 'example_code': 'from datasets import load_dataset\nfrom transformers import pipeline\ndataset = load_dataset(anton-l/superb_demo, ks, split=test)\nclassifier = pipeline(audio-classification, model=superb/hubert-base-superb-ks)\nlabels = classifier(dataset[0][file], top_k=5)', 'performance': {'dataset': 'Speech Commands dataset v1.0', 'accuracy': 0.9672}, 'description': "This is a ported version of S3PRL's Hubert for the SUPERB Keyword Spotting task. The base model is hubert-base-ls960, which is pretrained on 16kHz sampled speech audio. When using the model make sure that your speech input is also sampled at 16Khz. For more information refer to SUPERB: Speech processing Universal PERformance Benchmark."}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00160_keyword_spotting.py", line 40, in <module>
+    test_keyword_spotting()
+  File "output/hf-eval-data-v2/f00160_keyword_spotting.py", line 30, in test_keyword_spotting
+    predictions = keyword_spotting(audio_file_path)
+  File "output/hf-eval-data-v2/f00160_keyword_spotting.py", line 19, in keyword_spotting
+    keyword_predictions = classifier(audio_file_path, top_k=top_k)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/audio_classification.py", line 136, in __call__
+    return super().__call__(inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/audio_classification.py", line 154, in preprocess
+    with open(inputs, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'sample_audio.wav'

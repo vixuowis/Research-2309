@@ -1,0 +1,14 @@
+2023-11-12 00:27:25.150210: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 00:27:25.202789: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 00:27:26.103157: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00416_suggest_questions.py", line 40, in <module>
+    test_suggest_questions()
+  File "./f00416_suggest_questions.py", line 31, in test_suggest_questions
+    suggestions = suggest_questions(user_question, available_questions)
+  File "./f00416_suggest_questions.py", line 24, in suggest_questions
+    return [available_questions[i] for i in top_5_indices]
+  File "./f00416_suggest_questions.py", line 24, in <listcomp>
+    return [available_questions[i] for i in top_5_indices]
+TypeError: only integer scalar arrays can be converted to a scalar index

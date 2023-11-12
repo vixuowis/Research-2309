@@ -1,0 +1,67 @@
+'(MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa/a3743d0db8f50558624d39a3b14f063200f7305882ebc2220b5cc17ee403514f?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699956429&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk1NjQyOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby90aWVubnZjcy9sYXlvdXRsbXYyLWJhc2UtdW5jYXNlZC1maW5ldHVuZWQtaW5mb3ZxYS9hMzc0M2QwZGI4ZjUwNTU4NjI0ZDM5YTNiMTRmMDYzMjAwZjczMDU4ODJlYmMyMjIwYjVjYzE3ZWU0MDM1MTRmP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiZyZXNwb25zZS1jb250ZW50LXR5cGU9KiJ9XX0_&Signature=PiFSE~tLGSLw-vp-Lir0nYTLRXIwDoHCyG0WMEqr3Yk5UyNjlLiRq3ElAdFZCjijoZLKv4Tp0YmzXni8aBNZMc7FPn7ToOyoaXzyHcSJBl2qOeDeuoM~ec7mTJN98KCX2X03Yabbwprg4KJaZAKF5w9Rahiej4rIb3QrNExwwZzwM~LFQ1Z0y6vuTvdJ5ndfxKjZ8ccozRjviqbkFRn9Ay~RXmYsLxWL-Fp8hgdN2xT-eVBL6xkl6Q9IcJ0aT6dR9uEkIJF0soJ1fhxWXzbR-lTYe6I-gXVJ1oepNNv105Ld1DglgOeT3DXALf9kzSFvtg3Y01cpYdm1f1ZD99UB~Q__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: d58340d4-69b4-464a-9ac4-cb5b68dbc21e)')' thrown while requesting GET https://cdn-lfs.huggingface.co/tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa/a3743d0db8f50558624d39a3b14f063200f7305882ebc2220b5cc17ee403514f?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699956429&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk1NjQyOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby90aWVubnZjcy9sYXlvdXRsbXYyLWJhc2UtdW5jYXNlZC1maW5ldHVuZWQtaW5mb3ZxYS9hMzc0M2QwZGI4ZjUwNTU4NjI0ZDM5YTNiMTRmMDYzMjAwZjczMDU4ODJlYmMyMjIwYjVjYzE3ZWU0MDM1MTRmP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiZyZXNwb25zZS1jb250ZW50LXR5cGU9KiJ9XX0_&Signature=PiFSE%7EtLGSLw-vp-Lir0nYTLRXIwDoHCyG0WMEqr3Yk5UyNjlLiRq3ElAdFZCjijoZLKv4Tp0YmzXni8aBNZMc7FPn7ToOyoaXzyHcSJBl2qOeDeuoM%7Eec7mTJN98KCX2X03Yabbwprg4KJaZAKF5w9Rahiej4rIb3QrNExwwZzwM%7ELFQ1Z0y6vuTvdJ5ndfxKjZ8ccozRjviqbkFRn9Ay%7ERXmYsLxWL-Fp8hgdN2xT-eVBL6xkl6Q9IcJ0aT6dR9uEkIJF0soJ1fhxWXzbR-lTYe6I-gXVJ1oepNNv105Ld1DglgOeT3DXALf9kzSFvtg3Y01cpYdm1f1ZD99UB%7EQ__&Key-Pair-Id=KVTP0A1DKRTAX
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 712, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1012, in _prepare_proxy
+    conn.connect()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa/a3743d0db8f50558624d39a3b14f063200f7305882ebc2220b5cc17ee403514f?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699956429&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk1NjQyOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby90aWVubnZjcy9sYXlvdXRsbXYyLWJhc2UtdW5jYXNlZC1maW5ldHVuZWQtaW5mb3ZxYS9hMzc0M2QwZGI4ZjUwNTU4NjI0ZDM5YTNiMTRmMDYzMjAwZjczMDU4ODJlYmMyMjIwYjVjYzE3ZWU0MDM1MTRmP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiZyZXNwb25zZS1jb250ZW50LXR5cGU9KiJ9XX0_&Signature=PiFSE~tLGSLw-vp-Lir0nYTLRXIwDoHCyG0WMEqr3Yk5UyNjlLiRq3ElAdFZCjijoZLKv4Tp0YmzXni8aBNZMc7FPn7ToOyoaXzyHcSJBl2qOeDeuoM~ec7mTJN98KCX2X03Yabbwprg4KJaZAKF5w9Rahiej4rIb3QrNExwwZzwM~LFQ1Z0y6vuTvdJ5ndfxKjZ8ccozRjviqbkFRn9Ay~RXmYsLxWL-Fp8hgdN2xT-eVBL6xkl6Q9IcJ0aT6dR9uEkIJF0soJ1fhxWXzbR-lTYe6I-gXVJ1oepNNv105Ld1DglgOeT3DXALf9kzSFvtg3Y01cpYdm1f1ZD99UB~Q__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00271_document_question_answer.py", line 46, in <module>
+    test_document_question_answer()
+  File "./f00271_document_question_answer.py", line 39, in test_document_question_answer
+    answer = document_question_answer(document_content, question)
+  File "./f00271_document_question_answer.py", line 23, in document_question_answer
+    model = AutoModelForDocumentQuestionAnswering.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 515, in http_get
+    r = _request_wrapper(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 452, in _request_wrapper
+    return http_backoff(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 274, in http_backoff
+    raise err
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 258, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa/a3743d0db8f50558624d39a3b14f063200f7305882ebc2220b5cc17ee403514f?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699956429&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk1NjQyOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby90aWVubnZjcy9sYXlvdXRsbXYyLWJhc2UtdW5jYXNlZC1maW5ldHVuZWQtaW5mb3ZxYS9hMzc0M2QwZGI4ZjUwNTU4NjI0ZDM5YTNiMTRmMDYzMjAwZjczMDU4ODJlYmMyMjIwYjVjYzE3ZWU0MDM1MTRmP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiZyZXNwb25zZS1jb250ZW50LXR5cGU9KiJ9XX0_&Signature=PiFSE~tLGSLw-vp-Lir0nYTLRXIwDoHCyG0WMEqr3Yk5UyNjlLiRq3ElAdFZCjijoZLKv4Tp0YmzXni8aBNZMc7FPn7ToOyoaXzyHcSJBl2qOeDeuoM~ec7mTJN98KCX2X03Yabbwprg4KJaZAKF5w9Rahiej4rIb3QrNExwwZzwM~LFQ1Z0y6vuTvdJ5ndfxKjZ8ccozRjviqbkFRn9Ay~RXmYsLxWL-Fp8hgdN2xT-eVBL6xkl6Q9IcJ0aT6dR9uEkIJF0soJ1fhxWXzbR-lTYe6I-gXVJ1oepNNv105Ld1DglgOeT3DXALf9kzSFvtg3Y01cpYdm1f1ZD99UB~Q__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: d58340d4-69b4-464a-9ac4-cb5b68dbc21e)')

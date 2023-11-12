@@ -1,0 +1,3 @@
+transformers
+cv2
+torch

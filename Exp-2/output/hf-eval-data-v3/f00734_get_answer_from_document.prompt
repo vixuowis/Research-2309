@@ -1,0 +1,22 @@
+{'code': '###Instruction: We are a company managing hotel bookings. We need to answer our customer\'s questions regarding rental rates from our pricing document.\n\n###Output: <<<domain>>>: Multimodal Document Question Answer\n<<<api_call>>>: pipeline(\'question-answering\', model=\'pardeepSF/layoutlm-vqa\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the pipeline function from the transformers library provided by Hugging Face.\n2. Use the pipeline function to create a question-answering model.\n3. Specify the model \'pardeepSF/layoutlm-vqa\' to be loaded, which is tailored for document question answering tasks using the LayoutLM architecture.\n4. The created model can be used to analyze a document, such as a hotel pricing document, and answer customers\' questions regarding rental rates or other relevant information.\n<<<code>>>: from transformers import pipeline\ndocument_qa_model = pipeline(\'question-answering\', model=\'pardeepSF/layoutlm-vqa\')\n\n# pricing_document is the text from the hotel pricing document\nquestion = "What is the cost of a deluxe suite per night?"\nanswer = document_qa_model(question=question, context=pricing_document)\n', 'api_call': "pipeline('question-answering', model='pardeepSF/layoutlm-vqa')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Document Question Answer', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'layoutlm-vqa', 'api_call': "pipeline('question-answering', model='pardeepSF/layoutlm-vqa')", 'api_arguments': {'question': 'string', 'context': 'string'}, 'python_environment_requirements': 'transformers', 'example_code': '', 'performance': {'dataset': '', 'accuracy': ''}, 'description': 'A model for document question answering using the LayoutLM architecture.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00734_get_answer_from_document.py", line 34, in <module>
+    test_get_answer_from_document()
+  File "output/hf-eval-data-v2/f00734_get_answer_from_document.py", line 30, in test_get_answer_from_document
+    assert get_answer_from_document(question, document) == '$200'
+  File "output/hf-eval-data-v2/f00734_get_answer_from_document.py", line 18, in get_answer_from_document
+    document_qa_model = pipeline('question-answering', model='pardeepSF/layoutlm-vqa')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--pardeepSF--layoutlm-vqa'

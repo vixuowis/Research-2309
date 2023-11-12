@@ -1,0 +1,11 @@
+{'code': '###Instruction: Our team needs to develop a tool that can translate articles from English to German in real-time.\n###Output: <<<domain>>>: Natural Language Processing Text2Text Generation\n<<<api_call>>>: pipeline(\'translation_en_to_de\', model=\'sshleifer/tiny-marian-en-de\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. We import the pipeline function from the Hugging Face transformers library.\n2. Next, we use the pipeline function to create a text-to-text generation model, specifically for translating English to German. The specified model is \'sshleifer/tiny-marian-en-de\'.\n3. This model can be used to translate text from English to German. It can be implemented on a webpage or integrated within a content management system (CMS) to provide real-time translation services for your articles.\n<<<code>>>: from transformers import pipeline\ntranslator = pipeline(\'translation_en_to_de\', model=\'sshleifer/tiny-marian-en-de\')\ntranslated_text = translator("Input English text here")\n', 'api_call': "pipeline('translation_en_to_de', model='sshleifer/tiny-marian-en-de')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text2Text Generation', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'sshleifer/tiny-marian-en-de', 'api_call': "pipeline('translation_en_to_de', model='sshleifer/tiny-marian-en-de')", 'api_arguments': '', 'python_environment_requirements': 'transformers', 'example_code': '', 'performance': {'dataset': '', 'accuracy': ''}, 'description': 'A tiny English to German translation model using the Marian framework in Hugging Face Transformers.'}}
+
+
+
+
+
+
+
+
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/marian/tokenization_marian.py:194: UserWarning: Recommended: pip install sacremoses.
+  warnings.warn("Recommended: pip install sacremoses.")

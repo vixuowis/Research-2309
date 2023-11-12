@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "./f00170_load_pong_model.py", line 34, in <module>
+    test_load_pong_model()
+  File "./f00170_load_pong_model.py", line 28, in test_load_pong_model
+    model = load_pong_model('path_to_model_file')
+  File "./f00170_load_pong_model.py", line 19, in load_pong_model
+    model = PPO.load(model_file)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/stable_baselines3/common/base_class.py", line 679, in load
+    data, params, pytorch_variables = load_from_zip_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/stable_baselines3/common/save_util.py", line 390, in load_from_zip_file
+    load_path = open_path(load_path, "r", verbose=verbose, suffix="zip")
+  File "/root/miniconda3/envs/py38/lib/python3.8/functools.py", line 875, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/stable_baselines3/common/save_util.py", line 234, in open_path_str
+    return open_path(pathlib.Path(path), mode, verbose, suffix)
+  File "/root/miniconda3/envs/py38/lib/python3.8/functools.py", line 875, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/stable_baselines3/common/save_util.py", line 286, in open_path_pathlib
+    return open_path(path, mode, verbose, suffix)
+  File "/root/miniconda3/envs/py38/lib/python3.8/functools.py", line 875, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/stable_baselines3/common/save_util.py", line 266, in open_path_pathlib
+    raise error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/stable_baselines3/common/save_util.py", line 258, in open_path_pathlib
+    path = path.open("rb")
+  File "/root/miniconda3/envs/py38/lib/python3.8/pathlib.py", line 1222, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/root/miniconda3/envs/py38/lib/python3.8/pathlib.py", line 1078, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'path_to_model_file.zip'

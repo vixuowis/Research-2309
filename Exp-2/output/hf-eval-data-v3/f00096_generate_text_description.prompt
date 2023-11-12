@@ -1,0 +1,52 @@
+{'code': '###Instruction: We need a tool to help us generate textual descriptions for images and videos related to our product.\n###Output: <<<domain>>>: Multimodal Image-to-Text\n<<<api_call>>>: AutoModelForCausalLM.from_pretrained(\'microsoft/git-large-textcaps\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the necessary classes from the transformers library. This includes AutoModelForCausalLM for the pre-trained GIT model and AutoTokenizer for tokenizing the input data.\n2. Load the pre-trained GIT model using AutoModelForCausalLM.from_pretrained(\'microsoft/git-large-textcaps\'). This model is specifically designed to generate textual descriptions for images and videos.\n3. The model can be used for various tasks like image and video captioning, visual question answering (VQA) on images and videos, and image classification. Create an input sequence by concatenating the image tokens with the text tokens.\n4. The model\'s output will be the next text token, which can be used to generate a full textual description or answer a question based on the given image.\n<<<code>>>: from transformers import AutoModelForCausalLM, AutoTokenizer\nmodel = AutoModelForCausalLM.from_pretrained(\'microsoft/git-large-textcaps\')\ntokenizer = AutoTokenizer.from_pretrained(\'microsoft/git-large-textcaps\')\n# Prepare the image and text inputs\n# Encode the image and text tokens and concatenate them\ninput_ids = tokenizer("your text", return_tensors="pt", padding=True).input_ids\nprompt_length = len(input_ids[0])\nencoded_image = # Your encoded image\ninput_ids = torch.cat([encoded_image, input_ids], dim=1)\n# Run the model to generate text description\noutput = model.generate(input_ids, max_length=prompt_length + 20)\ngenerated_text = tokenizer.decode(output[0], skip_special_tokens=True)\n', 'api_call': "AutoModelForCausalLM.from_pretrained('microsoft/git-large-textcaps')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Image-to-Text', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'git-large-textcaps', 'api_call': "AutoModelForCausalLM.from_pretrained('microsoft/git-large-textcaps')", 'api_arguments': 'image, text', 'python_environment_requirements': 'transformers', 'example_code': 'N/A', 'performance': {'dataset': 'TextCaps', 'accuracy': 'Refer to the paper'}, 'description': "GIT (short for GenerativeImage2Text) model, large-sized version, fine-tuned on TextCaps. It was introduced in the paper GIT: A Generative Image-to-text Transformer for Vision and Language by Wang et al. and first released in this repository. The model is trained using 'teacher forcing' on a lot of (image, text) pairs. The goal for the model is simply to predict the next text token, giving the image tokens and previous text tokens. This allows the model to be used for tasks like image and video captioning, visual question answering (VQA) on images and videos, and even image classification (by simply conditioning the model on the image and asking it to generate a class for it in text)."}}
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 778, in urlopen
+    self._raise_timeout(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 370, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out. (read timeout=10.0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00096_generate_text_description.py", line 57, in <module>
+    test_generate_text_description()
+  File "output/hf-eval-data-v2/f00096_generate_text_description.py", line 49, in test_generate_text_description
+    description = generate_text_description(image, text)
+  File "output/hf-eval-data-v2/f00096_generate_text_description.py", line 20, in generate_text_description
+    model = AutoModelForCausalLM.from_pretrained('microsoft/git-large-textcaps')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 515, in http_get
+    r = _request_wrapper(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 452, in _request_wrapper
+    return http_backoff(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 274, in http_backoff
+    raise err
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 258, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out. (read timeout=10.0)"), '(Request ID: a679334e-c881-455b-8b2f-152b1542edf5)')

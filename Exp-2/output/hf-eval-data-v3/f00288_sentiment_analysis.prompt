@@ -1,0 +1,14 @@
+{'code': '###Instruction: I want to find out whether a given review is positive or negative. I need an API that can help me with sentiment analysis.\n###Output: <<<domain>>>: Natural Language Processing Text Classification\n<<<api_call>>>: pipeline(\'text-classification\', model=\'Seethal/sentiment_analysis_generic_dataset\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the necessary library, which is \'pipeline\' from transformers.\n2. Use the \'pipeline\' function from transformers to load the sentiment analysis model, which in this case is \'Seethal/sentiment_analysis_generic_dataset\'. This model has been fine-tuned on a classified dataset for text classification.\n3. By passing a text (review) to the sentiment_analysis function, you can obtain the sentiment of the given input text.\n4. The model will classify the review as positive or negative based on its content.\n<<<code>>>: from transformers import pipeline\nsentiment_analysis = pipeline(\'text-classification\', model=\'Seethal/sentiment_analysis_generic_dataset\')\nreview = "I love this product!"\nresult = sentiment_analysis(review)', 'api_call': "pipeline('text-classification', model='Seethal/sentiment_analysis_generic_dataset')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'sentiment_analysis_generic_dataset', 'api_call': "pipeline('text-classification', model='Seethal/sentiment_analysis_generic_dataset')", 'api_arguments': [], 'python_environment_requirements': ['transformers'], 'example_code': "sentiment_analysis('I love this product!')", 'performance': {'dataset': 'generic_dataset', 'accuracy': 'Not specified'}, 'description': 'This is a fine-tuned downstream version of the bert-base-uncased model for sentiment analysis, this model is not intended for further downstream fine-tuning for any other tasks. This model is trained on a classified dataset for text classification.'}}
+
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00288_sentiment_analysis.py", line 33, in <module>
+    test_sentiment_analysis()
+  File "output/hf-eval-data-v2/f00288_sentiment_analysis.py", line 28, in test_sentiment_analysis
+    assert sentiment_analysis(positive_review)[0]['label'] == 'POSITIVE'
+AssertionError

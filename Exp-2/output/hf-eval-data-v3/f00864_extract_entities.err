@@ -1,0 +1,4 @@
+  File "./f00864_extract_entities.py", line 29
+    test_text1 = 'Hello, my name is John Doe, and I work at Microsoft. Tomorrow, I'll be going to a conference in San Francisco.'
+                                                                                   ^
+SyntaxError: invalid syntax

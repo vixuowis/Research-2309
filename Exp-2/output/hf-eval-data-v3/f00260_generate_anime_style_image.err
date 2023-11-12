@@ -1,0 +1,6 @@
+Couldn't connect to the Hub: 404 Client Error. (Request ID: Root=1-654f5148-6925212129d6ab5e3c1f140a;f0fd0c1e-378e-41e5-a6d8-5b4c3a7eb0e4)
+
+Repository Not Found for url: https://huggingface.co/api/models/andite/anything-v4.0.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated..
+Will try to load from local cache.

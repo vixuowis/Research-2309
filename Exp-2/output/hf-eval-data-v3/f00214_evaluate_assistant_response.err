@@ -1,0 +1,10 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:473: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00214_evaluate_assistant_response.py", line 32, in <module>
+    test_evaluate_assistant_response()
+  File "./f00214_evaluate_assistant_response.py", line 25, in test_evaluate_assistant_response
+    assert evaluate_assistant_response('What is the refund policy?', 'We offer a 30-day money-back guarantee on all purchases.')['contradiction'] < 0.5
+  File "./f00214_evaluate_assistant_response.py", line 20, in evaluate_assistant_response
+    return {'contradiction': scores[0], 'entailment': scores[1], 'neutral': scores[2]}
+IndexError: index 1 is out of bounds for axis 0 with size 1

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00726_estimate_mortgage.py", line 54, in <module>
+    test_estimate_mortgage()
+  File "./f00726_estimate_mortgage.py", line 37, in test_estimate_mortgage
+    result = estimate_mortgage(data)
+  File "./f00726_estimate_mortgage.py", line 22, in estimate_mortgage
+    model = joblib.load('model.joblib')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'model.joblib'

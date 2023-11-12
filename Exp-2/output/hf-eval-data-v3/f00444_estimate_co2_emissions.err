@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00444_estimate_co2_emissions.py", line 54, in <module>
+    test_estimate_co2_emissions()
+  File "./f00444_estimate_co2_emissions.py", line 47, in test_estimate_co2_emissions
+    assert isinstance(predictions, pd.DataFrame), 'The result is not a DataFrame.'
+AssertionError: The result is not a DataFrame.

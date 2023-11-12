@@ -1,0 +1,23 @@
+{'code': "###Instruction: We have been asked to predict future criminal re-offense from a given dataset. What model should we adopt and how do we proceed?\n###Output: <<<domain>>>: Tabular Tabular Classification\n<<<api_call>>>: joblib.load(cached_download(hf_hub_url('imodels/figs-compas-recidivism', 'sklearn_model.joblib')))\n<<<api_provider>>>: Scikit-learn\n<<<explanation>>>: 1. In order to predict future criminal re-offense, we will use the 'imodels/figs-compas-recidivism' model, which is specifically trained for this task using the COMPAS dataset.\n2. First, we need to import the necessary libraries like joblib, huggingface_hub, pandas, numpy, and others.\n3. Next, we download the model file using the cached_download function from Hugging Face Hub.\n4. We then proceed to load the classification model using joblib's load function.\n5. After loading the model, we can use the predict function to make predictions on the given dataset.\n6. Finally, we can evaluate the accuracy of the predictions by comparing the predicted labels with the ground truth labels.\n<<<code>>>: from huggingface_hub import hf_hub_url, cached_download\nimport joblib\nimport pandas as pd\nimport numpy as np\n\nREPO_ID = 'imodels/figs-compas-recidivism'\nFILENAME = 'sklearn_model.joblib'\n\nmodel = joblib.load(cached_download(hf_hub_url(REPO_ID, FILENAME)))\npredictions = model.predict(X_test)\naccuracy = np.mean(predictions == y_test)\nprint('accuracy', accuracy)\n", 'api_call': "joblib.load(cached_download(hf_hub_url('imodels/figs-compas-recidivism', 'sklearn_model.joblib')))", 'provider': 'Scikit-learn', 'api_data': {'domain': 'Tabular Tabular Classification', 'framework': 'Scikit-learn', 'functionality': 'Classification', 'api_name': 'imodels/figs-compas-recidivism', 'api_call': "joblib.load(cached_download(hf_hub_url('imodels/figs-compas-recidivism', 'sklearn_model.joblib')))", 'api_arguments': ['REPO_ID', 'FILENAME'], 'python_environment_requirements': ['joblib', 'huggingface_hub', 'pandas', 'numpy', 'datasets', 'imodels', 'sklearn.model_selection'], 'example_code': "from huggingface_hub import hf_hub_url, cached_download\nimport joblib\nimport pandas as pd\nREPO_ID = imodels/figs-compas-recidivism\nFILENAME = sklearn_model.joblib\nmodel = joblib.load(cached_download(\n hf_hub_url(REPO_ID, FILENAME)\n))\npreds = model.predict(X_test)\nprint('accuracy', np.mean(preds==y_test))", 'performance': {'dataset': 'imodels/compas-recidivism', 'accuracy': 0.6759165485112416}, 'description': 'A tabular classification model for predicting recidivism using the COMPAS dataset. The model is an imodels.FIGSClassifier trained with Scikit-learn and can be used with the Hugging Face Inference API.'}}
+
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:659: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
+  warnings.warn(
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00086_predict_recidivism.py", line 43, in <module>
+    test_predict_recidivism()
+  File "output/hf-eval-data-v2/f00086_predict_recidivism.py", line 37, in test_predict_recidivism
+    predictions = predict_recidivism(X_test)
+  File "output/hf-eval-data-v2/f00086_predict_recidivism.py", line 22, in predict_recidivism
+    model = joblib.load(cached_download(hf_hub_url(REPO_ID, FILENAME)))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "/root/miniconda3/envs/py38/lib/python3.8/pickle.py", line 1212, in load
+    dispatch[key[0]](self)
+  File "/root/miniconda3/envs/py38/lib/python3.8/pickle.py", line 1537, in load_stack_global
+    self.append(self.find_class(module, name))
+  File "/root/miniconda3/envs/py38/lib/python3.8/pickle.py", line 1579, in find_class
+    __import__(module, level=0)
+ModuleNotFoundError: No module named 'imodels'

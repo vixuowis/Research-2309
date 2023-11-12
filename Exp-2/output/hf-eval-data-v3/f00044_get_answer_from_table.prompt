@@ -1,0 +1,19 @@
+{'code': '###Instruction: We have a large dataset of customer orders in the form of a table. Help us answer questions about this data.\n###Output: <<<domain>>>: Natural Language Processing Table Question Answering\n<<<api_call>>>: pipeline(\'table-question-answering\', model=\'google/tapas-small-finetuned-sqa\')\n<<<api_provider>>>: Transformers\n<<<explanation>>>:1. We import the pipeline function from the transformers library.\n2. We use the pipeline function to create a table-question-answering model by specifying the model as \'google/tapas-small-finetuned-sqa\'. This model is designed to answer questions based on tabular data and has been fine-tuned specifically for Sequential Question Answering tasks.\n3. The table-question-answering model can be used to answer questions about the customer orders dataset provided in the form of a table.\n4. Given a specific question about the data, the model can process the table and provide an answer.\n<<<code>>>: from transformers import pipeline\ntable_qa = pipeline(\'table-question-answering\', model=\'google/tapas-small-finetuned-sqa\')\nquestion = "What is the total revenue for product ID 12345?"\n# Replace \'question\' and \'table_data\' with your actual question and table data\nanswer = table_qa(question=question, table=table_data)\n', 'api_call': "pipeline('table-question-answering', model='google/tapas-small-finetuned-sqa')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Table Question Answering', 'framework': 'Transformers', 'functionality': 'Table Question Answering', 'api_name': 'google/tapas-small-finetuned-sqa', 'api_call': "pipeline('table-question-answering', model='google/tapas-small-finetuned-sqa')", 'api_arguments': '', 'python_environment_requirements': 'transformers', 'example_code': '', 'performance': {'dataset': 'msr_sqa', 'accuracy': 0.6155}, 'description': 'TAPAS small model fine-tuned on Sequential Question Answering (SQA). It uses relative position embeddings (i.e. resetting the position index at every cell of the table).'}}
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00044_get_answer_from_table.py", line 36, in <module>
+    test_get_answer_from_table()
+  File "output/hf-eval-data-v2/f00044_get_answer_from_table.py", line 31, in test_get_answer_from_table
+    answer = get_answer_from_table(question, table_data)
+  File "output/hf-eval-data-v2/f00044_get_answer_from_table.py", line 20, in get_answer_from_table
+    answer = table_qa(question=question, table=table_data)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/table_question_answering.py", line 345, in __call__
+    pipeline_inputs = self._args_parser(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/table_question_answering.py", line 70, in __call__
+    raise ValueError(
+ValueError: Invalid input. Keyword argument `table` should be either of type `dict` or `list`, but is <class 'dict'>)

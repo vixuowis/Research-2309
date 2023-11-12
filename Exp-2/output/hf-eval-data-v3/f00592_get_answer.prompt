@@ -1,0 +1,22 @@
+{'code': "###Instruction: We are worried about price inflation in our country. Can you answer our questions on price inflation using the BERT large cased whole word masking finetuned model on SQuAD?\n###Output: <<<domain>>>: Natural Language Processing Question Answering\n<<<api_call>>>: pipeline('question-answering', model='bert-large-cased-whole-word-masking-finetuned-squad')\n<<<api_provider>>>: Transformers\n<<<explanation>>>:1. Use the transformers library to import the pipeline function.\n2. Initialize the question-answering pipeline using the specified pretrained model 'bert-large-cased-whole-word-masking-finetuned-squad'.\n3. Pass the context and your question on price inflation to the pipeline instance which will use the pretrained model to analyze the context and generate an appropriate answer.\n4. The answer to your query will be generated based on the pre-trained model fine-tuned on the SQuAD dataset, which contains pairs of contexts and questions with answers.\n<<<code>>>: from transformers import pipeline\nqa_pipeline = pipeline('question-answering', model='bert-large-cased-whole-word-masking-finetuned-squad')\ncontext = 'Inflation is an increase in the general price level of goods and services in an economy over time.'\nquestion = 'What is inflation?'\nresult = qa_pipeline({'context': context, 'question': question})\nprint(result)\n", 'api_call': "AutoModel.from_pretrained('bert-large-cased-whole-word-masking-finetuned-squad')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Question Answering', 'framework': 'Transformers', 'functionality': 'Question Answering', 'api_name': 'bert-large-cased-whole-word-masking-finetuned-squad', 'api_call': "AutoModel.from_pretrained('bert-large-cased-whole-word-masking-finetuned-squad')", 'api_arguments': {'model_name_or_path': 'bert-large-cased-whole-word-masking', 'dataset_name': 'squad', 'do_train': True, 'do_eval': True, 'learning_rate': 3e-05, 'num_train_epochs': 2, 'max_seq_length': 384, 'doc_stride': 128, 'output_dir': './examples/models/wwm_cased_finetuned_squad/', 'per_device_eval_batch_size': 3, 'per_device_train_batch_size': 3}, 'python_environment_requirements': ['torch', 'transformers'], 'example_code': "from transformers import pipeline\nqa_pipeline = pipeline('question-answering', model='bert-large-cased-whole-word-masking-finetuned-squad')\nresult = qa_pipeline({'context': 'This is a context example.', 'question': 'What is this example for?'})\nprint(result)", 'performance': {'dataset': [{'name': 'BookCorpus', 'accuracy': 'N/A'}, {'name': 'English Wikipedia', 'accuracy': 'N/A'}]}, 'description': 'BERT large model (cased) whole word masking finetuned on SQuAD. This model is cased and trained with a new technique: Whole Word Masking. After pre-training, this model was fine-tuned on the SQuAD dataset.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00592_get_answer.py", line 38, in <module>
+    test_get_answer()
+  File "output/hf-eval-data-v2/f00592_get_answer.py", line 32, in test_get_answer
+    answer = get_answer(context, question)
+  File "output/hf-eval-data-v2/f00592_get_answer.py", line 19, in get_answer
+    qa_pipeline = pipeline('question-answering', model='bert-large-cased-whole-word-masking-finetuned-squad')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--bert-large-cased-whole-word-masking-finetuned-squad'

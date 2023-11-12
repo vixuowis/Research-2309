@@ -1,0 +1,33 @@
+{'code': '###Instruction: I am developing a home security software which can detect intruders entering the house. In case any door or object is tampered, the application will ask, "Who entered the room?", to assist quick analysis of the CCTV recordings.\n###Output: <<<domain>>>: Multimodal Visual Question Answering\n<<<api_call>>>: BlipForQuestionAnswering.from_pretrained(\'Salesforce/blip-vqa-capfilt-large\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: To implement this functionality, we will use the following steps:\n1. Import the necessary libraries, such as BlipProcessor, BlipForQuestionAnswering from transformers package and Image and requests for image data processing.\n2. Use the BlipProcessor and BlipForQuestionAnswering to load the pretrained model \'Salesforce/blip-vqa-capfilt-large\', which is specialized in multimodal visual question answering.\n3. We will need to obtain the image data from the CCTV recordings and convert the image to the appropriate format (RGB).\n4. As an input, we provide the raw image and the question "Who entered the room?" to the model, and it will generate a coherent answer which can be used in your home security software.\n<<<code>>>: from transformers import BlipProcessor, BlipForQuestionAnswering\nfrom PIL import Image\nimport requests\n\nprocessor = BlipProcessor.from_pretrained(\'Salesforce/blip-vqa-capfilt-large\')\nmodel = BlipForQuestionAnswering.from_pretrained(\'Salesforce/blip-vqa-capfilt-large\')\n\ncctv_image = Image.open(\'cctv_image_path.jpg\')\nquestion = "Who entered the room?"\n\ninputs = processor(cctv_image, question, return_tensors=\'pt\')\nanswer = model.generate(**inputs)\nprint(processor.decode(answer[0], skip_special_tokens=True))', 'api_call': "BlipForQuestionAnswering.from_pretrained('Salesforce/blip-vqa-capfilt-large')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Visual Question Answering', 'framework': 'Hugging Face Transformers', 'functionality': 'Visual Question Answering', 'api_name': 'Salesforce/blip-vqa-capfilt-large', 'api_call': "BlipForQuestionAnswering.from_pretrained('Salesforce/blip-vqa-capfilt-large')", 'api_arguments': {'raw_image': 'RGB image', 'question': 'string'}, 'python_environment_requirements': {'transformers': 'BlipProcessor, BlipForQuestionAnswering'}, 'example_code': "import requests\nfrom PIL import Image\nfrom transformers import BlipProcessor, BlipForQuestionAnswering\nprocessor = BlipProcessor.from_pretrained(Salesforce/blip-vqa-capfilt-large)\nmodel = BlipForQuestionAnswering.from_pretrained(Salesforce/blip-vqa-capfilt-large)\nimg_url = 'https://storage.googleapis.com/sfr-vision-language-research/BLIP/demo.jpg'\nraw_image = Image.open(requests.get(img_url, stream=True).raw).convert('RGB')\nquestion = how many dogs are in the picture?\ninputs = processor(raw_image, question, return_tensors=pt)\nout = model.generate(**inputs)\nprint(processor.decode(out[0], skip_special_tokens=True))", 'performance': {'dataset': 'VQA', 'accuracy': '+1.6% in VQA score'}, 'description': 'BLIP is a new Vision-Language Pre-training (VLP) framework that transfers flexibly to both vision-language understanding and generation tasks. It effectively utilizes the noisy web data by bootstrapping the captions, where a captioner generates synthetic captions and a filter removes the noisy ones. The model achieves state-of-the-art results on a wide range of vision-language tasks, such as image-text retrieval, image captioning, and VQA.'}}
+
+
+
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 0.23 MB. The target location /root/autodl-tmp/.cache/huggingface/hub only has 0.21 MB free disk space.
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 0.23 MB. The target location /root/autodl-tmp/.cache/huggingface/hub/models--Salesforce--blip-vqa-capfilt-large/blobs only has 0.21 MB free disk space.
+  warnings.warn(
+
+  File "output/hf-eval-data-v2/f00554_detect_intruder.py", line 44, in <module>
+    test_detect_intruder()
+  File "output/hf-eval-data-v2/f00554_detect_intruder.py", line 39, in test_detect_intruder
+    answer = detect_intruder(image_path, question)
+  File "output/hf-eval-data-v2/f00554_detect_intruder.py", line 21, in detect_intruder
+    processor = BlipProcessor.from_pretrained('Salesforce/blip-vqa-capfilt-large')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/processing_utils.py", line 226, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/processing_utils.py", line 270, in _get_arguments_from_pretrained
+    args.append(attribute_class.from_pretrained(pretrained_model_name_or_path, **kwargs))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1813, in from_pretrained
+    resolved_vocab_files[file_id] = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 554, in http_get
+    temp_file.write(chunk)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 473, in func_wrapper
+    return func(*args, **kwargs)
+OSError: [Errno 28] No space left on device
+

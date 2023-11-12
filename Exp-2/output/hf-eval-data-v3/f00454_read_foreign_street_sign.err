@@ -1,0 +1,20 @@
+2023-11-12 00:49:22.725496: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 00:49:22.785922: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 00:49:23.685947: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Downloading (…)rocessor_config.json:   0%|                                                                           | 0.00/156 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|████████████████████████████████████████████████████████████████████| 156/156 [00:00<00:00, 12.8kB/s]
+'(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: daf3a20f-c204-45ea-94ae-0b5773b19c78)')' thrown while requesting HEAD https://huggingface.co/alibaba-damo/mgp-str-base/resolve/main/vocab.json
+Traceback (most recent call last):
+  File "./f00454_read_foreign_street_sign.py", line 40, in <module>
+    test_read_foreign_street_sign()
+  File "./f00454_read_foreign_street_sign.py", line 34, in test_read_foreign_street_sign
+    result = read_foreign_street_sign(image_url)
+  File "./f00454_read_foreign_street_sign.py", line 19, in read_foreign_street_sign
+    processor = MgpstrProcessor.from_pretrained('alibaba-damo/mgp-str-base')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/processing_utils.py", line 226, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/processing_utils.py", line 270, in _get_arguments_from_pretrained
+    args.append(attribute_class.from_pretrained(pretrained_model_name_or_path, **kwargs))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1838, in from_pretrained
+    raise EnvironmentError(
+OSError: Can't load tokenizer for 'alibaba-damo/mgp-str-base'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'alibaba-damo/mgp-str-base' is the correct path to a directory containing all relevant files for a MgpstrTokenizer tokenizer.

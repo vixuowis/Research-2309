@@ -1,0 +1,27 @@
+{'code': "###Instruction: Our organization works with video surveillance. We need a system to analyze the videos and classify various events happening inside the video.\n###Output: <<<domain>>>: Computer Vision Video Classification\n<<<api_call>>>: VideoMAEForPreTraining.from_pretrained('MCG-NJU/videomae-base')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. We import the necessary classes from the transformers library. These include VideoMAEImageProcessor for processing the video frames and VideoMAEForPreTraining for the video classification model.\n2. We use the from_pretrained method of the VideoMAEForPreTraining class to load the pre-trained model 'MCG-NJU/videomae-base'.\n3. We then obtain the video frames, which can be sourced from video surveillance systems.\n4. We process each frame of the video with the VideoMAEImageProcessor.\n5. The processed video frames are then passed to the pre-trained model, which classifies the events happening inside the video.\n<<<code>>>: from transformers import VideoMAEImageProcessor, VideoMAEForPreTraining\nimport numpy as np\nimport torch\n\nnum_frames = 16\nvideo = list(np.random.randn(16, 3, 224, 224))\nprocessor = VideoMAEImageProcessor.from_pretrained('MCG-NJU/videomae-base')\nmodel = VideoMAEForPreTraining.from_pretrained('MCG-NJU/videomae-base')\n\npixel_values = processor(video, return_tensors='pt').pixel_values\nnum_patches_per_frame = (model.config.image_size // model.config.patch_size) ** 2\nseq_length = (num_frames // model.config.tubelet_size) * num_patches_per_frame\nbool_masked_pos = torch.randint(0, 2, (1, seq_length)).bool()\noutputs = model(pixel_values, bool_masked_pos=bool_masked_pos)\n", 'api_call': "VideoMAEForPreTraining.from_pretrained('MCG-NJU/videomae-base')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Video Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Video Classification', 'api_name': 'MCG-NJU/videomae-base', 'api_call': "VideoMAEForPreTraining.from_pretrained('MCG-NJU/videomae-base')", 'api_arguments': ['video'], 'python_environment_requirements': ['transformers'], 'example_code': 'from transformers import VideoMAEImageProcessor, VideoMAEForPreTraining\nimport numpy as np\nimport torch\nnum_frames = 16\nvideo = list(np.random.randn(16, 3, 224, 224))\nprocessor = VideoMAEImageProcessor.from_pretrained(MCG-NJU/videomae-base)\nmodel = VideoMAEForPreTraining.from_pretrained(MCG-NJU/videomae-base)\npixel_values = processor(video, return_tensors=pt).pixel_values\nnum_patches_per_frame = (model.config.image_size // model.config.patch_size) ** 2\nseq_length = (num_frames // model.config.tubelet_size) * num_patches_per_frame\nbool_masked_pos = torch.randint(0, 2, (1, seq_length)).bool()\noutputs = model(pixel_values, bool_masked_pos=bool_masked_pos)\nloss = outputs.loss', 'performance': {'dataset': 'Kinetics-400', 'accuracy': 'To be provided'}, 'description': 'VideoMAE is an extension of Masked Autoencoders (MAE) to video. The architecture of the model is very similar to that of a standard Vision Transformer (ViT), with a decoder on top for predicting pixel values for masked patches.'}}
+
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00200_video_classification.py", line 44, in <module>
+    test_video_classification()
+  File "output/hf-eval-data-v2/f00200_video_classification.py", line 39, in test_video_classification
+    output = video_classification(video)
+  File "output/hf-eval-data-v2/f00200_video_classification.py", line 23, in video_classification
+    pixel_values = processor(video, return_tensors='pt').pixel_values
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_processing_utils.py", line 546, in __call__
+    return self.preprocess(images, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 320, in preprocess
+    videos = [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 321, in <listcomp>
+    [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 322, in <listcomp>
+    self._preprocess_image(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 219, in _preprocess_image
+    image = self.resize(image=image, size=size, resample=resample, input_data_format=input_data_format)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 168, in resize
+    return resize(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_transforms.py", line 326, in resize
+    do_rescale = _rescale_for_pil_conversion(image)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_transforms.py", line 150, in _rescale_for_pil_conversion
+    raise ValueError(
+ValueError: The image to be converted to a PIL image contains values outside the range [0, 1], got [-4.596993869389845, 4.429923660285972] which cannot be converted to uint8.

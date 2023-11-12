@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00335_predict_fish_weight.py", line 52, in <module>
+    print(test_predict_fish_weight())
+  File "./f00335_predict_fish_weight.py", line 35, in test_predict_fish_weight
+    assert isinstance(predict_fish_weight(model_path, fish_measurements), float), 'The function should return a float.'
+  File "./f00335_predict_fish_weight.py", line 24, in predict_fish_weight
+    download('brendenc/Fish-Weight', model_path)
+TypeError: download() takes 0 positional arguments but 2 were given

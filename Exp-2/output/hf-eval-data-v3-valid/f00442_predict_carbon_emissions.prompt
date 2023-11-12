@@ -1,0 +1,18 @@
+{'code': "###Instruction: Our company is an environmental consultancy firm. Determine the carbon emissions of different facilities based on the provided data.\n###Output: <<<domain>>>: Tabular Tabular Regression\n<<<api_call>>>: joblib.load('model.joblib')\n<<<api_provider>>>: Hugging Face\n<<<explanation>>>:1. Import the necessary libraries such as pandas, json, and joblib.\n2. Load the pretrained model using the joblib.load function with input as 'model.joblib'.\n3. Open the config.json file and extract the required features needed for the model.\n4. Load the provided data (e.g. as a CSV) and select the required features based on the configuration file.\n5. Format the data columns with the appropriate naming convention.\n6. Use the pretrained model to predict the carbon emissions for each facility in the data set.\n<<<code>>>: import json\nimport joblib\nimport pandas as pd\n\nmodel = joblib.load('model.joblib')\nconfig = json.load(open('config.json'))\nfeatures = config['features']\n\ndata = pd.read_csv('facilities_data.csv')\ndata = data[features]\ndata.columns = ['feat_' + str(col) for col in data.columns]\n\npredictions = model.predict(data)\n", 'api_call': "joblib.load('model.joblib')", 'provider': 'Hugging Face', 'api_data': {'domain': 'Tabular Tabular Regression', 'framework': 'Hugging Face', 'functionality': 'Carbon Emissions', 'api_name': 'kochetkovIT/autotrain-ironhack-49741119788', 'api_call': "joblib.load('model.joblib')", 'api_arguments': ['data'], 'python_environment_requirements': ['json', 'joblib', 'pandas'], 'example_code': "import json\nimport joblib\nimport pandas as pd\nmodel = joblib.load('model.joblib')\nconfig = json.load(open('config.json'))\nfeatures = config['features']\ndata = pd.read_csv('data.csv')\ndata = data[features]\ndata.columns = ['feat_' + str(col) for col in data.columns]\npredictions = model.predict(data)", 'performance': {'dataset': 'kochetkovIT/autotrain-data-ironhack', 'accuracy': {'Loss': 2.603, 'R2': 0.013, 'MSE': 6.776, 'MAE': 1.666, 'RMSLE': 0.502}}, 'description': 'A tabular regression model trained using AutoTrain to predict carbon emissions (in grams) with an R2 score of 0.013.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00442_predict_carbon_emissions.py", line 51, in <module>
+    test_predict_carbon_emissions()
+  File "output/hf-eval-data-v2/f00442_predict_carbon_emissions.py", line 42, in test_predict_carbon_emissions
+    test_data = pd.read_csv('test_data.csv')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'test_data.csv'

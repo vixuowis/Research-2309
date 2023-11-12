@@ -1,0 +1,70 @@
+
+Could not download 'pyannote/brouhaha' model.
+It might be because the model is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Model.from_pretrained('pyannote/brouhaha',
+   ...                       use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the model is gated:
+visit https://hf.co/pyannote/brouhaha to accept the user conditions.
+
+Could not download 'None' model.
+It might be because the model is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Model.from_pretrained('None',
+   ...                       use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the model is gated:
+visit https://hf.co/None to accept the user conditions.
+Error: 'NoneType' object has no attribute 'device'
+
+Could not download 'pyannote/brouhaha' model.
+It might be because the model is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Model.from_pretrained('pyannote/brouhaha',
+   ...                       use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the model is gated:
+visit https://hf.co/pyannote/brouhaha to accept the user conditions.
+
+Could not download 'None' model.
+It might be because the model is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Model.from_pretrained('None',
+   ...                       use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the model is gated:
+visit https://hf.co/None to accept the user conditions.
+Error: 'NoneType' object has no attribute 'device'
+
+Could not download 'pyannote/brouhaha' model.
+It might be because the model is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Model.from_pretrained('pyannote/brouhaha',
+   ...                       use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the model is gated:
+visit https://hf.co/pyannote/brouhaha to accept the user conditions.
+
+Could not download 'None' model.
+It might be because the model is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Model.from_pretrained('None',
+   ...                       use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the model is gated:
+visit https://hf.co/None to accept the user conditions.
+Error: 'NoneType' object has no attribute 'device'
+All Tests Passed

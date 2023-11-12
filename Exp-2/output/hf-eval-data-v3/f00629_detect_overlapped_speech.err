@@ -1,0 +1,20 @@
+2023-11-12 06:35:20.280229: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 06:35:20.322826: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 06:35:20.971232: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/pyannote/audio/core/io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch_audiomentations/utils/io.py:27: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+Traceback (most recent call last):
+  File "./f00629_detect_overlapped_speech.py", line 51, in <module>
+    test_detect_overlapped_speech()
+  File "./f00629_detect_overlapped_speech.py", line 42, in test_detect_overlapped_speech
+    overlap_results = detect_overlapped_speech(audio_file, access_token)
+  File "./f00629_detect_overlapped_speech.py", line 20, in detect_overlapped_speech
+    pipeline = OverlappedSpeechDetection(segmentation=model)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pyannote/audio/pipelines/overlapped_speech_detection.py", line 129, in __init__
+    model = get_model(segmentation, use_auth_token=use_auth_token)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pyannote/audio/pipelines/utils/getter.py", line 84, in get_model
+    raise TypeError(
+TypeError: Unsupported type (<class 'NoneType'>) for loading model: expected `str` or `dict`.

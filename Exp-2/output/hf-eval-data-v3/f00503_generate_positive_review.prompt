@@ -1,0 +1,28 @@
+{'code': '###Instruction: I am working for the review section of a book company. I want to convert a book summary into a positive book review.\n###Output: <<<domain>>>: Natural Language Processing Text2Text Generation\n<<<api_call>>>: T5ForConditionalGeneration.from_pretrained(\'t5-3b\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Load the T5-3B model using the Hugging Face Transformers library. This model is trained to handle various natural language processing tasks, such as translation, summarization, question answering, and sentiment analysis.\n2. Before generating a positive book review, preprocess the book summary by modifying the provided input text, for example, by adding the prefix "Write a positive review: ".\n3. Tokenize the input text using the appropriate tokenizer.\n4. Generate the positive book review by feeding the tokenized input to the T5-3B model.\n5. Decode the output tokens to obtain the positive book review text.\n<<<code>>>: from transformers import T5Tokenizer, T5ForConditionalGeneration\nmodel = T5ForConditionalGeneration.from_pretrained(\'t5-3b\')\ntokenizer = T5Tokenizer.from_pretrained(\'t5-3b\')\ninput_text = \'Write a positive review: \' + book_summary\ninputs = tokenizer(input_text, return_tensors=\'pt\')\noutputs = model.generate(inputs)\npositive_review = tokenizer.decode(outputs[0])\n', 'api_call': "T5ForConditionalGeneration.from_pretrained('t5-3b')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text2Text Generation', 'framework': 'Hugging Face Transformers', 'functionality': 'Translation, Summarization, Question Answering, Sentiment Analysis', 'api_name': 't5-3b', 'api_call': "T5ForConditionalGeneration.from_pretrained('t5-3b')", 'api_arguments': 'input_text', 'python_environment_requirements': 'transformers', 'example_code': "input_text = 'translate English to French: The quick brown fox jumps over the lazy dog'; inputs = tokenizer.encode(input_text, return_tensors='pt'); outputs = model.generate(inputs); translated_text = tokenizer.decode(outputs[0])", 'performance': {'dataset': 'c4', 'accuracy': 'See research paper, Table 14'}, 'description': 'T5-3B is a Text-To-Text Transfer Transformer (T5) model with 3 billion parameters. It is designed for various NLP tasks such as translation, summarization, question answering, and sentiment analysis. The model is pre-trained on the Colossal Clean Crawled Corpus (C4) and fine-tuned on multiple supervised and unsupervised tasks.'}}
+
+
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 11406.55 MB. The target location /root/autodl-tmp/.cache/huggingface/hub only has 0.68 MB free disk space.
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 11406.55 MB. The target location /root/autodl-tmp/.cache/huggingface/hub/models--t5-3b/blobs only has 0.68 MB free disk space.
+  warnings.warn(
+
+  File "output/hf-eval-data-v2/f00503_generate_positive_review.py", line 38, in <module>
+    test_generate_positive_review()
+  File "output/hf-eval-data-v2/f00503_generate_positive_review.py", line 33, in test_generate_positive_review
+    review = generate_positive_review(book_summary)
+  File "output/hf-eval-data-v2/f00503_generate_positive_review.py", line 17, in generate_positive_review
+    model = T5ForConditionalGeneration.from_pretrained('t5-3b')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 554, in http_get
+    temp_file.write(chunk)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 473, in func_wrapper
+    return func(*args, **kwargs)
+OSError: [Errno 28] No space left on device
+

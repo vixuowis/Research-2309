@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "./f00117_classify_sports_video.py", line 51, in <module>
+    test_classify_sports_video()
+  File "./f00117_classify_sports_video.py", line 39, in test_classify_sports_video
+    outputs = classify_sports_video(video)
+  File "./f00117_classify_sports_video.py", line 23, in classify_sports_video
+    pixel_values = processor(video, return_tensors='pt').pixel_values
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_processing_utils.py", line 546, in __call__
+    return self.preprocess(images, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 320, in preprocess
+    videos = [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 321, in <listcomp>
+    [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 322, in <listcomp>
+    self._preprocess_image(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 219, in _preprocess_image
+    image = self.resize(image=image, size=size, resample=resample, input_data_format=input_data_format)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/videomae/image_processing_videomae.py", line 168, in resize
+    return resize(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_transforms.py", line 326, in resize
+    do_rescale = _rescale_for_pil_conversion(image)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_transforms.py", line 150, in _rescale_for_pil_conversion
+    raise ValueError(
+ValueError: The image to be converted to a PIL image contains values outside the range [0, 1], got [-4.716095282327337, 4.084209537562357] which cannot be converted to uint8.

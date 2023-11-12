@@ -1,0 +1,22 @@
+{'code': '###Instruction: My friend wrote me an English text about the upcoming holiday. I need to translate it to Arabic so I can share it with my family.\n###Input: "My friend is planning a holiday trip for our families. He found a beautiful place with a beach, swimming pool, and a wide range of outdoor activities for kids. There\'s also a famous seafood restaurant nearby! I think our families will have a great time together."\n###Output: إن صديقي يخطط لرحلة عطلة لعائلاتنا. لقد وجد مكانًا جميلًا به شاطئ وحمام سباحة ومجموعة واسعة من الأنشطة الخارجية للأطفال. هناك أيضًا مطعم للمأكولات البحرية الشهيرة بالقرب من هنا! أعتقد أن عائلاتنا ستقضي وقتًا رائعًا معاً.\n', 'api_call': "pipeline('translation_en_to_ar', model='Helsinki-NLP/opus-mt-en-ar')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Translation', 'framework': 'Hugging Face Transformers', 'functionality': 'Translation', 'api_name': 'Helsinki-NLP/opus-mt-en-ar', 'api_call': "pipeline('translation_en_to_ar', model='Helsinki-NLP/opus-mt-en-ar')", 'api_arguments': {'text': 'string'}, 'python_environment_requirements': ['transformers'], 'example_code': "from transformers import pipeline\ntranslation = pipeline('translation_en_to_ar', model='Helsinki-NLP/opus-mt-en-ar')\ntranslated_text = translation('Hello World')", 'performance': {'dataset': 'Tatoeba-test.eng.ara', 'accuracy': {'BLEU': 14.0, 'chr-F': 0.437}}, 'description': "A Hugging Face Transformers model for English to Arabic translation, trained on the Tatoeba dataset. It uses a transformer architecture and requires a sentence initial language token in the form of '>>id<<' (id = valid target language ID)."}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00693_translate_english_to_arabic.py", line 41, in <module>
+    test_translate_english_to_arabic()
+  File "output/hf-eval-data-v2/f00693_translate_english_to_arabic.py", line 34, in test_translate_english_to_arabic
+    assert translate_english_to_arabic(test_text) == expected_output
+  File "output/hf-eval-data-v2/f00693_translate_english_to_arabic.py", line 22, in translate_english_to_arabic
+    translation = pipeline('translation_en_to_ar', model='Helsinki-NLP/opus-mt-en-ar')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--Helsinki-NLP--opus-mt-en-ar'

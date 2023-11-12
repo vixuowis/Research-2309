@@ -1,0 +1,15 @@
+{'code': "###Instruction: We need to analyze user reviews for our app to determine whether they are positive, negative, or neutral.\n###Output: <<<domain>>>: Natural Language Processing Text Classification\n<<<api_call>>>: pipeline('sentiment-analysis', model='finiteautomata/beto-sentiment-analysis')\n<<<api_provider>>>: Transformers\n<<<explanation>>>: 1. Import the required libraries, which are 'pipeline' from transformers.\n2. Use the 'pipeline' function to load the model, which in this case is 'finiteautomata/beto-sentiment-analysis'. This model is trained on the TASS 2020 corpus and uses the BETO base model specifically for Spanish text.\n3. Provide the user review text to the model, which will output a sentiment label based on the input (positive, negative, or neutral).\n4. You can analyze multiple reviews and build a sentiment summary for your app.\n<<<code>>>: from transformers import pipeline\nsentiment_analyzer = pipeline('sentiment-analysis', model='finiteautomata/beto-sentiment-analysis')\nuser_review = 'Reseña del usuario aquí...'\nsentiment_result = sentiment_analyzer(user_review)\n", 'api_call': "pipeline('sentiment-analysis', model='finiteautomata/beto-sentiment-analysis')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Text Classification', 'framework': 'Transformers', 'functionality': 'Sentiment Analysis', 'api_name': 'finiteautomata/beto-sentiment-analysis', 'api_call': "pipeline('sentiment-analysis', model='finiteautomata/beto-sentiment-analysis')", 'api_arguments': 'text', 'python_environment_requirements': 'Hugging Face Transformers library', 'example_code': '', 'performance': {'dataset': 'TASS 2020 corpus', 'accuracy': ''}, 'description': 'Model trained with TASS 2020 corpus (around ~5k tweets) of several dialects of Spanish. Base model is BETO, a BERT model trained in Spanish. Uses POS, NEG, NEU labels.'}}
+
+
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00207_analyze_sentiment.py", line 36, in <module>
+    test_analyze_sentiment()
+  File "output/hf-eval-data-v2/f00207_analyze_sentiment.py", line 32, in test_analyze_sentiment
+    assert sentiment_result['label'] in ['POSITIVE', 'NEGATIVE', 'NEUTRAL']
+AssertionError

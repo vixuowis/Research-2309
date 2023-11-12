@@ -1,0 +1,35 @@
+{'code': "###Instruction: I am a lawyer, I have a lot of text. I need a system which reads context and answers the questions based on the context.\n###Output: <<<domain>>>: Natural Language Processing Question Answering\n<<<api_call>>>: pipeline('question-answering', model='philschmid/distilbert-onnx')\n<<<api_provider>>>: Transformers\n<<<explanation>>>: 1. Import the 'pipeline' function from the transformers library.\n2. Use the 'pipeline' function to load the model, which in this case is 'philschmid/distilbert-onnx', a pre-trained model fine-tuned for question answering tasks.\n3. The loaded model will read the context provided and answer the given question based on the contextual information.\n4. Provide the required context and question, and the model will give you the most plausible answer to your question.\n<<<code>>>: from transformers import pipeline\nqa_pipeline = pipeline('question-answering', model='philschmid/distilbert-onnx')\ncontext_text = 'Your context text here...'\nquestion = 'Your question here...'\nanswer = qa_pipeline({'context': context_text, 'question': question})\n", 'api_call': "pipeline('question-answering', model='philschmid/distilbert-onnx')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Question Answering', 'framework': 'Transformers', 'functionality': 'Question Answering', 'api_name': 'philschmid/distilbert-onnx', 'api_call': "pipeline('question-answering', model='philschmid/distilbert-onnx')", 'api_arguments': {'model': 'philschmid/distilbert-onnx'}, 'python_environment_requirements': ['transformers', 'onnx'], 'example_code': {'Compute': "from transformers import pipeline\nqa_pipeline = pipeline('question-answering', model='philschmid/distilbert-onnx')\nqa_pipeline({'context': 'This is a context', 'question': 'What is this?'})"}, 'performance': {'dataset': 'squad', 'accuracy': 'F1 score: 87.1'}, 'description': 'This model is a fine-tune checkpoint of DistilBERT-base-cased, fine-tuned using (a second step of) knowledge distillation on SQuAD v1.1.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00683_get_answer.py", line 36, in <module>
+    test_get_answer()
+  File "output/hf-eval-data-v2/f00683_get_answer.py", line 30, in test_get_answer
+    answer = get_answer(context_text, question)
+  File "output/hf-eval-data-v2/f00683_get_answer.py", line 18, in get_answer
+    qa_pipeline = pipeline('question-answering', model='philschmid/distilbert-onnx')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 824, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model philschmid/distilbert-onnx with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForQuestionAnswering'>, <class 'transformers.models.distilbert.modeling_distilbert.DistilBertForQuestionAnswering'>). See the original errors:
+
+while loading with AutoModelForQuestionAnswering, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2834, in from_pretrained
+    raise EnvironmentError(
+OSError: philschmid/distilbert-onnx does not appear to have a file named pytorch_model.bin, tf_model.h5, model.ckpt or flax_model.msgpack.
+
+while loading with DistilBertForQuestionAnswering, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2834, in from_pretrained
+    raise EnvironmentError(
+OSError: philschmid/distilbert-onnx does not appear to have a file named pytorch_model.bin, tf_model.h5, model.ckpt or flax_model.msgpack.
+
+
+

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00900_enhance_audio_quality.py", line 62, in <module>
+    print(test_enhance_audio_quality())
+  File "./f00900_enhance_audio_quality.py", line 40, in test_enhance_audio_quality
+    assert os.path.exists(enhance_audio_quality(input_audio_path, output_audio_path))
+  File "./f00900_enhance_audio_quality.py", line 25, in enhance_audio_quality
+    raise FileNotFoundError(f'Input audio file {input_audio_path} does not exist.')
+FileNotFoundError: Input audio file path_to_low_quality_audio.wav does not exist.

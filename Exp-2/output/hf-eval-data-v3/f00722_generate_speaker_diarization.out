@@ -1,0 +1,40 @@
+
+Could not download 'pyannote/speaker-diarization' pipeline.
+It might be because the pipeline is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Pipeline.from_pretrained('pyannote/speaker-diarization',
+   ...                          use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the pipeline is gated:
+visit https://hf.co/pyannote/speaker-diarization to accept the user conditions.
+Error: 'NoneType' object is not callable
+Test with a valid audio file failed. Error: 'NoneType' object is not callable
+
+Could not download 'pyannote/speaker-diarization' pipeline.
+It might be because the pipeline is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Pipeline.from_pretrained('pyannote/speaker-diarization',
+   ...                          use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the pipeline is gated:
+visit https://hf.co/pyannote/speaker-diarization to accept the user conditions.
+Error: 'NoneType' object is not callable
+Test with a non-existing audio file failed. Error: 'NoneType' object is not callable
+
+Could not download 'pyannote/speaker-diarization' pipeline.
+It might be because the pipeline is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Pipeline.from_pretrained('pyannote/speaker-diarization',
+   ...                          use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the pipeline is gated:
+visit https://hf.co/pyannote/speaker-diarization to accept the user conditions.
+Error: 'NoneType' object is not callable
+Test with an invalid audio file passed.
+All Tests Passed

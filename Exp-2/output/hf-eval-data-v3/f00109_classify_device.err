@@ -1,0 +1,15 @@
+Downloading (…)lve/main/config.json:   0%|                                                                         | 0.00/69.6k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████████| 69.6k/69.6k [00:00<00:00, 183kB/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████████| 69.6k/69.6k [00:00<00:00, 183kB/s]
+Downloading pytorch_model.bin:   0%|                                                                                | 0.00/324k [00:00<?, ?B/s]Downloading pytorch_model.bin: 100%|████████████████████████████████████████████████████████████████████████| 324k/324k [00:00<00:00, 24.4MB/s]
+Downloading (…)rocessor_config.json:   0%|                                                                           | 0.00/228 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|████████████████████████████████████████████████████████████████████| 228/228 [00:00<00:00, 95.2kB/s]
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/vit/feature_extraction_vit.py:28: FutureWarning: The class ViTFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use ViTImageProcessor instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00109_classify_device.py", line 40, in <module>
+    test_classify_device()
+  File "./f00109_classify_device.py", line 33, in test_classify_device
+    assert classify_device('test_device_image.jpg') == 0
+  File "./f00109_classify_device.py", line 23, in classify_device
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'test_device_image.jpg'

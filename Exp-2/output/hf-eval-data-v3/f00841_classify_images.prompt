@@ -1,0 +1,20 @@
+{'code': "###Instruction: A marketing firm has asked us to build an application to classify social media images into various categories.\n###Output: <<<domain>>>: Computer Vision Image Classification\n<<<api_call>>>: AutoModelForImageClassification.from_pretrained('microsoft/swin-tiny-patch4-window7-224-bottom_cleaned_data')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Develop an application using the Hugging Face Transformers library with the pre-trained model 'microsoft/swin-tiny-patch4-window7-224-bottom_cleaned_data'.\n2. This model is specifically designed for image classification tasks and has been fine-tuned on the 'imagefolder' dataset.\n3. Use the AutoModelForImageClassification class and its from_pretrained method to load the pre-trained model.\n4. Now, classify images passed into the application based on categories learned from the data.\n5. This will enable the marketing firm to automatically classify social media images into various categories based on their content.\n<<<code>>>: from transformers import AutoModelForImageClassification, ImageFeatureExtractionMixin\nmodel = AutoModelForImageClassification.from_pretrained('microsoft/swin-tiny-patch4-window7-224-bottom_cleaned_data')\ncategories = ['category1', 'category2', 'category3'] # Replace with actual categories\nresult = model.classify_images(image_paths, categories)", 'api_call': "AutoModelForImageClassification.from_pretrained('microsoft/swin-tiny-patch4-window7-224-bottom_cleaned_data')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Image Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Image Classification', 'api_name': 'swin-tiny-patch4-window7-224-bottom_cleaned_data', 'api_call': "AutoModelForImageClassification.from_pretrained('microsoft/swin-tiny-patch4-window7-224-bottom_cleaned_data')", 'api_arguments': ['learning_rate', 'train_batch_size', 'eval_batch_size', 'seed', 'gradient_accumulation_steps', 'total_train_batch_size', 'optimizer', 'lr_scheduler_type', 'lr_scheduler_warmup_ratio', 'num_epochs'], 'python_environment_requirements': ['Transformers 4.28.1', 'Pytorch 2.0.0+cu118', 'Datasets 2.11.0', 'Tokenizers 0.13.3'], 'example_code': '', 'performance': {'dataset': 'imagefolder', 'accuracy': 0.9726}, 'description': 'This model is a fine-tuned version of microsoft/swin-tiny-patch4-window7-224 on the imagefolder dataset.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00841_classify_images.py", line 39, in <module>
+    test_classify_images()
+  File "output/hf-eval-data-v2/f00841_classify_images.py", line 33, in test_classify_images
+    results = classify_images(image_paths, categories)
+  File "output/hf-eval-data-v2/f00841_classify_images.py", line 18, in classify_images
+    model = AutoModelForImageClassification.from_pretrained('microsoft/swin-tiny-patch4-window7-224-bottom_cleaned_data')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 494, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--microsoft--swin-tiny-patch4-window7-224-bottom_cleaned_data'

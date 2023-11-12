@@ -1,0 +1,4 @@
+  File "./f00787_summarize_conversation.py", line 42
+    conversation2 = 'A: Hi
+                         ^
+SyntaxError: EOL while scanning string literal

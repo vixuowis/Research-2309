@@ -1,0 +1,4 @@
+Pillow
+diffusers
+torch
+controlnet_aux

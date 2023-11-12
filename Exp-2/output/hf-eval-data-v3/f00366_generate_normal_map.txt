@@ -1,0 +1,6 @@
+PIL
+transformers
+diffusers
+torch
+numpy
+cv2

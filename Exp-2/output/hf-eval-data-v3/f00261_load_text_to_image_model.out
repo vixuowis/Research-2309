@@ -1,0 +1,2 @@
+Test failed.
+ (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/models/CompVis/stable-diffusion-v1-4 (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response')))"), '(Request ID: 2fd3ae25-2ed4-49e9-a01c-ecffa910bd6a)')

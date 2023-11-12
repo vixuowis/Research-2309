@@ -1,0 +1,21 @@
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Traceback (most recent call last):
+  File "./f00295_get_sales_extremes.py", line 45, in <module>
+    test_get_sales_extremes()
+  File "./f00295_get_sales_extremes.py", line 38, in test_get_sales_extremes
+    highest_sales, lowest_sales = get_sales_extremes(sales_data_table)
+  File "./f00295_get_sales_extremes.py", line 23, in get_sales_extremes
+    inputs = tokenizer(table=sales_data_table, queries=query, return_tensors='pt')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 671, in __call__
+    return self.encode_plus(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 1037, in encode_plus
+    return self._encode_plus(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 1088, in _encode_plus
+    table_tokens = self._tokenize_table(table)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 1387, in _tokenize_table
+    tokenized_row.append(self.tokenize(cell))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils.py", line 515, in tokenize
+    text = re.sub(pattern, lambda m: m.groups()[0] or m.groups()[1].lower(), text)
+  File "/root/miniconda3/envs/py38/lib/python3.8/re.py", line 210, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object

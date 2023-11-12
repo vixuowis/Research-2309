@@ -1,0 +1,22 @@
+{'code': "###Instruction: We have a user manual in English that needs to be translated into Spanish to be displayed on our Spanish website.\n###Output: <<<domain>>>: Natural Language Processing Translation\n<<<api_call>>>: pipeline('translation_en_to_es', model='Helsinki-NLP/opus-mt-en-es')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the pipeline function from the transformers library provided by Hugging Face.\n2. Use the pipeline function to create a translation model from English to Spanish.\n3. Specify the model 'Helsinki-NLP/opus-mt-en-es' to be loaded. This model is a translation model specifically designed for English to Spanish language pairs.\n4. The created translation model is used to translate the given English user manual text into Spanish for displaying on the Spanish website.\n<<<code>>>: from transformers import pipeline\ntranslation_pipeline = pipeline('translation_en_to_es', model='Helsinki-NLP/opus-mt-en-es')\ntranslated_manual = translation_pipeline(user_manual_text)\n", 'api_call': "pipeline('translation_en_to_es', model='Helsinki-NLP/opus-mt-en-es')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Translation', 'framework': 'Hugging Face Transformers', 'functionality': 'Translation', 'api_name': 'Helsinki-NLP/opus-mt-en-es', 'api_call': "pipeline('translation_en_to_es', model='Helsinki-NLP/opus-mt-en-es')", 'api_arguments': 'text', 'python_environment_requirements': 'transformers', 'example_code': "from transformers import pipeline\ntranslation = pipeline('translation_en_to_es', model='Helsinki-NLP/opus-mt-en-es')\ntranslated_text = translation('Hello, how are you?')", 'performance': {'dataset': 'Tatoeba-test.eng.spa', 'accuracy': 54.9}, 'description': 'This model is a translation model from English to Spanish using the Hugging Face Transformers library. It is based on the Marian framework and trained on the OPUS dataset. The model achieves a BLEU score of 54.9 on the Tatoeba test set.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00595_translate_english_to_spanish.py", line 38, in <module>
+    test_translate_english_to_spanish()
+  File "output/hf-eval-data-v2/f00595_translate_english_to_spanish.py", line 33, in test_translate_english_to_spanish
+    translated_text = translate_english_to_spanish(test_text)
+  File "output/hf-eval-data-v2/f00595_translate_english_to_spanish.py", line 22, in translate_english_to_spanish
+    translation_pipeline = pipeline('translation_en_to_es', model='Helsinki-NLP/opus-mt-en-es')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--Helsinki-NLP--opus-mt-en-es'

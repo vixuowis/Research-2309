@@ -1,0 +1,20 @@
+Downloading (…)lve/main/config.json:   0%|                                                                           | 0.00/161 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|████████████████████████████████████████████████████████████████████| 161/161 [00:00<00:00, 14.9kB/s]
+Downloading best.pt:   0%|                                                                                         | 0.00/52.0M [00:00<?, ?B/s]Downloading best.pt:  20%|████████████████▏                                                               | 10.5M/52.0M [00:04<00:18, 2.24MB/s]Downloading best.pt:  40%|████████████████████████████████▎                                               | 21.0M/52.0M [00:07<00:11, 2.71MB/s]Downloading best.pt:  60%|████████████████████████████████████████████████▍                               | 31.5M/52.0M [00:11<00:07, 2.92MB/s]Downloading best.pt:  81%|████████████████████████████████████████████████████████████████▌               | 41.9M/52.0M [00:14<00:03, 3.01MB/s]Downloading best.pt: 100%|████████████████████████████████████████████████████████████████████████████████| 52.0M/52.0M [00:18<00:00, 2.90MB/s]Downloading best.pt: 100%|████████████████████████████████████████████████████████████████████████████████| 52.0M/52.0M [00:18<00:00, 2.84MB/s]2023-11-12 00:52:55.759055: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 00:52:55.811449: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 00:52:56.812574: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+
+Ultralytics YOLOv8.0.23 🚀 Python-3.8.18 torch-2.1.0+cu121 CUDA:0 (NVIDIA GeForce RTX 3090, 24260MiB)
+Model summary (fused): 218 layers, 25840918 parameters, 0 gradients, 78.7 GFLOPs
+Found https://github.com/ultralytics/yolov5/raw/master/data/images/zidane.jpg locally at zidane.jpg
+image 1/1 /root/Research-0922/Exp-2/output/hf-eval-data-v3/zidane.jpg: 384x640 2 NO-Hardhats, 99.9ms
+Speed: 2.0ms pre-process, 99.9ms inference, 2.0ms postprocess per image at shape (1, 3, 640, 640)
+Traceback (most recent call last):
+  File "./f00465_detect_hard_hats.py", line 44, in <module>
+    test_detect_hard_hats()
+  File "./f00465_detect_hard_hats.py", line 37, in test_detect_hard_hats
+    assert isinstance(boxes, list), 'The returned boxes should be a list.'
+AssertionError: The returned boxes should be a list.
+Sentry is attempting to send 2 pending events
+Waiting up to 2 seconds
+Press Ctrl-C to quit

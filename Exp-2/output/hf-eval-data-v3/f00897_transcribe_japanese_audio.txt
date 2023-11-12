@@ -1,0 +1,5 @@
+huggingsound
+torch
+librosa
+datasets
+transformers

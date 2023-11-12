@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/sb3/dqn-MountainCar-v0/resolve/main/model.zip
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./f00253_load_model.py", line 34, in <module>
+    test_load_model()
+  File "./f00253_load_model.py", line 28, in test_load_model
+    model = load_model(repo_id='sb3/dqn-MountainCar-v0', filename='model.zip')
+  File "./f00253_load_model.py", line 19, in load_model
+    model = load_from_hub(repo_id=repo_id, filename=filename)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_sb3/load_from_hub.py", line 16, in load_from_hub
+    downloaded_model_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 271, in hf_raise_for_status
+    raise EntryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.EntryNotFoundError: 404 Client Error. (Request ID: Root=1-654f5034-082f7bc909d8405f28d410a1;ca2724be-d084-474d-9afd-952207e17012)
+
+Entry Not Found for url: https://huggingface.co/sb3/dqn-MountainCar-v0/resolve/main/model.zip.

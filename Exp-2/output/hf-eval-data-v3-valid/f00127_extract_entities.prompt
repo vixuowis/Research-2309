@@ -1,0 +1,52 @@
+{'code': '###Instruction: We have a news article and we need to extract all the entities like the names of people, organizations, and locations.\n###Output: <<<domain>>>: Natural Language Processing Token Classification\n<<<api_call>>>: pipeline(\'ner\', model=\'Davlan/distilbert-base-multilingual-cased-ner-hrl\', tokenizer=\'Davlan/distilbert-base-multilingual-cased-ner-hrl\')\n<<<api_provider>>>: Transformers\n<<<explanation>>>: 1. Import the \'pipeline\' function from transformers library, AutoTokenizer, and AutoModelForTokenClassification.\n2. Load the model (\'Davlan/distilbert-base-multilingual-cased-ner-hrl\') using AutoTokenizer and AutoModelForTokenClassification, which has been trained to identify named entities such as people, organizations, and locations.\n3. Create a named entity recognition (NER) pipeline using the model and tokenizer.\n4. Input your news article text into the NER pipeline, and it will extract named entities such as people, organizations, and locations.\n<<<code>>>: from transformers import AutoTokenizer, AutoModelForTokenClassification\nfrom transformers import pipeline\ntokenizer = AutoTokenizer.from_pretrained(\'Davlan/distilbert-base-multilingual-cased-ner-hrl\')\nmodel = AutoModelForTokenClassification.from_pretrained(\'Davlan/distilbert-base-multilingual-cased-ner-hrl\')\nnlp = pipeline(\'ner\', model=model, tokenizer=tokenizer)\nnews_article = "Nader Jokhadar had given Syria the lead with a well-struck header in the seventh minute."\nner_results = nlp(news_article)\nprint(ner_results)\n', 'api_call': "AutoModelForTokenClassification.from_pretrained('Davlan/distilbert-base-multilingual-cased-ner-hrl')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Token Classification', 'framework': 'Transformers', 'functionality': 'Named Entity Recognition', 'api_name': 'distilbert-base-multilingual-cased-ner-hrl', 'api_call': "AutoModelForTokenClassification.from_pretrained('Davlan/distilbert-base-multilingual-cased-ner-hrl')", 'api_arguments': {'model': 'Davlan/distilbert-base-multilingual-cased-ner-hrl', 'tokenizer': 'Davlan/distilbert-base-multilingual-cased-ner-hrl'}, 'python_environment_requirements': ['transformers'], 'example_code': 'from transformers import AutoTokenizer, AutoModelForTokenClassification\nfrom transformers import pipeline\ntokenizer = AutoTokenizer.from_pretrained(Davlan/distilbert-base-multilingual-cased-ner-hrl)\nmodel = AutoModelForTokenClassification.from_pretrained(Davlan/distilbert-base-multilingual-cased-ner-hrl)\nnlp = pipeline(ner, model=model, tokenizer=tokenizer)\nexample = Nader Jokhadar had given Syria the lead with a well-struck header in the seventh minute.\nner_results = nlp(example)\nprint(ner_results)', 'performance': {'dataset': [{'name': 'ANERcorp', 'language': 'Arabic'}, {'name': 'conll 2003', 'language': 'German'}, {'name': 'conll 2003', 'language': 'English'}, {'name': 'conll 2002', 'language': 'Spanish'}, {'name': 'Europeana Newspapers', 'language': 'French'}, {'name': 'Italian I-CAB', 'language': 'Italian'}, {'name': 'Latvian NER', 'language': 'Latvian'}, {'name': 'conll 2002', 'language': 'Dutch'}, {'name': 'Paramopama + Second Harem', 'language': 'Portuguese'}, {'name': 'MSRA', 'language': 'Chinese'}], 'accuracy': 'Not specified'}, 'description': 'distilbert-base-multilingual-cased-ner-hrl is a Named Entity Recognition model for 10 high resourced languages (Arabic, German, English, Spanish, French, Italian, Latvian, Dutch, Portuguese and Chinese) based on a fine-tuned Distiled BERT base model. It has been trained to recognize three types of entities: location (LOC), organizations (ORG), and person (PER).'}}
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 879, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 715, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00127_extract_entities.py", line 43, in <module>
+    test_extract_entities()
+  File "output/hf-eval-data-v2/f00127_extract_entities.py", line 30, in test_extract_entities
+    entities = extract_entities(news_article)
+  File "output/hf-eval-data-v2/f00127_extract_entities.py", line 18, in extract_entities
+    model = AutoModelForTokenClassification.from_pretrained('Davlan/distilbert-base-multilingual-cased-ner-hrl')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2773, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+

@@ -1,0 +1,22 @@
+{'code': '###Instruction: My daughter left her laptop logged in, and I found her English essay unfinished. There\'s a sentence that goes like "In the story, the antagonist represents the <mask> nature of humanity." Can you help me complete her sentence with an appropriate word?\n###Output: <<<domain>>>: Natural Language Processing Fill-Mask\n<<<api_call>>>: pipeline(\'fill-mask\', model=\'roberta-base\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the pipeline function from the transformers library.\n2. Use the pipeline function to create a fill-mask model with \'roberta-base\' as the pre-trained model.\n3. Supply the text with the mask token, where we want the model to predict the appropriate word to fill in the sentence.\n4. The model will return the most likely word(s) to fill in the masked position in the sentence.\n<<<code>>>: from transformers import pipeline\nunmasker = pipeline(\'fill-mask\', model=\'roberta-base\')\nsentence = "In the story, the antagonist represents the <mask> nature of humanity."\ncompleted_sentence = unmasker(sentence)', 'api_call': "pipeline('fill-mask', model='roberta-base')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Fill-Mask', 'framework': 'Hugging Face Transformers', 'functionality': 'Masked Language Modeling', 'api_name': 'roberta-base', 'api_call': "pipeline('fill-mask', model='roberta-base')", 'api_arguments': 'text', 'python_environment_requirements': 'transformers', 'example_code': "from transformers import pipeline\nunmasker = pipeline('fill-mask', model='roberta-base')\nunmasker(Hello I'm a <mask> model.)", 'performance': {'dataset': [{'name': 'MNLI', 'accuracy': 87.6}, {'name': 'QQP', 'accuracy': 91.9}, {'name': 'QNLI', 'accuracy': 92.8}, {'name': 'SST-2', 'accuracy': 94.8}, {'name': 'CoLA', 'accuracy': 63.6}, {'name': 'STS-B', 'accuracy': 91.2}, {'name': 'MRPC', 'accuracy': 90.2}, {'name': 'RTE', 'accuracy': 78.7}]}, 'description': 'RoBERTa is a transformers model pretrained on a large corpus of English data in a self-supervised fashion using the Masked language modeling (MLM) objective. This model is case-sensitive and can be fine-tuned on a downstream task.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00697_complete_sentence.py", line 34, in <module>
+    test_complete_sentence()
+  File "output/hf-eval-data-v2/f00697_complete_sentence.py", line 28, in test_complete_sentence
+    completed_sentence = complete_sentence(sentence)
+  File "output/hf-eval-data-v2/f00697_complete_sentence.py", line 17, in complete_sentence
+    unmasker = pipeline('fill-mask', model='roberta-base')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--roberta-base'

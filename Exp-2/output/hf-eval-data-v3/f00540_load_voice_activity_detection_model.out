@@ -1,0 +1,3 @@
+Model was trained with pyannote.audio 2.1.1, yours is 3.0.1. Bad things might happen unless you revert pyannote.audio to 2.x.
+Model was trained with torch 1.13.1+cu116, yours is 2.1.0+cu121. Bad things might happen unless you revert torch to 1.x.
+All Tests Passed

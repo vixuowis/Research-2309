@@ -1,0 +1,4 @@
+fairseq
+huggingface_hub
+torchaudio
+numpy

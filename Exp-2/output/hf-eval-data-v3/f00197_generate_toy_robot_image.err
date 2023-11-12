@@ -1,0 +1,13 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/controlnet_aux/mediapipe_face/mediapipe_face_common.py:7: UserWarning: The module 'mediapipe' is not installed. The package will have limited functionality. Please install it using the command: pip install 'mediapipe'
+  warnings.warn(
+Downloading (…)d_large_512_fp32.pth:   0%|                                                                         | 0.00/6.34M [00:00<?, ?B/s]Downloading (…)d_large_512_fp32.pth: 100%|█████████████████████████████████████████████████████████████████| 6.34M/6.34M [00:00<00:00, 112MB/s]
+Traceback (most recent call last):
+  File "./f00197_generate_toy_robot_image.py", line 55, in <module>
+    print(test_generate_toy_robot_image())
+  File "./f00197_generate_toy_robot_image.py", line 44, in test_generate_toy_robot_image
+    image1 = generate_toy_robot_image('toy robot')
+  File "./f00197_generate_toy_robot_image.py", line 27, in generate_toy_robot_image
+    control_image = processor(initial_image)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/controlnet_aux/mlsd/__init__.py", line 51, in __call__
+    input_image = np.array(input_image, dtype=np.uint8)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00195_transform_room_plan.py", line 61, in <module>
+    test_transform_room_plan()
+  File "./f00195_transform_room_plan.py", line 50, in test_transform_room_plan
+    transform_room_plan('room_plan.jpg')
+  File "./f00195_transform_room_plan.py", line 28, in transform_room_plan
+    image = load_image(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/utils/loading_utils.py", line 26, in load_image
+    raise ValueError(
+ValueError: Incorrect path or url, URLs must start with `http://` or `https://`, and room_plan.jpg is not a valid path

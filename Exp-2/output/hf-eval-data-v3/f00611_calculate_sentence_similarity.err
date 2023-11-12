@@ -1,0 +1,48 @@
+2023-11-12 06:25:22.606028: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 06:25:22.647453: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 06:25:23.358826: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 488, in load_state_dict
+    return torch.load(checkpoint_file, map_location=map_location)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 993, in load
+    with _open_zipfile_reader(opened_file) as opened_zipfile:
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 447, in __init__
+    super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 492, in load_state_dict
+    if f.read(7) == "version":
+  File "/root/miniconda3/envs/py38/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 64: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00611_calculate_sentence_similarity.py", line 35, in <module>
+    test_calculate_sentence_similarity()
+  File "./f00611_calculate_sentence_similarity.py", line 28, in test_calculate_sentence_similarity
+    assert abs(calculate_sentence_similarity('What time is it?', 'Can you tell me the current time?') - 0.8) < 0.1
+  File "./f00611_calculate_sentence_similarity.py", line 19, in calculate_sentence_similarity
+    model = SentenceTransformer('flax-sentence-embeddings/all_datasets_v4_MiniLM-L6')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/SentenceTransformer.py", line 95, in __init__
+    modules = self._load_sbert_model(model_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/SentenceTransformer.py", line 840, in _load_sbert_model
+    module = module_class.load(os.path.join(model_path, module_config['path']))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/models/Transformer.py", line 137, in load
+    return Transformer(model_name_or_path=input_path, **config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/models/Transformer.py", line 29, in __init__
+    self._load_model(model_name_or_path, config, cache_dir)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sentence_transformers/models/Transformer.py", line 49, in _load_model
+    self.auto_model = AutoModel.from_pretrained(model_name_or_path, config=config, cache_dir=cache_dir)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2883, in from_pretrained
+    state_dict = load_state_dict(resolved_archive_file)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 504, in load_state_dict
+    raise OSError(
+OSError: Unable to load weights from pytorch checkpoint file for '/root/.cache/torch/sentence_transformers/flax-sentence-embeddings_all_datasets_v4_MiniLM-L6/pytorch_model.bin' at '/root/.cache/torch/sentence_transformers/flax-sentence-embeddings_all_datasets_v4_MiniLM-L6/pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.

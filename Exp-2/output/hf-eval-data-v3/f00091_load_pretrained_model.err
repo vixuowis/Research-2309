@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00091_load_pretrained_model.py", line 33, in <module>
+    test_load_pretrained_model()
+  File "./f00091_load_pretrained_model.py", line 27, in test_load_pretrained_model
+    model = load_pretrained_model('model.zip')
+  File "./f00091_load_pretrained_model.py", line 18, in load_pretrained_model
+    model = rl_zoo3.load_from_hub(repo_id='HumanCompatibleAI/ppo-seals-CartPole-v0', filename=model_filename)
+AttributeError: module 'rl_zoo3' has no attribute 'load_from_hub'

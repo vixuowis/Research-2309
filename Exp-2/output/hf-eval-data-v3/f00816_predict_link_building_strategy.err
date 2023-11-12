@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00816_predict_link_building_strategy.py", line 42, in <module>
+    test_predict_link_building_strategy()
+  File "./f00816_predict_link_building_strategy.py", line 35, in test_predict_link_building_strategy
+    predictions = predict_link_building_strategy('sample_data.csv')
+  File "./f00816_predict_link_building_strategy.py", line 23, in predict_link_building_strategy
+    model = joblib.load('model.joblib')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'model.joblib'

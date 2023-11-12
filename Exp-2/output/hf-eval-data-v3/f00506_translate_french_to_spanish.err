@@ -1,0 +1,4 @@
+  File "./f00506_translate_french_to_spanish.py", line 29
+    assert translate_french_to_spanish('Il fait beau aujourd'hui.') != ''
+                                                             ^
+SyntaxError: invalid syntax

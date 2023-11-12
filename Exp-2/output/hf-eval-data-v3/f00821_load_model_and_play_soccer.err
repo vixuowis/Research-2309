@@ -1,0 +1,16 @@
+ERROR: Could not find a version that satisfies the requirement unity-ml-agents (from versions: none)
+ERROR: No matching distribution found for unity-ml-agents
+Traceback (most recent call last):
+  File "./f00821_load_model_and_play_soccer.py", line 51, in <module>
+    test_load_model_and_play_soccer()
+  File "./f00821_load_model_and_play_soccer.py", line 32, in test_load_model_and_play_soccer
+    load_model_and_play_soccer('Raiden-1001/poca-Soccerv7.1', './downloads')
+  File "./f00821_load_model_and_play_soccer.py", line 23, in load_model_and_play_soccer
+    subprocess.call(['mlagents-load-from-hf', '--repo-id', repo_id, '--local-dir', local_dir])
+  File "/root/miniconda3/envs/py38/lib/python3.8/subprocess.py", line 340, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/root/miniconda3/envs/py38/lib/python3.8/subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/root/miniconda3/envs/py38/lib/python3.8/subprocess.py", line 1720, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'mlagents-load-from-hf'

@@ -1,0 +1,4 @@
+Test case 1: Error - (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V15_30_03_2023/resolve/main/tokenizer_config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 90a67557-3da4-47db-aa70-6ea888db3a96)')
+Test case 2: Error - L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V15_30_03_2023 is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+Test case 3: Error - {str(e)}

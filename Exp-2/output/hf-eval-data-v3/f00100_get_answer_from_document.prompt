@@ -1,0 +1,52 @@
+{'code': "###Instruction: In a healthcare company, we are trying to create an automated system for answering patient-related questions based on their medical documents. We need a solution using NLP.\n###Output: <<<domain>>>: Multimodal Document Question Answer\n<<<api_call>>>: AutoModelForDocumentQuestionAnswering.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. We learn an automated solution for answering patient-related questions based on their medical documents by using a pre-trained model for document question answering.\n2. We use the AutoModelForDocumentQuestionAnswering class from the transformers package provided by Hugging Face to load a model pre-trained for document question answering tasks. In this case, we choose the 'tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa' model.\n3. Once this model is loaded, it can process both multimodal inputs like text and image data to generate meaningful answers.\n4. You can input any medical document and a relevant question, and the model will generate an accurate answer based on the document provided.\n<<<code>>>: from transformers import AutoTokenizer, AutoModelForDocumentQuestionAnswering\ntokenizer = AutoTokenizer.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')\nmodel = AutoModelForDocumentQuestionAnswering.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')\ninputs = tokenizer(document_text, question_text, return_tensors='pt')\noutputs = model(**inputs)\nanswer_start = outputs.start_logits.argmax(dim=-1).item()\nanswer_end = outputs.end_logits.argmax(dim=-1).item() + 1\nanswer = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(inputs['input_ids'][0][answer_start:answer_end]))\n", 'api_call': "AutoModelForDocumentQuestionAnswering.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Document Question Answer', 'framework': 'Hugging Face Transformers', 'functionality': 'Document Question Answering', 'api_name': 'layoutlmv2-base-uncased-finetuned-infovqa', 'api_call': "AutoModelForDocumentQuestionAnswering.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')", 'api_arguments': {}, 'python_environment_requirements': {'transformers': '4.12.2', 'pytorch': '1.8.0+cu101', 'datasets': '1.14.0', 'tokenizers': '0.10.3'}, 'example_code': '', 'performance': {'dataset': 'unknown', 'accuracy': {'Loss': 2.087}}, 'description': 'This model is a fine-tuned version of microsoft/layoutlmv2-base-uncased on an unknown dataset.'}}
+
+
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(42829253 bytes read, 759433942 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(42829253 bytes read, 759433942 more expected)', IncompleteRead(42829253 bytes read, 759433942 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00100_get_answer_from_document.py", line 42, in <module>
+    test_get_answer_from_document()
+  File "output/hf-eval-data-v2/f00100_get_answer_from_document.py", line 36, in test_get_answer_from_document
+    answer = get_answer_from_document(document_text, question_text)
+  File "output/hf-eval-data-v2/f00100_get_answer_from_document.py", line 19, in get_answer_from_document
+    model = AutoModelForDocumentQuestionAnswering.from_pretrained('tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(42829253 bytes read, 759433942 more expected)', IncompleteRead(42829253 bytes read, 759433942 more expected))
+

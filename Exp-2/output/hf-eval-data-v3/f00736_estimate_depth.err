@@ -1,0 +1,11 @@
+2023-11-12 08:51:41.800262: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 08:51:41.846517: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 08:51:42.503248: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+Traceback (most recent call last):
+  File "./f00736_estimate_depth.py", line 53, in <module>
+    test_estimate_depth()
+  File "./f00736_estimate_depth.py", line 42, in test_estimate_depth
+    assert isinstance(depth_map, np.ndarray), 'The depth map should be a numpy array.'
+AssertionError: The depth map should be a numpy array.

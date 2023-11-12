@@ -1,0 +1,27 @@
+{'code': "###Instruction: I am working as the head of customer service for a Spanish speaking market. I want to know the sentiment of my customers on their last call with our support agents.\n###Output: <<<domain>>>: Audio Audio Classification\n<<<api_call>>>: Wav2Vec2ForSequenceClassification.from_pretrained('hackathon-pln-es/wav2vec2-base-finetuned-sentiment-classification-MESD')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the necessary classes from the transformers library provided by Hugging Face.\n2. Use the `from_pretrained` method of the Wav2Vec2ForSequenceClassification class to create a sequence classification model specifically fine-tuned for sentiment classification in Spanish.\n3. Specify the model 'hackathon-pln-es/wav2vec2-base-finetuned-sentiment-classification-MESD' to be loaded. This model has been trained to classify sentiment in Spanish speech.\n4. The created classifier can be then used to analyze the customer call audio file and classify the underlying sentiment into categories like positive, neutral, or negative.\n<<<code>>>: from transformers import Wav2Vec2ForSequenceClassification\nmodel = Wav2Vec2ForSequenceClassification.from_pretrained('hackathon-pln-es/wav2vec2-base-finetuned-sentiment-classification-MESD')\n# Process the audio file to fit the required format and predict sentiment\n", 'api_call': "Wav2Vec2ForSequenceClassification.from_pretrained('hackathon-pln-es/wav2vec2-base-finetuned-sentiment-classification-MESD')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Audio Audio Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Sentiment Classification', 'api_name': 'hackathon-pln-es/wav2vec2-base-finetuned-sentiment-classification-MESD', 'api_call': "Wav2Vec2ForSequenceClassification.from_pretrained('hackathon-pln-es/wav2vec2-base-finetuned-sentiment-classification-MESD')", 'api_arguments': {'model_name': 'hackathon-pln-es/wav2vec2-base-finetuned-sentiment-classification-MESD'}, 'python_environment_requirements': {'transformers': '4.17.0', 'pytorch': '1.10.0+cu111', 'datasets': '2.0.0', 'tokenizers': '0.11.6'}, 'example_code': '', 'performance': {'dataset': 'MESD', 'accuracy': 0.9308}, 'description': 'This model is a fine-tuned version of facebook/wav2vec2-base on the MESD dataset. It is trained to classify underlying sentiment of Spanish audio/speech.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00719_classify_sentiment.py", line 22, in classify_sentiment
+    model = Wav2Vec2ForSequenceClassification.from_pretrained('hackathon-pln-es/wav2vec2-base-finetuned-sentiment-classification-MESD')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2377, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--hackathon-pln-es--wav2vec2-base-finetuned-sentiment-classification-MESD'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00719_classify_sentiment.py", line 55, in <module>
+    test_classify_sentiment()
+  File "output/hf-eval-data-v2/f00719_classify_sentiment.py", line 48, in test_classify_sentiment
+    sentiment = classify_sentiment(sample_audio_file)
+  File "output/hf-eval-data-v2/f00719_classify_sentiment.py", line 36, in classify_sentiment
+    raise Exception('Failed to classify sentiment: ' + str(e))
+Exception: Failed to classify sentiment: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--hackathon-pln-es--wav2vec2-base-finetuned-sentiment-classification-MESD'

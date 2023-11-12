@@ -1,0 +1,22 @@
+{'code': "###Instruction: Design a program that can help farmers detect diseases in bean crops by analyzing images of the crop leaves.\n###Output: <<<domain>>>: Computer Vision Image Classification\n<<<api_call>>>: pipeline('image-classification', model='fxmarty/resnet-tiny-beans')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. We first import the pipeline function from the transformers library provided by Hugging Face.\n2. We use the pipeline function to create an image classification model, which is capable of categorizing the input image into one of the various classes/categories it has been trained on.\n3. We specify the model 'fxmarty/resnet-tiny-beans'. This model has been trained to detect diseases in bean crops based on images of the crop leaves.\n4. The farmer can input an image of the bean crop leaf to the classifier, which will then return the predicted disease.\n<<<code>>>: from transformers import pipeline\nclassifier = pipeline('image-classification', model='fxmarty/resnet-tiny-beans')\nresult = classifier('path/to/bean_leaf_image.jpg')\n# Replace 'path/to/bean_leaf_image.jpg' with the path to the leaf image.", 'api_call': "pipeline('image-classification', model='fxmarty/resnet-tiny-beans')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Image Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Image Classification', 'api_name': 'fxmarty/resnet-tiny-beans', 'api_call': "pipeline('image-classification', model='fxmarty/resnet-tiny-beans')", 'api_arguments': {'model': 'fxmarty/resnet-tiny-beans'}, 'python_environment_requirements': {'transformers': 'latest'}, 'example_code': "from transformers import pipeline; classifier = pipeline('image-classification', model='fxmarty/resnet-tiny-beans'); results = classifier('path/to/image.jpg')", 'performance': {'dataset': 'beans', 'accuracy': 'Not provided'}, 'description': 'A model trained on the beans dataset, just for testing and having a really tiny model.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00651_classify_bean_disease.py", line 35, in <module>
+    test_classify_bean_disease()
+  File "output/hf-eval-data-v2/f00651_classify_bean_disease.py", line 28, in test_classify_bean_disease
+    result = classify_bean_disease(test_image_path)
+  File "output/hf-eval-data-v2/f00651_classify_bean_disease.py", line 17, in classify_bean_disease
+    classifier = pipeline('image-classification', model='fxmarty/resnet-tiny-beans')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--fxmarty--resnet-tiny-beans'

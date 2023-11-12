@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00122_classify_plant_disease.py", line 44, in <module>
+    test_classify_plant_disease()
+  File "./f00122_classify_plant_disease.py", line 35, in test_classify_plant_disease
+    classification_results = classify_plant_disease(image_path, candidate_labels)
+  File "./f00122_classify_plant_disease.py", line 20, in classify_plant_disease
+    model, preprocess = clip.load('timm/eva02_enormous_patch14_plus_clip_224.laion2b_s9b_b144k')
+AttributeError: module 'clip' has no attribute 'load'

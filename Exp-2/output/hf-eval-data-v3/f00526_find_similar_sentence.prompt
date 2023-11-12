@@ -1,0 +1,31 @@
+{'code': '###Instruction: We need to find a similar Chinese sentence to my source sentence for a suggestion.\n###Output: <<<domain>>>: Natural Language Processing Sentence Similarity\n<<<api_call>>>: AutoModel.from_pretrained(\'GanymedeNil/text2vec-large-chinese\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the required libraries, AutoModel and AutoTokenizer from the transformers package.\n2. Use the from_pretrained method of AutoTokenizer and AutoModel to load the \'GanymedeNil/text2vec-large-chinese\' model and tokenizer.\n3. Use the loaded tokenizer to encode both the source sentence and the list of sentences you want to compare it with.\n4. Use the loaded model to create embeddings for the source sentence and the sentences in the list to be compared.\n5. Calculate the cosine similarity between the source sentence embedding and the list of sentence embeddings.\n6. Return the highest similarity value and its corresponding sentence.\n<<<code>>>: from transformers import AutoModel, AutoTokenizer\nfrom sklearn.metrics.pairwise import cosine_similarity\nimport torch\ntokenizer = AutoTokenizer.from_pretrained(\'GanymedeNil/text2vec-large-chinese\')\nmodel = AutoModel.from_pretrained(\'GanymedeNil/text2vec-large-chinese\')\nsource_sentence = \'Your source Chinese sentence here\'\nsentences_to_compare = [\'List of Chinese sentences to compare\']\n\ndef encode(sentence):\n    input_ids = tokenizer(sentence, return_tensors="pt").input_ids\n    return model(input_ids).last_hidden_state.mean(1).detach()\n\nsource_embedding = encode(source_sentence)\nsentence_embeddings = torch.stack([encode(candidate) for candidate in sentences_to_compare])\n\nsimilarity_scores = cosine_similarity(source_embedding.cpu(), sentence_embeddings.cpu())\nhighest_similarity_index = similarity_scores.argmax()\n\nmost_similar_sentence = sentences_to_compare[highest_similarity_index]\nimachinery', 'api_call': "AutoModel.from_pretrained('GanymedeNil/text2vec-large-chinese')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Sentence Similarity', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'text2vec-large-chinese', 'api_call': "AutoModel.from_pretrained('GanymedeNil/text2vec-large-chinese')", 'api_arguments': 'source_sentence, sentences_to_compare', 'python_environment_requirements': 'transformers', 'example_code': "from transformers import AutoModel, AutoTokenizer\n\ntokenizer = AutoTokenizer.from_pretrained('GanymedeNil/text2vec-large-chinese')\nmodel = AutoModel.from_pretrained('GanymedeNil/text2vec-large-chinese')", 'performance': {'dataset': 'https://huggingface.co/shibing624/text2vec-base-chinese', 'accuracy': 'Not provided'}, 'description': 'A Chinese sentence similarity model based on the derivative model of https://huggingface.co/shibing624/text2vec-base-chinese, replacing MacBERT with LERT, and keeping other training conditions unchanged.'}}
+
+
+
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 0.44 MB. The target location /root/autodl-tmp/.cache/huggingface/hub only has 0.27 MB free disk space.
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 0.44 MB. The target location /root/autodl-tmp/.cache/huggingface/hub/models--GanymedeNil--text2vec-large-chinese/blobs only has 0.27 MB free disk space.
+  warnings.warn(
+
+  File "output/hf-eval-data-v2/f00526_find_similar_sentence.py", line 44, in <module>
+    test_find_similar_sentence()
+  File "output/hf-eval-data-v2/f00526_find_similar_sentence.py", line 40, in test_find_similar_sentence
+    assert find_similar_sentence(source_sentence, sentences_to_compare) == '我爱吃苹果'
+  File "output/hf-eval-data-v2/f00526_find_similar_sentence.py", line 20, in find_similar_sentence
+    tokenizer = AutoTokenizer.from_pretrained('GanymedeNil/text2vec-large-chinese')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 736, in from_pretrained
+    return tokenizer_class.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1813, in from_pretrained
+    resolved_vocab_files[file_id] = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 554, in http_get
+    temp_file.write(chunk)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 473, in func_wrapper
+    return func(*args, **kwargs)
+OSError: [Errno 28] No space left on device
+

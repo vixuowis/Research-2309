@@ -1,0 +1,52 @@
+{'code': '###Instruction: I want to translate a text from one language to another.\n###Output: <<<domain>>>: Natural Language Processing Translation\n<<<api_call>>>: pipeline(\'translation_xx_to_yy\', model=\'facebook/nllb-200-distilled-600M\')\n<<<api_provider>>>: PyTorch Transformers\n<<<explanation>>>:1. Import the pipeline function from the transformers library provided by Hugging Face.\n2. Initialize the NLP translation pipeline with the model \'facebook/nllb-200-distilled-600M\', which is a pre-trained model for translating text between multiple languages.\n3. Utilize the pipeline by providing the text you want to translate as an argument. It will translate the text from the source language to the target language indicated by the language codes xx_to_yy in the \'translation_xx_to_yy\' string.\n4. Replace xx with the source language code and yy with the target language code. For example, for English to French translation, use \'translation_en_to_fr\'.\n<<<code>>>: from transformers import pipeline\ntranslator = pipeline(\'translation_en_to_fr\', model=\'facebook/nllb-200-distilled-600M\')\ntranslated_text = translator("Hello, how are you?")\n', 'api_call': "pipeline('translation_xx_to_yy', model='facebook/nllb-200-distilled-600M')", 'provider': 'PyTorch Transformers', 'api_data': {'domain': 'Natural Language Processing Translation', 'framework': 'PyTorch Transformers', 'functionality': 'text2text-generation', 'api_name': 'facebook/nllb-200-distilled-600M', 'api_call': "pipeline('translation_xx_to_yy', model='facebook/nllb-200-distilled-600M')", 'api_arguments': ['model', 'text'], 'python_environment_requirements': ['transformers', 'torch'], 'example_code': "from transformers import pipeline; translator = pipeline('translation_xx_to_yy', model='facebook/nllb-200-distilled-600M'); translator('Hello World')", 'performance': {'dataset': 'Flores-200', 'accuracy': 'BLEU, spBLEU, chrF++'}, 'description': 'NLLB-200 is a machine translation model primarily intended for research in machine translation, especially for low-resource languages. It allows for single sentence translation among 200 languages. The model was trained on general domain text data and is not intended to be used with domain specific texts, such as medical domain or legal domain. The model is not intended to be used for document translation.'}}
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(33316056 bytes read, 2427141871 more expected)', IncompleteRead(33316056 bytes read, 2427141871 more expected))
+
+while loading with M2M100ForConditionalGeneration, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(52975671 bytes read, 2407482256 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(52975671 bytes read, 2407482256 more expected)', IncompleteRead(52975671 bytes read, 2407482256 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(52975671 bytes read, 2407482256 more expected)', IncompleteRead(52975671 bytes read, 2407482256 more expected))
+
+
+

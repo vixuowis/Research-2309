@@ -1,0 +1,19 @@
+Downloading (…)okenizer_config.json:   0%|                                                                          | 0.00/52.0 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|██████████████████████████████████████████████████████████████████| 52.0/52.0 [00:00<00:00, 4.33kB/s]
+Downloading (…)lve/main/config.json:   0%|                                                                           | 0.00/633 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|████████████████████████████████████████████████████████████████████| 633/633 [00:00<00:00, 51.4kB/s]
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'DebertaV2Tokenizer'. 
+The class this function is called from is 'DebertaTokenizer'.
+Traceback (most recent call last):
+  File "./f00150_improve_sentence_readability.py", line 44, in <module>
+    test_improve_sentence_readability()
+  File "./f00150_improve_sentence_readability.py", line 37, in test_improve_sentence_readability
+    assert isinstance(improve_sentence_readability(sentence1), str)
+  File "./f00150_improve_sentence_readability.py", line 20, in improve_sentence_readability
+    tokenizer = DebertaTokenizer.from_pretrained('microsoft/deberta-v2-xlarge')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1854, in from_pretrained
+    return cls._from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2017, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/deberta/tokenization_deberta.py", line 223, in __init__
+    with open(vocab_file, encoding="utf-8") as vocab_handle:
+TypeError: expected str, bytes or os.PathLike object, not NoneType

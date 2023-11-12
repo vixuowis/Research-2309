@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00298_classify_news_articles.py", line 36, in <module>
+    test_classify_news_articles()
+  File "./f00298_classify_news_articles.py", line 29, in test_classify_news_articles
+    assert classify_news_articles(article1)['technology'] > classify_news_articles(article1)['sports']
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

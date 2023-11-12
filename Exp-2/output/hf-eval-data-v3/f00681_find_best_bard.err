@@ -1,0 +1,49 @@
+2023-11-12 07:54:06.273273: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 07:54:06.334394: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 07:54:07.074291: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Downloading (…)okenizer_config.json:   0%|                                                                           | 0.00/490 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|████████████████████████████████████████████████████████████████████| 490/490 [00:00<00:00, 39.8kB/s]
+Downloading (…)lve/main/config.json:   0%|                                                                         | 0.00/1.65k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████████| 1.65k/1.65k [00:00<00:00, 146kB/s]
+Downloading (…)solve/main/vocab.txt:   0%|                                                                          | 0.00/262k [00:00<?, ?B/s]Downloading (…)solve/main/vocab.txt: 100%|███████████████████████████████████████████████████████████████████| 262k/262k [00:00<00:00, 455kB/s]Downloading (…)solve/main/vocab.txt: 100%|███████████████████████████████████████████████████████████████████| 262k/262k [00:00<00:00, 455kB/s]
+Downloading (…)cial_tokens_map.json:   0%|                                                                           | 0.00/154 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|████████████████████████████████████████████████████████████████████| 154/154 [00:00<00:00, 64.5kB/s]
+Downloading pytorch_model.bin:   0%|                                                                               | 0.00/45.8M [00:00<?, ?B/s]Downloading pytorch_model.bin:  23%|████████████████                                                      | 10.5M/45.8M [00:03<00:11, 3.15MB/s]Downloading pytorch_model.bin:  46%|████████████████████████████████                                      | 21.0M/45.8M [00:03<00:04, 6.11MB/s]Downloading pytorch_model.bin:  69%|████████████████████████████████████████████████                      | 31.5M/45.8M [00:04<00:01, 8.75MB/s]Downloading pytorch_model.bin:  92%|████████████████████████████████████████████████████████████████▏     | 41.9M/45.8M [00:05<00:00, 10.6MB/s]Downloading pytorch_model.bin: 100%|██████████████████████████████████████████████████████████████████████| 45.8M/45.8M [00:05<00:00, 11.0MB/s]Downloading pytorch_model.bin: 100%|██████████████████████████████████████████████████████████████████████| 45.8M/45.8M [00:05<00:00, 8.39MB/s]
+Traceback (most recent call last):
+  File "./f00681_find_best_bard.py", line 42, in <module>
+    test_find_best_bard()
+  File "./f00681_find_best_bard.py", line 32, in test_find_best_bard
+    result = find_best_bard(table_data, question)
+  File "./f00681_find_best_bard.py", line 21, in find_best_bard
+    result = nlp({'table': table_data, 'query': question})
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/table_question_answering.py", line 347, in __call__
+    results = super().__call__(pipeline_inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1121, in __call__
+    outputs = list(final_iterator)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 674, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/pt_utils.py", line 19, in __getitem__
+    processed = self.process(item, **self.params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/table_question_answering.py", line 376, in preprocess
+    inputs = self.tokenizer(table, query, return_tensors=self.framework, truncation=truncation, padding=padding)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 671, in __call__
+    return self.encode_plus(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 1037, in encode_plus
+    return self._encode_plus(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 1088, in _encode_plus
+    table_tokens = self._tokenize_table(table)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 1387, in _tokenize_table
+    tokenized_row.append(self.tokenize(cell))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils.py", line 515, in tokenize
+    text = re.sub(pattern, lambda m: m.groups()[0] or m.groups()[1].lower(), text)
+  File "/root/miniconda3/envs/py38/lib/python3.8/re.py", line 210, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object

@@ -1,0 +1,93 @@
+Fetching 5 files:   0%|                                                                                                  | 0/5 [00:00<?, ?it/s]
+Downloading (…)add8959f78e/dict.txt:   0%|                                                                         | 0.00/16.4k [00:00<?, ?B/s][ADownloading (…)add8959f78e/dict.txt: 100%|████████████████████████████████████████████████████████████████| 16.4k/16.4k [00:00<00:00, 1.31MB/s]
+
+Downloading (…)dd8959f78e/README.md:   0%|                                                                         | 0.00/2.71k [00:00<?, ?B/s][ADownloading (…)dd8959f78e/README.md: 100%|█████████████████████████████████████████████████████████████████| 2.71k/2.71k [00:00<00:00, 233kB/s]
+
+Downloading (…)8959f78e/config.yaml:   0%|                                                                           | 0.00/231 [00:00<?, ?B/s][ADownloading (…)8959f78e/config.yaml: 100%|████████████████████████████████████████████████████████████████████| 231/231 [00:00<00:00, 20.0kB/s]
+
+Downloading (…)9f78e/.gitattributes:   0%|                                                                         | 0.00/1.38k [00:00<?, ?B/s][ADownloading (…)9f78e/.gitattributes: 100%|█████████████████████████████████████████████████████████████████| 1.38k/1.38k [00:00<00:00, 112kB/s]
+Fetching 5 files:  20%|██████████████████                                                                        | 1/5 [00:07<00:28,  7.03s/it]
+Downloading model.pt:   0%|                                                                                        | 0.00/3.21G [00:00<?, ?B/s][A
+Downloading model.pt:   0%|▎                                                                              | 10.5M/3.21G [00:03<19:14, 2.77MB/s][A
+Downloading model.pt:   1%|▌                                                                              | 21.0M/3.21G [00:04<10:44, 4.94MB/s][A
+Downloading model.pt:   1%|▊                                                                              | 31.5M/3.21G [00:06<10:09, 5.21MB/s][A
+Downloading model.pt:   1%|█                                                                              | 41.9M/3.21G [00:08<10:31, 5.01MB/s][A
+Downloading model.pt:   2%|█▎                                                                             | 52.4M/3.21G [00:10<10:15, 5.13MB/s][A
+Downloading model.pt:   2%|█▌                                                                             | 62.9M/3.21G [00:12<10:05, 5.19MB/s][A
+Downloading model.pt:   2%|█▊                                                                             | 73.4M/3.21G [00:14<10:11, 5.13MB/s][A
+Downloading model.pt:   2%|█▊                                                                             | 73.4M/3.21G [00:29<10:11, 5.13MB/s][AFetching 5 files:  80%|████████████████████████████████████████████████████████████████████████                  | 4/5 [00:40<00:10, 10.01s/it]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 444, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 567, in read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 525, in _fp_read
+    data = self._fp.read(chunk_amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 628, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 593, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 449, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.")
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00079_translate_speech_to_speech.py", line 50, in <module>
+    test_translate_speech_to_speech()
+  File "./f00079_translate_speech_to_speech.py", line 42, in test_translate_speech_to_speech
+    hokkien_translation = translate_speech_to_speech(audio_path)
+  File "./f00079_translate_speech_to_speech.py", line 22, in translate_speech_to_speech
+    models, cfg, task = checkpoint_utils.load_model_ensemble_and_task_from_hf_hub('facebook/xm_transformer_s2ut_en-hk', arg_overrides={'config_yaml': 'config.yaml', 'task': 'speech_to_text'})
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/fairseq/checkpoint_utils.py", line 515, in load_model_ensemble_and_task_from_hf_hub
+    cache_dir = snapshot_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/_snapshot_download.py", line 239, in snapshot_download
+    thread_map(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/root/miniconda3/envs/py38/lib/python3.8/concurrent/futures/_base.py", line 619, in result_iterator
+    yield fs.pop().result()
+  File "/root/miniconda3/envs/py38/lib/python3.8/concurrent/futures/_base.py", line 444, in result
+    return self.__get_result()
+  File "/root/miniconda3/envs/py38/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/root/miniconda3/envs/py38/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/_snapshot_download.py", line 214, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Downloading model.pt:   2%|█▊                                                                             | 73.4M/3.21G [00:29<21:07, 2.47MB/s]

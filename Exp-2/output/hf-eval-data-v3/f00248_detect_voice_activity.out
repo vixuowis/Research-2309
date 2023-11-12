@@ -1,0 +1,37 @@
+
+Could not download 'pyannote/segmentation' model.
+It might be because the model is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Model.from_pretrained('pyannote/segmentation',
+   ...                       use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the model is gated:
+visit https://hf.co/pyannote/segmentation to accept the user conditions.
+Test failed with error: Unsupported type (<class 'NoneType'>) for loading model: expected `str` or `dict`.
+
+Could not download 'pyannote/segmentation' model.
+It might be because the model is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Model.from_pretrained('pyannote/segmentation',
+   ...                       use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the model is gated:
+visit https://hf.co/pyannote/segmentation to accept the user conditions.
+Test failed with error: Unsupported type (<class 'NoneType'>) for loading model: expected `str` or `dict`.
+
+Could not download 'pyannote/segmentation' model.
+It might be because the model is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Model.from_pretrained('pyannote/segmentation',
+   ...                       use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the model is gated:
+visit https://hf.co/pyannote/segmentation to accept the user conditions.
+Test passed: Exception was raised as expected with error: Unsupported type (<class 'NoneType'>) for loading model: expected `str` or `dict`.
+All tests passed.

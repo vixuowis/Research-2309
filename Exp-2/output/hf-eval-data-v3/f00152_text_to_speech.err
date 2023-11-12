@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00152_text_to_speech.py", line 43, in <module>
+    test_text_to_speech()
+  File "./f00152_text_to_speech.py", line 34, in test_text_to_speech
+    assert isinstance(text_to_speech('Hello World'), str)
+AssertionError

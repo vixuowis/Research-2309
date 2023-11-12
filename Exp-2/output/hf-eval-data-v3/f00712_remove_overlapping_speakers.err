@@ -1,0 +1,15 @@
+Downloading pytorch_model.bin:   0%|                                                                               | 0.00/20.4M [00:00<?, ?B/s]Downloading pytorch_model.bin:  51%|███████████████████████████████████▉                                  | 10.5M/20.4M [00:01<00:01, 6.45MB/s]Downloading pytorch_model.bin: 100%|██████████████████████████████████████████████████████████████████████| 20.4M/20.4M [00:02<00:00, 7.94MB/s]Downloading pytorch_model.bin: 100%|██████████████████████████████████████████████████████████████████████| 20.4M/20.4M [00:02<00:00, 7.65MB/s]
+Traceback (most recent call last):
+  File "./f00712_remove_overlapping_speakers.py", line 57, in <module>
+    test_remove_overlapping_speakers()
+  File "./f00712_remove_overlapping_speakers.py", line 38, in test_remove_overlapping_speakers
+    remove_overlapping_speakers('test_data/mixed_audio.wav', 'test_data/separated_audio.wav')
+  File "./f00712_remove_overlapping_speakers.py", line 25, in remove_overlapping_speakers
+    mixed_audio, sample_rate = sf.read(input_file_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/soundfile.py", line 285, in read
+    with SoundFile(file, 'r', samplerate, channels,
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/soundfile.py", line 658, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/soundfile.py", line 1216, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'test_data/mixed_audio.wav': System error.

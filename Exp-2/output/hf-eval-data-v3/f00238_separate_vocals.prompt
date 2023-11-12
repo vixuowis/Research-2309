@@ -1,0 +1,48 @@
+{'code': "###Instruction: \nCreate an application that automatically separates vocals from a song for karaoke nights.\n\n###Output:\n<<<domain>>>: Audio Audio-to-Audio\n<<<api_call>>>: pipeline('audio-source-separation', model='Awais/Audio_Source_Separation')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. We will first import the necessary classes from the transformers library and the Asteroid package.\n2. Using the pipeline function, we create an audio source separation model with the 'Awais/Audio_Source_Separation' pre-trained model.\n3. This model is capable of separating vocals from a song, which is especially helpful for karaoke nights when we want only the instrumental track.\n4. The separation process works by taking an audio file as input and returning an array of output audio files, where each file contains one of the separated sources (vocals, instruments, etc.).\n5. The vocals and instrumental tracks can then be saved separately or combined as needed.\n<<<code>>>: from transformers import pipeline\nsource_separation = pipeline('audio-source-separation', model='Awais/Audio_Source_Separation')\nseparated_audio_sources = source_separation(audio_file_path)", 'api_call': "pipeline('audio-source-separation', model='Awais/Audio_Source_Separation')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Audio Audio-to-Audio', 'framework': 'Hugging Face Transformers', 'functionality': 'Asteroid', 'api_name': 'Awais/Audio_Source_Separation', 'api_call': "pipeline('audio-source-separation', model='Awais/Audio_Source_Separation')", 'api_arguments': 'audio', 'python_environment_requirements': 'Asteroid', 'example_code': '', 'performance': {'dataset': 'Libri2Mix', 'accuracy': {'si_sdr': 14.764543634468069, 'si_sdr_imp': 14.764029375607246, 'sdr': 15.29337970745095, 'sdr_imp': 15.114146605113111, 'sir': 24.092904661115366, 'sir_imp': 23.913669683141528, 'sar': 16.06055906916849, 'sar_imp': -51.980784441287454, 'stoi': 0.9311142440593033, 'stoi_imp': 0.21817376142710482}}, 'description': 'This model was trained by Joris Cosentino using the librimix recipe in Asteroid. It was trained on the sep_clean task of the Libri2Mix dataset.'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/Awais/Audio_Source_Separation/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 271, in hf_raise_for_status
+    raise EntryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.EntryNotFoundError: 404 Client Error. (Request ID: Root=1-654d7e0d-392b35584f88fcf92e16b417;08b94a18-e60a-4927-9529-9a5a7b58f775)
+
+Entry Not Found for url: https://huggingface.co/Awais/Audio_Source_Separation/resolve/main/config.json.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00238_separate_vocals.py", line 37, in <module>
+    test_separate_vocals()
+  File "output/hf-eval-data-v2/f00238_separate_vocals.py", line 31, in test_separate_vocals
+    separated_audio_sources = separate_vocals(sample_audio_file_path)
+  File "output/hf-eval-data-v2/f00238_separate_vocals.py", line 20, in separate_vocals
+    source_separation = pipeline('audio-source-separation', model='Awais/Audio_Source_Separation')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 741, in pipeline
+    config = AutoConfig.from_pretrained(model, _from_pipeline=task, **hub_kwargs, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 1023, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 620, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 675, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 480, in cached_file
+    raise EnvironmentError(
+OSError: Awais/Audio_Source_Separation does not appear to have a file named config.json. Checkout 'https://huggingface.co/Awais/Audio_Source_Separation/main' for available files.

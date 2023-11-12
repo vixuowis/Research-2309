@@ -1,0 +1,25 @@
+Downloading (…)lve/main/config.json:   0%|                                                                         | 0.00/1.66k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████████| 1.66k/1.66k [00:00<00:00, 143kB/s]
+Downloading pytorch_model.bin:   0%|                                                                                | 0.00/117M [00:00<?, ?B/s]Downloading pytorch_model.bin:  18%|████████████▉                                                           | 21.0M/117M [00:00<00:00, 156MB/s]Downloading pytorch_model.bin:  36%|█████████████████████████▊                                              | 41.9M/117M [00:00<00:00, 181MB/s]Downloading pytorch_model.bin:  63%|█████████████████████████████████████████████                           | 73.4M/117M [00:00<00:00, 204MB/s]Downloading pytorch_model.bin:  81%|█████████████████████████████████████████████████████████▉              | 94.4M/117M [00:00<00:00, 201MB/s]Downloading pytorch_model.bin:  98%|███████████████████████████████████████████████████████████████████████▊ | 115M/117M [00:00<00:00, 201MB/s]Downloading pytorch_model.bin: 100%|█████████████████████████████████████████████████████████████████████████| 117M/117M [00:00<00:00, 195MB/s]
+Downloading (…)solve/main/vocab.txt:   0%|                                                                          | 0.00/262k [00:00<?, ?B/s]Downloading (…)solve/main/vocab.txt: 100%|███████████████████████████████████████████████████████████████████| 262k/262k [00:00<00:00, 336kB/s]Downloading (…)solve/main/vocab.txt: 100%|███████████████████████████████████████████████████████████████████| 262k/262k [00:00<00:00, 336kB/s]
+Downloading (…)cial_tokens_map.json:   0%|                                                                           | 0.00/154 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|████████████████████████████████████████████████████████████████████| 154/154 [00:00<00:00, 82.8kB/s]
+Downloading (…)okenizer_config.json:   0%|                                                                           | 0.00/490 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|█████████████████████████████████████████████████████████████████████| 490/490 [00:00<00:00, 256kB/s]
+Traceback (most recent call last):
+  File "./f00293_check_revenue_target.py", line 51, in <module>
+    test_check_revenue_target()
+  File "./f00293_check_revenue_target.py", line 38, in test_check_revenue_target
+    result1 = check_revenue_target(table1, query1)
+  File "./f00293_check_revenue_target.py", line 23, in check_revenue_target
+    inputs = tokenizer(table=table, queries=query, return_tensors='pt')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 671, in __call__
+    return self.encode_plus(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 1037, in encode_plus
+    return self._encode_plus(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 1088, in _encode_plus
+    table_tokens = self._tokenize_table(table)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/tapas/tokenization_tapas.py", line 1387, in _tokenize_table
+    tokenized_row.append(self.tokenize(cell))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils.py", line 515, in tokenize
+    text = re.sub(pattern, lambda m: m.groups()[0] or m.groups()[1].lower(), text)
+  File "/root/miniconda3/envs/py38/lib/python3.8/re.py", line 210, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object

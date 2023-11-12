@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "./f00325_convert_voice_style.py", line 68, in <module>
+    test_convert_voice_style()
+  File "./f00325_convert_voice_style.py", line 56, in test_convert_voice_style
+    convert_voice_style(audio_file_path, speaker_embedding_path, output_file_path)
+  File "./f00325_convert_voice_style.py", line 24, in convert_voice_style
+    example_speech, sampling_rate = sf.read(audio_file_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/soundfile.py", line 285, in read
+    with SoundFile(file, 'r', samplerate, channels,
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/soundfile.py", line 658, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/soundfile.py", line 1216, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'test_audio.wav': System error.

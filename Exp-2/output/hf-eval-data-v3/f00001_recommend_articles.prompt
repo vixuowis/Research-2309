@@ -1,0 +1,22 @@
+{'code': "###Instruction: Design a feature for a social media website to recommend articles to users based on how similar the articles are to their previously liked articles.\n###Output: <<<domain>>>: Natural Language Processing Sentence Similarity\n<<<api_call>>>: AutoModel.from_pretrained('princeton-nlp/unsup-simcse-roberta-base')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. We first import the necessary classes and modules from the transformers package. This includes AutoTokenizer and AutoModel for loading the pre-trained models from Hugging Face.\n2. We use the AutoModel.from_pretrained() method to load the 'princeton-nlp/unsup-simcse-roberta-base' model, which is specially designed for calculating sentence similarity.\n3. To build the recommendation feature, we process the text of previously liked articles and compute sentence embeddings. For each new article, we compute its sentence embedding and compare it to the embeddings of previously liked articles.\n4. If the similarity between the new article's embedding and any previous liked articles' embeddings is above a certain threshold, the new article is recommended to the user.\n<<<code>>>: from transformers import AutoTokenizer, AutoModel\ntokenizer = AutoTokenizer.from_pretrained('princeton-nlp/unsup-simcse-roberta-base')\nmodel = AutoModel.from_pretrained('princeton-nlp/unsup-simcse-roberta-base')\n", 'api_call': "AutoModel.from_pretrained('princeton-nlp/unsup-simcse-roberta-base')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Sentence Similarity', 'framework': 'Hugging Face Transformers', 'functionality': 'Feature Extraction', 'api_name': 'princeton-nlp/unsup-simcse-roberta-base', 'api_call': "AutoModel.from_pretrained('princeton-nlp/unsup-simcse-roberta-base')", 'api_arguments': None, 'python_environment_requirements': ['transformers'], 'example_code': None, 'performance': {'dataset': None, 'accuracy': None}, 'description': 'An unsupervised sentence embedding model trained using the SimCSE approach with a Roberta base architecture.'}}
+
+Downloading pytorch_model.bin:  97%|████████████████████████████████▉ | 482M/499M [07:52<00:14, 1.11MB/s]
+Downloading pytorch_model.bin:  99%|█████████████████████████████████▌| 493M/499M [07:58<00:04, 1.26MB/s]
+Downloading pytorch_model.bin: 100%|██████████████████████████████████| 499M/499M [08:01<00:00, 1.30MB/s]
+Downloading pytorch_model.bin: 100%|██████████████████████████████████| 499M/499M [08:01<00:00, 1.03MB/s]
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00001_recommend_articles.py", line 59, in <module>
+    test_recommend_articles()
+  File "output/hf-eval-data-v2/f00001_recommend_articles.py", line 52, in test_recommend_articles
+    recommended_articles = recommend_articles(user_articles, new_articles)
+  File "output/hf-eval-data-v2/f00001_recommend_articles.py", line 38, in recommend_articles
+    similarities = cosine_similarity(new_embedding, user_embeddings)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/utils/_param_validation.py", line 214, in wrapper
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/metrics/pairwise.py", line 1578, in cosine_similarity
+    X, Y = check_pairwise_arrays(X, Y)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/metrics/pairwise.py", line 173, in check_pairwise_arrays
+    Y = check_array(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/utils/validation.py", line 951, in check_array
+    raise ValueError(
+ValueError: Found array with dim 3. check_pairwise_arrays expected <= 2.

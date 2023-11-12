@@ -1,0 +1,22 @@
+{'code': '###Instruction: We are creating an AI newsletter application that generates summaries of news articles. We need the AI to generate a brief summary for a given article.\n###Output: <<<domain>>>: Natural Language Processing Text Generation\n<<<api_call>>>: pipeline(\'text-generation\', model=\'gpt2-large\')\n<<<api_provider>>>: Transformers\n<<<explanation>>>: 1. Import the pipeline function from the transformers library provided by Hugging Face.\n2. Use the pipeline function to load the GPT-2 Large model, which is a state-of-the-art text generation model.\n3. With the GPT-2 Large model, we can generate summaries of news articles by providing the model with the first few sentences of the news article and let it generate a summary based on that.\n4. Configure the model by specifying the maximum length of the generated summary and controlling the randomness of the output.\n<<<code>>>: from transformers import pipeline\nsummary_generator = pipeline(\'text-generation\', model=\'gpt2-large\')\narticle_text = "The first few sentences of the news article go here..."\nsummary = summary_generator(article_text, max_length=50, num_return_sequences=1)[0][\'generated_text\']', 'api_call': "pipeline('text-generation', model='gpt2-large')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Text Generation', 'framework': 'Transformers', 'functionality': 'Text Generation', 'api_name': 'gpt2-large', 'api_call': "pipeline('text-generation', model='gpt2-large')", 'api_arguments': {'text': "Hello, I'm a language model,", 'max_length': 30, 'num_return_sequences': 5}, 'python_environment_requirements': {'transformers': 'pipeline, set_seed', 'PyTorch': 'GPT2Tokenizer, GPT2Model', 'TensorFlow': 'GPT2Tokenizer, TFGPT2Model'}, 'example_code': "from transformers import pipeline, set_seed\ngenerator = pipeline('text-generation', model='gpt2-large')\nset_seed(42)\ngenerator(Hello, I'm a language model,, max_length=30, num_return_sequences=5)", 'performance': {'dataset': {'LAMBADA': {'PPL': 10.87}, 'CBT-CN': {'ACC': 93.45}, 'CBT-NE': {'ACC': 88.0}, 'WikiText2': {'PPL': 19.93}, 'PTB': {'PPL': 40.31}, 'enwiki8': {'BPB': 0.97}, 'text8': {'BPC': 1.02}, 'WikiText103': {'PPL': 22.05}, '1BW': {'PPL': 44.575}}}, 'description': 'GPT-2 Large is the 774M parameter version of GPT-2, a transformer-based language model created and released by OpenAI. The model is a pretrained model on English language using a causal language modeling (CLM) objective.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00793_generate_summary.py", line 36, in <module>
+    test_generate_summary()
+  File "output/hf-eval-data-v2/f00793_generate_summary.py", line 30, in test_generate_summary
+    summary = generate_summary(article_text)
+  File "output/hf-eval-data-v2/f00793_generate_summary.py", line 19, in generate_summary
+    summary_generator = pipeline('text-generation', model='gpt2-large')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--gpt2-large'

@@ -1,0 +1,37 @@
+False
+
+===================================BUG REPORT===================================
+================================================================================
+The following directories listed in your path were found to be non-existent: {PosixPath('/usr/local/nvidia/lib'), PosixPath('/usr/local/nvidia/lib64')}
+The following directories listed in your path were found to be non-existent: {PosixPath('//autodl-container-60c311bc08-814ca072'), PosixPath('http'), PosixPath('8888/jupyter')}
+The following directories listed in your path were found to be non-existent: {PosixPath('Asia/Shanghai')}
+The following directories listed in your path were found to be non-existent: {PosixPath('http'), PosixPath('//192.168.1.88'), PosixPath('41620')}
+The following directories listed in your path were found to be non-existent: {PosixPath('/root/autodl-tmp/.cache/huggingface/assets')}
+The following directories listed in your path were found to be non-existent: {PosixPath('//192.168.1.174'), PosixPath('http'), PosixPath('12798')}
+The following directories listed in your path were found to be non-existent: {PosixPath('https'), PosixPath('//developer.download.nvidia.com/compute/machine-learning/repos/ubuntu2004/x86_64')}
+The following directories listed in your path were found to be non-existent: {PosixPath('//192.168.1.174'), PosixPath('http'), PosixPath('12798')}
+CUDA_SETUP: WARNING! libcudart.so not found in any environmental path. Searching in backup paths...
+DEBUG: Possible options found for libcudart.so: {PosixPath('/usr/local/cuda/lib64/libcudart.so.11.0'), PosixPath('/usr/local/cuda/lib64/libcudart.so')}
+CUDA SETUP: CUDA version lower than 11 are currently not supported for LLM.int8(). You will be only to use 8-bit optimizers and quantization routines!!
+CUDA SETUP: PyTorch settings found: CUDA_VERSION=102, Highest Compute Capability: 8.6.
+CUDA SETUP: To manually override the PyTorch CUDA version please see:https://github.com/TimDettmers/bitsandbytes/blob/main/how_to_use_nonpytorch_cuda.md
+CUDA SETUP: Required library version not found: libbitsandbytes_cuda102.so. Maybe you need to compile it from source?
+CUDA SETUP: Defaulting to libbitsandbytes_cpu.so...
+
+================================================ERROR=====================================
+CUDA SETUP: CUDA detection failed! Possible reasons:
+1. You need to manually override the PyTorch CUDA version. Please see: "https://github.com/TimDettmers/bitsandbytes/blob/main/how_to_use_nonpytorch_cuda.md
+2. CUDA driver not installed
+3. CUDA not installed
+4. You have multiple conflicting CUDA libraries
+5. Required library not pre-compiled for this bitsandbytes release!
+CUDA SETUP: If you compiled from source, try again with `make CUDA_VERSION=DETECTED_CUDA_VERSION` for example, `make CUDA_VERSION=113`.
+CUDA SETUP: The CUDA version for the compile might depend on your conda install. Inspect CUDA version via `conda list | grep cuda`.
+================================================================================
+
+CUDA SETUP: Something unexpected happened. Please compile from source:
+git clone https://github.com/TimDettmers/bitsandbytes.git
+cd bitsandbytes
+CUDA_VERSION=102
+python setup.py install
+CUDA SETUP: Setup Failed!

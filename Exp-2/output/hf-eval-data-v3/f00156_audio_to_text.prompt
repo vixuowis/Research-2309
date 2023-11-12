@@ -1,0 +1,52 @@
+{'code': "###Instruction: We are opening a platform where users can record their own podcast and host it on our platform, can you help us to convert the audio into text automatically?\n###Output: <<<domain>>>: Audio Automatic Speech Recognition\n<<<api_call>>>: Wav2Vec2ForCTC.from_pretrained('facebook/wav2vec2-base-960h')\n<<<api_provider>>>: Transformers\n<<<explanation>>>: 1. We first import the necessary classes and modules from the transformers and datasets packages. This includes Wav2Vec2Processor for audio preprocessing, Wav2Vec2ForCTC for the speech recognition model, and torch for working with tensors.\n2. We then use the from_pretrained method of the Wav2Vec2Processor and Wav2Vec2ForCTC classes to load the pre-trained processor and model 'facebook/wav2vec2-base-960h'. This model has been trained for automatic speech recognition tasks, which is perfect for our podcast platform.\n3. The audio file can be loaded easily using the load_dataset method from the datasets package. After that, audio samples are processed, and tensors are created using the Wav2Vec2Processor.\n4. The model is then used to transcribe the audio samples to text.\n<<<code>>>: from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC\nfrom datasets import load_dataset\nimport torch\n\nprocessor = Wav2Vec2Processor.from_pretrained('facebook/wav2vec2-base-960h')\nmodel = Wav2Vec2ForCTC.from_pretrained('facebook/wav2vec2-base-960h')\nds = load_dataset('patrickvonplaten/librispeech_asr_dummy', 'clean', split='validation')\ninput_values = processor(ds[0]['audio']['array'], return_tensors='pt', padding='longest').input_values\nlogits = model(input_values).logits\npredicted_ids = torch.argmax(logits, dim=-1)\ntranscription = processor.batch_decode(predicted_ids)", 'api_call': "Wav2Vec2ForCTC.from_pretrained('facebook/wav2vec2-base-960h')", 'provider': 'Transformers', 'api_data': {'domain': 'Audio Automatic Speech Recognition', 'framework': 'Transformers', 'functionality': 'Transcription', 'api_name': 'facebook/wav2vec2-base-960h', 'api_call': "Wav2Vec2ForCTC.from_pretrained('facebook/wav2vec2-base-960h')", 'api_arguments': ['input_values'], 'python_environment_requirements': ['transformers', 'datasets', 'torch', 'jiwer'], 'example_code': "from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC\nfrom datasets import load_dataset\nimport torch\n\nprocessor = Wav2Vec2Processor.from_pretrained('facebook/wav2vec2-base-960h')\nmodel = Wav2Vec2ForCTC.from_pretrained('facebook/wav2vec2-base-960h')\nds = load_dataset('patrickvonplaten/librispeech_asr_dummy', 'clean', split='validation')\ninput_values = processor(ds[0]['audio']['array'], return_tensors='pt', padding='longest').input_values\nlogits = model(input_values).logits\npredicted_ids = torch.argmax(logits, dim=-1)\ntranscription = processor.batch_decode(predicted_ids)", 'performance': {'dataset': 'LibriSpeech', 'accuracy': {'clean': 3.4, 'other': 8.6}}, 'description': "Facebook's Wav2Vec2 base model pretrained and fine-tuned on 960 hours of Librispeech on 16kHz sampled speech audio. It is designed for automatic speech recognition and can transcribe audio files."}}
+
+
+Extracting data files:   0%|                                                   | 0/1 [00:00<?, ?it/s]
+Extracting data files: 100%|█████████████████████████████████████████| 1/1 [00:00<00:00, 1195.98it/s]
+
+Generating validation split: 0 examples [00:00, ? examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/audio.py", line 91, in encode_example
+    import soundfile as sf  # soundfile is a dependency of librosa, needed to decode audio files.
+ModuleNotFoundError: No module named 'soundfile'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1693, in _prepare_split_single
+    example = self.info.features.encode_example(record) if self.info.features is not None else record
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/features.py", line 1852, in encode_example
+    return encode_nested_example(self, example)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/features.py", line 1229, in encode_nested_example
+    {
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/features.py", line 1230, in <dictcomp>
+    k: encode_nested_example(sub_schema, sub_obj, level=level + 1)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/features.py", line 1284, in encode_nested_example
+    return schema.encode_example(obj) if obj is not None else None
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/features/audio.py", line 93, in encode_example
+    raise ImportError("To support encoding audio data, please install 'soundfile'.") from err
+ImportError: To support encoding audio data, please install 'soundfile'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00156_audio_to_text.py", line 53, in <module>
+    test_audio_to_text()
+  File "output/hf-eval-data-v2/f00156_audio_to_text.py", line 46, in test_audio_to_text
+    transcription = audio_to_text(sample_audio_file)
+  File "output/hf-eval-data-v2/f00156_audio_to_text.py", line 24, in audio_to_text
+    ds = load_dataset('patrickvonplaten/librispeech_asr_dummy', 'clean', split='validation')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/load.py", line 2153, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 954, in download_and_prepare
+    self._download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1717, in _download_and_prepare
+    super()._download_and_prepare(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1049, in _download_and_prepare
+    self._prepare_split(split_generator, **prepare_split_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1555, in _prepare_split
+    for job_id, done, content in self._prepare_split_single(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/datasets/builder.py", line 1712, in _prepare_split_single
+    raise DatasetGenerationError("An error occurred while generating the dataset") from e
+datasets.builder.DatasetGenerationError: An error occurred while generating the dataset

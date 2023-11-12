@@ -1,0 +1,49 @@
+{'code': '###Instruction: We have a French news agency and we want to categorize the news articles based on sports, politics, and science.\n###Output: <<<domain>>>: Natural Language Processing Zero-Shot Classification\n<<<api_call>>>: pipeline(\'zero-shot-classification\', model=\'BaptisteDoyen/camembert-base-xnli\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. First, import the necessary library, \'pipeline\', from the transformers package.\n2. Then, use the \'pipeline\' function from transformers to load the pre-trained model \'BaptisteDoyen/camembert-base-xnli\', which is specifically designed for French zero-shot classification.\n3. Pass the text (news article) you want to categorize and the candidate_labels, which are the categories, such as sports, politics, and science, to the classifier. Also, provide a hypothesis_template that appropriately identifies the categories, e.g., "Ce texte parle de {}."\n4. The classifier will return a result with probabilities associated with each category, helping you to classify the news articles.\n<<<code>>>: from transformers import pipeline\nclassifier = pipeline(\'zero-shot-classification\', model=\'BaptisteDoyen/camembert-base-xnli\')\nsequence = "L\'équipe de France joue aujourd\'hui au Parc des Princes"\ncandidate_labels = [\'sport\', \'politique\', \'science\']\nhypothesis_template = "Ce texte parle de {}."\nresult = classifier(sequence, candidate_labels, hypothesis_template=hypothesis_template)', 'api_call': "pipeline('zero-shot-classification', model='BaptisteDoyen/camembert-base-xnli')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Zero-Shot Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Zero-Shot Classification', 'api_name': 'BaptisteDoyen/camembert-base-xnli', 'api_call': "pipeline('zero-shot-classification', model='BaptisteDoyen/camembert-base-xnli')", 'api_arguments': {'sequence': 'str', 'candidate_labels': 'List[str]', 'hypothesis_template': 'str'}, 'python_environment_requirements': ['transformers'], 'example_code': "sequence = L'équipe de France joue aujourd'hui au Parc des Princes\ncandidate_labels = [sport,politique,science]\nhypothesis_template = Ce texte parle de {}.\nclassifier(sequence, candidate_labels, hypothesis_template=hypothesis_template)", 'performance': {'dataset': 'xnli', 'accuracy': {'validation': 81.4, 'test': 81.7}}, 'description': 'Camembert-base model fine-tuned on french part of XNLI dataset. One of the few Zero-Shot classification models working on French.'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/BaptisteDoyen/camembert-base-xnli/resolve/main/adapter_config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1344, in hf_hub_download
+    raise head_call_error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-654cda1d-287d7c25341916be0f06e7e4;ccc46bfa-0422-4739-954e-6233da4c21fe)
+
+Repository Not Found for url: https://huggingface.co/BaptisteDoyen/camembert-base-xnli/resolve/main/adapter_config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00052_classify_french_news.py", line 40, in <module>
+    test_classify_french_news()
+  File "output/hf-eval-data-v2/f00052_classify_french_news.py", line 31, in test_classify_french_news
+    result = classify_french_news(sequence, candidate_labels)
+  File "output/hf-eval-data-v2/f00052_classify_french_news.py", line 19, in classify_french_news
+    classifier = pipeline('zero-shot-classification', model='BaptisteDoyen/camembert-base-xnli')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 450, in cached_file
+    raise EnvironmentError(
+OSError: BaptisteDoyen/camembert-base-xnli is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`

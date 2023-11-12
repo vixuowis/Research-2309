@@ -1,0 +1,52 @@
+{'code': '###Instruction: We are building a source code autocompletion tool which will complete the code snippet containing a masked token.\n###Output: <<<domain>>>: Natural Language Processing Fill-Mask\n<<<api_call>>>: pipeline(\'fill-mask\', model=\'huggingface/CodeBERTa-small-v1\')\n<<<api_provider>>>: Transformers\n<<<explanation>>>: 1. To build the code completion tool, import the required library \'pipeline\' from transformers.\n2. Create an instance of the \'fill-mask\' pipeline using the pre-trained model \'huggingface/CodeBERTa-small-v1\'. This model is designed to fill in masked tokens in programming languages.\n3. Pass the incomplete code snippet with a masked token to the pipeline, which will return a completion suggestion for the masked part of the code.\n<<<code>>>: from transformers import pipeline\nfill_mask = pipeline(\'fill-mask\', model=\'huggingface/CodeBERTa-small-v1\')\nincomplete_code_snippet = \'def greet():\\n    print("Hello, <mask>!")\'\ncompleted_code_snippet = fill_mask(incomplete_code_snippet)\n', 'api_call': "pipeline('fill-mask', model='huggingface/CodeBERTa-small-v1')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Fill-Mask', 'framework': 'Transformers', 'functionality': 'Masked Language Modeling Prediction', 'api_name': 'CodeBERTa-small-v1', 'api_call': "pipeline('fill-mask', model='huggingface/CodeBERTa-small-v1')", 'api_arguments': ['task', 'model', 'tokenizer'], 'python_environment_requirements': ['transformers'], 'example_code': 'fill_mask(PHP_CODE)', 'performance': {'dataset': 'code_search_net', 'accuracy': None}, 'description': 'CodeBERTa is a RoBERTa-like model trained on the CodeSearchNet dataset from GitHub. It supports languages like Go, Java, JavaScript, PHP, Python, and Ruby. The tokenizer is a Byte-level BPE tokenizer trained on the corpus using Hugging Face tokenizers. The small model is a 6-layer, 84M parameters, RoBERTa-like Transformer model.'}}
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(18528574 bytes read, 317878914 more expected)', IncompleteRead(18528574 bytes read, 317878914 more expected))
+
+while loading with RobertaForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(38952187 bytes read, 297455301 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(38952187 bytes read, 297455301 more expected)', IncompleteRead(38952187 bytes read, 297455301 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(38952187 bytes read, 297455301 more expected)', IncompleteRead(38952187 bytes read, 297455301 more expected))
+
+
+

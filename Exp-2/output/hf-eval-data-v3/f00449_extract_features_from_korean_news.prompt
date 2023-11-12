@@ -1,0 +1,19 @@
+{'code': "###Instruction: We are a news agency that wants to extract useful features from Korean news articles for a content recommendation service.\n###Output: <<<domain>>>: Natural Language Processing Feature Extraction\n<<<api_call>>>: BartModel.from_pretrained('gogamza/kobart-base-v2')\n<<<api_provider>>>: PyTorch Transformers\n<<<explanation>>>:1. Import the necessary classes from the transformers package, which includes PreTrainedTokenizerFast for tokenizing the Korean text and BartModel for feature extraction.\n2. The tokenizer helps convert the input text into a format that the model can understand and process.\n3. The model, 'gogamza/kobart-base-v2', is a pre-trained model designed specifically for handling Korean text and is trained on a large dataset of Korean text.\n4. Use the above-mentioned model for feature extraction from Korean news articles, which can be further used to improve your content recommendation service.\n<<<code>>>: from transformers import PreTrainedTokenizerFast, BartModel\ntokenizer = PreTrainedTokenizerFast.from_pretrained('gogamza/kobart-base-v2')\nmodel = BartModel.from_pretrained('gogamza/kobart-base-v2')\nnews_article = 'your Korean news article here...'\ntokens = tokenizer(news_article, return_tensors='pt')\nfeatures = model(**tokens)", 'api_call': "BartModel.from_pretrained('gogamza/kobart-base-v2')", 'provider': 'PyTorch Transformers', 'api_data': {'domain': 'Natural Language Processing Feature Extraction', 'framework': 'PyTorch Transformers', 'functionality': 'Feature Extraction', 'api_name': 'kobart-base-v2', 'api_call': "BartModel.from_pretrained('gogamza/kobart-base-v2')", 'api_arguments': {'tokenizer': "PreTrainedTokenizerFast.from_pretrained('gogamza/kobart-base-v2')"}, 'python_environment_requirements': {'transformers': 'latest', 'tokenizers': 'latest'}, 'example_code': "from transformers import PreTrainedTokenizerFast, BartModel\ntokenizer = PreTrainedTokenizerFast.from_pretrained('gogamza/kobart-base-v2')\nmodel = BartModel.from_pretrained('gogamza/kobart-base-v2')", 'performance': {'dataset': 'NSMC', 'accuracy': 0.901}, 'description': 'KoBART is a Korean encoder-decoder language model trained on over 40GB of Korean text using the BART architecture. It can be used for feature extraction and has been trained on a variety of data sources, including Korean Wiki, news, books, and more.'}}
+
+
+
+
+
+You passed along `num_labels=3` with an incompatible id to label map: {'0': 'NEGATIVE', '1': 'POSITIVE'}. The number of labels wil be overwritten to 2.
+You passed along `num_labels=3` with an incompatible id to label map: {'0': 'NEGATIVE', '1': 'POSITIVE'}. The number of labels wil be overwritten to 2.
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00449_extract_features_from_korean_news.py", line 36, in <module>
+    test_extract_features_from_korean_news()
+  File "output/hf-eval-data-v2/f00449_extract_features_from_korean_news.py", line 30, in test_extract_features_from_korean_news
+    features = extract_features_from_korean_news(news_article)
+  File "output/hf-eval-data-v2/f00449_extract_features_from_korean_news.py", line 20, in extract_features_from_korean_news
+    features = model(**tokens)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: forward() got an unexpected keyword argument 'token_type_ids'

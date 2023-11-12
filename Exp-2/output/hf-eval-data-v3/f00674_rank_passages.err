@@ -1,0 +1,27 @@
+Downloading (…)lve/main/config.json:   0%|                                                                           | 0.00/791 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|████████████████████████████████████████████████████████████████████| 791/791 [00:00<00:00, 70.3kB/s]2023-11-12 07:49:58.471940: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 07:49:58.533507: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 07:49:59.393993: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+
+Downloading pytorch_model.bin:   0%|                                                                                | 0.00/134M [00:00<?, ?B/s]Downloading pytorch_model.bin:   8%|█████▌                                                                 | 10.5M/134M [00:05<01:06, 1.84MB/s]Downloading pytorch_model.bin:  16%|███████████▏                                                           | 21.0M/134M [00:08<00:42, 2.63MB/s]Downloading pytorch_model.bin:  24%|████████████████▋                                                      | 31.5M/134M [00:09<00:27, 3.78MB/s]Downloading pytorch_model.bin:  31%|██████████████████████▎                                                | 41.9M/134M [00:10<00:17, 5.11MB/s]Downloading pytorch_model.bin:  39%|███████████████████████████▉                                           | 52.4M/134M [00:12<00:14, 5.67MB/s]Downloading pytorch_model.bin:  47%|█████████████████████████████████▍                                     | 62.9M/134M [00:13<00:11, 6.09MB/s]Downloading pytorch_model.bin:  55%|███████████████████████████████████████                                | 73.4M/134M [00:14<00:08, 7.46MB/s]Downloading pytorch_model.bin:  63%|████████████████████████████████████████████▌                          | 83.9M/134M [00:15<00:05, 8.75MB/s]Downloading pytorch_model.bin:  71%|██████████████████████████████████████████████████▏                    | 94.4M/134M [00:15<00:03, 10.2MB/s]Downloading pytorch_model.bin:  79%|████████████████████████████████████████████████████████▌               | 105M/134M [00:16<00:02, 10.9MB/s]Downloading pytorch_model.bin:  86%|██████████████████████████████████████████████████████████████▏         | 115M/134M [00:17<00:01, 11.4MB/s]Downloading pytorch_model.bin:  94%|███████████████████████████████████████████████████████████████████▊    | 126M/134M [00:18<00:00, 11.6MB/s]Downloading pytorch_model.bin: 100%|████████████████████████████████████████████████████████████████████████| 134M/134M [00:19<00:00, 11.8MB/s]Downloading pytorch_model.bin: 100%|████████████████████████████████████████████████████████████████████████| 134M/134M [00:19<00:00, 7.02MB/s]
+Downloading (…)okenizer_config.json:   0%|                                                                           | 0.00/316 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|█████████████████████████████████████████████████████████████████████| 316/316 [00:00<00:00, 136kB/s]
+Downloading (…)solve/main/vocab.txt:   0%|                                                                          | 0.00/232k [00:00<?, ?B/s]Downloading (…)solve/main/vocab.txt: 100%|███████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 422kB/s]Downloading (…)solve/main/vocab.txt: 100%|███████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 421kB/s]
+Downloading (…)cial_tokens_map.json:   0%|                                                                           | 0.00/112 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|████████████████████████████████████████████████████████████████████| 112/112 [00:00<00:00, 48.7kB/s]
+Traceback (most recent call last):
+  File "./f00674_rank_passages.py", line 50, in <module>
+    test_rank_passages()
+  File "./f00674_rank_passages.py", line 42, in test_rank_passages
+    result = rank_passages(query, passages)
+  File "./f00674_rank_passages.py", line 24, in rank_passages
+    features = tokenizer(query, passages, padding=True, truncation=True, return_tensors='pt')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2602, in __call__
+    encodings = self._call_one(text=text, text_pair=text_pair, **all_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2708, in _call_one
+    return self.encode_plus(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2781, in encode_plus
+    return self._encode_plus(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 524, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 452, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextInputSequence must be str

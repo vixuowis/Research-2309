@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00908_predict_digit_category.py", line 58, in <module>
+    test_predict_digit_category()
+  File "./f00908_predict_digit_category.py", line 46, in test_predict_digit_category
+    accuracy = predict_digit_category(model_path, X, y)
+  File "./f00908_predict_digit_category.py", line 22, in predict_digit_category
+    model = joblib.load(model_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'path_to_folder/random_forest_model.joblib'

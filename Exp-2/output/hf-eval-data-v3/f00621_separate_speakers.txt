@@ -1,0 +1,4 @@
+soundfile
+asteroid
+huggingface_hub
+numpy

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00001_recommend_articles.py", line 64, in <module>
+    test_recommend_articles()
+  File "./f00001_recommend_articles.py", line 49, in test_recommend_articles
+    assert 'This new AI technology is groundbreaking.' in recommended_articles
+AssertionError

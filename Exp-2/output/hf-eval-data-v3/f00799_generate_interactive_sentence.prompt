@@ -1,0 +1,22 @@
+{'code': '###Instruction: I am working in a dating chatapp development team. We want to generate sentences to make it more interactive.\n###Output: <<<domain>>>: Natural Language Processing Fill-Mask\n<<<api_call>>>: pipeline(\'fill-mask\', model=\'albert-base-v2\')\n<<<api_provider>>>: Transformers\n<<<explanation>>>: 1. Import the pipeline function from the transformers library.\n2. Use the pipeline function to create a fill-mask model, which is capable of predicting missing words in a given sentence.\n3. Specify the model \'albert-base-v2\' to be loaded. This is a model that has been trained on a large corpus of text in a self-supervised fashion using a masked language modeling (MLM) objective.\n4. With the created fill-mask model, you can generate more interactive sentences for your dating chatapp by providing the partial sentences with masked words (e.g., \'Tell me more about your [MASK] hobbies.\').\n<<<code>>>: from transformers import pipeline\nunmasker = pipeline(\'fill-mask\', model=\'albert-base-v2\')\nmasked_sentence = "Tell me more about your [MASK] hobbies."\ncompleted_sentence = unmasker(masked_sentence)', 'api_call': "pipeline('fill-mask', model='albert-base-v2')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Fill-Mask', 'framework': 'Transformers', 'functionality': 'Masked Language Modeling', 'api_name': 'albert-base-v2', 'api_call': "pipeline('fill-mask', model='albert-base-v2')", 'api_arguments': ['text'], 'python_environment_requirements': ['transformers'], 'example_code': "from transformers import pipeline\nunmasker = pipeline('fill-mask', model='albert-base-v2')\nunmasker(Hello I'm a [MASK] model.)", 'performance': {'dataset': {'SQuAD1.1': '90.2/83.2', 'SQuAD2.0': '82.1/79.3', 'MNLI': '84.6', 'SST-2': '92.9', 'RACE': '66.8'}, 'accuracy': '82.3'}, 'description': 'ALBERT Base v2 is a transformers model pretrained on a large corpus of English data in a self-supervised fashion using a masked language modeling (MLM) objective. It was introduced in this paper and first released in this repository. This model, as all ALBERT models, is uncased: it does not make a difference between english and English.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00799_generate_interactive_sentence.py", line 43, in <module>
+    test_generate_interactive_sentence()
+  File "output/hf-eval-data-v2/f00799_generate_interactive_sentence.py", line 36, in test_generate_interactive_sentence
+    completed_sentence = generate_interactive_sentence(masked_sentence)
+  File "output/hf-eval-data-v2/f00799_generate_interactive_sentence.py", line 23, in generate_interactive_sentence
+    unmasker = pipeline('fill-mask', model='albert-base-v2')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--albert-base-v2'

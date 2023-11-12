@@ -1,0 +1,47 @@
+2023-11-12 00:33:38.391104: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 00:33:38.451519: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 00:33:39.332658: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:659: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
+  warnings.warn(
+Downloading final_pipeline.pkl:   0%|                                                                              | 0.00/3.44k [00:00<?, ?B/s]Downloading final_pipeline.pkl: 100%|██████████████████████████████████████████████████████████████████████| 3.44k/3.44k [00:00<00:00, 275kB/s]
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/base.py:348: InconsistentVersionWarning: Trying to unpickle estimator SimpleImputer from version 1.0.2 when using version 1.3.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/base.py:348: InconsistentVersionWarning: Trying to unpickle estimator StandardScaler from version 1.0.2 when using version 1.3.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/base.py:348: InconsistentVersionWarning: Trying to unpickle estimator Pipeline from version 1.0.2 when using version 1.3.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/base.py:348: InconsistentVersionWarning: Trying to unpickle estimator OneHotEncoder from version 1.0.2 when using version 1.3.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/base.py:348: InconsistentVersionWarning: Trying to unpickle estimator ColumnTransformer from version 1.0.2 when using version 1.3.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:659: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
+  warnings.warn(
+Downloading titanic_model.h5:   0%|                                                                                | 0.00/26.4k [00:00<?, ?B/s]Downloading titanic_model.h5: 100%|████████████████████████████████████████████████████████████████████████| 26.4k/26.4k [00:00<00:00, 169kB/s]Downloading titanic_model.h5: 100%|████████████████████████████████████████████████████████████████████████| 26.4k/26.4k [00:00<00:00, 169kB/s]2023-11-12 00:33:44.643451: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22280 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3090, pci bus id: 0000:57:00.0, compute capability: 8.6
+
+WARNING:tensorflow:Error in loading the saved optimizer state. As a result, your model is starting with a freshly initialized optimizer.
+Traceback (most recent call last):
+  File "./f00439_predict_vacation_success.py", line 45, in <module>
+    test_predict_vacation_success()
+  File "./f00439_predict_vacation_success.py", line 38, in test_predict_vacation_success
+    assert predict_vacation_success('Bali', 'Hotel', 'Solo') == 1
+  File "./f00439_predict_vacation_success.py", line 31, in predict_vacation_success
+    prediction = model_seq.predict(model_pipeline.transform(new_data))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/utils/_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/compose/_column_transformer.py", line 827, in transform
+    Xs = self._fit_transform(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/compose/_column_transformer.py", line 675, in _fit_transform
+    transformers = list(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/compose/_column_transformer.py", line 381, in _iter
+    transformers = [
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/compose/_column_transformer.py", line 382, in <listcomp>
+    replace_passthrough(*trans) for trans in self.transformers_
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/sklearn/compose/_column_transformer.py", line 377, in replace_passthrough
+    if name not in self._name_to_fitted_passthrough:
+AttributeError: 'ColumnTransformer' object has no attribute '_name_to_fitted_passthrough'

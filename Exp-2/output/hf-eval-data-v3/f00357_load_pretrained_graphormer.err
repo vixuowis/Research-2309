@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00357_load_pretrained_graphormer.py", line 52, in <module>
+    test_load_pretrained_graphormer()
+  File "./f00357_load_pretrained_graphormer.py", line 35, in test_load_pretrained_graphormer
+    assert isinstance(model, AutoModel), 'Test Case 1 Failed'
+AssertionError: Test Case 1 Failed

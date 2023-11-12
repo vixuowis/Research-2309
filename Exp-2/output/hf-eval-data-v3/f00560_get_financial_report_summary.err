@@ -1,0 +1,4 @@
+  File "./f00560_get_financial_report_summary.py", line 34
+    context = 'In the last quarter, the company's total revenues were reported at $3.2 million with a gross profit of $1.5 million. The operating expenses during the same quarter were $1 million.'
+                                                ^
+SyntaxError: invalid syntax

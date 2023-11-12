@@ -1,0 +1,4 @@
+  File "./f00689_infer_sentiment.py", line 29
+    result = infer_sentiment('I recently purchased this product and it completely exceeded my expectations! The build quality is top-notch, and I've already recommended it to several friends.')
+                                                                                                                                                  ^
+SyntaxError: invalid syntax

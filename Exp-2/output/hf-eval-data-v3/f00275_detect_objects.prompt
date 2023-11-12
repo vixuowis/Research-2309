@@ -1,0 +1,27 @@
+{'code': "###Instruction: I am building an app to detect objects in an image from a URL. How can I experiment with object detection models using transformers?\n###Output: <<<domain>>>: Computer Vision Object Detection\n<<<api_call>>>: DetrForObjectDetection.from_pretrained('facebook/detr-resnet-101')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the necessary libraries, which include 'DetrImageProcessor', 'DetrForObjectDetection', 'PIL', 'requests', and 'torch'.\n2. Use the 'from_pretrained' method to load the pre-trained model 'facebook/detr-resnet-101' and 'DetrImageProcessor'.\n3. Download and open the image from the URL and preprocess it using the loaded 'DetrImageProcessor'.\n4. Pass the preprocessed image to the loaded 'DetrForObjectDetection' model.\n5. The model will output the detected objects and their confidence scores on the image.\n<<<code>>>: from transformers import DetrImageProcessor, DetrForObjectDetection\nimport torch\nfrom PIL import Image\nimport requests\n\nurl = 'http://images.cocodataset.org/val2017/000000039769.jpg'\nimage = Image.open(requests.get(url, stream=True).raw)\n\nprocessor = DetrImageProcessor.from_pretrained('facebook/detr-resnet-101')\nmodel = DetrForObjectDetection.from_pretrained('facebook/detr-resnet-101')\n\ninputs = processor(images=image, return_tensors='pt')\noutputs = model(**inputs)", 'api_call': "DetrForObjectDetection.from_pretrained('facebook/detr-resnet-101')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Object Detection', 'framework': 'Hugging Face Transformers', 'functionality': 'Object Detection', 'api_name': 'facebook/detr-resnet-101', 'api_call': "DetrForObjectDetection.from_pretrained('facebook/detr-resnet-101')", 'api_arguments': ['image'], 'python_environment_requirements': ['transformers', 'torch', 'PIL', 'requests'], 'example_code': 'from transformers import DetrImageProcessor, DetrForObjectDetection\nimport torch\nfrom PIL import Image\nimport requests\nurl = http://images.cocodataset.org/val2017/000000039769.jpg\nimage = Image.open(requests.get(url, stream=True).raw)\nprocessor = DetrImageProcessor.from_pretrained(facebook/detr-resnet-101)\nmodel = DetrForObjectDetection.from_pretrained(facebook/detr-resnet-101)\ninputs = processor(images=image, return_tensors=pt)\noutputs = model(**inputs)', 'performance': {'dataset': 'COCO 2017', 'accuracy': '43.5 AP'}, 'description': 'DEtection TRansformer (DETR) model trained end-to-end on COCO 2017 object detection (118k annotated images). It was introduced in the paper End-to-End Object Detection with Transformers by Carion et al. and first released in this repository.'}}
+
+
+The `max_size` parameter is deprecated and will be removed in v4.26. Please specify in `size['longest_edge'] instead`.
+
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00275_detect_objects.py", line 47, in <module>
+    test_detect_objects()
+  File "output/hf-eval-data-v2/f00275_detect_objects.py", line 40, in test_detect_objects
+    outputs = detect_objects(url)
+  File "output/hf-eval-data-v2/f00275_detect_objects.py", line 25, in detect_objects
+    model = DetrForObjectDetection.from_pretrained('facebook/detr-resnet-101')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2954, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/detr/modeling_detr.py", line 1498, in __init__
+    self.model = DetrModel(config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/detr/modeling_detr.py", line 1330, in __init__
+    backbone = DetrConvEncoder(config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/detr/modeling_detr.py", line 344, in __init__
+    requires_backends(self, ["timm"])
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/import_utils.py", line 1112, in requires_backends
+    raise ImportError("".join(failed))
+ImportError: 
+DetrConvEncoder requires the timm library but it was not found in your environment. You can install it with pip:
+`pip install timm`. Please note that you may need to restart your runtime after installation.
+

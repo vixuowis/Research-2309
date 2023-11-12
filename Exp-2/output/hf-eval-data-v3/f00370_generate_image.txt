@@ -1,0 +1,5 @@
+torch
+huggingface_hub
+diffusers
+PIL
+controlnet_aux

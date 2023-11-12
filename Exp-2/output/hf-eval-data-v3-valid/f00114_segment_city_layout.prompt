@@ -1,0 +1,52 @@
+{'code': "###Instruction: We are a city planning department and want to evaluate the city layout. Analyze the image we provide to segment and understand the various urban elements.\n###Output: <<<domain>>>: Computer Vision Image Segmentation\n<<<api_call>>>: SegformerForSemanticSegmentation.from_pretrained('nvidia/segformer-b5-finetuned-cityscapes-1024-1024')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. We first import the necessary classes from the transformers and PIL packages. This includes SegformerForSemanticSegmentation for the semantic segmentation model and Image for processing image data.\n2. We then use the from_pretrained method of the SegformerForSemanticSegmentation class to load the pre-trained model 'nvidia/segformer-b5-finetuned-cityscapes-1024-1024'. This model has been specifically fine-tuned for urban environments and will work well for city layout analysis.\n3. We load the image data from a file.\n4. This model can then be used to compute predictions and segment the different urban elements in the image.\n<<<code>>>: from transformers import SegformerForSemanticSegmentation\nfrom PIL import Image\nimage = Image.open('city_image_path.jpg')\n# replace 'city_image_path.jpg' with path to your image\nmodel = SegformerForSemanticSegmentation.from_pretrained('nvidia/segformer-b5-finetuned-cityscapes-1024-1024')\ninputs = feature_extractor(images=image, return_tensors='pt')\noutputs = model(**inputs)\n", 'api_call': "SegformerForSemanticSegmentation.from_pretrained('nvidia/segformer-b5-finetuned-cityscapes-1024-1024')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Image Segmentation', 'framework': 'Hugging Face Transformers', 'functionality': 'Semantic Segmentation', 'api_name': 'nvidia/segformer-b5-finetuned-cityscapes-1024-1024', 'api_call': "SegformerForSemanticSegmentation.from_pretrained('nvidia/segformer-b5-finetuned-cityscapes-1024-1024')", 'api_arguments': {'images': 'image', 'return_tensors': 'pt'}, 'python_environment_requirements': {'packages': ['transformers', 'PIL', 'requests']}, 'example_code': 'from transformers import SegformerFeatureExtractor, SegformerForSemanticSegmentation\nfrom PIL import Image\nimport requests\nfeature_extractor = SegformerFeatureExtractor.from_pretrained(nvidia/segformer-b5-finetuned-cityscapes-1024-1024)\nmodel = SegformerForSemanticSegmentation.from_pretrained(nvidia/segformer-b5-finetuned-cityscapes-1024-1024)\nurl = http://images.cocodataset.org/val2017/000000039769.jpg\nimage = Image.open(requests.get(url, stream=True).raw)\ninputs = feature_extractor(images=image, return_tensors=pt)\noutputs = model(**inputs)\nlogits = outputs.logits', 'performance': {'dataset': 'CityScapes', 'accuracy': 'Not provided'}, 'description': 'SegFormer model fine-tuned on CityScapes at resolution 1024x1024. It was introduced in the paper SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers by Xie et al. and first released in this repository.'}}
+
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/segformer/image_processing_segformer.py:101: FutureWarning: The `reduce_labels` parameter is deprecated and will be removed in a future version. Please use `do_reduce_labels` instead.
+  warnings.warn(
+
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(27270609 bytes read, 311625844 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(27270609 bytes read, 311625844 more expected)', IncompleteRead(27270609 bytes read, 311625844 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00114_segment_city_layout.py", line 53, in <module>
+    test_segment_city_layout()
+  File "output/hf-eval-data-v2/f00114_segment_city_layout.py", line 46, in test_segment_city_layout
+    output = segment_city_layout(image_path)
+  File "output/hf-eval-data-v2/f00114_segment_city_layout.py", line 22, in segment_city_layout
+    model = SegformerForSemanticSegmentation.from_pretrained('nvidia/segformer-b5-finetuned-cityscapes-1024-1024')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(27270609 bytes read, 311625844 more expected)', IncompleteRead(27270609 bytes read, 311625844 more expected))
+

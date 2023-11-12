@@ -1,0 +1,34 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/pyannote/audio/core/io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch_audiomentations/utils/io.py:27: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+Downloading (…)lve/main/config.yaml:   0%|                                                                                       | 0.00/601 [00:00<?, ?B/s]Downloading (…)lve/main/config.yaml: 100%|████████████████████████████████████████████████████████████████████████████████| 601/601 [00:00<00:00, 60.2kB/s]
+Downloading pytorch_model.bin:   0%|                                                                                           | 0.00/17.7M [00:00<?, ?B/s]Downloading pytorch_model.bin:  59%|████████████████████████████████████████████████▌                                 | 10.5M/17.7M [00:02<00:01, 4.73MB/s]Downloading pytorch_model.bin: 100%|██████████████████████████████████████████████████████████████████████████████████| 17.7M/17.7M [00:02<00:00, 7.48MB/s]Downloading pytorch_model.bin: 100%|██████████████████████████████████████████████████████████████████████████████████| 17.7M/17.7M [00:02<00:00, 6.76MB/s]
+Downloading (…)lve/main/config.yaml:   0%|                                                                                       | 0.00/318 [00:00<?, ?B/s]Downloading (…)lve/main/config.yaml: 100%|████████████████████████████████████████████████████████████████████████████████| 318/318 [00:00<00:00, 26.1kB/s]
+Lightning automatically upgraded your loaded checkpoint from v1.5.4 to v2.1.1. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../../../.cache/torch/pyannote/models--philschmid--pyannote-segmentation/snapshots/d13283ce236dd60ccbe5dafe181ae8fc57e85bfb/pytorch_model.bin`
+Downloading (…)ain/hyperparams.yaml:   0%|                                                                                     | 0.00/1.92k [00:00<?, ?B/s]Downloading (…)ain/hyperparams.yaml: 100%|█████████████████████████████████████████████████████████████████████████████| 1.92k/1.92k [00:00<00:00, 173kB/s]
+Downloading embedding_model.ckpt:   0%|                                                                                        | 0.00/83.3M [00:00<?, ?B/s]Downloading embedding_model.ckpt:  13%|█████████▉                                                                     | 10.5M/83.3M [00:00<00:04, 15.9MB/s]Downloading embedding_model.ckpt:  25%|███████████████████▉                                                           | 21.0M/83.3M [00:01<00:03, 15.7MB/s]Downloading embedding_model.ckpt:  38%|█████████████████████████████▊                                                 | 31.5M/83.3M [00:01<00:03, 16.3MB/s]Downloading embedding_model.ckpt:  50%|███████████████████████████████████████▊                                       | 41.9M/83.3M [00:02<00:02, 14.4MB/s]Downloading embedding_model.ckpt:  63%|█████████████████████████████████████████████████▋                             | 52.4M/83.3M [00:03<00:02, 11.7MB/s]Downloading embedding_model.ckpt:  76%|███████████████████████████████████████████████████████████▋                   | 62.9M/83.3M [00:04<00:01, 11.9MB/s]Downloading embedding_model.ckpt:  88%|█████████████████████████████████████████████████████████████████████▌         | 73.4M/83.3M [00:05<00:00, 12.1MB/s]Downloading embedding_model.ckpt: 100%|███████████████████████████████████████████████████████████████████████████████| 83.3M/83.3M [00:06<00:00, 10.9MB/s]Downloading embedding_model.ckpt: 100%|███████████████████████████████████████████████████████████████████████████████| 83.3M/83.3M [00:06<00:00, 12.2MB/s]
+Downloading (…)an_var_norm_emb.ckpt:   0%|                                                                                     | 0.00/1.92k [00:00<?, ?B/s]Downloading (…)an_var_norm_emb.ckpt: 100%|█████████████████████████████████████████████████████████████████████████████| 1.92k/1.92k [00:00<00:00, 164kB/s]
+Downloading classifier.ckpt:   0%|                                                                                             | 0.00/5.53M [00:00<?, ?B/s]Downloading classifier.ckpt: 100%|████████████████████████████████████████████████████████████████████████████████████| 5.53M/5.53M [00:00<00:00, 5.83MB/s]Downloading classifier.ckpt: 100%|████████████████████████████████████████████████████████████████████████████████████| 5.53M/5.53M [00:00<00:00, 5.81MB/s]
+Downloading (…)in/label_encoder.txt:   0%|                                                                                      | 0.00/129k [00:00<?, ?B/s]Downloading (…)in/label_encoder.txt: 100%|███████████████████████████████████████████████████████████████████████████████| 129k/129k [00:00<00:00, 359kB/s]Downloading (…)in/label_encoder.txt: 100%|███████████████████████████████████████████████████████████████████████████████| 129k/129k [00:00<00:00, 358kB/s]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pyannote/audio/pipelines/speaker_diarization.py", line 172, in __init__
+    Klustering = Clustering[clustering]
+  File "/root/miniconda3/envs/py38/lib/python3.8/enum.py", line 387, in __getitem__
+    return cls._member_map_[name]
+KeyError: 'HiddenMarkovModelClustering'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00813_analyze_conference_call.py", line 36, in <module>
+    test_analyze_conference_call()
+  File "./f00813_analyze_conference_call.py", line 28, in test_analyze_conference_call
+    result = analyze_conference_call(audio_file)
+  File "./f00813_analyze_conference_call.py", line 17, in analyze_conference_call
+    pipeline = Pipeline.from_pretrained('philschmid/pyannote-speaker-diarization-endpoint')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pyannote/audio/core/pipeline.py", line 136, in from_pretrained
+    pipeline = Klass(**params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pyannote/audio/pipelines/speaker_diarization.py", line 174, in __init__
+    raise ValueError(
+ValueError: clustering must be one of [AgglomerativeClustering, OracleClustering]

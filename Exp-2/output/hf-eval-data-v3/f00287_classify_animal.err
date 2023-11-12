@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00287_classify_animal.py", line 48, in <module>
+    test_classify_animal()
+  File "./f00287_classify_animal.py", line 34, in test_classify_animal
+    assert classify_animal('https://placekitten.com/200/300') == 'cat'
+AssertionError

@@ -1,0 +1,18 @@
+{'code': "###Instruction: I am working in a bank, I want to estimate the mortgage for a given housing using the housing's features.\n###Output: <<<domain>>>: Tabular Tabular Regression\n<<<api_call>>>: joblib.load('model.joblib')\n<<<api_provider>>>: Joblib\n<<<explanation>>>: 1. Firstly, we need to import joblib, pandas as well as other necessary libraries for processing data.\n2. Load the pre-trained model for US housing prices prediction using joblib.load() with the given model filename 'model.joblib'.\n3. Load the dataset in the format of a pandas DataFrame, which contains the information about the houses.\n4. The model has been trained with specific features, so filter the data to only include the required features.\n5. Next, adjust the column names in the data to match the format the model expects.\n6. Finally, use the model's predict() function to generate mortgage estimates for the given housing features.\n<<<code>>>: import joblib\nimport pandas as pd\nmodel = joblib.load('model.joblib')\n# Ingest your data into a pandas DataFrame\ndata = pd.DataFrame({'feature_1': ...,'feature_n': ...})\nfiltered_columns = config['features'] # Replace with the list of features the model requires\ndata = data[filtered_columns]\ndata.columns = [f'feat_{col}' for col in data.columns]\npredictions = model.predict(data)\n", 'api_call': "joblib.load('model.joblib')", 'provider': 'Joblib', 'api_data': {'domain': 'Tabular Tabular Regression', 'framework': 'Joblib', 'functionality': 'Single Column Regression', 'api_name': 'jwan2021/autotrain-us-housing-prices-1771761511', 'api_call': "joblib.load('model.joblib')", 'api_arguments': {'data': 'pandas.DataFrame'}, 'python_environment_requirements': {'joblib': 'latest', 'pandas': 'latest'}, 'example_code': "import json\nimport joblib\nimport pandas as pd\nmodel = joblib.load('model.joblib')\nconfig = json.load(open('config.json'))\nfeatures = config['features']\ndata = pd.read_csv('data.csv')\ndata = data[features]\ndata.columns = ['feat_' + str(col) for col in data.columns]\npredictions = model.predict(data)", 'performance': {'dataset': 'jwan2021/autotrain-data-us-housing-prices', 'accuracy': {'Loss': 134406.507, 'R2': 0.861, 'MSE': 18065109105.27, 'MAE': 103271.843, 'RMSLE': 0.139}}, 'description': 'A model trained using AutoTrain for predicting US housing prices. The model is trained on the jwan2021/autotrain-data-us-housing-prices dataset and is a single column regression model with an ID of 1771761511.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00726_estimate_mortgage.py", line 38, in <module>
+    test_estimate_mortgage()
+  File "output/hf-eval-data-v2/f00726_estimate_mortgage.py", line 31, in test_estimate_mortgage
+    data = pd.read_csv('jwan2021/autotrain-data-us-housing-prices')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'jwan2021/autotrain-data-us-housing-prices'

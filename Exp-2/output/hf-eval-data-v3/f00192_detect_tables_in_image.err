@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00192_detect_tables_in_image.py", line 61, in <module>
+    test_detect_tables_in_image()
+  File "./f00192_detect_tables_in_image.py", line 48, in test_detect_tables_in_image
+    detected_tables = detect_tables_in_image(test_image_path)
+  File "./f00192_detect_tables_in_image.py", line 23, in detect_tables_in_image
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'https://placekitten.com/200/300'

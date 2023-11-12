@@ -1,0 +1,1 @@
+Test failed: Unable to load model: Parameter config in `Pix2StructVisionModel(config)` should be an instance of class `PretrainedConfig`. To create a model from a pretrained model use `model = Pix2StructVisionModel.from_pretrained(PRETRAINED_MODEL_NAME)`

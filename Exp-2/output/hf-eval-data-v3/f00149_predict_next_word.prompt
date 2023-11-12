@@ -1,0 +1,52 @@
+{'code': '###Instruction: A writer needs help with generating the next word in the phrase "The dog jumped over the" __.\n###Output: <<<domain>>>: Natural Language Processing Fill-Mask\n<<<api_call>>>: DebertaV2ForMaskedLM.from_pretrained(\'microsoft/deberta-v2-xxlarge\')\n<<<api_provider>>>: Transformers\n<<<explanation>>>: 1. First, we need to import the necessary class: DebertaV2ForMaskedLM from the transformers library.\n2. Next, we load the pre-trained model \'microsoft/deberta-v2-xxlarge\' by calling the from_pretrained method of the DebertaV2ForMaskedLM class. This model has been trained on a large corpus of text and is capable of predicting the masked word/token in a given context.\n3. Finally, use the model to generate the next word in the given text "The dog jumped over the <mask>". The result will be the most likely word to complete the phrase based on the model\'s understanding of the English language.\n<<<code>>>: from transformers import DebertaV2ForMaskedLM, DebertaV2Tokenizer\nmask_model = DebertaV2ForMaskedLM.from_pretrained(\'microsoft/deberta-v2-xxlarge\')\ntokenizer = DebertaV2Tokenizer.from_pretrained(\'microsoft/deberta-v2-xxlarge\')\n\nphrase = "The dog jumped over the <|mask|>"\nprocessed = tokenizer(phrase, return_tensors=\'pt\')\npredictions = mask_model(**processed).logits.argmax(dim=-1)\n\npredicted_word = tokenizer.decode(predictions[0], skip_special_tokens=True)\n', 'api_call': "DebertaV2ForMaskedLM.from_pretrained('microsoft/deberta-v2-xxlarge')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Fill-Mask', 'framework': 'Transformers', 'functionality': 'Fill-Mask', 'api_name': 'microsoft/deberta-v2-xxlarge', 'api_call': "DebertaV2ForMaskedLM.from_pretrained('microsoft/deberta-v2-xxlarge')", 'api_arguments': {'model_name_or_path': 'microsoft/deberta-v2-xxlarge'}, 'python_environment_requirements': {'pip_install': ['datasets', 'deepspeed']}, 'example_code': 'python -m torch.distributed.launch --nproc_per_node=${num_gpus} run_glue.py --model_name_or_path microsoft/deberta-v2-xxlarge --task_name $TASK_NAME --do_train --do_eval --max_seq_length 256 --per_device_train_batch_size ${batch_size} --learning_rate 3e-6 --num_train_epochs 3 --output_dir $output_dir --overwrite_output_dir --logging_steps 10 --logging_dir $output_dir --deepspeed ds_config.json', 'performance': {'dataset': [{'name': 'SQuAD 1.1', 'accuracy': 'F1/EM: 96.1/91.4'}, {'name': 'SQuAD 2.0', 'accuracy': 'F1/EM: 92.2/89.7'}, {'name': 'MNLI-m/mm', 'accuracy': 'Acc: 91.7/91.9'}, {'name': 'SST-2', 'accuracy': 'Acc: 97.2'}, {'name': 'QNLI', 'accuracy': 'Acc: 96.0'}, {'name': 'CoLA', 'accuracy': 'MCC: 72.0'}, {'name': 'RTE', 'accuracy': 'Acc: 93.5'}, {'name': 'MRPC', 'accuracy': 'Acc/F1: 93.1/94.9'}, {'name': 'QQP', 'accuracy': 'Acc/F1: 92.7/90.3'}, {'name': 'STS-B', 'accuracy': 'P/S: 93.2/93.1'}]}, 'description': 'DeBERTa improves the BERT and RoBERTa models using disentangled attention and enhanced mask decoder. It outperforms BERT and RoBERTa on majority of NLU tasks with 80GB training data. This is the DeBERTa V2 xxlarge model with 48 layers, 1536 hidden size. The total parameters are 1.5B and it is trained with 160GB raw data.'}}
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 879, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 715, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00149_predict_next_word.py", line 38, in <module>
+    test_predict_next_word()
+  File "output/hf-eval-data-v2/f00149_predict_next_word.py", line 32, in test_predict_next_word
+    predicted_word = predict_next_word(test_phrase)
+  File "output/hf-eval-data-v2/f00149_predict_next_word.py", line 17, in predict_next_word
+    mask_model = DebertaV2ForMaskedLM.from_pretrained('microsoft/deberta-v2-xxlarge')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+

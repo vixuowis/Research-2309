@@ -1,0 +1,12 @@
+2023-11-12 08:28:16.982307: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 08:28:17.044361: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 08:28:18.052056: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00701_fill_mask_with_bio_clinical_bert.py", line 41, in <module>
+    test_fill_mask_with_bio_clinical_bert()
+  File "./f00701_fill_mask_with_bio_clinical_bert.py", line 34, in test_fill_mask_with_bio_clinical_bert
+    assert fill_mask_with_bio_clinical_bert("The patient showed signs of fever and a [MASK] heart rate.") == "The patient showed signs of fever and a high heart rate."
+  File "./f00701_fill_mask_with_bio_clinical_bert.py", line 23, in fill_mask_with_bio_clinical_bert
+    output_logits = model(input_tokens).logits
+AttributeError: 'BaseModelOutputWithPoolingAndCrossAttentions' object has no attribute 'logits'

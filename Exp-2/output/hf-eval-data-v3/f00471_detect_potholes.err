@@ -1,0 +1,16 @@
+Downloading (…)lve/main/config.json:   0%|                                                                           | 0.00/195 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|████████████████████████████████████████████████████████████████████| 195/195 [00:00<00:00, 17.5kB/s]
+Downloading best.pt:   0%|                                                                                         | 0.00/23.8M [00:00<?, ?B/s]Downloading best.pt:  44%|███████████████████████████████████▏                                            | 10.5M/23.8M [00:01<00:02, 5.90MB/s]Downloading best.pt:  88%|██████████████████████████████████████████████████████████████████████▍         | 21.0M/23.8M [00:02<00:00, 9.01MB/s]Downloading best.pt: 100%|████████████████████████████████████████████████████████████████████████████████| 23.8M/23.8M [00:02<00:00, 9.21MB/s]
+Traceback (most recent call last):
+  File "./f00471_detect_potholes.py", line 41, in <module>
+    test_detect_potholes()
+  File "./f00471_detect_potholes.py", line 33, in test_detect_potholes
+    result = detect_potholes('https://github.com/ultralytics/yolov5/raw/master/data/images/zidane.jpg')
+  File "./f00471_detect_potholes.py", line 18, in detect_potholes
+    model = YOLO('keremberke/yolov8s-pothole-segmentation')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/ultralyticsplus/ultralytics_utils.py", line 46, in __init__
+    self._load_from_hf_hub(model, hf_token=hf_token)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/ultralyticsplus/ultralytics_utils.py", line 61, in _load_from_hf_hub
+    self.model, self.ckpt = attempt_load_one_weight(weights)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1723, in __setattr__
+    raise AttributeError(
+AttributeError: cannot assign module before Module.__init__() call

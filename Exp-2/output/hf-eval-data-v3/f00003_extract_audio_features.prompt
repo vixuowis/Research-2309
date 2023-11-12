@@ -1,0 +1,22 @@
+{'code': "###Instruction: As a journalist, I am curious about speech sentiment analysis in a group of people in a crowd. I want to extract features from the audio to run sentiment analysis.\n###Output: <<<domain>>>: Multimodal Feature Extraction\n<<<api_call>>>: HubertModel.from_pretrained('facebook/hubert-large-ll60k')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the necessary libraries, which include the 'HubertModel' from transformers.\n2. Load the pretrained model 'facebook/hubert-large-ll60k', which is a self-supervised speech representation learning model, capable of dealing with unique problems in speech representation learning and extracting useful features from audio data.\n3. Process the crowd audio data and convert it into an acceptable input format for the Hubert model.\n4. Pass the preprocessed audio data through the Hubert model to extract features that can be used for further sentiment analysis.\n<<<code>>>: from transformers import HubertModel\nhubert = HubertModel.from_pretrained('facebook/hubert-large-ll60k')\n# Preprocess the crowd audio data (as input_data) to a suitable input format\ninput_data = preprocess_audio(crowd_audio)\n# Extract features using the Hubert model\nfeatures = hubert(input_data)\n", 'api_call': "HubertModel.from_pretrained('facebook/hubert-large-ll60k')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Feature Extraction', 'framework': 'Hugging Face Transformers', 'functionality': 'Feature Extraction', 'api_name': 'hubert-large-ll60k', 'api_call': "HubertModel.from_pretrained('facebook/hubert-large-ll60k')", 'api_arguments': 'pretrained model name', 'python_environment_requirements': 'transformers', 'example_code': "hubert = HubertModel.from_pretrained('facebook/hubert-large-ll60k')", 'performance': {'dataset': 'Libri-Light', 'accuracy': 'matches or improves upon the state-of-the-art wav2vec 2.0 performance'}, 'description': 'Hubert-Large is a self-supervised speech representation learning model pretrained on 16kHz sampled speech audio. It is designed to deal with the unique problems in speech representation learning, such as multiple sound units in each input utterance, no lexicon of input sound units during the pre-training phase, and variable lengths of sound units with no explicit segmentation. The model relies on an offline clustering step to provide aligned target labels for a BERT-like prediction loss.'}}
+
+    test_extract_audio_features()
+  File "output/hf-eval-data-v2/f00003_extract_audio_features.py", line 34, in test_extract_audio_features
+    features = extract_audio_features(sample_audio)
+  File "output/hf-eval-data-v2/f00003_extract_audio_features.py", line 18, in extract_audio_features
+    hubert = HubertModel.from_pretrained('facebook/hubert-large-ll60k')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(433184764 bytes read, 828735305 more expected)', IncompleteRead(433184764 bytes read, 828735305 more expected))
+
+Downloading pytorch_model.bin:  34%|███████████▌                      | 430M/1.26G [17:17<33:28, 414kB/s]

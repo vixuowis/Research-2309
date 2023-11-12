@@ -1,0 +1,20 @@
+{'code': "###Instruction: To build a source code recommendation engine, we need to extract features from text and code using Transformer models.\n###Output: <<<domain>>>: Multimodal Feature Extraction\n<<<api_call>>>: AutoModel.from_pretrained('microsoft/codebert-base')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the necessary classes from the transformers library. This includes AutoModel for loading pre-trained models and AutoTokenizer for tokenizing input text.\n2. Load the pre-trained CodeBERT model 'microsoft/codebert-base' using the from_pretrained method of the AutoModel class. This model is specifically designed for extracting features from both natural language text and code.\n3. Instantiate the tokenizer corresponding to the 'microsoft/codebert-base' model using AutoTokenizer.from_pretrained.\n4. Use the tokenizer to process the input text or code snippets into a suitable format for the model.\n5. Pass the tokenized input into the model to generate embeddings or feature representations.\n<<<code>>>: from transformers import AutoModel, AutoTokenizer\nmodel = AutoModel.from_pretrained('microsoft/codebert-base')\ntokenizer = AutoTokenizer.from_pretrained('microsoft/codebert-base')\ninput_text = 'your input text or code here' # Replace this with your own text or code\ninputs = tokenizer(input_text, return_tensors='pt')\noutputs = model(**inputs)\nembeddings = outputs.last_hidden_state\n", 'api_call': "AutoModel.from_pretrained('microsoft/codebert-base')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Feature Extraction', 'framework': 'Hugging Face Transformers', 'functionality': 'Feature Extraction', 'api_name': 'microsoft/codebert-base', 'api_call': "AutoModel.from_pretrained('microsoft/codebert-base')", 'api_arguments': 'n/a', 'python_environment_requirements': ['transformers'], 'example_code': 'n/a', 'performance': {'dataset': 'CodeSearchNet', 'accuracy': 'n/a'}, 'description': 'Pretrained weights for CodeBERT: A Pre-Trained Model for Programming and Natural Languages. The model is trained on bi-modal data (documents & code) of CodeSearchNet. This model is initialized with Roberta-base and trained with MLM+RTD objective.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00729_extract_features.py", line 39, in <module>
+    test_extract_features()
+  File "output/hf-eval-data-v2/f00729_extract_features.py", line 33, in test_extract_features
+    embeddings = extract_features(input_text)
+  File "output/hf-eval-data-v2/f00729_extract_features.py", line 17, in extract_features
+    model = AutoModel.from_pretrained('microsoft/codebert-base')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 494, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--microsoft--codebert-base'

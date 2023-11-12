@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "./f00116_generate_image_from_text.py", line 6, in <module>
+    from controlnet_aux import HEDdetector
+ModuleNotFoundError: No module named 'controlnet_aux'

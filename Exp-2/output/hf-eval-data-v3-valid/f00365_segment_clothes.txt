@@ -1,0 +1,5 @@
+transformers
+PIL
+requests
+matplotlib
+torch

@@ -1,0 +1,51 @@
+{'code': '###Instruction: We are developing a game and need a text-based AI to control the main character\'s behavior. Help us use this chatbot based on the Joshua character.\n###Output: <<<domain>>>: Natural Language Processing Conversational\n<<<api_call>>>: AutoModelWithLMHead.from_pretrained(\'output-small\')\n<<<api_provider>>>: PyTorch Transformers\n<<<explanation>>>:1. First, import the required classes from the transformers library such as the AutoTokenizer and AutoModelWithLMHead.\n2. Load the tokenizer from the \'microsoft/DialoGPT-small\' model using the AutoTokenizer.from_pretrained method.\n3. Load the pre-trained DialoGPT model by using the `AutoModelWithLMHead.from_pretrained` method with the given model \'output-small\'. The model is trained based on the Joshua character\'s speech from the game "The World Ends With You."\n4. Utilize the tokenizer to encode user input, concatenate it with the previous chatbot response if necessary, and use the model to generate responses in your text-based AI game.\n5. Decode the model output to provide the AI response, which drives the main character\'s behavior in the game.\n<<<code>>>: from transformers import AutoTokenizer, AutoModelWithLMHead\nimport torch\n\ntokenizer = AutoTokenizer.from_pretrained(\'microsoft/DialoGPT-small\')\nmodel = AutoModelWithLMHead.from_pretrained(\'output-small\')\n\ndef generate_response(user_input):\n    user_input_ids = tokenizer.encode(user_input + tokenizer.eos_token, return_tensors=\'pt\')\n    bot_input_ids = torch.cat([chat_history_ids, user_input_ids], dim=-1) if step > 0 else new_user_input_ids\n    chat_history_ids = model.generate(bot_input_ids, max_length=500, pad_token_id=tokenizer.eos_token_id, no_repeat_ngram_size=3, do_sample=True, top_k=100, top_p=0.7, temperature = 0.8)\n    ai_response = tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)\n    return ai_response\n', 'api_call': "AutoModelWithLMHead.from_pretrained('output-small')", 'provider': 'PyTorch Transformers', 'api_data': {'domain': 'Natural Language Processing Conversational', 'framework': 'PyTorch Transformers', 'functionality': 'text-generation', 'api_name': 'satvikag/chatbot', 'api_call': "AutoModelWithLMHead.from_pretrained('output-small')", 'api_arguments': {'tokenizer': "AutoTokenizer.from_pretrained('microsoft/DialoGPT-small')", 'model': "AutoModelWithLMHead.from_pretrained('output-small')"}, 'python_environment_requirements': ['torch', 'transformers'], 'example_code': "for step in range(100):\n  new_user_input_ids = tokenizer.encode(input('&gt;&gt; User:') + tokenizer.eos_token, return_tensors='pt')\n  bot_input_ids = torch.cat([chat_history_ids, new_user_input_ids], dim=-1) if step &gt; 0 else new_user_input_ids\n  chat_history_ids = model.generate(bot_input_ids, max_length=500, pad_token_id=tokenizer.eos_token_id, no_repeat_ngram_size=3, do_sample=True, top_k=100, top_p=0.7, temperature = 0.8)\n  print('AI: {}'.format(tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)))", 'performance': {'dataset': 'Kaggle game script dataset', 'accuracy': 'Not provided'}, 'description': 'DialoGPT Trained on the Speech of a Game Character, Joshua from The World Ends With You.'}}
+
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/modeling_auto.py:1479: FutureWarning: The class `AutoModelWithLMHead` is deprecated and will be removed in a future version. Please use `AutoModelForCausalLM` for causal language models, `AutoModelForMaskedLM` for masked language models and `AutoModelForSeq2SeqLM` for encoder-decoder models.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/output-small/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1344, in hf_hub_download
+    raise head_call_error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-654da478-363dbc4d21af8bf057191b19;68d6107e-62c6-4f76-b990-f5c8b9efe1c5)
+
+Repository Not Found for url: https://huggingface.co/output-small/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00510_generate_response.py", line 39, in <module>
+    test_generate_response()
+  File "output/hf-eval-data-v2/f00510_generate_response.py", line 34, in test_generate_response
+    response = generate_response(user_input)
+  File "output/hf-eval-data-v2/f00510_generate_response.py", line 19, in generate_response
+    model = AutoModelWithLMHead.from_pretrained('output-small')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/modeling_auto.py", line 1485, in from_pretrained
+    return super().from_pretrained(pretrained_model_name_or_path, *model_args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 494, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 450, in cached_file
+    raise EnvironmentError(
+OSError: output-small is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`

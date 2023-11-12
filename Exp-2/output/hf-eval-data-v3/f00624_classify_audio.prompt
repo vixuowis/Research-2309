@@ -1,0 +1,20 @@
+{'code': "###Instruction: Our company is building an interactive platform for children to learn random trivia quickly. We need a model to understand what is being spoken and what category it belongs to.\n\n###Output: <<<domain>>>: Audio Audio Classification\n<<<api_call>>>: pipeline('audio-classification', model=Wav2Vec2ForCTC.from_pretrained('anton-l/wav2vec2-random-tiny-classifier'))\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the necessary classes from the transformers library provided by Hugging Face. In this case, you would require the pipeline function and Wav2Vec2ForCTC class.\n2. Use the pipeline function to create an audio classification model.\n3. Specify the model 'anton-l/wav2vec2-random-tiny-classifier' to be loaded. As this model is based on wav2vec2, it is designed for audio classification tasks.\n4. The created classifier can be used to classify spoken phrases into different categories, which is useful for an interactive platform meant for children to learn random trivia.\n\n<<<code>>>: from transformers import pipeline, Wav2Vec2ForCTC\naudio_classifier = pipeline('audio-classification', model=Wav2Vec2ForCTC.from_pretrained('anton-l/wav2vec2-random-tiny-classifier'))\ncategory = audio_classifier(audio_file_path)\n", 'api_call': "pipeline('audio-classification', model=Wav2Vec2ForCTC.from_pretrained('anton-l/wav2vec2-random-tiny-classifier'))", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Audio Audio Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'wav2vec2-random-tiny-classifier', 'api_call': "pipeline('audio-classification', model=Wav2Vec2ForCTC.from_pretrained('anton-l/wav2vec2-random-tiny-classifier'))", 'api_arguments': '', 'python_environment_requirements': 'transformers', 'example_code': '', 'performance': {'dataset': '', 'accuracy': ''}, 'description': 'An audio classification model based on wav2vec2.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00624_classify_audio.py", line 33, in <module>
+    test_classify_audio()
+  File "output/hf-eval-data-v2/f00624_classify_audio.py", line 28, in test_classify_audio
+    category = classify_audio(sample_audio_file_path)
+  File "output/hf-eval-data-v2/f00624_classify_audio.py", line 17, in classify_audio
+    audio_classifier = pipeline('audio-classification', model=Wav2Vec2ForCTC.from_pretrained('anton-l/wav2vec2-random-tiny-classifier'))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2377, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--anton-l--wav2vec2-random-tiny-classifier'

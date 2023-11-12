@@ -1,0 +1,71 @@
+Downloading builder script:   0%|                                                                                  | 0.00/2.56k [00:00<?, ?B/s]Downloading builder script: 100%|█████████████████████████████████████████████████████████████████████████| 2.56k/2.56k [00:00<00:00, 5.91MB/s]
+Downloading data files:   0%|                                                                                            | 0/1 [00:00<?, ?it/s]
+Downloading data:   0%|                                                                                             | 0.00/173k [00:00<?, ?B/s][A
+Downloading data:   9%|████████                                                                             | 16.4k/173k [00:00<00:01, 145kB/s][A
+Downloading data:  30%|█████████████████████████▏                                                           | 51.2k/173k [00:00<00:00, 199kB/s][A
+Downloading data:  57%|████████████████████████████████████████████████▊                                    | 99.3k/173k [00:00<00:00, 294kB/s][A
+Downloading data:  81%|█████████████████████████████████████████████████████████████████████▋                | 140k/173k [00:00<00:00, 327kB/s][ADownloading data: 100%|██████████████████████████████████████████████████████████████████████████████████████| 173k/173k [00:00<00:00, 342kB/s]
+Downloading data files: 100%|████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  2.79s/it]Downloading data files: 100%|████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  2.79s/it]
+Extracting data files:   0%|                                                                                             | 0/1 [00:00<?, ?it/s]Extracting data files: 100%|████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 680.56it/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 1 examples [00:00, 109.67 examples/s]
+Downloading (…)rocessor_config.json:   0%|                                                                           | 0.00/266 [00:00<?, ?B/s]Downloading (…)rocessor_config.json: 100%|████████████████████████████████████████████████████████████████████| 266/266 [00:00<00:00, 21.4kB/s]
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/convnext/feature_extraction_convnext.py:28: FutureWarning: The class ConvNextFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use ConvNextImageProcessor instead.
+  warnings.warn(
+Downloading (…)lve/main/config.json:   0%|                                                                         | 0.00/69.6k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████████| 69.6k/69.6k [00:00<00:00, 271kB/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████████| 69.6k/69.6k [00:00<00:00, 270kB/s]
+Downloading pytorch_model.bin:   0%|                                                                                | 0.00/791M [00:00<?, ?B/s]Downloading pytorch_model.bin:   1%|▉                                                                      | 10.5M/791M [00:01<02:19, 5.59MB/s]Downloading pytorch_model.bin:   3%|█▉                                                                     | 21.0M/791M [00:02<01:26, 8.89MB/s]Downloading pytorch_model.bin:   4%|██▊                                                                    | 31.5M/791M [00:03<01:08, 11.1MB/s]Downloading pytorch_model.bin:   5%|███▊                                                                   | 41.9M/791M [00:03<01:01, 12.1MB/s]Downloading pytorch_model.bin:   7%|████▋                                                                  | 52.4M/791M [00:04<00:55, 13.2MB/s]Downloading pytorch_model.bin:   8%|█████▋                                                                 | 62.9M/791M [00:05<00:53, 13.6MB/s]Downloading pytorch_model.bin:   9%|██████▌                                                                | 73.4M/791M [00:06<00:50, 14.3MB/s]Downloading pytorch_model.bin:  11%|███████▌                                                               | 83.9M/791M [00:06<00:49, 14.2MB/s]Downloading pytorch_model.bin:  12%|████████▍                                                              | 94.4M/791M [00:07<00:47, 14.8MB/s]Downloading pytorch_model.bin:  13%|█████████▌                                                              | 105M/791M [00:08<00:46, 14.7MB/s]Downloading pytorch_model.bin:  15%|██████████▍                                                             | 115M/791M [00:08<00:44, 15.0MB/s]Downloading pytorch_model.bin:  16%|███████████▍                                                            | 126M/791M [00:09<00:44, 14.9MB/s]Downloading pytorch_model.bin:  17%|████████████▍                                                           | 136M/791M [00:10<00:43, 14.9MB/s]Downloading pytorch_model.bin:  19%|█████████████▎                                                          | 147M/791M [00:10<00:42, 15.1MB/s]Downloading pytorch_model.bin:  20%|██████████████▎                                                         | 157M/791M [00:11<00:41, 15.1MB/s]Downloading pytorch_model.bin:  21%|███████████████▎                                                        | 168M/791M [00:12<00:40, 15.3MB/s]Downloading pytorch_model.bin:  23%|████████████████▏                                                       | 178M/791M [00:13<00:41, 14.9MB/s]Downloading pytorch_model.bin:  24%|█████████████████▏                                                      | 189M/791M [00:13<00:40, 14.8MB/s]Downloading pytorch_model.bin:  25%|██████████████████▏                                                     | 199M/791M [00:14<00:39, 15.0MB/s]Downloading pytorch_model.bin:  27%|███████████████████                                                     | 210M/791M [00:15<00:38, 14.9MB/s]Downloading pytorch_model.bin:  28%|████████████████████                                                    | 220M/791M [00:15<00:37, 15.2MB/s]Downloading pytorch_model.bin:  29%|████████████████████▉                                                   | 231M/791M [00:16<00:37, 15.0MB/s]Downloading pytorch_model.bin:  30%|█████████████████████▉                                                  | 241M/791M [00:19<01:13, 7.46MB/s]Downloading pytorch_model.bin:  32%|██████████████████████▉                                                 | 252M/791M [00:23<01:50, 4.88MB/s]Downloading pytorch_model.bin:  32%|██████████████████████▉                                                 | 252M/791M [00:38<01:50, 4.88MB/s]Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 444, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 567, in read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 533, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 628, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 593, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 449, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.")
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00107_classify_product.py", line 42, in <module>
+    test_classify_product()
+  File "./f00107_classify_product.py", line 36, in test_classify_product
+    assert classify_product('huggingface/cats-image', 0) == 'cat'
+  File "./f00107_classify_product.py", line 23, in classify_product
+    model = ConvNextForImageClassification.from_pretrained('facebook/convnext-large-224')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Downloading pytorch_model.bin:  32%|██████████████████████▉                                                 | 252M/791M [00:57<02:03, 4.36MB/s]

@@ -1,0 +1,34 @@
+{'code': '###Instruction: Design a chatbot for a school website, which can answer queries related to admissions, classes, teachers, and extracurriculars.\n###Output: <<<domain>>>: Natural Language Processing Text2Text Generation\n<<<api_call>>>: BlenderbotForConditionalGeneration.from_pretrained(\'facebook/blenderbot_small-90M\')\n<<<api_provider>>>: Hugging Face\n<<<explanation>>>: 1. We import the necessary class from the transformers package. This includes BlenderbotForConditionalGeneration for the chatbot model.\n2. We then use the from_pretrained method of the BlenderbotForConditionalGeneration class to load the pre-trained model \'facebook/blenderbot_small-90M\'. This model is designed for generating human-like answers in a conversational manner, suitable for answering queries in various contexts.\n3. Our chatbot can be used to answer questions about admissions, classes, teachers, and extracurricular activities, making it an ideal solution for a school website.\n<<<code>>>: from transformers import BlenderbotForConditionalGeneration, BlenderbotTokenizer\nmodel = BlenderbotForConditionalGeneration.from_pretrained(\'facebook/blenderbot_small-90M\')\ntokenizer = BlenderbotTokenizer.from_pretrained(\'facebook/blenderbot_small-90M\')\ninput_text = "What is the admission process for the new academic year?"\ninputs = tokenizer(input_text, return_tensors=\'pt\')\noutputs = model.generate(**inputs)\nresponse = tokenizer.decode(outputs[0], skip_special_tokens=True)\nprint(response)\n', 'api_call': "BlenderbotForConditionalGeneration.from_pretrained('facebook/blenderbot_small-90M')", 'provider': 'Hugging Face', 'api_data': {'domain': 'Natural Language Processing Text2Text Generation', 'framework': 'Hugging Face', 'functionality': 'Conversational', 'api_name': 'facebook/blenderbot_small-90M', 'api_call': "BlenderbotForConditionalGeneration.from_pretrained('facebook/blenderbot_small-90M')", 'api_arguments': ['message'], 'python_environment_requirements': ['transformers'], 'example_code': 'Input a message to start chatting with facebook/blenderbot_small-90M.', 'performance': {'dataset': 'blended_skill_talk', 'accuracy': 'Not provided'}, 'description': 'Blenderbot is a chatbot model that provides engaging talking points and listens to their partners, both asking and answering questions, and displaying knowledge, empathy, and personality appropriately, depending on the situation.'}}
+
+
+You are using a model of type blenderbot-small to instantiate a model of type blenderbot. This is not supported for all configurations of models and can yield errors.
+
+Some weights of BlenderbotForConditionalGeneration were not initialized from the model checkpoint at facebook/blenderbot_small-90M and are newly initialized: ['model.encoder.layer_norm.weight', 'model.decoder.layer_norm.weight', 'model.encoder.layer_norm.bias', 'model.decoder.layer_norm.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+
+
+
+
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'BlenderbotSmallTokenizer'. 
+The class this function is called from is 'BlenderbotTokenizer'.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/generation/utils.py:1417: UserWarning: You have modified the pretrained model configuration to control generation. This is a deprecated strategy to control generation and will be removed soon, in a future version. Please use a generation configuration file (see https://huggingface.co/docs/transformers/main_classes/text_generation )
+  warnings.warn(
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00403_get_chatbot_response.py", line 36, in <module>
+    test_get_chatbot_response()
+  File "output/hf-eval-data-v2/f00403_get_chatbot_response.py", line 31, in test_get_chatbot_response
+    response = get_chatbot_response(input_text)
+  File "output/hf-eval-data-v2/f00403_get_chatbot_response.py", line 21, in get_chatbot_response
+    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 3550, in decode
+    return self._decode(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils.py", line 956, in _decode
+    sub_texts.append(self.convert_tokens_to_string(current_sub_text))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/blenderbot/tokenization_blenderbot.py", line 308, in convert_tokens_to_string
+    text = bytearray([self.byte_decoder[c] for c in text]).decode("utf-8", errors=self.errors)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/blenderbot/tokenization_blenderbot.py", line 308, in <listcomp>
+    text = bytearray([self.byte_decoder[c] for c in text]).decode("utf-8", errors=self.errors)
+KeyError: 'ū'

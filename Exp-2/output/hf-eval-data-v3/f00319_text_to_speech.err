@@ -1,0 +1,105 @@
+Fetching 9 files:   0%|                                                                                                  | 0/9 [00:00<?, ?it/s]
+Downloading (…)ed9370c/hifigan.json:   0%|                                                                           | 0.00/762 [00:00<?, ?B/s][ADownloading (…)ed9370c/hifigan.json: 100%|████████████████████████████████████████████████████████████████████| 762/762 [00:00<00:00, 70.3kB/s]
+
+Downloading (…)e6ced9370c/vocab.txt:   0%|                                                                           | 0.00/646 [00:00<?, ?B/s][ADownloading (…)e6ced9370c/vocab.txt: 100%|█████████████████████████████████████████████████████████████████████| 646/646 [00:00<00:00, 134kB/s]
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/fastspeech2-en-200_speaker-cv4/resolve/e0218c23f36ee17ddef548a1ec04efe6ced9370c/gcmvn_stats.npz (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 0269d6b6-4977-44c1-9b79-67f582768c15)')' thrown while requesting HEAD https://huggingface.co/facebook/fastspeech2-en-200_speaker-cv4/resolve/e0218c23f36ee17ddef548a1ec04efe6ced9370c/gcmvn_stats.npz
+2023-11-11 19:39:54 | WARNING | huggingface_hub.utils._http | '(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/fastspeech2-en-200_speaker-cv4/resolve/e0218c23f36ee17ddef548a1ec04efe6ced9370c/gcmvn_stats.npz (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 0269d6b6-4977-44c1-9b79-67f582768c15)')' thrown while requesting HEAD https://huggingface.co/facebook/fastspeech2-en-200_speaker-cv4/resolve/e0218c23f36ee17ddef548a1ec04efe6ced9370c/gcmvn_stats.npz
+
+Downloading (…)ced9370c/config.yaml:   0%|                                                                           | 0.00/636 [00:00<?, ?B/s][ADownloading (…)ced9370c/config.yaml: 100%|████████████████████████████████████████████████████████████████████| 636/636 [00:00<00:00, 92.6kB/s]
+
+Downloading (…)ed9370c/speakers.txt:   0%|                                                                         | 0.00/25.8k [00:00<?, ?B/s][A
+Downloading (…)ed9370c/speakers.txt: 100%|████████████████████████████████████████████████████████████████| 25.8k/25.8k [00:00<00:00, 86.8kB/s][ADownloading (…)ed9370c/speakers.txt: 100%|████████████████████████████████████████████████████████████████| 25.8k/25.8k [00:00<00:00, 86.5kB/s]
+
+Downloading (…)9370c/.gitattributes:   0%|                                                                         | 0.00/1.18k [00:00<?, ?B/s][ADownloading (…)9370c/.gitattributes: 100%|█████████████████████████████████████████████████████████████████| 1.18k/1.18k [00:00<00:00, 219kB/s]
+Fetching 9 files:  11%|██████████                                                                                | 1/9 [00:11<01:32, 11.59s/it]
+Downloading (…)e6ced9370c/README.md:   0%|                                                                         | 0.00/2.21k [00:00<?, ?B/s][ADownloading (…)e6ced9370c/README.md: 100%|█████████████████████████████████████████████████████████████████| 2.21k/2.21k [00:00<00:00, 182kB/s]
+Fetching 9 files:  22%|████████████████████                                                                      | 2/9 [00:12<00:37,  5.35s/it]Fetching 9 files:  33%|██████████████████████████████                                                            | 3/9 [00:12<00:25,  4.19s/it]
+Downloading pytorch_model.pt:   0%|                                                                                 | 0.00/548M [00:00<?, ?B/s]'(MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /facebook/fastspeech2-en-200_speaker-cv4/ce4ab4c65a00d12ea3362375c1eb92f1c54054ac5373801a0dbed9f859102fc3?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27hifigan.bin%3B+filename%3D%22hifigan.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699961991&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk2MTk5MX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9mYWNlYm9vay9mYXN0c3BlZWNoMi1lbi0yMDBfc3BlYWtlci1jdjQvY2U0YWI0YzY1YTAwZDEyZWEzMzYyMzc1YzFlYjkyZjFjNTQwNTRhYzUzNzM4MDFhMGRiZWQ5Zjg1OTEwMmZjMz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=HhNFOC6jorfTZQ2HGMu1mAExKvwCSJj5u0BM~lJK-zYCWORElepKEiZ7q~rxZ5KXBUGH7iVR8SQ14Qr1-zuw6iO6UckwZO0xRexMQ3V2x472G1l2rPS0-naYfFrZILCLUPAhWIDIehfwxJoAwBkxN4JC1t4mzO0ue9MeuPiheI7~vh13WWMOesMaJeMCOBeIE8DII4LK0YMzjW8g9UOjb-ZA-R6DoGeBkMAOuBrteqWgTJXscMWRP5WfxxwpyonNSH2mbpfZp-Ypt9TLEMu61oubPFdqIXztCVYYYLQmqUDLJTFWqlarDR9hcUVTk51dtGqmlfpvMfQcoLCr0JCnlw__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: c76f8df7-0fab-4e88-aa9d-30ba66892cd2)')' thrown while requesting GET https://cdn-lfs.huggingface.co/facebook/fastspeech2-en-200_speaker-cv4/ce4ab4c65a00d12ea3362375c1eb92f1c54054ac5373801a0dbed9f859102fc3?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27hifigan.bin%3B+filename%3D%22hifigan.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699961991&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk2MTk5MX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9mYWNlYm9vay9mYXN0c3BlZWNoMi1lbi0yMDBfc3BlYWtlci1jdjQvY2U0YWI0YzY1YTAwZDEyZWEzMzYyMzc1YzFlYjkyZjFjNTQwNTRhYzUzNzM4MDFhMGRiZWQ5Zjg1OTEwMmZjMz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=HhNFOC6jorfTZQ2HGMu1mAExKvwCSJj5u0BM%7ElJK-zYCWORElepKEiZ7q%7ErxZ5KXBUGH7iVR8SQ14Qr1-zuw6iO6UckwZO0xRexMQ3V2x472G1l2rPS0-naYfFrZILCLUPAhWIDIehfwxJoAwBkxN4JC1t4mzO0ue9MeuPiheI7%7Evh13WWMOesMaJeMCOBeIE8DII4LK0YMzjW8g9UOjb-ZA-R6DoGeBkMAOuBrteqWgTJXscMWRP5WfxxwpyonNSH2mbpfZp-Ypt9TLEMu61oubPFdqIXztCVYYYLQmqUDLJTFWqlarDR9hcUVTk51dtGqmlfpvMfQcoLCr0JCnlw__&Key-Pair-Id=KVTP0A1DKRTAX
+2023-11-11 19:40:02 | WARNING | huggingface_hub.utils._http | '(MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /facebook/fastspeech2-en-200_speaker-cv4/ce4ab4c65a00d12ea3362375c1eb92f1c54054ac5373801a0dbed9f859102fc3?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27hifigan.bin%3B+filename%3D%22hifigan.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699961991&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk2MTk5MX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9mYWNlYm9vay9mYXN0c3BlZWNoMi1lbi0yMDBfc3BlYWtlci1jdjQvY2U0YWI0YzY1YTAwZDEyZWEzMzYyMzc1YzFlYjkyZjFjNTQwNTRhYzUzNzM4MDFhMGRiZWQ5Zjg1OTEwMmZjMz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=HhNFOC6jorfTZQ2HGMu1mAExKvwCSJj5u0BM~lJK-zYCWORElepKEiZ7q~rxZ5KXBUGH7iVR8SQ14Qr1-zuw6iO6UckwZO0xRexMQ3V2x472G1l2rPS0-naYfFrZILCLUPAhWIDIehfwxJoAwBkxN4JC1t4mzO0ue9MeuPiheI7~vh13WWMOesMaJeMCOBeIE8DII4LK0YMzjW8g9UOjb-ZA-R6DoGeBkMAOuBrteqWgTJXscMWRP5WfxxwpyonNSH2mbpfZp-Ypt9TLEMu61oubPFdqIXztCVYYYLQmqUDLJTFWqlarDR9hcUVTk51dtGqmlfpvMfQcoLCr0JCnlw__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: c76f8df7-0fab-4e88-aa9d-30ba66892cd2)')' thrown while requesting GET https://cdn-lfs.huggingface.co/facebook/fastspeech2-en-200_speaker-cv4/ce4ab4c65a00d12ea3362375c1eb92f1c54054ac5373801a0dbed9f859102fc3?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27hifigan.bin%3B+filename%3D%22hifigan.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1699961991&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk2MTk5MX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9mYWNlYm9vay9mYXN0c3BlZWNoMi1lbi0yMDBfc3BlYWtlci1jdjQvY2U0YWI0YzY1YTAwZDEyZWEzMzYyMzc1YzFlYjkyZjFjNTQwNTRhYzUzNzM4MDFhMGRiZWQ5Zjg1OTEwMmZjMz9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=HhNFOC6jorfTZQ2HGMu1mAExKvwCSJj5u0BM%7ElJK-zYCWORElepKEiZ7q%7ErxZ5KXBUGH7iVR8SQ14Qr1-zuw6iO6UckwZO0xRexMQ3V2x472G1l2rPS0-naYfFrZILCLUPAhWIDIehfwxJoAwBkxN4JC1t4mzO0ue9MeuPiheI7%7Evh13WWMOesMaJeMCOBeIE8DII4LK0YMzjW8g9UOjb-ZA-R6DoGeBkMAOuBrteqWgTJXscMWRP5WfxxwpyonNSH2mbpfZp-Ypt9TLEMu61oubPFdqIXztCVYYYLQmqUDLJTFWqlarDR9hcUVTk51dtGqmlfpvMfQcoLCr0JCnlw__&Key-Pair-Id=KVTP0A1DKRTAX
+Downloading pytorch_model.pt:   2%|█▍                                                                       | 10.5M/548M [00:50<43:34, 206kB/s]Downloading pytorch_model.pt:   2%|█▍                                                                       | 10.5M/548M [01:04<43:34, 206kB/s]Downloading pytorch_model.pt:   4%|██▋                                                                   | 21.0M/548M [05:34<2:37:21, 55.8kB/s]Downloading pytorch_model.pt:   4%|██▋                                                                   | 21.0M/548M [05:44<2:37:21, 55.8kB/s]Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 712, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1012, in _prepare_proxy
+    conn.connect()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/fastspeech2-en-200_speaker-cv4/resolve/e0218c23f36ee17ddef548a1ec04efe6ced9370c/gcmvn_stats.npz (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00319_text_to_speech.py", line 40, in <module>
+    test_text_to_speech()
+  File "./f00319_text_to_speech.py", line 34, in test_text_to_speech
+    audio_output = text_to_speech(test_text)
+  File "./f00319_text_to_speech.py", line 19, in text_to_speech
+    models, cfg, task = load_model_ensemble_and_task_from_hf_hub('facebook/fastspeech2-en-200_speaker-cv4', arg_overrides={'vocoder': 'hifigan', 'fp16': False})
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/fairseq/checkpoint_utils.py", line 515, in load_model_ensemble_and_task_from_hf_hub
+    cache_dir = snapshot_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/_snapshot_download.py", line 239, in snapshot_download
+    thread_map(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/root/miniconda3/envs/py38/lib/python3.8/concurrent/futures/_base.py", line 619, in result_iterator
+    yield fs.pop().result()
+  File "/root/miniconda3/envs/py38/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/root/miniconda3/envs/py38/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/root/miniconda3/envs/py38/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/_snapshot_download.py", line 214, in _inner_hf_hub_download
+    return hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1597, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 417, in _request_wrapper
+    response = _request_wrapper(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 452, in _request_wrapper
+    return http_backoff(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 274, in http_backoff
+    raise err
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 258, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/fastspeech2-en-200_speaker-cv4/resolve/e0218c23f36ee17ddef548a1ec04efe6ced9370c/gcmvn_stats.npz (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 0269d6b6-4977-44c1-9b79-67f582768c15)')
+Downloading pytorch_model.pt:   4%|██▋                                                                   | 21.0M/548M [06:12<2:36:09, 56.3kB/s]

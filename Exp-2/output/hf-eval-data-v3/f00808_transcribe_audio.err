@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "./f00808_transcribe_audio.py", line 59, in <module>
+    test_transcribe_audio()
+  File "./f00808_transcribe_audio.py", line 48, in test_transcribe_audio
+    transcription = transcribe_audio('sample_audio_file.wav')
+  File "./f00808_transcribe_audio.py", line 22, in transcribe_audio
+    audio_data, sampling_rate = sf.read(audio_file_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/soundfile.py", line 285, in read
+    with SoundFile(file, 'r', samplerate, channels,
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/soundfile.py", line 658, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/soundfile.py", line 1216, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'sample_audio_file.wav': System error.

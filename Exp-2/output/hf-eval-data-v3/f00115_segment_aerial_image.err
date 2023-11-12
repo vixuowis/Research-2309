@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00115_segment_aerial_image.py", line 42, in <module>
+    test_segment_aerial_image()
+  File "./f00115_segment_aerial_image.py", line 34, in test_segment_aerial_image
+    predicted_semantic_map = segment_aerial_image(image_path)
+  File "./f00115_segment_aerial_image.py", line 19, in segment_aerial_image
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'https://huggingface.co/datasets/hf-internal-testing/fixtures_ade20k/resolve/main/ADE_val_00000001.jpg'

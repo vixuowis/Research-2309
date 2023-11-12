@@ -1,0 +1,29 @@
+2023-11-12 07:08:20.445068: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 07:08:20.504384: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 07:08:21.169532: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Downloading (…)lve/main/config.json:   0%|                                                                           | 0.00/635 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|████████████████████████████████████████████████████████████████████| 635/635 [00:00<00:00, 55.3kB/s]
+Traceback (most recent call last):
+  File "./f00652_classify_image.py", line 42, in <module>
+    test_classify_image()
+  File "./f00652_classify_image.py", line 33, in test_classify_image
+    result = classify_image(test_image_path)
+  File "./f00652_classify_image.py", line 21, in classify_image
+    image_classifier = pipeline('image-classification', model='timm/vit_large_patch14_clip_224.openai_ft_in12k_in1k', framework='pt')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 824, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model timm/vit_large_patch14_clip_224.openai_ft_in12k_in1k with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForImageClassification'>,). See the original errors:
+
+while loading with AutoModelForImageClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    raise ValueError(
+ValueError: Unrecognized configuration class <class 'transformers.models.clip.configuration_clip.CLIPConfig'> for this kind of AutoModel: AutoModelForImageClassification.
+Model type should be one of BeitConfig, BitConfig, ConvNextConfig, ConvNextV2Config, CvtConfig, Data2VecVisionConfig, DeiTConfig, DinatConfig, Dinov2Config, EfficientFormerConfig, EfficientNetConfig, FocalNetConfig, ImageGPTConfig, LevitConfig, MobileNetV1Config, MobileNetV2Config, MobileViTConfig, MobileViTV2Config, NatConfig, PerceiverConfig, PoolFormerConfig, PvtConfig, RegNetConfig, ResNetConfig, SegformerConfig, SwiftFormerConfig, SwinConfig, Swinv2Config, VanConfig, ViTConfig, ViTHybridConfig, ViTMSNConfig.
+
+
+

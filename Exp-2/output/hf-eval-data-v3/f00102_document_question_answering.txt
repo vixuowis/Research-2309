@@ -1,0 +1,4 @@
+transformers
+PIL
+pytesseract
+PyTorch

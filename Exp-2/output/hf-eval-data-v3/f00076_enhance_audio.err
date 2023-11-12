@@ -1,0 +1,40 @@
+Downloading (…)ain/hyperparams.yaml:   0%|                                                                         | 0.00/1.12k [00:00<?, ?B/s]Downloading (…)ain/hyperparams.yaml: 100%|████████████████████████████████████████████████████████████████| 1.12k/1.12k [00:00<00:00, 89.9kB/s]
+Downloading (…)n/enhance_model.ckpt:   0%|                                                                         | 0.00/7.59M [00:00<?, ?B/s]Downloading (…)n/enhance_model.ckpt: 100%|████████████████████████████████████████████████████████████████| 7.59M/7.59M [00:01<00:00, 5.57MB/s]Downloading (…)n/enhance_model.ckpt: 100%|████████████████████████████████████████████████████████████████| 7.59M/7.59M [00:01<00:00, 5.55MB/s]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/path/to/resolve/main/noisy_audio_file.wav
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./f00076_enhance_audio.py", line 42, in <module>
+    test_enhance_audio()
+  File "./f00076_enhance_audio.py", line 36, in test_enhance_audio
+    enhance_audio('path/to/noisy_audio_file.wav', 'path/to/enhanced_audio_file.wav')
+  File "./f00076_enhance_audio.py", line 25, in enhance_audio
+    noisy = enhance_model.load_audio(input_audio_path).unsqueeze(0)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/speechbrain/pretrained/interfaces.py", line 283, in load_audio
+    path = fetch(fl, source=source, savedir=savedir)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/speechbrain/pretrained/fetching.py", line 161, in fetch
+    fetched_file = huggingface_hub.hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1344, in hf_hub_download
+    raise head_call_error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-654e9362-203f40485096182d50e80ab8;1d3412be-95b1-42b9-9618-e985e5437d02)
+
+Repository Not Found for url: https://huggingface.co/path/to/resolve/main/noisy_audio_file.wav.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+Invalid username or password.

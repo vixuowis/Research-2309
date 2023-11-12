@@ -1,0 +1,20 @@
+{'code': "###Instruction: I am working on a project where I want to make predictions from my data that is stored in structured tables. Find a pre-trained model for table question answering.\n###Output: <<<domain>>>: Natural Language Processing Table Question Answering\n<<<api_call>>>: TapasForQuestionAnswering.from_pretrained('google/tapas-base-finetuned-wikisql-supervised')\n<<<api_provider>>>: Transformers\n<<<explanation>>>:1. Import the TapasForQuestionAnswering class from the transformers library provided by Hugging Face.\n2. Load the pre-trained model using the from_pretrained method with the specified model identifier, 'google/tapas-base-finetuned-wikisql-supervised'.\n3. The loaded model can be used for answering questions based on structured tables. By providing a list of questions and a related table, the model can infer answers from the given data.\n<<<code>>>: from transformers import TapasForQuestionAnswering\nmodel = TapasForQuestionAnswering.from_pretrained('google/tapas-base-finetuned-wikisql-supervised')\n", 'api_call': "TapasForQuestionAnswering.from_pretrained('google/tapas-base-finetuned-wikisql-supervised')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Table Question Answering', 'framework': 'Transformers', 'functionality': 'Table Question Answering', 'api_name': 'google/tapas-base-finetuned-wikisql-supervised', 'api_call': "TapasForQuestionAnswering.from_pretrained('google/tapas-base-finetuned-wikisql-supervised')", 'api_arguments': ['question', 'table'], 'python_environment_requirements': ['PyTorch', 'TensorFlow'], 'example_code': 'This model can be loaded on the Inference API on-demand.', 'performance': {'dataset': 'wikisql', 'accuracy': 'Not provided'}, 'description': 'TAPAS is a BERT-like transformers model pretrained on a large corpus of English data from Wikipedia in a self-supervised fashion. It was pretrained with two objectives: Masked language modeling (MLM) and Intermediate pre-training. Fine-tuning is done by adding a cell selection head and aggregation head on top of the pre-trained model, and then jointly train these randomly initialized classification heads with the base model on SQA and WikiSQL.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00774_load_tapas_model.py", line 33, in <module>
+    test_load_tapas_model()
+  File "output/hf-eval-data-v2/f00774_load_tapas_model.py", line 28, in test_load_tapas_model
+    model = load_tapas_model()
+  File "output/hf-eval-data-v2/f00774_load_tapas_model.py", line 17, in load_tapas_model
+    model = TapasForQuestionAnswering.from_pretrained('google/tapas-base-finetuned-wikisql-supervised')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2377, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--google--tapas-base-finetuned-wikisql-supervised'

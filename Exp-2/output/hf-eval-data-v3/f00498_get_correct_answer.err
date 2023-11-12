@@ -1,0 +1,4 @@
+  File "./f00498_get_correct_answer.py", line 38
+    summary_text = 'The sky is blue because of the way Earth's atmosphere scatters sunlight.'
+                                                             ^
+SyntaxError: invalid syntax

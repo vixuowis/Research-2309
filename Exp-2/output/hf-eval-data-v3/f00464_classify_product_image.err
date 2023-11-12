@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "./f00464_classify_product_image.py", line 55, in <module>
+    test_classify_product_image()
+  File "./f00464_classify_product_image.py", line 44, in test_classify_product_image
+    output2 = classify_product_image('https://placedog.net/500')
+  File "./f00464_classify_product_image.py", line 23, in classify_product_image
+    img = Image.open(urlopen(image_url))
+  File "/root/miniconda3/envs/py38/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/root/miniconda3/envs/py38/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/root/miniconda3/envs/py38/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/root/miniconda3/envs/py38/lib/python3.8/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/root/miniconda3/envs/py38/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/root/miniconda3/envs/py38/lib/python3.8/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden

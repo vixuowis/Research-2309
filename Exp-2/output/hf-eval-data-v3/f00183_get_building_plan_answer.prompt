@@ -1,0 +1,49 @@
+{'code': '###Instruction: Please generate a correct building plan leveraging the data given.\n###Output: <<<domain>>>: Multimodal Document Question Answer\n<<<api_call>>>: AutoModelForDocumentQuestionAnswering.from_pretrained(\'L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V18_08_04_2023\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the necessary libraries from the transformers package provided by Hugging Face.\n2. Use the \'AutoModelForDocumentQuestionAnswering.from_pretrained()\' function to load the \'L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V18_08_04_2023\' model. This model is trained to answer questions based on context provided like documents, building plans, etc.\n3. The created question answering model will be able to extract relevant information from the given building plans and data provided for different sections, for example: area size, layout, materials needed, etc.\n4. Use the model to answer specific questions about the building plan, for example: "What is the total estimated cost of the project?" or "How many floors does the building have?"\n<<<code>>>: from transformers import AutoTokenizer, AutoModelForDocumentQuestionAnswering\ntokenizer = AutoTokenizer.from_pretrained(\'L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V18_08_04_2023\')\nmodel = AutoModelForDocumentQuestionAnswering.from_pretrained(\'L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V18_08_04_2023\')\n\nquestion = "What is the total estimated cost of the project?"\nbuilding_plan_data = "Building plan data here..."\n\ninputs = tokenizer(question, building_plan_data, return_tensors=\'pt\')\nresult = model(**inputs)\nanswer_start, answer_end = result.start_logits.argmax(), result.end_logits.argmax()\n\nanswer = tokenizer.decode(inputs.input_ids[0][answer_start:answer_end+1])', 'api_call': "AutoModelForDocumentQuestionAnswering.from_pretrained('L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V18_08_04_2023')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Document Question Answer', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'LayoutLMX_pt_question_answer_ocrazure_correct_V18_08_04_2023', 'api_call': "AutoModelForDocumentQuestionAnswering.from_pretrained('L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V18_08_04_2023')", 'api_arguments': {'question': 'string', 'context': 'string'}, 'python_environment_requirements': ['transformers'], 'example_code': '', 'performance': {'dataset': '', 'accuracy': ''}, 'description': 'A LayoutLM model for document question answering.'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V18_08_04_2023/resolve/main/tokenizer_config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1344, in hf_hub_download
+    raise head_call_error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-654d2de2-00ea160a095b8b40194a9c1d;9b34e0ef-c466-4169-a331-356f1e5174a8)
+
+Repository Not Found for url: https://huggingface.co/L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V18_08_04_2023/resolve/main/tokenizer_config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00183_get_building_plan_answer.py", line 41, in <module>
+    test_get_building_plan_answer()
+  File "output/hf-eval-data-v2/f00183_get_building_plan_answer.py", line 36, in test_get_building_plan_answer
+    answer = get_building_plan_answer(question, building_plan_data)
+  File "output/hf-eval-data-v2/f00183_get_building_plan_answer.py", line 18, in get_building_plan_answer
+    tokenizer = AutoTokenizer.from_pretrained('L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V18_08_04_2023')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 686, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 519, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 450, in cached_file
+    raise EnvironmentError(
+OSError: L-oenai/LayoutLMX_pt_question_answer_ocrazure_correct_V18_08_04_2023 is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`

@@ -1,0 +1,4 @@
+PIL
+diffusers
+controlnet_aux
+torch

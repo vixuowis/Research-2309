@@ -1,0 +1,22 @@
+{'code': "###Instruction: We have a dataset with customer reviews of our financial service app, and we'd like to analyze their sentiment.\n###Output: <<<domain>>>: Natural Language Processing Text Classification\n<<<api_call>>>: pipeline('sentiment-analysis', model='ProsusAI/finbert')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the required libraries, which in this case is 'pipeline' from the transformers library.\n2. Use the 'pipeline' function to load the model 'ProsusAI/finbert'. FinBERT is designed specifically for sentiment analysis in the finance domain.\n3. The model can be used to classify customer reviews into either positive, negative, or neutral sentiment.\n4. You can process your dataset to analyze the sentiment of each review and use the output for your analysis and decision-making.\n<<<code>>>: from transformers import pipeline\nclassifier = pipeline('sentiment-analysis', model='ProsusAI/finbert')\nreview = 'I love this financial service app. It has made managing my finances so much easier!'\nresult = classifier(review)\n", 'api_call': "AutoModelForSequenceClassification.from_pretrained('ProsusAI/finbert')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'financial-sentiment-analysis', 'api_name': 'ProsusAI/finbert', 'api_call': "AutoModelForSequenceClassification.from_pretrained('ProsusAI/finbert')", 'api_arguments': 'text', 'python_environment_requirements': 'transformers', 'example_code': "from transformers import pipeline; classifier = pipeline('sentiment-analysis', model='ProsusAI/finbert'); classifier('your_text_here')", 'performance': {'dataset': 'Financial PhraseBank', 'accuracy': 'Not provided'}, 'description': 'FinBERT is a pre-trained NLP model to analyze sentiment of financial text. It is built by further training the BERT language model in the finance domain, using a large financial corpus and thereby fine-tuning it for financial sentiment classification. Financial PhraseBank by Malo et al. (2014) is used for fine-tuning.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00860_analyze_sentiment.py", line 38, in <module>
+    test_analyze_sentiment()
+  File "output/hf-eval-data-v2/f00860_analyze_sentiment.py", line 30, in test_analyze_sentiment
+    result = analyze_sentiment(review)
+  File "output/hf-eval-data-v2/f00860_analyze_sentiment.py", line 19, in analyze_sentiment
+    classifier = pipeline('sentiment-analysis', model='ProsusAI/finbert')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--ProsusAI--finbert'

@@ -1,0 +1,14 @@
+2023-11-11 20:31:33.178710: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-11 20:31:33.240513: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-11 20:31:34.178202: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00366_generate_normal_map.py", line 74, in <module>
+    test_generate_normal_map()
+  File "./f00366_generate_normal_map.py", line 59, in test_generate_normal_map
+    generate_normal_map('path/to/your/image1.png', 'output_normal_map1.png')
+  File "./f00366_generate_normal_map.py", line 25, in generate_normal_map
+    image = load_image(image_path).convert('RGB')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/utils/loading_utils.py", line 26, in load_image
+    raise ValueError(
+ValueError: Incorrect path or url, URLs must start with `http://` or `https://`, and path/to/your/image1.png is not a valid path

@@ -1,0 +1,35 @@
+{'code': "###Instruction: Our company manages a restaurant. We need to analyze customers' tips and predict how much tip a new customer would give based on their total bill, sex, smoker, day, time, and party size. We should use a pre-trained model.\n\n###Output: <<<domain>>>: Tabular Tabular Regression\n<<<api_call>>>: joblib.load(hf_hub_download('merve/tips5wx_sbh5-tip-regression', 'sklearn_model.joblib'))\n<<<api_provider>>>: Scikit-learn\n<<<explanation>>>: 1. We first import the necessary libraries such as joblib and wrappers from Hugging Face.\n2. We use the 'joblib.load()' function to load the 'merve/tips5wx_sbh5-tip-regression' pre-trained model, which is designed for tip regression tasks.\n3. The loaded model is a scikit-learn pipeline, which includes pre-processing steps as well as the ridge regression model.\n4. The model can then be used to predict the tip given by a new customer based on different input features like total bill, sex, smoker, day, time, and party size.\n<<<code>>>: from huggingface_hub import hf_hub_download\nimport joblib\nmodel_path = hf_hub_download('merve/tips5wx_sbh5-tip-regression', 'sklearn_model.joblib')\nmodel = joblib.load(model_path)\npredict_data = [[39.42, 0, 0, 6, 0, 4]]\nprediction = model.predict(predict_data)\n", 'api_call': "joblib.load(hf_hub_download('merve/tips5wx_sbh5-tip-regression', 'sklearn_model.joblib'))", 'provider': 'Scikit-learn', 'api_data': {'domain': 'Tabular Tabular Regression', 'framework': 'Scikit-learn', 'functionality': 'baseline-trainer', 'api_name': 'merve/tips5wx_sbh5-tip-regression', 'api_call': "joblib.load(hf_hub_download('merve/tips5wx_sbh5-tip-regression', 'sklearn_model.joblib'))", 'api_arguments': {'alpha': 10}, 'python_environment_requirements': ['dabl'], 'example_code': "Pipeline(steps=[('easypreprocessor',EasyPreprocessor(types= continuous dirty_float low_card_int ... date free_string useless\ntotal_bill True False False ... False False False\nsex False False False ... False False False\nsmoker False False False ... False False False\nday False False False ... False False False\ntime False False False ... False False False\nsize False False False ... False False False[6 rows x 7 columns])),('ridge', Ridge(alpha=10))])", 'performance': {'dataset': 'tips5wx_sbh5', 'r2': 0.389363, 'neg_mean_squared_error': -1.092356}, 'description': 'Baseline Model trained on tips5wx_sbh5 to apply regression on tip'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/merve/tips5wx_sbh5-tip-regression/resolve/main/sklearn_model.joblib
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00336_predict_tip.py", line 42, in <module>
+    test_predict_tip()
+  File "output/hf-eval-data-v2/f00336_predict_tip.py", line 36, in test_predict_tip
+    prediction = predict_tip(39.42, 0, 0, 6, 0, 4)
+  File "output/hf-eval-data-v2/f00336_predict_tip.py", line 24, in predict_tip
+    model_path = hf_hub_download('merve/tips5wx_sbh5-tip-regression', 'sklearn_model.joblib')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1344, in hf_hub_download
+    raise head_call_error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-654d86cd-38bbef076ec3fc5f5eb0a9a1;0db3bcc3-d938-44b1-89d5-7002cfa74d14)
+
+Repository Not Found for url: https://huggingface.co/merve/tips5wx_sbh5-tip-regression/resolve/main/sklearn_model.joblib.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.

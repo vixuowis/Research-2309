@@ -1,0 +1,22 @@
+{'code': "###Instruction: We are working on an AI chatbot for customer support and we need our chatbot to generate human-like responses to customers' questions.\n###Output: <<<domain>>>: Natural Language Processing Text Generation\n<<<api_call>>>: pipeline('text-generation', model='facebook/opt-350m')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. First, import the transformer's library `pipeline` function.\n2. Use the pipeline function to create a text generation model with the specified pre-trained model, `facebook/opt-350m`.\n3. The loaded text generation model is designed to create human-like responses to a given input text.\n4. Finally, use the created generator to generate responses to customers' questions.\n<<<code>>>: from transformers import pipeline\ngenerator = pipeline('text-generation', model='facebook/opt-350m')\nresponse = generator('What is your return policy?')\n", 'api_call': "pipeline('text-generation', model='facebook/opt-350m')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text Generation', 'framework': 'Hugging Face Transformers', 'functionality': 'Text Generation', 'api_name': 'facebook/opt-350m', 'api_call': "pipeline('text-generation', model='facebook/opt-350m')", 'api_arguments': {'model': 'facebook/opt-350m', 'do_sample': 'True', 'num_return_sequences': 5}, 'python_environment_requirements': {'transformers': '4.3.0'}, 'example_code': "from transformers import pipeline, set_seed\nset_seed(32)\ngenerator = pipeline('text-generation', model='facebook/opt-350m', do_sample=True, num_return_sequences=5)\ngenerator('The man worked as a')", 'performance': {'dataset': 'BookCorpus, CC-Stories, The Pile, Pushshift.io Reddit, CCNewsV2', 'accuracy': 'Roughly matches GPT-3 performance'}, 'description': 'OPT (Open Pre-trained Transformer) is a suite of decoder-only pre-trained transformers ranging from 125M to 175B parameters, developed by Meta AI. It is designed to enable reproducible and responsible research at scale and bring more voices to the table in studying the impact of large language models. The pretrained-only model can be used for prompting for evaluation of downstream tasks as well as text generation. It can also be fine-tuned on a downstream task using the CLM example.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00887_generate_text.py", line 34, in <module>
+    test_generate_text()
+  File "output/hf-eval-data-v2/f00887_generate_text.py", line 28, in test_generate_text
+    response = generate_text(input_text)
+  File "output/hf-eval-data-v2/f00887_generate_text.py", line 17, in generate_text
+    generator = pipeline('text-generation', model='facebook/opt-350m')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--facebook--opt-350m'

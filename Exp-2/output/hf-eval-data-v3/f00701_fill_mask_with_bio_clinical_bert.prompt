@@ -1,0 +1,22 @@
+{'code': '###Instruction: Our task is to complete a given sentence with a missing word. The sentence is from an electronic health record.\n###Output: <<<domain>>>: Natural Language Processing Fill-Mask\n<<<api_call>>>: AutoModel.from_pretrained(\'emilyalsentzer/Bio_ClinicalBERT\')\n<<<api_provider>>>: Transformers\n<<<explanation>>>:1. Import the necessary libraries AutoTokenizer and AutoModel from the transformers package provided by Hugging Face.\n2. Load the Bio_ClinicalBERT model and tokenizer using the from_pretrained method, which has been trained on medical text data.\n3. Tokenize your input sentence with the missing word using the mask token in place of the missing word.\n4. Pass the tokenized sentence with the mask token to the Bio_ClinicalBERT model.\n5. Get the most probable word that can fill the mask token from the returned logits.\n<<<code>>>: from transformers import AutoTokenizer, AutoModel\ntokenizer = AutoTokenizer.from_pretrained(\'emilyalsentzer/Bio_ClinicalBERT\')\nmodel = AutoModel.from_pretrained(\'emilyalsentzer/Bio_ClinicalBERT\')\nmasked_sentence = "The patient showed signs of fever and a [MASK] heart rate."\ninput_tokens = tokenizer.encode(masked_sentence, return_tensors="pt")\noutput_logits = model(input_tokens).logits\ntop_predicted_word = tokenizer.decode(output_logits.argmax(-1).item())\nfilled_sentence = masked_sentence.replace("[MASK]", top_predicted_word)', 'api_call': "AutoModel.from_pretrained('emilyalsentzer/Bio_ClinicalBERT')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Fill-Mask', 'framework': 'Transformers', 'functionality': 'Fill-Mask', 'api_name': 'emilyalsentzer/Bio_ClinicalBERT', 'api_call': "AutoModel.from_pretrained('emilyalsentzer/Bio_ClinicalBERT')", 'api_arguments': ['AutoTokenizer', 'AutoModel', 'from_pretrained'], 'python_environment_requirements': ['transformers'], 'example_code': "from transformers import AutoTokenizer, AutoModel\ntokenizer = AutoTokenizer.from_pretrained('emilyalsentzer/Bio_ClinicalBERT')\nmodel = AutoModel.from_pretrained('emilyalsentzer/Bio_ClinicalBERT')", 'performance': {'dataset': 'MIMIC III', 'accuracy': 'Not provided'}, 'description': 'Bio_ClinicalBERT is a model initialized with BioBERT and trained on all MIMIC notes. It can be used for various NLP tasks in the clinical domain, such as Named Entity Recognition (NER) and Natural Language Inference (NLI).'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00701_fill_mask_with_bio_clinical_bert.py", line 37, in <module>
+    test_fill_mask_with_bio_clinical_bert()
+  File "output/hf-eval-data-v2/f00701_fill_mask_with_bio_clinical_bert.py", line 33, in test_fill_mask_with_bio_clinical_bert
+    assert fill_mask_with_bio_clinical_bert(test_sentence) == expected_result
+  File "output/hf-eval-data-v2/f00701_fill_mask_with_bio_clinical_bert.py", line 17, in fill_mask_with_bio_clinical_bert
+    tokenizer = AutoTokenizer.from_pretrained('emilyalsentzer/Bio_ClinicalBERT')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 686, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 519, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--emilyalsentzer--Bio_ClinicalBERT'

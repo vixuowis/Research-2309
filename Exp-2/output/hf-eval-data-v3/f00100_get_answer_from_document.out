@@ -1,0 +1,1 @@
+Error: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /tiennvcs/layoutlmv2-base-uncased-finetuned-infovqa/resolve/main/pytorch_model.bin.index.json (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 38928174-125e-4596-a8af-c5bcc29be477)')

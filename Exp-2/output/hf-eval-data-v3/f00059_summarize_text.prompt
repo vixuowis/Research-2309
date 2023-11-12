@@ -1,0 +1,52 @@
+{'code': '###Instruction: Please provide a brief overview of a news article.\n###Input: A new study suggests that eating chocolate at least once a week can lead to better cognition. The study, published in the journal Appetite, analyzed data from over 900 adults and found that individuals who consumed chocolate at least once a week performed better on cognitive tests than those who consumed chocolate less frequently. Researchers believe that the beneficial effects of chocolate on cognition may be due to the presence of flavonoids, which have been shown to be antioxidant-rich and to improve brain blood flow.\n\n###Output: <<<domain>>>: Natural Language Processing Summarization\n<<<api_call>>>: PegasusForConditionalGeneration.from_pretrained(\'google/pegasus-cnn_dailymail\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import PegasusForConditionalGeneration and PegasusTokenizer from the transformers package.\n2. Load the model \'google/pegasus-cnn_dailymail\' using the PegasusTokenizer.from_pretrained() and PegasusForConditionalGeneration.from_pretrained() functions.\n3. Pass the news article to the tokenizer to get the input tokens.\n4. Generate the summary by passing these tokens to the model.\n5. Decode the summary using the tokenizer.\n6. The summary obtained will be a concise version of the input news article.\n<<<code>>>: from transformers import PegasusForConditionalGeneration, PegasusTokenizer\nmodel_name = \'google/pegasus-cnn_dailymail\'\ntokenizer = PegasusTokenizer.from_pretrained(model_name)\nmodel = PegasusForConditionalGeneration.from_pretrained(model_name)\ninputs = tokenizer.encode("""A new study suggests that eating chocolate at least once a week can lead to better cognition. The study, published in the journal Appetite, analyzed data from over 900 adults and found that individuals who consumed chocolate at least once a week performed better on cognitive tests than those who consumed chocolate less frequently. Researchers believe that the beneficial effects of chocolate on cognition may be due to the presence of flavonoids, which have been shown to be antioxidant-rich and to improve brain blood flow."""\n, return_tensors=\'pt\')\nsummary_ids = model.generate(inputs)\nsummary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)', 'api_call': "PegasusForConditionalGeneration.from_pretrained('google/pegasus-cnn_dailymail')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Summarization', 'framework': 'Hugging Face Transformers', 'functionality': 'text2text-generation', 'api_name': 'google/pegasus-cnn_dailymail', 'api_call': "PegasusForConditionalGeneration.from_pretrained('google/pegasus-cnn_dailymail')", 'api_arguments': ['model_name'], 'python_environment_requirements': ['transformers'], 'example_code': "from transformers import PegasusForConditionalGeneration, PegasusTokenizer\nmodel_name = 'google/pegasus-cnn_dailymail'\ntokenizer = PegasusTokenizer.from_pretrained(model_name)\nmodel = PegasusForConditionalGeneration.from_pretrained(model_name)\ninputs = tokenizer.encode('input_text', return_tensors='pt')\nsummary_ids = model.generate(inputs)\nsummary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)", 'performance': {'dataset': 'cnn_dailymail', 'accuracy': '44.16/21.56/41.30'}, 'description': 'PEGASUS model for abstractive summarization, pretrained on the CNN/DailyMail dataset.'}}
+
+
+
+
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(15666459 bytes read, 2259661424 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(15666459 bytes read, 2259661424 more expected)', IncompleteRead(15666459 bytes read, 2259661424 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00059_summarize_text.py", line 37, in <module>
+    test_summarize_text()
+  File "output/hf-eval-data-v2/f00059_summarize_text.py", line 32, in test_summarize_text
+    summary = summarize_text(input_text)
+  File "output/hf-eval-data-v2/f00059_summarize_text.py", line 19, in summarize_text
+    model = PegasusForConditionalGeneration.from_pretrained(model_name)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(15666459 bytes read, 2259661424 more expected)', IncompleteRead(15666459 bytes read, 2259661424 more expected))
+

@@ -1,0 +1,35 @@
+{'code': "###Instruction: Write a welcome email to a new employee joining the company.\n###Output: <<<domain>>>: Natural Language Processing Text Generation\n<<<api_call>>>: pipeline('text-generation', model='lewtun/tiny-random-mt5')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the pipeline function from the transformers library provided by Hugging Face.\n2. Use the pipeline function to create a text generation model.\n3. Specify the model 'lewtun/tiny-random-mt5' to be loaded. This model is a tiny random model, designed for quick experimentation and prototyping.\n4. Use the created text generation model to generate a welcome email for a new employee joining the company by providing a seed text as input.\n<<<code>>>: from transformers import pipeline\ntext_generator = pipeline('text-generation', model='lewtun/tiny-random-mt5')\nseed_text = 'Welcome to the company,'\ngenerated_email = text_generator(seed_text, max_length=150)\n", 'api_call': "AutoModel.from_pretrained('lewtun/tiny-random-mt5')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text Generation', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'lewtun/tiny-random-mt5', 'api_call': "AutoModel.from_pretrained('lewtun/tiny-random-mt5')", 'api_arguments': 'text', 'python_environment_requirements': 'transformers', 'example_code': "nlp('Once upon a time...')", 'performance': {'dataset': '', 'accuracy': ''}, 'description': 'A tiny random mt5 model for text generation'}}
+
+
+
+
+
+
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. If you see this, DO NOT PANIC! This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thouroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/convert_slow_tokenizer.py:473: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+The model 'MT5Model' is not supported for text-generation. Supported models are ['BartForCausalLM', 'BertLMHeadModel', 'BertGenerationDecoder', 'BigBirdForCausalLM', 'BigBirdPegasusForCausalLM', 'BioGptForCausalLM', 'BlenderbotForCausalLM', 'BlenderbotSmallForCausalLM', 'BloomForCausalLM', 'CamembertForCausalLM', 'LlamaForCausalLM', 'CodeGenForCausalLM', 'CpmAntForCausalLM', 'CTRLLMHeadModel', 'Data2VecTextForCausalLM', 'ElectraForCausalLM', 'ErnieForCausalLM', 'FalconForCausalLM', 'GitForCausalLM', 'GPT2LMHeadModel', 'GPT2LMHeadModel', 'GPTBigCodeForCausalLM', 'GPTNeoForCausalLM', 'GPTNeoXForCausalLM', 'GPTNeoXJapaneseForCausalLM', 'GPTJForCausalLM', 'LlamaForCausalLM', 'MarianForCausalLM', 'MBartForCausalLM', 'MegaForCausalLM', 'MegatronBertForCausalLM', 'MptForCausalLM', 'MusicgenForCausalLM', 'MvpForCausalLM', 'OpenLlamaForCausalLM', 'OpenAIGPTLMHeadModel', 'OPTForCausalLM', 'PegasusForCausalLM', 'PLBartForCausalLM', 'ProphetNetForCausalLM', 'QDQBertLMHeadModel', 'ReformerModelWithLMHead', 'RemBertForCausalLM', 'RobertaForCausalLM', 'RobertaPreLayerNormForCausalLM', 'RoCBertForCausalLM', 'RoFormerForCausalLM', 'RwkvForCausalLM', 'Speech2Text2ForCausalLM', 'TransfoXLLMHeadModel', 'TrOCRForCausalLM', 'XGLMForCausalLM', 'XLMWithLMHeadModel', 'XLMProphetNetForCausalLM', 'XLMRobertaForCausalLM', 'XLMRobertaXLForCausalLM', 'XLNetLMHeadModel', 'XmodForCausalLM'].
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00342_generate_welcome_email.py", line 40, in <module>
+    test_generate_welcome_email()
+  File "output/hf-eval-data-v2/f00342_generate_welcome_email.py", line 34, in test_generate_welcome_email
+    generated_email = generate_welcome_email()
+  File "output/hf-eval-data-v2/f00342_generate_welcome_email.py", line 22, in generate_welcome_email
+    generated_email = text_generator(seed_text, max_length=150)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/text_generation.py", line 205, in __call__
+    return super().__call__(text_inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1147, in run_single
+    model_outputs = self.forward(model_inputs, **forward_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1046, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/text_generation.py", line 268, in _forward
+    generated_sequence = self.model.generate(input_ids=input_ids, attention_mask=attention_mask, **generate_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/generation/utils.py", line 1408, in generate
+    self._validate_model_class()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/generation/utils.py", line 1203, in _validate_model_class
+    raise TypeError(exception_message)
+TypeError: The current model class (MT5Model) is not compatible with `.generate()`, as it doesn't have a language model head. Please use one of the following classes instead: {'MT5ForConditionalGeneration'}

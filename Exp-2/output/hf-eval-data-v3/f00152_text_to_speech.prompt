@@ -1,0 +1,48 @@
+{'code': '###Instruction: Our company is building an automated assistance system for the visually impaired. We need a tool to convert text into spoken instructions.\n###Output: <<<domain>>>: Audio Text-to-Speech\n<<<api_call>>>: pipeline(\'text-to-speech\', model=\'espnet/kan-bayashi_ljspeech_vits\')\n<<<api_provider>>>: ESPnet\n<<<explanation>>>:1. Import the pipeline function from the transformers library.\n2. Use the pipeline function to create a text-to-speech model.\n3. Specify the model \'espnet/kan-bayashi_ljspeech_vits\' to be loaded. This model is trained on the \'ljspeech\' dataset and optimized for converting text to speech.\n4. Once the model is loaded, we can use the tts function to provide the input text, such as instructions for the visually impaired, and generate speech output. The synthesized speech can then be played to assist the user.\n<<<code>>>: from transformers import pipeline\ntts_pipeline = pipeline(\'text-to-speech\', model=\'espnet/kan-bayashi_ljspeech_vits\')\nspoken_instructions = tts_pipeline("Example instruction for the visually impaired user.")\n', 'api_call': "pipeline('text-to-speech', model='espnet/kan-bayashi_ljspeech_vits')", 'provider': 'ESPnet', 'api_data': {'domain': 'Audio Text-to-Speech', 'framework': 'ESPnet', 'functionality': 'Text-to-Speech', 'api_name': 'kan-bayashi_ljspeech_vits', 'api_call': "pipeline('text-to-speech', model='espnet/kan-bayashi_ljspeech_vits')", 'api_arguments': 'text', 'python_environment_requirements': 'transformers', 'example_code': "from transformers import pipeline; tts = pipeline('text-to-speech', model='espnet/kan-bayashi_ljspeech_vits'); tts('Hello World')", 'performance': {'dataset': 'ljspeech', 'accuracy': 'Not mentioned'}, 'description': 'A Text-to-Speech model trained on the ljspeech dataset using the ESPnet toolkit. This model can be used to convert text input into synthesized speech.'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/espnet/kan-bayashi_ljspeech_vits/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 271, in hf_raise_for_status
+    raise EntryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.EntryNotFoundError: 404 Client Error. (Request ID: Root=1-654d28c1-4db3f5253c99e738177ab349;9961ee5e-a815-4d9d-80ae-d308b358d68e)
+
+Entry Not Found for url: https://huggingface.co/espnet/kan-bayashi_ljspeech_vits/resolve/main/config.json.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00152_text_to_speech.py", line 38, in <module>
+    test_text_to_speech()
+  File "output/hf-eval-data-v2/f00152_text_to_speech.py", line 33, in test_text_to_speech
+    output = text_to_speech(sample_text)
+  File "output/hf-eval-data-v2/f00152_text_to_speech.py", line 22, in text_to_speech
+    tts_pipeline = pipeline('text-to-speech', model='espnet/kan-bayashi_ljspeech_vits')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 741, in pipeline
+    config = AutoConfig.from_pretrained(model, _from_pipeline=task, **hub_kwargs, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 1023, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 620, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 675, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 480, in cached_file
+    raise EnvironmentError(
+OSError: espnet/kan-bayashi_ljspeech_vits does not appear to have a file named config.json. Checkout 'https://huggingface.co/espnet/kan-bayashi_ljspeech_vits/main' for available files.

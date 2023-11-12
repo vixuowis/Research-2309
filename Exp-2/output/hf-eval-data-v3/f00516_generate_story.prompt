@@ -1,0 +1,49 @@
+{'code': "###Instruction: Give me a tool that I can use to generate stories based on a starting phrase.\n###Output: <<<domain>>>: Natural Language Processing Text Generation\n<<<api_call>>>: pipeline('text-generation', model='decapoda-research/llama-13b-hf')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. We import the pipeline function from the transformers library provided by Hugging Face.\n2. We create a text-generation pipeline using the 'decapoda-research/llama-13b-hf' model, which is skilled at generating coherent and contextually relevant text.\n3. With the text-generation pipeline, we can generate stories or paragraphs by providing a starting phrase to the model.\n4. The model leverages its auto-regressive language capabilities to generate a story that is semantically and syntactically coherent, based on the given starting phrase.\n<<<code>>>: from transformers import pipeline\ngenerator = pipeline('text-generation', model='decapoda-research/llama-13b-hf')\nstarting_phrase = 'Once upon a time'\ngenerated_text = generator(starting_phrase)\n", 'api_call': "pipeline('text-generation', model='decapoda-research/llama-13b-hf')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text Generation', 'framework': 'Hugging Face Transformers', 'functionality': 'Text Generation', 'api_name': 'decapoda-research/llama-13b-hf', 'api_call': "pipeline('text-generation', model='decapoda-research/llama-13b-hf')", 'api_arguments': 'text', 'python_environment_requirements': 'transformers', 'example_code': "generator('Once upon a time')", 'performance': {'dataset': [{'name': 'BoolQ', 'accuracy': '85.3'}, {'name': 'PIQA', 'accuracy': '82.8'}, {'name': 'SIQA', 'accuracy': '52.3'}, {'name': 'HellaSwag', 'accuracy': '84.2'}, {'name': 'WinoGrande', 'accuracy': '77'}, {'name': 'ARC-e', 'accuracy': '81.5'}, {'name': 'ARC-c', 'accuracy': '56'}, {'name': 'OBQACOPA', 'accuracy': '60.2'}]}, 'description': 'LLaMA-13B is an auto-regressive language model based on the transformer architecture developed by the FAIR team of Meta AI. It is designed for research purposes, such as question answering, natural language understanding, and reading comprehension. The model has been trained on a variety of sources, including web data, GitHub, Wikipedia, and books in 20 languages. It has been evaluated on several benchmarks, including BoolQ, PIQA, SIQA, HellaSwag, WinoGrande, ARC, and OpenBookQA.'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/decapoda-research/llama-13b-hf/resolve/main/adapter_config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1344, in hf_hub_download
+    raise head_call_error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-654da492-44957fea6c36a84d248bb61b;2295806d-904f-4cb6-89b6-ebaa79b9f8c8)
+
+Repository Not Found for url: https://huggingface.co/decapoda-research/llama-13b-hf/resolve/main/adapter_config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00516_generate_story.py", line 34, in <module>
+    test_generate_story()
+  File "output/hf-eval-data-v2/f00516_generate_story.py", line 28, in test_generate_story
+    generated_text = generate_story(starting_phrase)
+  File "output/hf-eval-data-v2/f00516_generate_story.py", line 17, in generate_story
+    generator = pipeline('text-generation', model='decapoda-research/llama-13b-hf')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 450, in cached_file
+    raise EnvironmentError(
+OSError: decapoda-research/llama-13b-hf is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`

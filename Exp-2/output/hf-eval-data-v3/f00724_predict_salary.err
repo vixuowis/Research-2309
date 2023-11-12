@@ -1,0 +1,17 @@
+2023-11-12 08:40:39.063358: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 08:40:39.124685: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 08:40:40.036474: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+WARNING:root:TensorFlow Decision Forests 1.5.0 is compatible with the following TensorFlow Versions: ['2.13.0']. However, TensorFlow 2.13.1 was detected. This can cause issues with the TF API and symbols in the custom C++ ops. See the TF and TF-DF compatibility table at https://github.com/tensorflow/decision-forests/blob/main/documentation/known_issues.md#compatibility-table.
+2023-11-12 08:40:41.887887: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22280 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3090, pci bus id: 0000:57:00.0, compute capability: 8.6
+WARNING:absl:The `num_threads` constructor argument is not set and the number of CPU is os.cpu_count()=128 > 32. Setting num_threads to 32. Set num_threads manually to use more than 32 cpus.
+Traceback (most recent call last):
+  File "./f00724_predict_salary.py", line 44, in <module>
+    test_predict_salary()
+  File "./f00724_predict_salary.py", line 35, in test_predict_salary
+    prediction = predict_salary(input_features, target)
+  File "./f00724_predict_salary.py", line 22, in predict_salary
+    model.fit(input_features, target)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/tensorflow_decision_forests/keras/core.py", line 1207, in fit
+    raise ValueError(
+ValueError: `fit` cannot consume Pandas' dataframes directly. Instead, use the `pd_dataframe_to_tf_dataset` utility function. For example: `model.fit(tfdf.keras.pd_dataframe_to_tf_dataset(train_dataframe, label="label_column"))

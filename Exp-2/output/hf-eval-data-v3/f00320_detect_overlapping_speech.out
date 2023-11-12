@@ -1,0 +1,11 @@
+
+Could not download 'pyannote/overlapped-speech-detection' pipeline.
+It might be because the pipeline is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Pipeline.from_pretrained('pyannote/overlapped-speech-detection',
+   ...                          use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the pipeline is gated:
+visit https://hf.co/pyannote/overlapped-speech-detection to accept the user conditions.

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "./f00177_image_to_text.py", line 60, in <module>
+    test_image_to_text()
+  File "./f00177_image_to_text.py", line 43, in test_image_to_text
+    cat_text = image_to_text(cat_image_url)
+  File "./f00177_image_to_text.py", line 31, in image_to_text
+    text_output = img2text_pipeline(image)[0]['generated_text']
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/text_generation.py", line 205, in __call__
+    return super().__call__(text_inputs, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/text_generation.py", line 211, in preprocess
+    prefix + prompt_text, padding=False, add_special_tokens=add_special_tokens, return_tensors=self.framework
+TypeError: can only concatenate str (not "JpegImageFile") to str

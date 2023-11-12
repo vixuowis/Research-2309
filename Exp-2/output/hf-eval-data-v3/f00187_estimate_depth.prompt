@@ -1,0 +1,33 @@
+{'code': "###Instruction: We are creating an autonomous car and need to estimate the depth of objects in a given scene.\n###Output: <<<domain>>>: Computer Vision Depth Estimation\n<<<api_call>>>: pipeline('depth-estimation', model='sayakpaul/glpn-nyu-finetuned-diode-221122-044810')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: To estimate the depth of objects in a scene, we can use the pre-trained model 'sayakpaul/glpn-nyu-finetuned-diode-221122-044810'. This model has been fine-tuned on the diode-subset dataset and is specifically designed for depth estimation tasks.\n\n1. Import the necessary package - the transformers library, which provides the pipeline function for loading pre-trained models.\n2. Call the pipeline() function with the 'depth-estimation' task and provide the 'sayakpaul/glpn-nyu-finetuned-diode-221122-044810' model as an argument. This will create a depth estimation model.\n3. Use the created model to estimate the depth of objects in a scene using images captured by the car's camera.\n<<<code>>>: from transformers import pipeline\ndepth_estimator = pipeline('depth-estimation', model='sayakpaul/glpn-nyu-finetuned-diode-221122-044810')\nresult = depth_estimator(image_path)\n# replace 'image_path' with the actual path to the image", 'api_call': "pipeline('depth-estimation', model='sayakpaul/glpn-nyu-finetuned-diode-221122-044810')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Depth Estimation', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'glpn-nyu-finetuned-diode-221122-044810', 'api_call': "pipeline('depth-estimation', model='sayakpaul/glpn-nyu-finetuned-diode-221122-044810')", 'api_arguments': '', 'python_environment_requirements': 'transformers==4.24.0, torch==1.12.1, tokenizers==0.13.2', 'example_code': '', 'performance': {'dataset': 'diode-subset', 'accuracy': {'Loss': 0.369, 'Mae': 0.2909, 'Rmse': 0.4208, 'Abs Rel': 0.3635, 'Log Mae': 0.1224, 'Log Rmse': 0.1793, 'Delta1': 0.5323, 'Delta2': 0.8179, 'Delta3': 0.9258}}, 'description': 'This model is a fine-tuned version of vinvino02/glpn-nyu on the diode-subset dataset.'}}
+
+
+
+
+Could not find image processor class in the image processor config or the model config. Loading based on pattern matching with the model's feature extractor configuration.
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_utils.py", line 308, in load_image
+    b64 = base64.b64decode(image, validate=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/base64.py", line 86, in b64decode
+    raise binascii.Error('Non-base64 digit found')
+binascii.Error: Non-base64 digit found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00187_estimate_depth.py", line 34, in <module>
+    test_estimate_depth()
+  File "output/hf-eval-data-v2/f00187_estimate_depth.py", line 28, in test_estimate_depth
+    result = estimate_depth(image_path)
+  File "output/hf-eval-data-v2/f00187_estimate_depth.py", line 18, in estimate_depth
+    result = depth_estimator(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/depth_estimation.py", line 85, in __call__
+    return super().__call__(images, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/depth_estimation.py", line 94, in preprocess
+    image = load_image(image, timeout)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/image_utils.py", line 311, in load_image
+    raise ValueError(
+ValueError: Incorrect image source. Must be a valid URL starting with `http://` or `https://`, a valid path to an image file, or a base64 encoded string. Got test_image.jpg. Failed with Non-base64 digit found

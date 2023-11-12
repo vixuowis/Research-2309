@@ -1,0 +1,10 @@
+2023-11-11 19:58:35.229036: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-11 19:58:35.282231: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-11 19:58:36.241142: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00341_calculate_similarity.py", line 38, in <module>
+    test_calculate_similarity()
+  File "./f00341_calculate_similarity.py", line 32, in test_calculate_similarity
+    assert 0.7 <= calculate_similarity(review1, review2) <= 1.0
+AssertionError

@@ -1,0 +1,12 @@
+2023-11-12 03:55:34.449089: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 03:55:34.494406: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 03:55:35.145899: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00544_load_pretrained_model.py", line 34, in <module>
+    print(test_load_pretrained_model())
+  File "./f00544_load_pretrained_model.py", line 28, in test_load_pretrained_model
+    ppo = load_pretrained_model(model_filename)
+  File "./f00544_load_pretrained_model.py", line 18, in load_pretrained_model
+    ppo = rl_zoo3.load_from_hub(repo_id='sb3/ppo-CartPole-v1', filename=model_filename)
+AttributeError: module 'rl_zoo3' has no attribute 'load_from_hub'

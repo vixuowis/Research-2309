@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "./f00461_estimate_depth.py", line 38, in <module>
+    test_estimate_depth()
+  File "./f00461_estimate_depth.py", line 31, in test_estimate_depth
+    depth = estimate_depth('sample_image.jpg')
+  File "./f00461_estimate_depth.py", line 19, in estimate_depth
+    image_input = read_image(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torchvision/io/image.py", line 258, in read_image
+    data = read_file(path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torchvision/io/image.py", line 52, in read_file
+    data = torch.ops.image.read_file(path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch/_ops.py", line 692, in __call__
+    return self._op(*args, **kwargs or {})
+RuntimeError: [Errno 2] No such file or directory: 'sample_image.jpg'

@@ -1,0 +1,224 @@
+2023-11-12 00:01:46.971943: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 00:01:47.025780: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 00:01:47.863739: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Downloading (…)lve/main/config.json:   0%|                                                                           | 0.00/508 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|████████████████████████████████████████████████████████████████████| 508/508 [00:00<00:00, 40.2kB/s]
+'(MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /camembert-base/486643fdcac936afc551aa4b0fedcd9f61c5f71f42b8333e07c709f38043475d?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1699977719&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk3NzcxOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYW1lbWJlcnQtYmFzZS80ODY2NDNmZGNhYzkzNmFmYzU1MWFhNGIwZmVkY2Q5ZjYxYzVmNzFmNDJiODMzM2UwN2M3MDlmMzgwNDM0NzVkP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=vFdF2RVGKCQLqvhyGXAq71SxBF4PwxA6aeljru6ENa5wK3RP~TgGLBrirzm8OO~Pm~N8Fa2Rxom0yDE~GV30e8EoAV5OYDPscCG6VPyokfmR-owLWI1AparR5jojKjN3c4t95R2qWPwsWk-wR2a088PUTBPN5v-es295axg9rdXWuXkiOehy6w7i77n6WlZCmq58169oj1tWk2Hid58toWNcOrMf2gOsroIg2LxOZwkCQmQ3fQpskYkl4qfTIS1579XLl5bQtWCRurQF2shOFOF7xKSZHOSGs2Jf2RYFvmt4KsMHJU2mF2aDuGU4Jmz0V77EyYijw8TfHuXAu8Gc7A__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 9ef5fa70-aeb8-47fd-bb94-93bb0795208f)')' thrown while requesting GET https://cdn-lfs.huggingface.co/camembert-base/486643fdcac936afc551aa4b0fedcd9f61c5f71f42b8333e07c709f38043475d?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1699977719&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk3NzcxOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYW1lbWJlcnQtYmFzZS80ODY2NDNmZGNhYzkzNmFmYzU1MWFhNGIwZmVkY2Q5ZjYxYzVmNzFmNDJiODMzM2UwN2M3MDlmMzgwNDM0NzVkP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=vFdF2RVGKCQLqvhyGXAq71SxBF4PwxA6aeljru6ENa5wK3RP%7ETgGLBrirzm8OO%7EPm%7EN8Fa2Rxom0yDE%7EGV30e8EoAV5OYDPscCG6VPyokfmR-owLWI1AparR5jojKjN3c4t95R2qWPwsWk-wR2a088PUTBPN5v-es295axg9rdXWuXkiOehy6w7i77n6WlZCmq58169oj1tWk2Hid58toWNcOrMf2gOsroIg2LxOZwkCQmQ3fQpskYkl4qfTIS1579XLl5bQtWCRurQF2shOFOF7xKSZHOSGs2Jf2RYFvmt4KsMHJU2mF2aDuGU4Jmz0V77EyYijw8TfHuXAu8Gc7A__&Key-Pair-Id=KVTP0A1DKRTAX
+Downloading model.safetensors:   0%|                                                                                | 0.00/445M [00:00<?, ?B/s]Downloading model.safetensors:   0%|                                                                                | 0.00/445M [01:29<?, ?B/s]
+Downloading model.safetensors:   0%|                                                                                | 0.00/445M [00:00<?, ?B/s]Downloading model.safetensors:   2%|█▋                                                                   | 10.5M/445M [02:42<1:52:00, 64.7kB/s]Downloading model.safetensors:   2%|█▋                                                                   | 10.5M/445M [02:57<1:52:00, 64.7kB/s]Downloading model.safetensors:   4%|██▊                                                                  | 18.3M/445M [03:23<1:12:40, 97.9kB/s]Downloading model.safetensors:   4%|██▊                                                                  | 18.3M/445M [03:23<1:19:06, 89.9kB/s]
+'(MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /camembert-base/486643fdcac936afc551aa4b0fedcd9f61c5f71f42b8333e07c709f38043475d?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1699978046&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk3ODA0Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYW1lbWJlcnQtYmFzZS80ODY2NDNmZGNhYzkzNmFmYzU1MWFhNGIwZmVkY2Q5ZjYxYzVmNzFmNDJiODMzM2UwN2M3MDlmMzgwNDM0NzVkP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=mtIIoGKwfGikqkQyY3dvvLfTxl45pWskPJUywW7NOqFPoMFDAuDNWz68JOK0~-z50cJCuJKerJUvu7QVCS1EF9ummgoccQqkWKx-U1G0qShZthQfwseMebJl3SJULqwKJ0jB0NIcQadbAbvlBlcUgS9AjvB~mRxJ5amU8vHpYwd~8nAtIAuCG6gB4~EmlTG35Ocg0oa~k1I9zyX3NWwGPLHV05bfdqVGqirRet1I~kGRtpQFJgdMc5tF4O0QA9jD7x6xKZ~-M6eDdrrTduNFJBauDimR90KzJ7b8cuTgomoTuDJWfablW4xDs3nNVwYw6RyxtWXCcDLJ7jZ4gEMp8Q__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 31814a5e-cc07-4978-ab77-7bbf9cfb994a)')' thrown while requesting GET https://cdn-lfs.huggingface.co/camembert-base/486643fdcac936afc551aa4b0fedcd9f61c5f71f42b8333e07c709f38043475d?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1699978046&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk3ODA0Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYW1lbWJlcnQtYmFzZS80ODY2NDNmZGNhYzkzNmFmYzU1MWFhNGIwZmVkY2Q5ZjYxYzVmNzFmNDJiODMzM2UwN2M3MDlmMzgwNDM0NzVkP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=mtIIoGKwfGikqkQyY3dvvLfTxl45pWskPJUywW7NOqFPoMFDAuDNWz68JOK0%7E-z50cJCuJKerJUvu7QVCS1EF9ummgoccQqkWKx-U1G0qShZthQfwseMebJl3SJULqwKJ0jB0NIcQadbAbvlBlcUgS9AjvB%7EmRxJ5amU8vHpYwd%7E8nAtIAuCG6gB4%7EEmlTG35Ocg0oa%7Ek1I9zyX3NWwGPLHV05bfdqVGqirRet1I%7EkGRtpQFJgdMc5tF4O0QA9jD7x6xKZ%7E-M6eDdrrTduNFJBauDimR90KzJ7b8cuTgomoTuDJWfablW4xDs3nNVwYw6RyxtWXCcDLJ7jZ4gEMp8Q__&Key-Pair-Id=KVTP0A1DKRTAX
+Traceback (most recent call last):
+  File "./f00412_fill_mask.py", line 34, in <module>
+    print(test_fill_mask())
+  File "./f00412_fill_mask.py", line 27, in test_fill_mask
+    assert fill_mask('Le camembert est <mask> :)')[0]['sequence'] == 'Le camembert est délicieux :)', 'Test Case 1 Failed'
+  File "./f00412_fill_mask.py", line 17, in fill_mask
+    camembert_fill_mask = pipeline('fill-mask', model='camembert-base', tokenizer='camembert-base')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 824, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model camembert-base with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForMaskedLM'>, <class 'transformers.models.auto.modeling_tf_auto.TFAutoModelForMaskedLM'>, <class 'transformers.models.camembert.modeling_camembert.CamembertForMaskedLM'>, <class 'transformers.models.camembert.modeling_tf_camembert.TFCamembertForMaskedLM'>). See the original errors:
+
+while loading with AutoModelForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 712, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1012, in _prepare_proxy
+    conn.connect()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /camembert-base/486643fdcac936afc551aa4b0fedcd9f61c5f71f42b8333e07c709f38043475d?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1699977719&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk3NzcxOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYW1lbWJlcnQtYmFzZS80ODY2NDNmZGNhYzkzNmFmYzU1MWFhNGIwZmVkY2Q5ZjYxYzVmNzFmNDJiODMzM2UwN2M3MDlmMzgwNDM0NzVkP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=vFdF2RVGKCQLqvhyGXAq71SxBF4PwxA6aeljru6ENa5wK3RP~TgGLBrirzm8OO~Pm~N8Fa2Rxom0yDE~GV30e8EoAV5OYDPscCG6VPyokfmR-owLWI1AparR5jojKjN3c4t95R2qWPwsWk-wR2a088PUTBPN5v-es295axg9rdXWuXkiOehy6w7i77n6WlZCmq58169oj1tWk2Hid58toWNcOrMf2gOsroIg2LxOZwkCQmQ3fQpskYkl4qfTIS1579XLl5bQtWCRurQF2shOFOF7xKSZHOSGs2Jf2RYFvmt4KsMHJU2mF2aDuGU4Jmz0V77EyYijw8TfHuXAu8Gc7A__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2773, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 515, in http_get
+    r = _request_wrapper(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 452, in _request_wrapper
+    return http_backoff(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 274, in http_backoff
+    raise err
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 258, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /camembert-base/486643fdcac936afc551aa4b0fedcd9f61c5f71f42b8333e07c709f38043475d?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1699977719&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk3NzcxOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYW1lbWJlcnQtYmFzZS80ODY2NDNmZGNhYzkzNmFmYzU1MWFhNGIwZmVkY2Q5ZjYxYzVmNzFmNDJiODMzM2UwN2M3MDlmMzgwNDM0NzVkP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=vFdF2RVGKCQLqvhyGXAq71SxBF4PwxA6aeljru6ENa5wK3RP~TgGLBrirzm8OO~Pm~N8Fa2Rxom0yDE~GV30e8EoAV5OYDPscCG6VPyokfmR-owLWI1AparR5jojKjN3c4t95R2qWPwsWk-wR2a088PUTBPN5v-es295axg9rdXWuXkiOehy6w7i77n6WlZCmq58169oj1tWk2Hid58toWNcOrMf2gOsroIg2LxOZwkCQmQ3fQpskYkl4qfTIS1579XLl5bQtWCRurQF2shOFOF7xKSZHOSGs2Jf2RYFvmt4KsMHJU2mF2aDuGU4Jmz0V77EyYijw8TfHuXAu8Gc7A__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 9ef5fa70-aeb8-47fd-bb94-93bb0795208f)')
+
+while loading with TFAutoModelForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 444, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 567, in read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 533, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 628, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 593, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 449, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.")
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2777, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+while loading with CamembertForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2773, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 557, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 445008750 but has size 18282200 (model.safetensors).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+while loading with TFCamembertForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 712, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1012, in _prepare_proxy
+    conn.connect()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/miniconda3/envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /camembert-base/486643fdcac936afc551aa4b0fedcd9f61c5f71f42b8333e07c709f38043475d?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1699978046&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk3ODA0Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYW1lbWJlcnQtYmFzZS80ODY2NDNmZGNhYzkzNmFmYzU1MWFhNGIwZmVkY2Q5ZjYxYzVmNzFmNDJiODMzM2UwN2M3MDlmMzgwNDM0NzVkP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=mtIIoGKwfGikqkQyY3dvvLfTxl45pWskPJUywW7NOqFPoMFDAuDNWz68JOK0~-z50cJCuJKerJUvu7QVCS1EF9ummgoccQqkWKx-U1G0qShZthQfwseMebJl3SJULqwKJ0jB0NIcQadbAbvlBlcUgS9AjvB~mRxJ5amU8vHpYwd~8nAtIAuCG6gB4~EmlTG35Ocg0oa~k1I9zyX3NWwGPLHV05bfdqVGqirRet1I~kGRtpQFJgdMc5tF4O0QA9jD7x6xKZ~-M6eDdrrTduNFJBauDimR90KzJ7b8cuTgomoTuDJWfablW4xDs3nNVwYw6RyxtWXCcDLJ7jZ4gEMp8Q__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2777, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 515, in http_get
+    r = _request_wrapper(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 452, in _request_wrapper
+    return http_backoff(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 274, in http_backoff
+    raise err
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 258, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /camembert-base/486643fdcac936afc551aa4b0fedcd9f61c5f71f42b8333e07c709f38043475d?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1699978046&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5OTk3ODA0Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYW1lbWJlcnQtYmFzZS80ODY2NDNmZGNhYzkzNmFmYzU1MWFhNGIwZmVkY2Q5ZjYxYzVmNzFmNDJiODMzM2UwN2M3MDlmMzgwNDM0NzVkP3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiJ9XX0_&Signature=mtIIoGKwfGikqkQyY3dvvLfTxl45pWskPJUywW7NOqFPoMFDAuDNWz68JOK0~-z50cJCuJKerJUvu7QVCS1EF9ummgoccQqkWKx-U1G0qShZthQfwseMebJl3SJULqwKJ0jB0NIcQadbAbvlBlcUgS9AjvB~mRxJ5amU8vHpYwd~8nAtIAuCG6gB4~EmlTG35Ocg0oa~k1I9zyX3NWwGPLHV05bfdqVGqirRet1I~kGRtpQFJgdMc5tF4O0QA9jD7x6xKZ~-M6eDdrrTduNFJBauDimR90KzJ7b8cuTgomoTuDJWfablW4xDs3nNVwYw6RyxtWXCcDLJ7jZ4gEMp8Q__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 31814a5e-cc07-4978-ab77-7bbf9cfb994a)')
+
+
+

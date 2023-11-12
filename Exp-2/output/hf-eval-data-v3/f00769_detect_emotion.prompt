@@ -1,0 +1,22 @@
+{'code': "###Instruction: We're creating a chatbot that will detect the user's emotion. I want to start by implementing the basic functionality of emotion detection from the user's responses.\n###Output: <<<domain>>>: Natural Language Processing Text Classification\n<<<api_call>>>: pipeline('sentiment-analysis', model='michellejieli/emotion_text_classifier')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. We import the pipeline function from the transformers library provided by Hugging Face.\n2. We create a sentiment analysis pipeline specifying the model 'michellejieli/emotion_text_classifier'. This model is a fine-tuned DistilRoBERTa-base transformer that can classify emotions from text data, specifically dialogue from movies or TV shows.\n3. The model is capable of predicting 6 Ekman emotions and a neutral class, which includes anger, disgust, fear, joy, neutrality, sadness, and surprise.\n4. The created sentiment analysis pipeline can be used to classify user responses into these emotion categories for our chatbot.\n<<<code>>>: from transformers import pipeline\nemotion_detector = pipeline('sentiment-analysis', model='michellejieli/emotion_text_classifier')\nuser_emotion = emotion_detector(user_response_text)", 'api_call': "pipeline('sentiment-analysis', model='michellejieli/emotion_text_classifier')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'michellejieli/emotion_text_classifier', 'api_call': "pipeline('sentiment-analysis', model='michellejieli/emotion_text_classifier')", 'api_arguments': ['text'], 'python_environment_requirements': ['transformers'], 'example_code': 'classifier(I love this!)', 'performance': {'dataset': ['Crowdflower (2016)', 'Emotion Dataset, Elvis et al. (2018)', 'GoEmotions, Demszky et al. (2020)', 'ISEAR, Vikash (2018)', 'MELD, Poria et al. (2019)', 'SemEval-2018, EI-reg, Mohammad et al. (2018)', 'Emotion Lines (Friends)'], 'accuracy': 'Not provided'}, 'description': 'DistilRoBERTa-base is a transformer model that performs sentiment analysis. I fine-tuned the model on transcripts from the Friends show with the goal of classifying emotions from text data, specifically dialogue from Netflix shows or movies. The model predicts 6 Ekman emotions and a neutral class. These emotions include anger, disgust, fear, joy, neutrality, sadness, and surprise.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00769_detect_emotion.py", line 35, in <module>
+    test_detect_emotion()
+  File "output/hf-eval-data-v2/f00769_detect_emotion.py", line 30, in test_detect_emotion
+    result = detect_emotion(text)
+  File "output/hf-eval-data-v2/f00769_detect_emotion.py", line 17, in detect_emotion
+    emotion_detector = pipeline('sentiment-analysis', model='michellejieli/emotion_text_classifier')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--michellejieli--emotion_text_classifier'

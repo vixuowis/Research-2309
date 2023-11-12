@@ -1,0 +1,18 @@
+{'code': "###Instruction: I have a dataset with CO2 emissions in a CSV file, and I want to classify which sources have high or low emissions.\n###Output: <<<domain>>>: Tabular Tabular Classification\n<<<api_call>>>: pipeline('tabular-classification', model='datadmg/autotrain-test-news-44534112235')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the necessary libraries, which include 'pipeline', 'pandas', and 'joblib'.\n2. Read the CSV file with your CO2 emissions dataset into a pandas DataFrame.\n3. Use the 'pipeline' function from transformers to load the model, which in this case is 'datadmg/autotrain-test-news-44534112235'.\n4. The loaded pipeline will be used for tabular classification, which is a task where the model makes a prediction about the CO2 emissions (high or low) based on the tabular data available in the dataset.\n<<<code>>>: from transformers import pipeline\nimport pandas as pd\nemissions_data = pd.read_csv('CO2_emissions.csv')\n# Replace 'CO2_emissions.csv' with the path to your dataset\nclassifier = pipeline('tabular-classification', model='datadmg/autotrain-test-news-44534112235')\npredictions = classifier(emissions_data)\n", 'api_call': "AutoModel.from_pretrained('datadmg/autotrain-test-news-44534112235')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Tabular Tabular Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Tabular Classification', 'api_name': 'datadmg/autotrain-test-news-44534112235', 'api_call': "AutoModel.from_pretrained('datadmg/autotrain-test-news-44534112235')", 'api_arguments': ['data'], 'python_environment_requirements': ['joblib', 'pandas'], 'example_code': "import json\nimport joblib\nimport pandas as pd\nmodel = joblib.load('model.joblib')\nconfig = json.load(open('config.json'))\nfeatures = config['features']\ndata = pd.read_csv('data.csv')\ndata = data[features]\ndata.columns = ['feat_' + str(col) for col in data.columns]\npredictions = model.predict(data)", 'performance': {'dataset': 'datadmg/autotrain-data-test-news', 'accuracy': 0.333}, 'description': 'This model is trained for Multi-class Classification on CO2 Emissions dataset. It uses the Hugging Face Transformers framework and is based on the extra_trees algorithm. The model is trained with AutoTrain and has a tabular classification functionality.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00815_classify_co2_emissions.py", line 50, in <module>
+    test_classify_co2_emissions()
+  File "output/hf-eval-data-v2/f00815_classify_co2_emissions.py", line 37, in test_classify_co2_emissions
+    test_data = pd.read_csv('test_data.csv')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'test_data.csv'

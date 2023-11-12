@@ -1,0 +1,55 @@
+2023-11-12 04:42:47.183283: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 04:42:47.227919: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 04:42:47.919967: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00591_get_answer.py", line 39, in <module>
+    print(test_get_answer())
+  File "./f00591_get_answer.py", line 28, in test_get_answer
+    assert get_answer(context, question) == 'a context'
+  File "./f00591_get_answer.py", line 19, in get_answer
+    qa_pipeline = pipeline('question-answering', model='philschmid/distilbert-onnx')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 824, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model philschmid/distilbert-onnx with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForQuestionAnswering'>, <class 'transformers.models.auto.modeling_tf_auto.TFAutoModelForQuestionAnswering'>, <class 'transformers.models.distilbert.modeling_distilbert.DistilBertForQuestionAnswering'>, <class 'transformers.models.distilbert.modeling_tf_distilbert.TFDistilBertForQuestionAnswering'>). See the original errors:
+
+while loading with AutoModelForQuestionAnswering, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2834, in from_pretrained
+    raise EnvironmentError(
+OSError: philschmid/distilbert-onnx does not appear to have a file named pytorch_model.bin, tf_model.h5, model.ckpt or flax_model.msgpack.
+
+while loading with TFAutoModelForQuestionAnswering, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2826, in from_pretrained
+    raise EnvironmentError(
+OSError: philschmid/distilbert-onnx does not appear to have a file named pytorch_model.bin, tf_model.h5 or model.ckpt
+
+while loading with DistilBertForQuestionAnswering, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2834, in from_pretrained
+    raise EnvironmentError(
+OSError: philschmid/distilbert-onnx does not appear to have a file named pytorch_model.bin, tf_model.h5, model.ckpt or flax_model.msgpack.
+
+while loading with TFDistilBertForQuestionAnswering, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2826, in from_pretrained
+    raise EnvironmentError(
+OSError: philschmid/distilbert-onnx does not appear to have a file named pytorch_model.bin, tf_model.h5 or model.ckpt
+
+
+

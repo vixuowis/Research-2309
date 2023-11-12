@@ -1,0 +1,13 @@
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Traceback (most recent call last):
+  File "./f00769_detect_emotion.py", line 40, in <module>
+    test_detect_emotion()
+  File "./f00769_detect_emotion.py", line 33, in test_detect_emotion
+    assert detect_emotion('I love this!')[0]['label'] in ['anger', 'disgust', 'fear', 'joy', 'neutrality', 'sadness', 'surprise']
+  File "./f00769_detect_emotion.py", line 21, in detect_emotion
+    emotion_detector = pipeline('sentiment-analysis', model='michellejieli/emotion_text_classifier')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 870, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 220, in infer_framework_load_model
+    raise RuntimeError(
+RuntimeError: At least one of TensorFlow 2.0 or PyTorch should be installed. To install TensorFlow 2.0, read the instructions at https://www.tensorflow.org/install/ To install PyTorch, read the instructions at https://pytorch.org/.

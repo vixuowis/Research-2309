@@ -1,0 +1,16 @@
+2023-11-12 08:36:31.876874: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 08:36:31.923634: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 08:36:32.579509: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/pyannote/audio/core/io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch_audiomentations/utils/io.py:27: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+Traceback (most recent call last):
+  File "./f00708_detect_voice_activity.py", line 39, in <module>
+    test_detect_voice_activity()
+  File "./f00708_detect_voice_activity.py", line 32, in test_detect_voice_activity
+    speech_segments = detect_voice_activity('sample.wav')
+  File "./f00708_detect_voice_activity.py", line 18, in detect_voice_activity
+    output = pipeline(audio_file)
+TypeError: 'NoneType' object is not callable

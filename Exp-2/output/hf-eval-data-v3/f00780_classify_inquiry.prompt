@@ -1,0 +1,22 @@
+{'code': '###Instruction: We have received a customer inquiry. Help us categorize the inquiry into one of the following categories: "sales", "technical support", or "billing".\n###Input: "I am experiencing difficulty with the installation process of your software."\n###Output: <<<domain>>>: Natural Language Processing Zero-Shot Classification\n<<<api_call>>>: XLMRobertaForSequenceClassification.from_pretrained(\'joeddav/xlm-roberta-large-xnli\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. First, import the necessary class XLMRobertaForSequenceClassification from Transformers package.\n2. Load the pre-trained model \'joeddav/xlm-roberta-large-xnli\'. This model is designed for zero-shot text classification tasks in multiple languages.\n3. Define the candidate labels ("sales", "technical support", "billing") to categorize the customer inquiry.\n4. Use the model to classify the given inquiry into one of the categories.\n5. Return the most relevant category.\n<<<code>>>: from transformers import XLMRobertaForSequenceClassification\nclassifier = XLMRobertaForSequenceClassification.from_pretrained(\'joeddav/xlm-roberta-large-xnli\')\ninquiry = "I am experiencing difficulty with the installation process of your software."\ncandidate_labels = ["sales", "technical support", "billing"]\nhypothesis_template = \'The inquiry is related to {}.\'\ncategory = classifier(inquiry, candidate_labels, hypothesis_template=hypothesis_template)\n', 'api_call': "XLMRobertaForSequenceClassification.from_pretrained('joeddav/xlm-roberta-large-xnli')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Zero-Shot Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Zero-Shot Classification', 'api_name': 'joeddav/xlm-roberta-large-xnli', 'api_call': "XLMRobertaForSequenceClassification.from_pretrained('joeddav/xlm-roberta-large-xnli')", 'api_arguments': ['sequence', 'candidate_labels', 'hypothesis_template'], 'python_environment_requirements': ['transformers'], 'example_code': "sequence_to_classify = '¿A quién vas a votar en 2020?'\ncandidate_labels = ['Europa', 'salud pública', 'política']\nhypothesis_template = 'Este ejemplo es {}.'\nclassifier(sequence_to_classify, candidate_labels, hypothesis_template=hypothesis_template)", 'performance': {'dataset': {'xnli': '56.6k', 'multi_nli': '8.73k'}, 'accuracy': 'Not specified'}, 'description': 'This model takes xlm-roberta-large and fine-tunes it on a combination of NLI data in 15 languages. It is intended to be used for zero-shot text classification, such as with the Hugging Face ZeroShotClassificationPipeline.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00780_classify_inquiry.py", line 34, in <module>
+    test_classify_inquiry()
+  File "output/hf-eval-data-v2/f00780_classify_inquiry.py", line 30, in test_classify_inquiry
+    assert classify_inquiry(test_inquiry) == expected_result
+  File "output/hf-eval-data-v2/f00780_classify_inquiry.py", line 17, in classify_inquiry
+    classifier = pipeline('zero-shot-classification', model='joeddav/xlm-roberta-large-xnli')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--joeddav--xlm-roberta-large-xnli'

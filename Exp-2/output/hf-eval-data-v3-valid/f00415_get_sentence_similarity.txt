@@ -1,0 +1,4 @@
+sentence-transformers
+transformers
+numpy
+scikit-learn

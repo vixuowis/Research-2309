@@ -1,0 +1,30 @@
+2023-11-12 00:33:11.781602: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 00:33:11.824045: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 00:33:12.482877: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/pyannote/audio/core/io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/torch_audiomentations/utils/io.py:27: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+Traceback (most recent call last):
+  File "./f00435_perform_speaker_diarization.py", line 26, in perform_speaker_diarization
+    raise FileNotFoundError(f"{audio_file} does not exist.")
+FileNotFoundError: valid_audio_file.wav does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00435_perform_speaker_diarization.py", line 48, in test_perform_speaker_diarization
+    perform_speaker_diarization('valid_audio_file.wav', 'output_audio.rttm')
+  File "./f00435_perform_speaker_diarization.py", line 38, in perform_speaker_diarization
+    raise Exception(f"Error in performing speaker diarization: {str(e)}")
+Exception: Error in performing speaker diarization: valid_audio_file.wav does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00435_perform_speaker_diarization.py", line 70, in <module>
+    print(test_perform_speaker_diarization())
+  File "./f00435_perform_speaker_diarization.py", line 50, in test_perform_speaker_diarization
+    assert False, f"Test case 1 failed: {str(e)}"
+AssertionError: Test case 1 failed: Error in performing speaker diarization: valid_audio_file.wav does not exist.

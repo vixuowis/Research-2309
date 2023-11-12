@@ -1,0 +1,48 @@
+{'code': "###Instruction: We are building an app that simulates Pokemon battles. Can you help us predict the HP of a Pokemon given its input attributes?\n###Output: <<<domain>>>: Tabular Tabular Regression\n<<<api_call>>>: pipeline('regression', model='julien-c/pokemon-predict-hp')\n<<<api_provider>>>: Hugging Face\n<<<explanation>>>:1. We first import the pipeline function from the transformers library.\n2. We then create a regression model using the pipeline function and specify the model 'julien-c/pokemon-predict-hp' to be loaded. This model is trained to predict the HP of a Pokemon based on its attributes.\n3. We can then use this model to predict the HP of a given Pokemon by providing its attributes as input data. The model will return a predicted HP value.\n<<<code>>>: from transformers import pipeline\nhp_predictor = pipeline('regression', model='julien-c/pokemon-predict-hp')\n# Replace 'input_data' with a dictionary containing the Pokemon attributes\npredicted_hp = hp_predictor(input_data)[0]['score']\n", 'api_call': "pipeline('regression', model='julien-c/pokemon-predict-hp')", 'provider': 'Hugging Face', 'api_data': {'domain': 'Tabular Tabular Regression', 'framework': 'Hugging Face', 'functionality': 'Predicting Pokemon HP', 'api_name': 'julien-c/pokemon-predict-hp', 'api_call': "pipeline('regression', model='julien-c/pokemon-predict-hp')", 'api_arguments': 'input_data', 'python_environment_requirements': 'transformers', 'example_code': '', 'performance': {'dataset': 'julien-c/kaggle-rounakbanik-pokemon', 'accuracy': {'mean_absolute_error': 15.909, 'model_loss': 647.605}}, 'description': 'A tabular regression model trained on the julien-c/kaggle-rounakbanik-pokemon dataset to predict the HP of Pokemon.'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/julien-c/pokemon-predict-hp/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 271, in hf_raise_for_status
+    raise EntryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.EntryNotFoundError: 404 Client Error. (Request ID: Root=1-654da678-136cba742c1318ce6f326ccf;ce6e039e-dbed-4204-bb20-1d1ae355a0c5)
+
+Entry Not Found for url: https://huggingface.co/julien-c/pokemon-predict-hp/resolve/main/config.json.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00632_predict_pokemon_hp.py", line 37, in <module>
+    test_predict_pokemon_hp()
+  File "output/hf-eval-data-v2/f00632_predict_pokemon_hp.py", line 29, in test_predict_pokemon_hp
+    predicted_hp = predict_pokemon_hp(test_data)
+  File "output/hf-eval-data-v2/f00632_predict_pokemon_hp.py", line 17, in predict_pokemon_hp
+    hp_predictor = pipeline('regression', model='julien-c/pokemon-predict-hp')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 741, in pipeline
+    config = AutoConfig.from_pretrained(model, _from_pipeline=task, **hub_kwargs, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 1023, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 620, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 675, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 480, in cached_file
+    raise EnvironmentError(
+OSError: julien-c/pokemon-predict-hp does not appear to have a file named config.json. Checkout 'https://huggingface.co/julien-c/pokemon-predict-hp/main' for available files.

@@ -1,0 +1,3 @@
+fairseq
+torchaudio
+huggingface_hub

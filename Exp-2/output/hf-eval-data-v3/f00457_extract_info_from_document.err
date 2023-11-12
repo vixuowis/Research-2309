@@ -1,0 +1,20 @@
+2023-11-12 00:50:41.892870: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-12 00:50:41.952473: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-12 00:50:42.842385: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Downloading (…)olve/main/vocab.json:   0%|                                                                         | 0.00/14.6k [00:00<?, ?B/s]Downloading (…)olve/main/vocab.json: 100%|█████████████████████████████████████████████████████████████████| 14.6k/14.6k [00:00<00:00, 786kB/s]
+Downloading (…)olve/main/merges.txt:   0%|                                                                         | 0.00/4.54k [00:00<?, ?B/s]Downloading (…)olve/main/merges.txt: 100%|█████████████████████████████████████████████████████████████████| 4.54k/4.54k [00:00<00:00, 378kB/s]
+Downloading (…)cial_tokens_map.json:   0%|                                                                           | 0.00/957 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|█████████████████████████████████████████████████████████████████████| 957/957 [00:00<00:00, 407kB/s]
+Downloading (…)okenizer_config.json:   0%|                                                                         | 0.00/1.60k [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|█████████████████████████████████████████████████████████████████| 1.60k/1.60k [00:00<00:00, 713kB/s]
+Downloading (…)lve/main/config.json:   0%|                                                                         | 0.00/1.02k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|█████████████████████████████████████████████████████████████████| 1.02k/1.02k [00:00<00:00, 456kB/s]
+Downloading pytorch_model.bin:   0%|                                                                                | 0.00/459k [00:00<?, ?B/s]Downloading pytorch_model.bin: 100%|████████████████████████████████████████████████████████████████████████| 459k/459k [00:00<00:00, 57.8MB/s]
+Traceback (most recent call last):
+  File "./f00457_extract_info_from_document.py", line 48, in <module>
+    test_extract_info_from_document()
+  File "./f00457_extract_info_from_document.py", line 38, in test_extract_info_from_document
+    answers = extract_info_from_document(document_path, questions)
+  File "./f00457_extract_info_from_document.py", line 24, in extract_info_from_document
+    input_data = tokenizer(question, document_path, return_tensors='pt')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/layoutlmv3/tokenization_layoutlmv3.py", line 615, in __call__
+    raise ValueError(
+ValueError: Words must be of type `List[str]` (single pretokenized example), or `List[List[str]]` (batch of pretokenized examples).

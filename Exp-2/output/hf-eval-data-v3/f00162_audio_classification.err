@@ -1,0 +1,4 @@
+  File "./f00162_audio_classification.py", line 24
+    print(f'Speaker identity for {audio_file['file']}: {speaker_identity}')
+                                              ^
+SyntaxError: invalid syntax

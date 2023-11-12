@@ -1,0 +1,36 @@
+Couldn't connect to the Hub: 503 Server Error: Service Unavailable for url: https://huggingface.co/api/models/damo-vilab/text-to-video-ms-1.7b-legacy.
+Will try to load from local cache.
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://huggingface.co/api/models/damo-vilab/text-to-video-ms-1.7b-legacy
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 1637, in download
+    info = model_info(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/hf_api.py", line 1698, in model_info
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 303, in hf_raise_for_status
+    raise HfHubHTTPError(str(e), response=response) from e
+huggingface_hub.utils._errors.HfHubHTTPError: 503 Server Error: Service Unavailable for url: https://huggingface.co/api/models/damo-vilab/text-to-video-ms-1.7b-legacy
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./f00266_generate_video_from_text.py", line 41, in <module>
+    test_generate_video_from_text()
+  File "./f00266_generate_video_from_text.py", line 34, in test_generate_video_from_text
+    video_path = generate_video_from_text(prompt)
+  File "./f00266_generate_video_from_text.py", line 20, in generate_video_from_text
+    pipe = DiffusionPipeline.from_pretrained('damo-vilab/text-to-video-ms-1.7b-legacy', torch_dtype=torch.float16)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 1078, in from_pretrained
+    cached_folder = cls.download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 1891, in download
+    raise EnvironmentError(
+OSError: Cannot load model damo-vilab/text-to-video-ms-1.7b-legacy: model is not cached locally and an error occured while trying to fetch metadata from the Hub. Please check out the root cause in the stacktrace above.

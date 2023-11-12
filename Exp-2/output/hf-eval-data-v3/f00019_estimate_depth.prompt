@@ -1,0 +1,52 @@
+{'code': "###Instruction: The client is a real estate company working on virtual tours. We need to help them estimate depth in images of houses.\n###Output: <<<domain>>>: Computer Vision Depth Estimation\n<<<api_call>>>: pipeline('depth-estimation', model='sayakpaul/glpn-kitti-finetuned-diode-221214-123047')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the pipeline function from the transformers library. \n2. Use the pipeline function to create a depth estimation model with the 'sayakpaul/glpn-kitti-finetuned-diode-221214-123047' model.\n3. This model can be used for depth estimation in images of houses on virtual tours.\n4. The depth estimation pipeline will output depth values for each pixel in the input image which can be visualized to improve the perception of depth in virtual tours.\n<<<code>>>: from transformers import pipeline\ndepth_estimator = pipeline('depth-estimation', model='sayakpaul/glpn-kitti-finetuned-diode-221214-123047')\ndepth_map = depth_estimator(image_path)\n", 'api_call': "pipeline('depth-estimation', model='sayakpaul/glpn-kitti-finetuned-diode-221214-123047')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Depth Estimation', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'glpn-kitti-finetuned-diode-221214-123047', 'api_call': "pipeline('depth-estimation', model='sayakpaul/glpn-kitti-finetuned-diode-221214-123047')", 'api_arguments': [], 'python_environment_requirements': ['transformers==4.24.0', 'torch==1.12.1+cu116', 'tokenizers==0.13.2'], 'example_code': '', 'performance': {'dataset': 'diode-subset', 'accuracy': {'Loss': 0.3497, 'Mae': 0.2847, 'Rmse': 0.3977, 'Abs Rel': 0.3477, 'Log Mae': 0.1203, 'Log Rmse': 0.1726, 'Delta1': 0.5217, 'Delta2': 0.8246, 'Delta3': 0.9436}}, 'description': 'This model is a fine-tuned version of vinvino02/glpn-kitti on the diode-subset dataset. It is used for depth estimation in computer vision applications.'}}
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(38943276 bytes read, 206269117 more expected)', IncompleteRead(38943276 bytes read, 206269117 more expected))
+
+while loading with GLPNForDepthEstimation, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(55661813 bytes read, 189550580 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(55661813 bytes read, 189550580 more expected)', IncompleteRead(55661813 bytes read, 189550580 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(55661813 bytes read, 189550580 more expected)', IncompleteRead(55661813 bytes read, 189550580 more expected))
+
+
+

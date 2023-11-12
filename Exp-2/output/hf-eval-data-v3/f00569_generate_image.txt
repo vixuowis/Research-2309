@@ -1,0 +1,4 @@
+torch
+pathlib
+controlnet_aux==0.3.0
+diffusers

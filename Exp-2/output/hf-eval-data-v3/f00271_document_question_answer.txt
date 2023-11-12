@@ -1,0 +1,5 @@
+transformers
+torch
+datasets
+tokenizers
+detectron2

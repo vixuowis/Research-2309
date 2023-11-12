@@ -1,0 +1,4 @@
+  File "./f00557_document_question_answer.py", line 34
+    scanned_document_text = 'This document is about the importance of AI in today's world.'
+                                                                                  ^
+SyntaxError: invalid syntax

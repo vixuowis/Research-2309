@@ -1,0 +1,22 @@
+{'code': "###Instruction: Can you help me find the best model to fill in the gap in my legal document? I want a smaller model with higher efficiency but maintains a high level of accuracy.\n###Output: <<<domain>>>: Natural Language Processing Fill-Mask\n<<<api_call>>>: AutoModel.from_pretrained('nlpaueb/legal-bert-small-uncased')\n<<<api_provider>>>: Transformers\n<<<explanation>>>: 1. Based on your requirements, the 'nlpaueb/legal-bert-small-uncased' model is a suitable choice. It's designed specifically for the legal domain and is a lightweight version of the BERT-BASE model, providing higher efficiency while maintaining a high level of accuracy.\n2. Import the necessary classes AutoTokenizer and AutoModel from the transformers library.\n3. Load the pre-trained tokenizer and model using the from_pretrained method and the model name 'nlpaueb/legal-bert-small-uncased'.\n4. After loading the model, you can use it to fill in the gaps in your legal document by tokenizing the input and generating predictions based on the context.\n<<<code>>>: from transformers import AutoTokenizer, AutoModel\ntokenizer = AutoTokenizer.from_pretrained('nlpaueb/legal-bert-small-uncased')\nmodel = AutoModel.from_pretrained('nlpaueb/legal-bert-small-uncased')\n", 'api_call': "AutoModel.from_pretrained('nlpaueb/legal-bert-small-uncased')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Fill-Mask', 'framework': 'Transformers', 'functionality': 'Fill-Mask', 'api_name': 'nlpaueb/legal-bert-small-uncased', 'api_call': "AutoModel.from_pretrained('nlpaueb/legal-bert-small-uncased')", 'api_arguments': {'pretrained_model_name_or_path': 'nlpaueb/legal-bert-small-uncased'}, 'python_environment_requirements': {'transformers': 'AutoTokenizer, AutoModel'}, 'example_code': "from transformers import AutoTokenizer, AutoModel\ntokenizer = AutoTokenizer.from_pretrained('nlpaueb/legal-bert-small-uncased')\nmodel = AutoModel.from_pretrained('nlpaueb/legal-bert-small-uncased')", 'performance': {'dataset': 'Legal Corpora', 'accuracy': 'Comparable to larger models'}, 'description': 'LEGAL-BERT is a family of BERT models for the legal domain, intended to assist legal NLP research, computational law, and legal technology applications. This is the light-weight version of BERT-BASE (33% the size of BERT-BASE) pre-trained from scratch on legal data, which achieves comparable performance to larger models, while being much more efficient (approximately 4 times faster) with a smaller environmental footprint.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00608_fill_mask_with_legal_bert.py", line 38, in <module>
+    test_fill_mask_with_legal_bert()
+  File "output/hf-eval-data-v2/f00608_fill_mask_with_legal_bert.py", line 34, in test_fill_mask_with_legal_bert
+    assert fill_mask_with_legal_bert(test_text) == expected_output
+  File "output/hf-eval-data-v2/f00608_fill_mask_with_legal_bert.py", line 18, in fill_mask_with_legal_bert
+    tokenizer = AutoTokenizer.from_pretrained('nlpaueb/legal-bert-small-uncased')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 686, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 519, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--nlpaueb--legal-bert-small-uncased'

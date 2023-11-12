@@ -1,0 +1,29 @@
+{'code': "###Instruction: Our client is a legal firm that needs assistance in extracting specific information from a large number of legal documents. Automate the process of answering questions related to these documents.\n###Output: <<<domain>>>: Multimodal Document Question Answer\n<<<api_call>>>: pipeline('question-answering', model='Sayantan1993/layoutlmv2-base-uncased_finetuned_docvqa')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the pipeline function from the transformers library provided by Hugging Face.\n2. Use the pipeline function to create a question-answering model.\n3. Specify the model 'Sayantan1993/layoutlmv2-base-uncased_finetuned_docvqa' to be loaded. This model is trained for document question answering tasks, and it has been fine-tuned on the DocVQA dataset.\n4. The created model can be used to analyze the legal documents and answer specific questions related to those documents. The provided context will be the text from the legal documents and the question will concentrate on the required information.\n<<<code>>>: from transformers import pipeline\ndoc_qa = pipeline('question-answering', model='Sayantan1993/layoutlmv2-base-uncased_finetuned_docvqa')\nquestion = 'What is the contract termination date?'\ncontext = 'This contract is valid for a period of two years, commencing on the 1st of January 2020 and terminating on the 31st of December 2021.'\nanswer = doc_qa(question=question, context=context)\n", 'api_call': "pipeline('question-answering', model='Sayantan1993/layoutlmv2-base-uncased_finetuned_docvqa')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Document Question Answer', 'framework': 'Hugging Face Transformers', 'functionality': 'Document Question Answering', 'api_name': 'layoutlmv2-base-uncased_finetuned_docvqa', 'api_call': "pipeline('question-answering', model='Sayantan1993/layoutlmv2-base-uncased_finetuned_docvqa')", 'api_arguments': "{'question': 'your_question', 'context': 'your_context'}", 'python_environment_requirements': 'transformers', 'example_code': '', 'performance': {'dataset': '', 'accuracy': ''}, 'description': 'A model for document question answering, fine-tuned on the DocVQA dataset using LayoutLMv2-base-uncased.'}}
+
+
+
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00099_extract_legal_info.py", line 37, in <module>
+    test_extract_legal_info()
+  File "output/hf-eval-data-v2/f00099_extract_legal_info.py", line 33, in test_extract_legal_info
+    assert extract_legal_info(question, context) == expected_answer
+  File "output/hf-eval-data-v2/f00099_extract_legal_info.py", line 19, in extract_legal_info
+    doc_qa = pipeline('question-answering', model='Sayantan1993/layoutlmv2-base-uncased_finetuned_docvqa')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 824, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2954, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/layoutlmv2/modeling_layoutlmv2.py", line 1292, in __init__
+    self.layoutlmv2 = LayoutLMv2Model(config)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/layoutlmv2/modeling_layoutlmv2.py", line 715, in __init__
+    requires_backends(self, "detectron2")
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/import_utils.py", line 1112, in requires_backends
+    raise ImportError("".join(failed))
+ImportError: 
+LayoutLMv2Model requires the detectron2 library but it was not found in your environment. Checkout the instructions on the
+installation page: https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+

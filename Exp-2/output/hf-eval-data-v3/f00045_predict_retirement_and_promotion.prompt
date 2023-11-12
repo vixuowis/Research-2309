@@ -1,0 +1,50 @@
+{'code': '###Instruction: Gather information about annual income and age demographics of employees to predict retirement patterns. Make sure to identify top employees for potential promotions.\n###Output: <<<domain>>>: Natural Language Processing Table Question Answering\n<<<api_call>>>: TapasForQuestionAnswering.from_pretrained(\'google/tapas-large-finetuned-sqa\')\n<<<api_provider>>>: Transformers\n<<<explanation>>>: 1. Import the required classes, such as TapasForQuestionAnswering, TapasTokenizer from the transformers library.\n2. Load the pretrained TAPAS model, \'google/tapas-large-finetuned-sqa\', which is specifically designed for table question answering tasks.\n3. Load the table containing employee data, including annual income and age demographics.\n4. Use the model to answer questions about retirement patterns, such as determining the average income and age for employees close to retirement and identifying top-performing candidates for potential promotions.\n5. Leverage the model\'s capabilities to provide insights and facilitate decision-making based on the gathered data.\n<<<code>>>: from transformers import TapasForQuestionAnswering, TapasTokenizer\nmodel = TapasForQuestionAnswering.from_pretrained(\'google/tapas-large-finetuned-sqa\')\ntokenizer = TapasTokenizer.from_pretrained(\'google/tapas-large-finetuned-sqa\')\nemployee_table = "employee_data.csv"  # path to the CSV file containing employee data\nretirement_question = "What is the average annual income and age of employees who are close to retirement?"\npromotion_question = "Who are the top 5 employees with the highest performance ratings?"\ninputs_retirement = tokenizer(table=employee_table, queries=retirement_question, return_tensors="pt")\ninputs_promotion = tokenizer(table=employee_table, queries=promotion_question, return_tensors="pt")\nretirement_output = model(**inputs_retirement)\npromotion_output = model(**inputs_promotion)\nretirement_answers = tokenizer.convert_logits_to_answers(**retirement_output)\npromotion_answers = tokenizer.convert_logits_to_answers(**promotion_output)', 'api_call': "TapasForQuestionAnswering.from_pretrained('google/tapas-large-finetuned-sqa')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Table Question Answering', 'framework': 'Transformers', 'functionality': 'Table Question Answering', 'api_name': 'google/tapas-large-finetuned-sqa', 'api_call': "TapasForQuestionAnswering.from_pretrained('google/tapas-large-finetuned-sqa')", 'api_arguments': ['question', 'table'], 'python_environment_requirements': ['transformers'], 'example_code': 'https://huggingface.co/google/tapas-large-finetuned-sqa', 'performance': {'dataset': 'msr_sqa', 'accuracy': 0.7289}, 'description': 'TAPAS large model fine-tuned on Sequential Question Answering (SQA). This model was pre-trained on MLM and an additional step which the authors call intermediate pre-training, and then fine-tuned on SQA. It uses relative position embeddings (i.e. resetting the position index at every cell of the table).'}}
+
+
+
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 710, in _error_catcher
+    yield
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(13377852 bytes read, 1333706811 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 940, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 911, in read
+    data = self._raw_read(amt)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 835, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/miniconda3/envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 727, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(13377852 bytes read, 1333706811 more expected)', IncompleteRead(13377852 bytes read, 1333706811 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00045_predict_retirement_and_promotion.py", line 43, in <module>
+    test_predict_retirement_and_promotion()
+  File "output/hf-eval-data-v2/f00045_predict_retirement_and_promotion.py", line 37, in test_predict_retirement_and_promotion
+    retirement_answers, promotion_answers = predict_retirement_and_promotion(employee_table)
+  File "output/hf-eval-data-v2/f00045_predict_retirement_and_promotion.py", line 17, in predict_retirement_and_promotion
+    model = TapasForQuestionAnswering.from_pretrained('google/tapas-large-finetuned-sqa')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 551, in http_get
+    for chunk in r.iter_content(chunk_size=10 * 1024 * 1024):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(13377852 bytes read, 1333706811 more expected)', IncompleteRead(13377852 bytes read, 1333706811 more expected))
+

@@ -1,0 +1,2 @@
+Error: Antheia/Hanna does not appear to have a file named config.json. Checkout 'https://huggingface.co/Antheia/Hanna/main' for available files.
+Test failed: The function does not return a pipeline object.

@@ -1,0 +1,47 @@
+{'code': '###Instruction: Implement an optical text recognition system for documents that can answer a simple question about the document\'s content.\n###Output: <<<domain>>>: Multimodal Document Question Answer\n<<<api_call>>>: AutoModelForTokenClassification.from_pretrained(\'DataIntelligenceTeam/eurocorpV4\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import necessary libraries: AutoTokenizer and AutoModelForTokenClassification from transformers.\n2. Load the pretrained model \'DataIntelligenceTeam/eurocorpV4\' using the AutoModelForTokenClassification.from_pretrained method.\n3. Load the tokenizer associated with the model using AutoTokenizer.from_pretrained.\n4. Tokenize the document text using the tokenizer.\n5. Pass the tokenized text through the model for token classification.\n6. Extract and organize the classified tokens to answer the specific question.\n<<<code>>>: from transformers import AutoTokenizer, AutoModelForTokenClassification\nmodel = AutoModelForTokenClassification.from_pretrained(\'DataIntelligenceTeam/eurocorpV4\')\ntokenizer = AutoTokenizer.from_pretrained(\'DataIntelligenceTeam/eurocorpV4\')\ninputs = tokenizer(document_text, return_tensors="pt", padding=True, truncation=True, max_length=512)\noutputs = model(**inputs)\ntoken_classification_results = outputs.logits.argmax(-1).numpy()', 'api_call': "AutoModelForTokenClassification.from_pretrained('DataIntelligenceTeam/eurocorpV4')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Multimodal Document Question Answer', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'DataIntelligenceTeam/eurocorpV4', 'api_call': "AutoModelForTokenClassification.from_pretrained('DataIntelligenceTeam/eurocorpV4')", 'api_arguments': '', 'python_environment_requirements': 'transformers>=4.26.0.dev0, torch>=1.12.1+cu113, datasets>=2.2.2, tokenizers>=0.13.2', 'example_code': '', 'performance': {'dataset': 'sroie', 'accuracy': 0.982}, 'description': 'This model is a fine-tuned version of microsoft/layoutlmv3-large on the sroie dataset. It achieves the following results on the evaluation set: Loss: 0.1239, Precision: 0.9548, Recall: 0.9602, F1: 0.9575, Accuracy: 0.9819'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/DataIntelligenceTeam/eurocorpV4/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1344, in hf_hub_download
+    raise head_call_error
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 293, in hf_raise_for_status
+    raise RepositoryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-654d7fb6-28956c7d0e902feb11ad4d53;09f594c2-941f-4745-84bd-e3a351a30099)
+
+Repository Not Found for url: https://huggingface.co/DataIntelligenceTeam/eurocorpV4/resolve/main/config.json.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00269_document_question_answer.py", line 38, in <module>
+    test_document_question_answer()
+  File "output/hf-eval-data-v2/f00269_document_question_answer.py", line 33, in test_document_question_answer
+    result = document_question_answer(sample_document_text)
+  File "output/hf-eval-data-v2/f00269_document_question_answer.py", line 18, in document_question_answer
+    model = AutoModelForTokenClassification.from_pretrained('DataIntelligenceTeam/eurocorpV4')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 494, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 450, in cached_file
+    raise EnvironmentError(
+OSError: DataIntelligenceTeam/eurocorpV4 is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`

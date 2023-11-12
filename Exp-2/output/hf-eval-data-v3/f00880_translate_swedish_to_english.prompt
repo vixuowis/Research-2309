@@ -1,0 +1,20 @@
+{'code': '###Instruction: Our Customer is a Swedish travel magazine with an English version. Translate this Swedish text to English for them: "Stockholm är Sveriges huvudstad och största stad. Den har en rik historia och erbjuder många kulturella och historiska sevärdheter."\n###Input: "Stockholm är Sveriges huvudstad och största stad. Den har en rik historia och erbjuder många kulturella och historiska sevärdheter."\n###Output: Stockholm is the capital and largest city of Sweden. It has a rich history and offers many cultural and historical attractions.', 'api_call': "AutoModel.from_pretrained('Helsinki-NLP/opus-mt-sv-en').", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Translation', 'framework': 'Hugging Face Transformers', 'functionality': 'Translation', 'api_name': 'opus-mt-sv-en', 'api_call': "AutoModel.from_pretrained('Helsinki-NLP/opus-mt-sv-en').", 'api_arguments': ['inputs'], 'python_environment_requirements': ['transformers'], 'example_code': '', 'performance': {'dataset': 'Tatoeba.sv.en', 'accuracy': 'BLEU: 64.5, chr-F: 0.763'}, 'description': 'A Swedish to English translation model trained on the OPUS dataset using the transformer-align architecture. The model is pre-processed with normalization and SentencePiece.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00880_translate_swedish_to_english.py", line 36, in <module>
+    test_translate_swedish_to_english()
+  File "output/hf-eval-data-v2/f00880_translate_swedish_to_english.py", line 32, in test_translate_swedish_to_english
+    assert translate_swedish_to_english(input_text) == expected_output
+  File "output/hf-eval-data-v2/f00880_translate_swedish_to_english.py", line 17, in translate_swedish_to_english
+    model = AutoModel.from_pretrained('Helsinki-NLP/opus-mt-sv-en')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 494, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--Helsinki-NLP--opus-mt-sv-en'

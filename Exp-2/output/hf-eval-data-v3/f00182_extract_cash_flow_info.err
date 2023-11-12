@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "./f00182_extract_cash_flow_info.py", line 3, in <module>
+    from transformers import LayoutXLMForQuestionAnswering
+ImportError: cannot import name 'LayoutXLMForQuestionAnswering' from 'transformers' (/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/__init__.py)

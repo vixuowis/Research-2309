@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00779_extract_answer.py", line 42, in <module>
+    test_extract_answer()
+  File "./f00779_extract_answer.py", line 34, in test_extract_answer
+    assert extract_answer(question, context) == 'John Doe'
+AssertionError

@@ -1,0 +1,20 @@
+{'code': "###Instruction: Our company is growing and expanding into multiple countries. We need a solution for translating English sentences to German to ensure effective communication.\n###Output: <<<domain>>>: Natural Language Processing Text2Text Generation\n<<<api_call>>>: T5ForConditionalGeneration.from_pretrained('google/flan-t5-xl')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. We'll first import the necessary libraries by importing T5Tokenizer and T5ForConditionalGeneration from the transformers package.\n2. Load the pre-trained 'google/flan-t5-xl' model using the from_pretrained method. This model is capable of performing a wide range of tasks including translation.\n3. Use the T5Tokenizer to tokenize your given English sentence into appropriate tokens, ready for the model to consume.\n4. Using the T5ForConditionalGeneration model, generate the translated tokens for the input English sentence.\n5. Lastly, decode the translated tokens back into a readable German sentence.\n<<<code>>>: from transformers import T5Tokenizer, T5ForConditionalGeneration\ntokenizer = T5Tokenizer.from_pretrained('google/flan-t5-xl')\nmodel = T5ForConditionalGeneration.from_pretrained('google/flan-t5-xl')\ninput_text = 'translate English to German: How old are you?'\ninput_ids = tokenizer(input_text, return_tensors='pt').input_ids\noutputs = model.generate(input_ids)\nprint(tokenizer.decode(outputs[0]))", 'api_call': "T5ForConditionalGeneration.from_pretrained('google/flan-t5-xl')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text2Text Generation', 'framework': 'Hugging Face Transformers', 'functionality': 'Text Generation', 'api_name': 'google/flan-t5-xl', 'api_call': "T5ForConditionalGeneration.from_pretrained('google/flan-t5-xl')", 'api_arguments': ['input_text'], 'python_environment_requirements': ['transformers'], 'example_code': "from transformers import T5Tokenizer, T5ForConditionalGeneration\ntokenizer = T5Tokenizer.from_pretrained('google/flan-t5-xl')\nmodel = T5ForConditionalGeneration.from_pretrained('google/flan-t5-xl')\ninput_text = 'translate English to German: How old are you?'\ninput_ids = tokenizer(input_text, return_tensors='pt').input_ids\noutputs = model.generate(input_ids)\nprint(tokenizer.decode(outputs[0]))", 'performance': {'dataset': [{'name': 'MMLU', 'accuracy': '75.2%'}]}, 'description': 'FLAN-T5 XL is a large-scale language model fine-tuned on more than 1000 tasks covering multiple languages. It achieves state-of-the-art performance on several benchmarks and is designed for research on zero-shot and few-shot NLP tasks, such as reasoning, question answering, and understanding the limitations of current large language models.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00604_translate_english_to_german.py", line 35, in <module>
+    test_translate_english_to_german()
+  File "output/hf-eval-data-v2/f00604_translate_english_to_german.py", line 30, in test_translate_english_to_german
+    translated_text = translate_english_to_german(input_text)
+  File "output/hf-eval-data-v2/f00604_translate_english_to_german.py", line 17, in translate_english_to_german
+    tokenizer = T5Tokenizer.from_pretrained('google/flan-t5-xl')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1813, in from_pretrained
+    resolved_vocab_files[file_id] = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--google--flan-t5-xl'

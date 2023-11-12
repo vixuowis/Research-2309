@@ -1,0 +1,10 @@
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "./f00246_predict_emotion_hubert.py", line 57, in <module>
+    test_predict_emotion_hubert()
+  File "./f00246_predict_emotion_hubert.py", line 46, in test_predict_emotion_hubert
+    result = predict_emotion_hubert('test_audio.mp3')
+  File "./f00246_predict_emotion_hubert.py", line 19, in predict_emotion_hubert
+    from transformers import HubertForSpeechClassification
+ImportError: cannot import name 'HubertForSpeechClassification' from 'transformers' (/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/__init__.py)

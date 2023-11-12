@@ -1,0 +1,48 @@
+{'code': "###Instruction: I want to analyze a medical image to find out if it's an X-ray, an MRI scan, or a CT scan.\n###Output: <<<domain>>>: Multimodal Zero-Shot Image Classification\n<<<api_call>>>: pipeline('zero-shot-image-classification', model='microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224')\n<<<api_provider>>>: Hugging Face\n<<<explanation>>>: 1. Import the necessary libraries, which are 'pipeline' from transformers, as well as torch and torchvision.\n2. Use the 'pipeline' function to load the image classification model, 'microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224'. This model is specifically designed for biomedical images and utilizes a combination of text and image encoders.\n3. Specify the path to the medical image that you'd like to classify.\n4. Provide a list of possible class names corresponding to the types of scans (e.g., X-ray, MRI scan, CT scan).\n5. Execute the classifier on the image, and it will return the probabilities for each class. You can then select the class with the highest probability as the predicted class.\n<<<code>>>: from transformers import pipeline\nclip = pipeline('zero-shot-image-classification', model='microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224')\nimage = 'path/to/medical_image.png'\npossible_class_names = ['X-ray', 'MRI scan', 'CT scan']\nresult = clip(image, possible_class_names)", 'api_call': "pipeline('zero-shot-image-classification', model='microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224')", 'provider': 'Hugging Face', 'api_data': {'domain': 'Multimodal Zero-Shot Image Classification', 'framework': 'Hugging Face', 'functionality': 'Zero-Shot Image Classification', 'api_name': 'microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224', 'api_call': "pipeline('zero-shot-image-classification', model='microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224')", 'api_arguments': 'image, possible_class_names', 'python_environment_requirements': 'transformers, torch, torchvision', 'example_code': "from transformers import pipeline\nclip = pipeline('zero-shot-image-classification', model='microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224')\nimage = 'path/to/image.png'\npossible_class_names = ['class1', 'class2', 'class3']\nresult = clip(image, possible_class_names)", 'performance': {'dataset': 'PMC-15M', 'accuracy': 'State of the art'}, 'description': 'BiomedCLIP is a biomedical vision-language foundation model pretrained on PMC-15M, a dataset of 15 million figure-caption pairs extracted from biomedical research articles in PubMed Central, using contrastive learning. It uses PubMedBERT as the text encoder and Vision Transformer as the image encoder, with domain-specific adaptations. It can perform various vision-language processing (VLP) tasks such as cross-modal retrieval, image classification, and visual question answering.'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 271, in hf_raise_for_status
+    raise EntryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.EntryNotFoundError: 404 Client Error. (Request ID: Root=1-654ccbe1-66e0ce1f09595aa617ca1c74;7f4efcff-c303-4d5d-a93b-6f506930f4ea)
+
+Entry Not Found for url: https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/resolve/main/config.json.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00032_classify_medical_image.py", line 38, in <module>
+    test_classify_medical_image()
+  File "output/hf-eval-data-v2/f00032_classify_medical_image.py", line 30, in test_classify_medical_image
+    result = classify_medical_image(image_path, possible_class_names)
+  File "output/hf-eval-data-v2/f00032_classify_medical_image.py", line 18, in classify_medical_image
+    clip = pipeline('zero-shot-image-classification', model='microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 741, in pipeline
+    config = AutoConfig.from_pretrained(model, _from_pipeline=task, **hub_kwargs, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 1023, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 620, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 675, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 480, in cached_file
+    raise EnvironmentError(
+OSError: microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224 does not appear to have a file named config.json. Checkout 'https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/main' for available files.

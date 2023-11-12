@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00014_extract_total_amount.py", line 42, in <module>
+    test_extract_total_amount()
+  File "./f00014_extract_total_amount.py", line 36, in test_extract_total_amount
+    assert extract_total_amount(question, context1) == '$81.38'
+  File "./f00014_extract_total_amount.py", line 18, in extract_total_amount
+    model = AutoModelForDocumentQuestionAnswering.from_pretrained('impira/layoutlm-invoices')
+NameError: name 'AutoModelForDocumentQuestionAnswering' is not defined

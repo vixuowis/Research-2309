@@ -1,0 +1,33 @@
+{'code': '###Instruction: As a language teacher, I sometimes need help completing Dutch sentences with the most suitable word. Can you fill in the gaps?\n###Output: <<<domain>>>: Natural Language Processing Fill-Mask\n<<<api_call>>>: AutoModel.from_pretrained(\'GroNLP/bert-base-dutch-cased\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. We import the AutoTokenizer and AutoModel from the transformers library provided by Hugging Face.\n2. We use the \'GroNLP/bert-base-dutch-cased\' model, which is specifically designed for the Dutch language.\n3. The tokenizer is used to tokenize Dutch sentences while preserving the masked token. The masked token represents the missing word in the sentence.\n4. The model is used to predict the missing word (the masked token) based on the context of the Dutch sentence.\n5. The most suitable word suggested by the model can be used to complete the sentence.\n<<<code>>>: from transformers import AutoTokenizer, AutoModel\ntokenizer = AutoTokenizer.from_pretrained(\'GroNLP/bert-base-dutch-cased\')\nmodel = AutoModel.from_pretrained(\'GroNLP/bert-base-dutch-cased\')\ninput_sentence = "Hij ging naar de [MASK] om boodschappen te doen."\ninput_tokens = tokenizer(input_sentence, return_tensors=\'pt\')\noutputs = model(**input_tokens)\n', 'api_call': "AutoModel.from_pretrained('GroNLP/bert-base-dutch-cased')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Fill-Mask', 'framework': 'Transformers', 'functionality': 'Fill-Mask', 'api_name': 'GroNLP/bert-base-dutch-cased', 'api_call': "AutoModel.from_pretrained('GroNLP/bert-base-dutch-cased')", 'api_arguments': ['pretrained_model_name_or_path'], 'python_environment_requirements': ['transformers'], 'example_code': 'from transformers import AutoTokenizer, AutoModel, TFAutoModel\ntokenizer = AutoTokenizer.from_pretrained(GroNLP/bert-base-dutch-cased)\nmodel = AutoModel.from_pretrained(GroNLP/bert-base-dutch-cased)', 'performance': {'dataset': [{'name': 'CoNLL-2002', 'accuracy': '90.24'}, {'name': 'SoNaR-1', 'accuracy': '84.93'}, {'name': 'spaCy UD LassySmall', 'accuracy': '86.10'}]}, 'description': 'BERTje is a Dutch pre-trained BERT model developed at the University of Groningen.'}}
+
+
+
+
+
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 436.70 MB. The target location /root/autodl-tmp/.cache/huggingface/hub only has 0.39 MB free disk space.
+  warnings.warn(
+/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:980: UserWarning: Not enough free disk space to download the file. The expected file size is: 436.70 MB. The target location /root/autodl-tmp/.cache/huggingface/hub/models--GroNLP--bert-base-dutch-cased/blobs only has 0.39 MB free disk space.
+  warnings.warn(
+
+  File "output/hf-eval-data-v2/f00520_fill_mask_dutch_sentence.py", line 38, in <module>
+    test_fill_mask_dutch_sentence()
+  File "output/hf-eval-data-v2/f00520_fill_mask_dutch_sentence.py", line 34, in test_fill_mask_dutch_sentence
+    assert fill_mask_dutch_sentence(test_sentence) == expected_output
+  File "output/hf-eval-data-v2/f00520_fill_mask_dutch_sentence.py", line 18, in fill_mask_dutch_sentence
+    model = AutoModel.from_pretrained('GroNLP/bert-base-dutch-cased')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2773, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 554, in http_get
+    temp_file.write(chunk)
+  File "/root/miniconda3/envs/py38/lib/python3.8/tempfile.py", line 473, in func_wrapper
+    return func(*args, **kwargs)
+OSError: [Errno 28] No space left on device
+

@@ -1,0 +1,14 @@
+{'code': '###Instruction: Our client wants to analyze videos for their marketing website. They need a quick solution to categorize video content without worrying about accuracy.\n###Output: <<<domain>>>: Computer Vision Video Classification\n<<<api_call>>>: VideoClassificationPipeline(model=\'hf-tiny-model-private/tiny-random-VideoMAEForVideoClassification\')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>:1. Import the VideoClassificationPipeline from the transformers library provided by Hugging Face.\n2. Create an instance of VideoClassificationPipeline using the "hf-tiny-model-private/tiny-random-VideoMAEForVideoClassification" model, which is a tiny random model for video classification.\n3. The created classifier can be used to quickly categorize videos into different content types, although the accuracy of the categorization may not be as high as more advanced models. This could help the marketing website determine which videos to display or feature based on the video content.\n<<<code>>>: from transformers import VideoClassificationPipeline\nvideo_classifier = VideoClassificationPipeline(model=\'hf-tiny-model-private/tiny-random-VideoMAEForVideoClassification\')\nvideo_categories = video_classifier(video_path)\n', 'api_call': "VideoClassificationPipeline(model='hf-tiny-model-private/tiny-random-VideoMAEForVideoClassification')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Video Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Transformers', 'api_name': 'tiny-random-VideoMAEForVideoClassification', 'api_call': "VideoClassificationPipeline(model='hf-tiny-model-private/tiny-random-VideoMAEForVideoClassification')", 'api_arguments': 'model', 'python_environment_requirements': 'transformers', 'example_code': '', 'performance': {'dataset': '', 'accuracy': ''}, 'description': 'A tiny random VideoMAE model for video classification.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00572_classify_video.py", line 40, in <module>
+    test_classify_video()
+  File "output/hf-eval-data-v2/f00572_classify_video.py", line 34, in test_classify_video
+    categories = classify_video(video_path)
+  File "output/hf-eval-data-v2/f00572_classify_video.py", line 20, in classify_video
+    video_classifier = VideoClassificationPipeline(model='hf-tiny-model-private/tiny-random-VideoMAEForVideoClassification')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/video_classification.py", line 35, in __init__
+    super().__init__(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 776, in __init__
+    framework, model = infer_framework_load_model(model, config=model.config)
+AttributeError: 'str' object has no attribute 'config'

@@ -1,0 +1,48 @@
+{'code': "###Instruction: I have a text question about an image, and I would like to receive an appropriate answer.\n###Output: <<<domain>>>: Multimodal Visual Question Answering\n<<<api_call>>>: pipeline('visual-question-answering', model='JosephusCheung/GuanacoVQAOnConsumerHardware')\n<<<api_provider>>>: Hugging Face\n<<<explanation>>>: 1. Import the necessary pipeline function from the transformers library provided by Hugging Face.\n2. Initialize the visual question-answering pipeline with the 'JosephusCheung/GuanacoVQAOnConsumerHardware' model and tokenizer.\n3. Specify the image_path and question text, related to the image.\n4. Use the created pipeline to process the image and question text and provide an appropriate answer based on the contents of the image.\n<<<code>>>: from transformers import pipeline\nvqa = pipeline('visual-question-answering', model='JosephusCheung/GuanacoVQAOnConsumerHardware')\nimage_path = 'path_to_image.jpg'\nquestion = 'What color is the car in the image?'\nanswer = vqa(image_path, question)\n", 'api_call': "pipeline('visual-question-answering', model='JosephusCheung/GuanacoVQAOnConsumerHardware')", 'provider': 'Hugging Face', 'api_data': {'domain': 'Multimodal Visual Question Answering', 'framework': 'Hugging Face', 'functionality': 'Visual Question Answering', 'api_name': 'JosephusCheung/GuanacoVQAOnConsumerHardware', 'api_call': "pipeline('visual-question-answering', model='JosephusCheung/GuanacoVQAOnConsumerHardware')", 'api_arguments': {'model': 'JosephusCheung/GuanacoVQAOnConsumerHardware', 'tokenizer': 'JosephusCheung/GuanacoVQAOnConsumerHardware'}, 'python_environment_requirements': {'transformers': 'latest', 'torch': 'latest'}, 'example_code': 'vqa(image_path, question)', 'performance': {'dataset': 'JosephusCheung/GuanacoVQADataset', 'accuracy': 'unknown'}, 'description': 'A Visual Question Answering model trained on the GuanacoVQADataset, designed to work on consumer hardware like Colab Free T4 GPU. The model can be used to answer questions about images.'}}
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 261, in hf_raise_for_status
+    response.raise_for_status()
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/JosephusCheung/GuanacoVQAOnConsumerHardware/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1230, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1606, in get_hf_file_metadata
+    hf_raise_for_status(r)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 271, in hf_raise_for_status
+    raise EntryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.EntryNotFoundError: 404 Client Error. (Request ID: Root=1-654d9d80-46974fd1413789c1734f9ade;d27582f2-3f14-4fd5-b5bd-12fa45574982)
+
+Entry Not Found for url: https://huggingface.co/JosephusCheung/GuanacoVQAOnConsumerHardware/resolve/main/config.json.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00455_visual_question_answering.py", line 37, in <module>
+    test_visual_question_answering()
+  File "output/hf-eval-data-v2/f00455_visual_question_answering.py", line 32, in test_visual_question_answering
+    answer = visual_question_answering(image_path, question)
+  File "output/hf-eval-data-v2/f00455_visual_question_answering.py", line 19, in visual_question_answering
+    vqa = pipeline('visual-question-answering', model='JosephusCheung/GuanacoVQAOnConsumerHardware')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 741, in pipeline
+    config = AutoConfig.from_pretrained(model, _from_pipeline=task, **hub_kwargs, **model_kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/configuration_auto.py", line 1023, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 620, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 675, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 480, in cached_file
+    raise EnvironmentError(
+OSError: JosephusCheung/GuanacoVQAOnConsumerHardware does not appear to have a file named config.json. Checkout 'https://huggingface.co/JosephusCheung/GuanacoVQAOnConsumerHardware/main' for available files.

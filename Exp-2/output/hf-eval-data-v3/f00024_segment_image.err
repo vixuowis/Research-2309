@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00024_segment_image.py", line 56, in <module>
+    test_segment_image()
+  File "./f00024_segment_image.py", line 39, in test_segment_image
+    result = segment_image('valid_image.jpg')
+  File "./f00024_segment_image.py", line 22, in segment_image
+    image = Image.open(image_path)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'valid_image.jpg'

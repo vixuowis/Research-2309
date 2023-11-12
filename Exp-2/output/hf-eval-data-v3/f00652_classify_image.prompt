@@ -1,0 +1,22 @@
+{'code': "###Instruction: To build an intelligent system to recognize and identify objects in submitted pictures within the household, which includes furniture, electronics and ornaments.\n###Output: <<<domain>>>: Computer Vision Image Classification\n<<<api_call>>>: pipeline('image-classification', model='timm/vit_large_patch14_clip_224.openai_ft_in12k_in1k', framework='pt')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Import the required pipeline function from the transformers library.\n2. Create an image classification pipeline that will utilize the ViT model ('timm/vit_large_patch14_clip_224.openai_ft_in12k_in1k') which was trained on ImageNet-1K and fine-tuned on ImageNet-12K. This model can recognize various types of objects in images including furniture, electronics, and ornaments.\n3. The image classification pipeline will automatically handle pre-processing and post-processing of image data, making it easier to use for object recognition tasks.\n4. Pass the input image to the created pipeline and retrieve the predictions containing the possible object categories and their probabilities.\n<<<code>>>: from transformers import pipeline\nimport PIL.Image\nimage_classifier = pipeline('image-classification', model='timm/vit_large_patch14_clip_224.openai_ft_in12k_in1k', framework='pt')\nimage = PIL.Image.open('path/to/your/image.jpg')\nresult = image_classifier(image)\n", 'api_call': "pipeline('image-classification', model='timm/vit_large_patch14_clip_224.openai_ft_in12k_in1k', framework='pt')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Computer Vision Image Classification', 'framework': 'Hugging Face Transformers', 'functionality': 'Image Classification', 'api_name': 'timm/vit_large_patch14_clip_224.openai_ft_in12k_in1k', 'api_call': "pipeline('image-classification', model='timm/vit_large_patch14_clip_224.openai_ft_in12k_in1k', framework='pt')", 'api_arguments': {'model': 'timm/vit_large_patch14_clip_224.openai_ft_in12k_in1k', 'framework': 'pt'}, 'python_environment_requirements': ['transformers', 'torch'], 'example_code': '', 'performance': {'dataset': '', 'accuracy': ''}, 'description': 'A ViT-based image classification model trained on ImageNet-1K and fine-tuned on ImageNet-12K by OpenAI.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00652_classify_image.py", line 40, in <module>
+    test_classify_image()
+  File "output/hf-eval-data-v2/f00652_classify_image.py", line 33, in test_classify_image
+    result = classify_image(test_image_path)
+  File "output/hf-eval-data-v2/f00652_classify_image.py", line 18, in classify_image
+    image_classifier = pipeline('image-classification', model='timm/vit_large_patch14_clip_224.openai_ft_in12k_in1k', framework='pt')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--timm--vit_large_patch14_clip_224.openai_ft_in12k_in1k'

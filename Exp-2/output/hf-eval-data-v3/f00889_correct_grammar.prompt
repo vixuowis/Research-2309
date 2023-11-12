@@ -1,0 +1,22 @@
+{'code': "###Instruction: I am struggling with grammar while writing. Thus, I want to create a grammar correction tool for myself.\n###Output: <<<domain>>>: Natural Language Processing Text2Text Generation\n<<<api_call>>>: pipeline('text2text-generation', 'pszemraj/flan-t5-large-grammar-synthesis')\n<<<api_provider>>>: Hugging Face Transformers\n<<<explanation>>>: 1. Start by importing the pipeline function from the transformers library provided by Hugging Face.\n2. Use the pipeline function to create a text generation model for grammar synthesis. This model will be able to generate improved versions of text, where grammar mistakes have been corrected.\n3. Define the 'pszemraj/flan-t5-large-grammar-synthesis' as the model to load. This model is fine-tuned for grammar correction on an expanded version of the JFLEG dataset.\n4. Use this model to correct the grammar of your input text by passing your text to the model.\n<<<code>>>: from transformers import pipeline\ncorrector = pipeline('text2text-generation', 'pszemraj/flan-t5-large-grammar-synthesis')\nraw_text = 'i can has cheezburger'\nresults = corrector(raw_text)", 'api_call': "pipeline('text2text-generation', 'pszemraj/flan-t5-large-grammar-synthesis')", 'provider': 'Hugging Face Transformers', 'api_data': {'domain': 'Natural Language Processing Text2Text Generation', 'framework': 'Hugging Face Transformers', 'functionality': 'Grammar Synthesis', 'api_name': 'pszemraj/flan-t5-large-grammar-synthesis', 'api_call': "pipeline('text2text-generation', 'pszemraj/flan-t5-large-grammar-synthesis')", 'api_arguments': ['raw_text'], 'python_environment_requirements': ['transformers'], 'example_code': "from transformers import pipeline\n\ncorrector = pipeline(\n 'text2text-generation',\n 'pszemraj/flan-t5-large-grammar-synthesis',\n )\n\nraw_text = 'i can has cheezburger'\nresults = corrector(raw_text)\nprint(results)", 'performance': {'dataset': 'jfleg', 'accuracy': 'Not provided'}, 'description': 'A fine-tuned version of google/flan-t5-large for grammar correction on an expanded version of the JFLEG dataset.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00889_correct_grammar.py", line 34, in <module>
+    test_correct_grammar()
+  File "output/hf-eval-data-v2/f00889_correct_grammar.py", line 29, in test_correct_grammar
+    assert correct_grammar(test_text1) == 'I can have a cheeseburger.'
+  File "output/hf-eval-data-v2/f00889_correct_grammar.py", line 17, in correct_grammar
+    corrector = pipeline('text2text-generation', 'pszemraj/flan-t5-large-grammar-synthesis')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--pszemraj--flan-t5-large-grammar-synthesis'

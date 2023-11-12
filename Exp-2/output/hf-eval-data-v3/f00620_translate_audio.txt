@@ -1,0 +1,2 @@
+fairseq
+huggingface_hub

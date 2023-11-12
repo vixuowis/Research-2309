@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00009_text_to_video.py", line 43, in <module>
+    print(test_text_to_video())
+  File "./f00009_text_to_video.py", line 36, in test_text_to_video
+    assert isinstance(text_to_video('Create a video about a dog playing in the park.'), dict)
+AssertionError

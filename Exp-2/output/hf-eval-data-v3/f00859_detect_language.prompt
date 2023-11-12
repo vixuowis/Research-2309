@@ -1,0 +1,22 @@
+{'code': "###Instruction: We are integrating a chatbot into our system. We want the chatbot to first detect the language of user input before providing a response.\n###Output: <<<domain>>>: Natural Language Processing Text Classification\n<<<api_call>>>: pipeline('text-classification', model='papluca/xlm-roberta-base-language-detection')\n<<<api_provider>>>: Transformers\n<<<explanation>>>:1. Import the necessary library from transformers, including the pipeline function.\n2. Create a text classification pipeline using the pre-trained model 'papluca/xlm-roberta-base-language-detection'. This model is a fine-tuned version of the XLM-RoBERTa model for language detection tasks.\n3. You can now pass any input text to the created pipeline for language detection. The model will return the detected language and its confidence score.\n<<<code>>>: from transformers import pipeline\nlanguage_detection = pipeline('text-classification', model='papluca/xlm-roberta-base-language-detection')\nresult = language_detection('Hello, how are you?')\n", 'api_call': "pipeline('text-classification', model='papluca/xlm-roberta-base-language-detection')", 'provider': 'Transformers', 'api_data': {'domain': 'Natural Language Processing Text Classification', 'framework': 'Transformers', 'functionality': 'Language Detection', 'api_name': 'papluca/xlm-roberta-base-language-detection', 'api_call': "pipeline('text-classification', model='papluca/xlm-roberta-base-language-detection')", 'api_arguments': ['text'], 'python_environment_requirements': ['transformers', 'torch'], 'example_code': "language_detection('Hello, how are you?')", 'performance': {'dataset': 'Language Identification', 'accuracy': 0.996}, 'description': 'This model is a fine-tuned version of xlm-roberta-base on the Language Identification dataset. It is an XLM-RoBERTa transformer model with a classification head on top, and can be used as a language detector for sequence classification tasks. It supports 20 languages including Arabic, Bulgarian, German, Greek, English, Spanish, French, Hindi, Italian, Japanese, Dutch, Polish, Portuguese, Russian, Swahili, Thai, Turkish, Urdu, Vietnamese, and Chinese.'}}
+
+Traceback (most recent call last):
+  File "output/hf-eval-data-v2/f00859_detect_language.py", line 46, in <module>
+    test_detect_language()
+  File "output/hf-eval-data-v2/f00859_detect_language.py", line 38, in test_detect_language
+    result_english = detect_language(test_text_english)
+  File "output/hf-eval-data-v2/f00859_detect_language.py", line 23, in detect_language
+    language_detection = pipeline('text-classification', model='papluca/xlm-roberta-base-language-detection')
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 729, in pipeline
+    maybe_adapter_path = find_adapter_config_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/peft_utils.py", line 87, in find_adapter_config_file
+    adapter_cached_filename = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1193, in hf_hub_download
+    os.makedirs(storage_folder, exist_ok=True)
+  File "/root/miniconda3/envs/py38/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 122] Disk quota exceeded: '/root/autodl-tmp/.cache/huggingface/hub/models--papluca--xlm-roberta-base-language-detection'

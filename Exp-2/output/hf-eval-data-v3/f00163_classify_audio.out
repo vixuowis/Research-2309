@@ -1,0 +1,84 @@
+Error: Could not load model mazkooleg/0-9up-unispeech-sat-base-ft with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForAudioClassification'>, <class 'transformers.models.unispeech_sat.modeling_unispeech_sat.UniSpeechSatForSequenceClassification'>). See the original errors:
+
+while loading with AutoModelForAudioClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 557, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 378359891 but has size 31967503 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+while loading with UniSpeechSatForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 557, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 378359891 but has size 199601965 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+
+
+Test case 1 failed with error: Could not load model mazkooleg/0-9up-unispeech-sat-base-ft with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForAudioClassification'>, <class 'transformers.models.unispeech_sat.modeling_unispeech_sat.UniSpeechSatForSequenceClassification'>). See the original errors:
+
+while loading with AutoModelForAudioClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 563, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 557, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 378359891 but has size 31967503 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+while loading with UniSpeechSatForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2793, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1429, in hf_hub_download
+    http_get(
+  File "/root/miniconda3/envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 557, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 378359891 but has size 199601965 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+
+
