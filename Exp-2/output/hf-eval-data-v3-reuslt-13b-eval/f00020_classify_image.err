@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00020_classify_image.py", line 56, in <module>
+    test_classify_image()
+  File "./f00020_classify_image.py", line 48, in test_classify_image
+    assert isinstance(classify_image('https://placekitten.com/200/300'), int)
+  File "./f00020_classify_image.py", line 26, in classify_image
+    input_image = Image.open(io.BytesIO(img_bytes))
+NameError: name 'io' is not defined

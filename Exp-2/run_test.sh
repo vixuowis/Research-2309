@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # 指定要遍历的文件夹
-base_dir="output/hf-eval-data-v3"
+base_dir="output/hf-eval-data-v3-reuslt-7b-eval"
 cd ${base_dir}
 
 # 设置计数器
 count=0
 
-# 遍历文件夹，找到后缀为 _test.py 的文件
+# 遍历文件夹，找到后缀为 .py 的文件
 for file in ./*.py; do
     # 提取文件名前缀
-    prefix=$(basename ${file} .py)
+    prefix=$(basename "$file" .py)
     echo ${prefix}
     
     # 检查输出文件是否已经存在，如果存在则跳过当前文件的处理

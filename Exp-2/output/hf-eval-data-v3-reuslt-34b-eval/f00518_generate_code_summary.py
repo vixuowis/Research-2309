@@ -1,0 +1,50 @@
+# function_import --------------------
+
+from transformers import RobertaTokenizer, T5ForConditionalGeneration
+
+# function_code --------------------
+
+def generate_code_summary(code_snippet):
+    """
+    Generate a short summary of the provided code snippet using the Salesforce/codet5-base model.
+
+    Args:
+        code_snippet (str): The code snippet to summarize.
+
+    Returns:
+        str: The generated summary of the code snippet.
+    """
+
+    tokenizer = RobertaTokenizer.from_pretrained("Salesforce/codet5-base")
+    
+    model = T5ForConditionalGeneration.from_pretrained("Salesforce/codet5-base", return_dict=True)
+    
+    input = "summarize: " + code_snippet
+    
+    encoding = tokenizer(input, padding="max_length", truncation="longest_first", return_tensors="pt")
+    
+    # The max_length parameter can be played with to get the best possible results.
+    prediction = model.generate(encoding["input_ids"], max_length=60)
+    
+    summary = tokenizer.decode(prediction[0], skip_special_tokens=True, clean_up_tokenization_spaces=False)
+    
+    return summary
+
+# test_function_code --------------------
+
+def test_generate_code_summary():
+    """
+    Test the generate_code_summary function.
+    """
+    code_snippet1 = 'def greet(user): print(f\'Hello, {user}!\')'
+    code_snippet2 = 'def add(a, b): return a + b'
+    code_snippet3 = 'class MyClass: def __init__(self): pass'
+    assert isinstance(generate_code_summary(code_snippet1), str)
+    assert isinstance(generate_code_summary(code_snippet2), str)
+    assert isinstance(generate_code_summary(code_snippet3), str)
+    return 'All Tests Passed'
+
+
+# call_test_function_code --------------------
+
+test_generate_code_summary()

@@ -1,0 +1,3 @@
+huggingface_hub>=0.0.17
+transformers>=4.13.0
+torch>=1.10.0

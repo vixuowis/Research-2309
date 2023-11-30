@@ -1,0 +1,35 @@
+# function_import --------------------
+
+from transformers import pipeline
+
+# function_code --------------------
+
+def get_capital_of_germany():
+    """
+    This function uses the Hugging Face Transformers library to answer the question "What is the capital of Germany?".
+    It uses the 'deepset/roberta-large-squad2' model for question answering.
+    
+    Returns:
+        str: The capital of Germany.
+    """
+    # Load pipeline for question answering
+    question_answerer = pipeline("question-answering", "deepset/roberta-large-squad2")
+
+    # Ask the loaded pipeline a question
+    results = question_answerer(context='Die Bundeshauptstadt von Deutschland ist Berlin.', question='Was ist die Bundeshauptstadt?')
+
+    return results['answer']
+
+# test_function_code --------------------
+
+def test_get_capital_of_germany():
+    """
+    This function tests the 'get_capital_of_germany' function by comparing the output to the expected answer 'Berlin'.
+    """
+    assert get_capital_of_germany() == 'Berlin'
+    return 'All Tests Passed'
+
+
+# call_test_function_code --------------------
+
+test_get_capital_of_germany()

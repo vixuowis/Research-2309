@@ -1,0 +1,4 @@
+diffusers
+PIL
+torchvision
+requests

@@ -1,0 +1,47 @@
+# function_import --------------------
+
+from transformers import AutoModelForVideoClassification
+
+# function_code --------------------
+
+def load_and_classify_video(model_name: str, video_path: str):
+    """
+    Load a pre-trained model for video classification and classify a video.
+
+    Args:
+        model_name (str): The name of the pre-trained model.
+        video_path (str): The path to the video file to be classified.
+
+    Returns:
+        The classification result.
+
+    Raises:
+        FileNotFoundError: If the video file does not exist.
+    """
+
+    if os.path.exists(video_path) is False:
+        raise FileNotFoundError()
+    
+    # Load the pre-trained model and classify the video.
+    model = AutoModelForVideoClassification.from_pretrained(model_name, cache_dir='cache')
+    result = model([video_path])
+    return result[0]['label']
+
+# test_function_code --------------------
+
+def test_load_and_classify_video():
+    """
+    Test the load_and_classify_video function.
+    """
+    # Test with a known model and video file
+    result = load_and_classify_video('lmazzon70/videomae-base-finetuned-kinetics-finetuned-rwf2000mp4-epochs8-batch8-kb', 'test_video.mp4')
+    assert isinstance(result, str), 'The result should be a string.'
+
+    # TODO: Add more test cases
+
+    return 'All Tests Passed'
+
+
+# call_test_function_code --------------------
+
+test_load_and_classify_video()

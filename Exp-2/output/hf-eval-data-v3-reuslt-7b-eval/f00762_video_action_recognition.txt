@@ -1,0 +1,5 @@
+decord
+transformers
+huggingface_hub
+torch
+numpy

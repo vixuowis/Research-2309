@@ -1,0 +1,32 @@
+Downloading: "https://github.com/y-bar/face-mask-ml-app/releases/download/v0.0.1/model_mobilenetv3_small_100.pt" to /root/.cache/torch/hub/checkpoints/model_mobilenetv3_small_100.pt
+Traceback (most recent call last):
+  File "./f00020_classify_image.py", line 40, in classify_image
+    model.load_state_dict(torch.hub.load_state_dict_from_url("https://github.com/y-bar/face-mask-ml-app/releases/download/v0.0.1/model_mobilenetv3_small_100.pt", map_location="cpu"))
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/hub.py", line 766, in load_state_dict_from_url
+    download_url_to_file(url, cached_file, hash_prefix, progress=progress)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/hub.py", line 620, in download_url_to_file
+    u = urlopen(req)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/urllib/request.py", line 640, in http_response
+    response = self.parent.error(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./f00020_classify_image.py", line 67, in <module>
+    test_classify_image()
+  File "./f00020_classify_image.py", line 59, in test_classify_image
+    assert isinstance(classify_image('https://placekitten.com/200/300'), int)
+  File "./f00020_classify_image.py", line 46, in classify_image
+    raise RuntimeError("An error occured when running the model.") from e
+RuntimeError: An error occured when running the model.

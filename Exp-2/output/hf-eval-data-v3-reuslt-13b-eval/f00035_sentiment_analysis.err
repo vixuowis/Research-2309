@@ -1,0 +1,7 @@
+2023-11-30 15:45:17.267582: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 15:45:18.068961: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+No model was supplied, defaulted to distilbert-base-uncased-finetuned-sst-2-english and revision af0f99b (https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english).
+Using a pipeline without specifying a model name and revision in production is not recommended.
+config.json:   0%|                                                                    | 0.00/629 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 629/629 [00:00<00:00, 154kB/s]
+model.safetensors:   0%|                                                             | 0.00/268M [00:00<?, ?B/s]model.safetensors:   4%|██                                                   | 10.5M/268M [00:12<05:04, 846kB/s]

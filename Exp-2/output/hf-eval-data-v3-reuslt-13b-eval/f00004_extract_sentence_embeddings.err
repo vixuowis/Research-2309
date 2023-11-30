@@ -1,0 +1,42 @@
+config.json:   0%|                                                                    | 0.00/804 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 804/804 [00:00<00:00, 243kB/s]
+pytorch_model.bin:   0%|                                                            | 0.00/1.88G [00:00<?, ?B/s]pytorch_model.bin:   1%|▎                                                  | 10.5M/1.88G [00:04<14:05, 2.21MB/s]pytorch_model.bin:   1%|▌                                                  | 21.0M/1.88G [00:09<13:55, 2.23MB/s]pytorch_model.bin:   2%|▊                                                  | 31.5M/1.88G [00:16<17:36, 1.75MB/s]pytorch_model.bin:   2%|█▏                                                 | 41.9M/1.88G [00:33<29:45, 1.03MB/s]pytorch_model.bin:   2%|█▏                                                 | 41.9M/1.88G [00:45<29:45, 1.03MB/s]pytorch_model.bin:   3%|█▍                                                  | 52.4M/1.88G [00:48<34:23, 888kB/s]pytorch_model.bin:   3%|█▋                                                  | 62.9M/1.88G [01:03<37:55, 800kB/s]pytorch_model.bin:   3%|█▋                                                  | 62.9M/1.88G [01:15<37:55, 800kB/s]pytorch_model.bin:   4%|██                                                  | 73.4M/1.88G [01:21<41:56, 719kB/s]pytorch_model.bin:   4%|██                                                  | 73.4M/1.88G [01:35<41:56, 719kB/s]pytorch_model.bin:   4%|██▎                                                 | 83.9M/1.88G [01:38<44:00, 682kB/s]pytorch_model.bin:   5%|██▌                                                 | 94.4M/1.88G [01:54<44:25, 671kB/s]pytorch_model.bin:   5%|██▌                                                 | 94.4M/1.88G [02:05<44:25, 671kB/s]pytorch_model.bin:   6%|██▉                                                  | 105M/1.88G [02:08<42:27, 698kB/s]pytorch_model.bin:   6%|██▉                                                  | 105M/1.88G [02:25<42:27, 698kB/s]pytorch_model.bin:   6%|███▏                                                 | 115M/1.88G [02:26<44:34, 661kB/s]pytorch_model.bin:   6%|███▏                                                 | 115M/1.88G [02:45<44:34, 661kB/s]pytorch_model.bin:   7%|███▌                                                 | 126M/1.88G [02:45<47:40, 614kB/s]pytorch_model.bin:   7%|███▌                                                 | 126M/1.88G [03:05<47:40, 614kB/s]pytorch_model.bin:   7%|███▊                                                 | 136M/1.88G [03:11<54:36, 533kB/s]pytorch_model.bin:   7%|███▊                                                 | 136M/1.88G [03:25<54:36, 533kB/s]pytorch_model.bin:   8%|███▉                                               | 147M/1.88G [03:38<1:00:03, 482kB/s]pytorch_model.bin:   8%|████▏                                                | 147M/1.88G [03:40<43:23, 667kB/s]
+Traceback (most recent call last):
+  File "./f00004_extract_sentence_embeddings.py", line 50, in <module>
+    test_extract_sentence_embeddings()
+  File "./f00004_extract_sentence_embeddings.py", line 37, in test_extract_sentence_embeddings
+    embedding1 = extract_sentence_embeddings(sentence1)
+  File "./f00004_extract_sentence_embeddings.py", line 19, in extract_sentence_embeddings
+    model = AutoModel.from_pretrained("sentence-transformers/LaBSE")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 812, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 797, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt
