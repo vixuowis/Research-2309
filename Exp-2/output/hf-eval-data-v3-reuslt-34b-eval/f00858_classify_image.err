@@ -1,0 +1,10 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00858_classify_image.py", line 53, in <module>
+    test_classify_image()
+  File "./f00858_classify_image.py", line 44, in test_classify_image
+    result = classify_image(img_url)
+  File "./f00858_classify_image.py", line 21, in classify_image
+    pil_image = Image.open(BytesIO(r.content))
+NameError: name 'BytesIO' is not defined

@@ -1,0 +1,20 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/pyannote/audio/core/io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch_audiomentations/utils/io.py:27: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+Traceback (most recent call last):
+  File "./f00906_measure_noise_levels.py", line 91, in <module>
+    print(test_measure_noise_levels())
+  File "./f00906_measure_noise_levels.py", line 76, in test_measure_noise_levels
+    measure_noise_levels('invalid_audio_file.wav', 'valid_access_token')
+  File "./f00906_measure_noise_levels.py", line 39, in measure_noise_levels
+    data, sampleRate = sf.read(audio_file_path)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/soundfile.py", line 285, in read
+    with SoundFile(file, 'r', samplerate, channels,
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/soundfile.py", line 658, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/soundfile.py", line 1216, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'invalid_audio_file.wav': System error.

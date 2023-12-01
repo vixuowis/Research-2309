@@ -1,0 +1,4 @@
+  File "./f00497_get_answer.py", line 62
+    This function tests the get_answer function.
+         ^
+SyntaxError: invalid syntax

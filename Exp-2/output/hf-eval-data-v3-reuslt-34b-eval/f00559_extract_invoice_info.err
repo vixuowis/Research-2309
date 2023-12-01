@@ -1,0 +1,10 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00559_extract_invoice_info.py", line 57, in <module>
+    test_extract_invoice_info()
+  File "./f00559_extract_invoice_info.py", line 47, in test_extract_invoice_info
+    answers = extract_invoice_info(image_path)
+  File "./f00559_extract_invoice_info.py", line 22, in extract_invoice_info
+    model = AutoModelForDocumentQuestionAnswering.from_pretrained(f"{os.getcwd()}/models/model-finetuned")
+NameError: name 'os' is not defined

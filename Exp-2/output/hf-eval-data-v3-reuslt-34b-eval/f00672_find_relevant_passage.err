@@ -1,0 +1,13 @@
+tokenizer_config.json:   0%|                                                         | 0.00/28.0 [00:00<?, ?B/s]tokenizer_config.json: 100%|█████████████████████████████████████████████████| 28.0/28.0 [00:00<00:00, 3.79kB/s]
+vocab.txt:   0%|                                                                     | 0.00/232k [00:00<?, ?B/s]vocab.txt: 100%|██████████████████████████████████████████████████████████████| 232k/232k [00:01<00:00, 174kB/s]vocab.txt: 100%|██████████████████████████████████████████████████████████████| 232k/232k [00:01<00:00, 174kB/s]
+tokenizer.json:   0%|                                                                | 0.00/466k [00:00<?, ?B/s]tokenizer.json: 100%|█████████████████████████████████████████████████████████| 466k/466k [00:01<00:00, 360kB/s]tokenizer.json: 100%|█████████████████████████████████████████████████████████| 466k/466k [00:01<00:00, 360kB/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-large-uncased-whole-word-masking-finetuned-squad and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-large-uncased-whole-word-masking-finetuned-squad and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "./f00672_find_relevant_passage.py", line 84, in <module>
+    test_find_relevant_passage()
+  File "./f00672_find_relevant_passage.py", line 75, in test_find_relevant_passage
+    assert find_relevant_passage(question, candidate_passages) == 'Berlin is the capital of Germany.'
+AssertionError

@@ -1,0 +1,11 @@
+2023-11-30 21:07:31.632317: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 21:07:32.445180: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00632_predict_pokemon_hp.py", line 71, in <module>
+    test_predict_pokemon_hp()
+  File "./f00632_predict_pokemon_hp.py", line 45, in test_predict_pokemon_hp
+    predicted_hp1 = predict_pokemon_hp(input_data1)
+  File "./f00632_predict_pokemon_hp.py", line 23, in predict_pokemon_hp
+    model_path = os.path.join(MODELS, MODEL_NAME)
+NameError: name 'os' is not defined

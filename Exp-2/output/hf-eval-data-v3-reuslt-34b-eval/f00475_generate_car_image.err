@@ -1,0 +1,10 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00475_generate_car_image.py", line 50, in <module>
+    print(test_generate_car_image())
+  File "./f00475_generate_car_image.py", line 38, in test_generate_car_image
+    generate_car_image()
+  File "./f00475_generate_car_image.py", line 21, in generate_car_image
+    p = DDPMPipeline(model_id)
+TypeError: __init__() missing 1 required positional argument: 'scheduler'

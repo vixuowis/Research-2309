@@ -1,0 +1,5 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Couldn't connect to the Hub: 503 Server Error: Service Unavailable for url: https://huggingface.co/api/models/google/ddpm-ema-cat-256.
+Will try to load from local cache.
+Loading pipeline components...:   0%|                                                     | 0/2 [00:00<?, ?it/s]Loading pipeline components...:   0%|                                                     | 0/2 [00:00<?, ?it/s]

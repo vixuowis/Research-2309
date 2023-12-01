@@ -1,0 +1,26 @@
+2023-12-01 02:17:41.676181: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-01 02:17:42.404196: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForMaskedLM: ['cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "./f00798_fill_mask.py", line 36, in <module>
+    test_fill_mask()
+  File "./f00798_fill_mask.py", line 28, in test_fill_mask
+    assert fill_mask('The weather was so <mask> that everyone stayed indoors.') != 'The weather was so <mask> that everyone stayed indoors.'
+  File "./f00798_fill_mask.py", line 19, in fill_mask
+    return unmasker(text)[0]['sequence']
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 270, in __call__
+    outputs = super().__call__(inputs, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 123, in preprocess
+    self.ensure_exactly_one_mask_token(model_inputs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 112, in ensure_exactly_one_mask_token
+    self._ensure_exactly_one_mask_token(input_ids)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 100, in _ensure_exactly_one_mask_token
+    raise PipelineException(
+transformers.pipelines.base.PipelineException: No mask_token ([MASK]) found on the input

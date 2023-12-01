@@ -1,0 +1,78 @@
+2023-11-30 18:07:40.388299: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 18:07:41.211144: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+No model was supplied, defaulted to distilroberta-base and revision ec58a5b (https://huggingface.co/distilroberta-base).
+Using a pipeline without specifying a model name and revision in production is not recommended.
+config.json:   0%|                                                                    | 0.00/480 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 480/480 [00:00<00:00, 115kB/s]
+model.safetensors:   0%|                                                             | 0.00/331M [00:00<?, ?B/s]model.safetensors:   3%|█▋                                                  | 10.5M/331M [00:02<01:31, 3.51MB/s]model.safetensors:   6%|███▎                                                | 21.0M/331M [00:05<01:14, 4.18MB/s]model.safetensors:  10%|████▉                                               | 31.5M/331M [00:07<01:11, 4.20MB/s]model.safetensors:  13%|██████▌                                             | 41.9M/331M [00:10<01:09, 4.13MB/s]model.safetensors:  16%|████████▏                                           | 52.4M/331M [00:12<01:06, 4.18MB/s]model.safetensors:  19%|█████████▉                                          | 62.9M/331M [00:14<01:02, 4.31MB/s]model.safetensors:  22%|███████████▌                                        | 73.4M/331M [00:17<01:00, 4.28MB/s]model.safetensors:  25%|█████████████▏                                      | 83.9M/331M [00:20<00:59, 4.15MB/s]model.safetensors:  29%|██████████████▊                                     | 94.4M/331M [00:22<00:54, 4.31MB/s]model.safetensors:  32%|████████████████▊                                    | 105M/331M [00:24<00:48, 4.69MB/s]model.safetensors:  35%|██████████████████▍                                  | 115M/331M [00:26<00:43, 4.95MB/s]model.safetensors:  38%|████████████████████▏                                | 126M/331M [00:27<00:39, 5.17MB/s]model.safetensors:  41%|█████████████████████▊                               | 136M/331M [00:29<00:36, 5.34MB/s]model.safetensors:  44%|███████████████████████▌                             | 147M/331M [00:31<00:33, 5.52MB/s]model.safetensors:  48%|█████████████████████████▏                           | 157M/331M [00:33<00:33, 5.20MB/s]model.safetensors:  51%|██████████████████████████▊                          | 168M/331M [00:35<00:32, 5.01MB/s]model.safetensors:  54%|████████████████████████████▌                        | 178M/331M [00:38<00:30, 5.00MB/s]model.safetensors:  57%|██████████████████████████████▏                      | 189M/331M [00:40<00:29, 4.84MB/s]model.safetensors:  60%|███████████████████████████████▉                     | 199M/331M [00:42<00:26, 4.96MB/s]model.safetensors:  63%|█████████████████████████████████▌                   | 210M/331M [00:44<00:24, 4.98MB/s]model.safetensors:  67%|███████████████████████████████████▎                 | 220M/331M [00:46<00:22, 4.90MB/s]model.safetensors:  70%|████████████████████████████████████▉                | 231M/331M [00:49<00:22, 4.39MB/s]model.safetensors:  73%|██████████████████████████████████████▌              | 241M/331M [00:53<00:23, 3.82MB/s]model.safetensors:  76%|████████████████████████████████████████▎            | 252M/331M [00:59<00:29, 2.68MB/s]model.safetensors:  79%|█████████████████████████████████████████▉           | 262M/331M [01:05<00:28, 2.45MB/s]model.safetensors:  82%|███████████████████████████████████████████▋         | 273M/331M [01:07<00:21, 2.76MB/s]model.safetensors:  86%|█████████████████████████████████████████████▎       | 283M/331M [01:10<00:15, 3.03MB/s]model.safetensors:  89%|███████████████████████████████████████████████      | 294M/331M [01:12<00:10, 3.41MB/s]model.safetensors:  92%|████████████████████████████████████████████████▋    | 304M/331M [01:14<00:07, 3.76MB/s]model.safetensors:  95%|██████████████████████████████████████████████████▎  | 315M/331M [01:16<00:04, 4.06MB/s]model.safetensors:  98%|████████████████████████████████████████████████████ | 325M/331M [01:18<00:01, 4.34MB/s]model.safetensors: 100%|█████████████████████████████████████████████████████| 331M/331M [01:20<00:00, 4.44MB/s]model.safetensors: 100%|█████████████████████████████████████████████████████| 331M/331M [01:20<00:00, 4.14MB/s]
+Some weights of the model checkpoint at distilroberta-base were not used when initializing RobertaForMaskedLM: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+- This IS expected if you are initializing RobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 712, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1012, in _prepare_proxy
+    conn.connect()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /distilroberta-base/resolve/main/tokenizer_config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00313_generate_fill_in_the_blank_questions.py", line 57, in <module>
+    test_generate_fill_in_the_blank_questions()
+  File "./f00313_generate_fill_in_the_blank_questions.py", line 44, in test_generate_fill_in_the_blank_questions
+    result_1 = generate_fill_in_the_blank_questions(test_sentence_1)
+  File "./f00313_generate_fill_in_the_blank_questions.py", line 19, in generate_fill_in_the_blank_questions
+    nlp = pipeline("fill-mask")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 967, in pipeline
+    tokenizer = AutoTokenizer.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 718, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 550, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1247, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1624, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 402, in _request_wrapper
+    response = _request_wrapper(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 425, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /distilroberta-base/resolve/main/tokenizer_config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 31f14f1b-cf68-485d-a8ed-d2186552a838)')

@@ -1,0 +1,33 @@
+2023-11-30 23:25:02.113629: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 23:25:02.855595: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+No model was supplied, defaulted to facebook/bart-large-mnli and revision c626438 (https://huggingface.co/facebook/bart-large-mnli).
+Using a pipeline without specifying a model name and revision in production is not recommended.
+Traceback (most recent call last):
+  File "./f00782_german_news_classifier.py", line 44, in <module>
+    test_german_news_classifier()
+  File "./f00782_german_news_classifier.py", line 34, in test_german_news_classifier
+    result = german_news_classifier(sequence, candidate_labels)
+  File "./f00782_german_news_classifier.py", line 24, in german_news_classifier
+    return classifier({'sequence': sequence, 'candidate_labels': candidate_labels}, hypothesis_template=hypothesis_template)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/zero_shot_classification.py", line 206, in __call__
+    return super().__call__(sequences, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1132, in __call__
+    return next(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/pt_utils.py", line 124, in __next__
+    item = next(self.iterator)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/pt_utils.py", line 266, in __next__
+    processed = self.infer(next(self.iterator), **self.params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 674, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/pt_utils.py", line 183, in __next__
+    processed = next(self.subiterator)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/zero_shot_classification.py", line 209, in preprocess
+    sequence_pairs, sequences = self._args_parser(inputs, candidate_labels, hypothesis_template)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/zero_shot_classification.py", line 26, in __call__
+    if len(labels) == 0 or len(sequences) == 0:
+TypeError: object of type 'NoneType' has no len()

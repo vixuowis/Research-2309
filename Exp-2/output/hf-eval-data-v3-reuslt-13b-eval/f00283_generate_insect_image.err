@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "./f00283_generate_insect_image.py", line 26, in generate_insect_image
+    model = DDPMPipeline(model_name)
+TypeError: __init__() missing 1 required positional argument: 'scheduler'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00283_generate_insect_image.py", line 46, in <module>
+    generate_insect_image('2021-08-30 23:54:49.666704')
+  File "./f00283_generate_insect_image.py", line 40, in generate_insect_image
+    raise Exception(e)
+Exception: __init__() missing 1 required positional argument: 'scheduler'

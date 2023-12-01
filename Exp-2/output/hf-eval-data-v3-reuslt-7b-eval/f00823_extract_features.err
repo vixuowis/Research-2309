@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00823_extract_features.py", line 57, in <module>
+    test_extract_features()
+  File "./f00823_extract_features.py", line 51, in test_extract_features
+    assert output.shape[0] == 1, 'Output shape is not correct'
+AssertionError: Output shape is not correct

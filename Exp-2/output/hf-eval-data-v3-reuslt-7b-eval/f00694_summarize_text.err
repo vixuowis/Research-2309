@@ -1,0 +1,77 @@
+2023-11-30 21:30:17.253071: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 21:30:17.995681: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+config.json:   0%|                                                                  | 0.00/1.63k [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████| 1.63k/1.63k [00:00<00:00, 354kB/s]
+pytorch_model.bin:   0%|                                                            | 0.00/1.63G [00:00<?, ?B/s]pytorch_model.bin:   1%|▎                                                   | 10.5M/1.63G [00:16<42:10, 638kB/s]pytorch_model.bin:   1%|▎                                                   | 10.5M/1.63G [00:34<42:10, 638kB/s]pytorch_model.bin:   1%|▋                                                 | 21.0M/1.63G [01:00<1:22:43, 323kB/s]pytorch_model.bin:   1%|▋                                                 | 21.0M/1.63G [01:14<1:22:43, 323kB/s]pytorch_model.bin:   2%|▉                                                 | 31.5M/1.63G [02:07<2:02:37, 217kB/s]pytorch_model.bin:   2%|█                                                 | 33.4M/1.63G [02:19<2:07:05, 209kB/s]pytorch_model.bin:   2%|█                                                 | 33.4M/1.63G [02:19<1:50:51, 239kB/s]
+pytorch_model.bin:   0%|                                                            | 0.00/1.63G [00:00<?, ?B/s]pytorch_model.bin:   1%|▎                                                 | 10.5M/1.63G [01:00<2:35:32, 173kB/s]pytorch_model.bin:   1%|▎                                                 | 10.5M/1.63G [01:19<2:35:32, 173kB/s]pytorch_model.bin:   1%|▋                                                | 21.0M/1.63G [05:04<7:09:05, 62.3kB/s]pytorch_model.bin:   1%|▋                                                | 21.0M/1.63G [05:19<7:09:05, 62.3kB/s]pytorch_model.bin:   2%|▊                                                | 26.1M/1.63G [07:01<8:01:02, 55.4kB/s]pytorch_model.bin:   2%|▊                                                | 26.1M/1.63G [07:01<7:10:42, 61.9kB/s]
+Traceback (most recent call last):
+  File "./f00694_summarize_text.py", line 41, in <module>
+    test_summarize_text()
+  File "./f00694_summarize_text.py", line 34, in test_summarize_text
+    assert len(summarize_text(text1)) > 0
+  File "./f00694_summarize_text.py", line 21, in summarize_text
+    summarizer = pipeline("summarization", model="philschmid/bart-large-cnn-samsum")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 870, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model philschmid/bart-large-cnn-samsum with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForSeq2SeqLM'>, <class 'transformers.models.auto.modeling_tf_auto.TFAutoModelForSeq2SeqLM'>, <class 'transformers.models.bart.modeling_bart.BartForConditionalGeneration'>, <class 'transformers.models.bart.modeling_tf_bart.TFBartForConditionalGeneration'>). See the original errors:
+
+while loading with AutoModelForSeq2SeqLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 1625565295 but has size 33359993 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+while loading with TFAutoModelForSeq2SeqLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2823, in from_pretrained
+    raise EnvironmentError(
+OSError: philschmid/bart-large-cnn-samsum does not appear to have a file named tf_model.h5 but there is a file for PyTorch weights. Use `from_pt=True` to load this model from those weights.
+
+while loading with BartForConditionalGeneration, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 1625565295 but has size 26096560 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+while loading with TFBartForConditionalGeneration, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2823, in from_pretrained
+    raise EnvironmentError(
+OSError: philschmid/bart-large-cnn-samsum does not appear to have a file named tf_model.h5 but there is a file for PyTorch weights. Use `from_pt=True` to load this model from those weights.
+
+
+

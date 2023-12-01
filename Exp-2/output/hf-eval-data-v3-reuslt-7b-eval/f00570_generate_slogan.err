@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "./f00570_generate_slogan.py", line 47, in <module>
+    test_generate_slogan()
+  File "./f00570_generate_slogan.py", line 37, in test_generate_slogan
+    best_slogan = generate_slogan(api_key, prompt, engine, max_tokens, n, temperature)
+  File "./f00570_generate_slogan.py", line 23, in generate_slogan
+    response = openai.Completion.create(engine=engine, prompt=prompt, max_tokens=max_tokens, n=n, temperature=temperature)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/openai/_utils/_proxy.py", line 22, in __getattr__
+    return getattr(self.__get_proxied__(), attr)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/openai/_utils/_proxy.py", line 43, in __get_proxied__
+    return self.__load__()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/openai/lib/_old_api.py", line 33, in __load__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.Completion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+

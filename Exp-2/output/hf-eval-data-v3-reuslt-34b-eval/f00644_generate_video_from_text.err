@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00644_generate_video_from_text.py", line 50, in <module>
+    test_generate_video_from_text()
+  File "./f00644_generate_video_from_text.py", line 41, in test_generate_video_from_text
+    video_path = generate_video_from_text(prompt)
+  File "./f00644_generate_video_from_text.py", line 24, in generate_video_from_text
+    schedule = DPMSolverMultistepScheduler(diffusion_steps = num_inference_steps)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/diffusers/configuration_utils.py", line 645, in inner_init
+    init(self, *args, **init_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'diffusion_steps'

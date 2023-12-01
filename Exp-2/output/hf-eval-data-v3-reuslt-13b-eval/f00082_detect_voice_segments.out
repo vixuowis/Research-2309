@@ -1,0 +1,1 @@
+Error: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /julien-c/wav2vec2-base-voxrepo-vad/resolve/main/config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: f4f040c9-46da-49bd-b2a3-12bbcd1ba450)')

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "./f00758_generate_butterfly_image.py", line 33, in <module>
+    test_generate_butterfly_image()
+  File "./f00758_generate_butterfly_image.py", line 26, in test_generate_butterfly_image
+    image = generate_butterfly_image()
+  File "./f00758_generate_butterfly_image.py", line 15, in generate_butterfly_image
+    diffuser = DDPMPipeline('myunus1', '/home/gst-ai/Documents/diffusers/models/myunus1/diffmodels_galaxies_scratchbook')
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/diffusers/pipelines/ddpm/pipeline_ddpm.py", line 43, in __init__
+    self.register_modules(unet=unet, scheduler=scheduler)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 566, in register_modules
+    library = not_compiled_module.__module__.split(".")[0]
+AttributeError: 'str' object has no attribute '__module__'

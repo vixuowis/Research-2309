@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00732_generate_image_description.py", line 61, in <module>
+    test_generate_image_description()
+  File "./f00732_generate_image_description.py", line 53, in test_generate_image_description
+    assert isinstance(generate_image_description(img_url1), str)
+  File "./f00732_generate_image_description.py", line 20, in generate_image_description
+    tokenizer = BlipTokenizer() # from transformers
+NameError: name 'BlipTokenizer' is not defined

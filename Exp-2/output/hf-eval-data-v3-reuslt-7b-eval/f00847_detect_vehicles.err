@@ -1,0 +1,30 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+WARNING ⚠️ DetectMultiBackend failed: ERROR: yolov5s is not a supported format
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/yolov5/helpers.py", line 38, in load_model
+    model = DetectMultiBackend(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/yolov5/models/common.py", line 503, in __init__
+    raise NotImplementedError(f'ERROR: {w} is not a supported format')
+NotImplementedError: ERROR: yolov5s is not a supported format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00847_detect_vehicles.py", line 59, in <module>
+    test_detect_vehicles()
+  File "./f00847_detect_vehicles.py", line 49, in test_detect_vehicles
+    result = detect_vehicles(image_url)
+  File "./f00847_detect_vehicles.py", line 19, in detect_vehicles
+    yolo = yolov5.load('yolov5s')
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/yolov5/helpers.py", line 59, in load_model
+    model = attempt_load(model_path, device=device, fuse=False)  # arbitrary model
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/yolov5/models/experimental.py", line 79, in attempt_load
+    ckpt = torch.load(attempt_download(w), map_location='cpu')  # load
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 986, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 435, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 416, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'yolov5s'

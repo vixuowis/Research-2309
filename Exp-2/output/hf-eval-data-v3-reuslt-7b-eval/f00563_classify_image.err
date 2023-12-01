@@ -1,0 +1,23 @@
+2023-11-30 19:44:57.157884: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 19:44:57.945784: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+preprocessor_config.json:   0%|                                                       | 0.00/406 [00:00<?, ?B/s]preprocessor_config.json: 100%|█████████████████████████████████████████████████| 406/406 [00:00<00:00, 103kB/s]
+config.json:   0%|                                                                  | 0.00/69.6k [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████| 69.6k/69.6k [00:00<00:00, 208kB/s]config.json: 100%|██████████████████████████████████████████████████████████| 69.6k/69.6k [00:00<00:00, 207kB/s]
+pytorch_model.bin:   0%|                                                            | 0.00/10.5M [00:00<?, ?B/s]pytorch_model.bin: 100%|███████████████████████████████████████████████████| 10.5M/10.5M [00:08<00:00, 1.26MB/s]pytorch_model.bin: 100%|███████████████████████████████████████████████████| 10.5M/10.5M [00:08<00:00, 1.26MB/s]
+Traceback (most recent call last):
+  File "./f00563_classify_image.py", line 53, in <module>
+    test_classify_image()
+  File "./f00563_classify_image.py", line 45, in test_classify_image
+    assert classify_image('http://images.cocodataset.org/val2017/000000039769.jpg') is not None
+  File "./f00563_classify_image.py", line 22, in classify_image
+    model = AutoModelForImageClassification.from_pretrained('google/mobilenet_v1_0.75_192', num_labels=5,
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3480, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3931, in _load_pretrained_model
+    raise RuntimeError(f"Error(s) in loading state_dict for {model.__class__.__name__}:\n\t{error_msg}")
+RuntimeError: Error(s) in loading state_dict for MobileNetV1ForImageClassification:
+	size mismatch for classifier.weight: copying a param with shape torch.Size([1001, 768]) from checkpoint, the shape in current model is torch.Size([5, 768]).
+	size mismatch for classifier.bias: copying a param with shape torch.Size([1001]) from checkpoint, the shape in current model is torch.Size([5]).
+	You may consider adding `ignore_mismatched_sizes=True` in the model `from_pretrained` method.

@@ -1,0 +1,11 @@
+2023-11-30 20:14:10.121441: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 20:14:10.825159: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00548_generate_image_from_text.py", line 51, in <module>
+    test_generate_image_from_text()
+  File "./f00548_generate_image_from_text.py", line 40, in test_generate_image_from_text
+    generate_image_from_text('a serene lake at sunset', save_path='serene_lake_sunset.png')
+  File "./f00548_generate_image_from_text.py", line 23, in generate_image_from_text
+    diffusion = StableDiffusionPipeline(model=model_id)
+TypeError: __init__() got an unexpected keyword argument 'model'

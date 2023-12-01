@@ -1,0 +1,141 @@
+2023-11-30 21:32:25.074914: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 21:32:25.837022: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+model.safetensors:   0%|                                                             | 0.00/499M [00:00<?, ?B/s]model.safetensors:   2%|█                                                    | 10.5M/499M [00:19<15:08, 537kB/s]model.safetensors:   2%|█                                                    | 10.5M/499M [00:30<15:08, 537kB/s]model.safetensors:   4%|██▏                                                  | 21.0M/499M [01:19<32:43, 243kB/s]model.safetensors:   4%|██▏                                                  | 21.0M/499M [01:30<32:43, 243kB/s]model.safetensors:   5%|██▋                                                  | 25.1M/499M [01:46<37:10, 212kB/s]model.safetensors:   5%|██▋                                                  | 25.1M/499M [01:46<33:20, 237kB/s]
+model.safetensors:   0%|                                                             | 0.00/499M [00:00<?, ?B/s]model.safetensors:   2%|█                                                    | 10.5M/499M [00:44<34:54, 233kB/s]model.safetensors:   2%|█                                                    | 10.5M/499M [00:55<34:54, 233kB/s]model.safetensors:   4%|██▏                                                  | 21.0M/499M [01:57<46:41, 171kB/s]model.safetensors:   4%|██▏                                                  | 21.0M/499M [02:15<46:41, 171kB/s]model.safetensors:   6%|███▎                                                 | 31.5M/499M [03:14<50:50, 153kB/s]model.safetensors:   6%|███▎                                                 | 31.5M/499M [03:25<50:50, 153kB/s]model.safetensors:   7%|███▌                                                 | 33.3M/499M [03:26<50:37, 153kB/s]model.safetensors:   7%|███▌                                                 | 33.3M/499M [03:26<48:10, 161kB/s]
+model.safetensors:   0%|                                                             | 0.00/499M [00:00<?, ?B/s]model.safetensors:   2%|█                                                   | 10.5M/499M [00:07<05:49, 1.40MB/s]model.safetensors:   2%|█                                                   | 10.5M/499M [00:23<05:49, 1.40MB/s]model.safetensors:   4%|██▏                                                  | 21.0M/499M [00:32<13:33, 587kB/s]model.safetensors:   4%|██▏                                                  | 21.0M/499M [00:43<13:33, 587kB/s]model.safetensors:   6%|███▎                                                 | 31.0M/499M [01:46<33:02, 236kB/s]model.safetensors:   6%|███▎                                                 | 31.0M/499M [01:46<26:50, 290kB/s]
+Traceback (most recent call last):
+  File "./f00697_complete_sentence.py", line 47, in <module>
+    test_complete_sentence()
+  File "./f00697_complete_sentence.py", line 39, in test_complete_sentence
+    assert complete_sentence('In the story, the antagonist represents the <mask> nature of humanity.')
+  File "./f00697_complete_sentence.py", line 21, in complete_sentence
+    complete = pipeline('fill-mask', model='roberta-base')(sentence)[0]["sequence"]
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 870, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model roberta-base with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForMaskedLM'>, <class 'transformers.models.auto.modeling_tf_auto.TFAutoModelForMaskedLM'>, <class 'transformers.models.roberta.modeling_roberta.RobertaForMaskedLM'>, <class 'transformers.models.roberta.modeling_tf_roberta.TFRobertaForMaskedLM'>). See the original errors:
+
+while loading with AutoModelForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3037, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 498818054 but has size 25112370 (model.safetensors).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+while loading with TFAutoModelForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 712, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1012, in _prepare_proxy
+    conn.connect()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /roberta-base/resolve/main/model.safetensors (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2784, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1247, in hf_hub_download
+    metadata = get_hf_file_metadata(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1624, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 402, in _request_wrapper
+    response = _request_wrapper(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 425, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /roberta-base/resolve/main/model.safetensors (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 49a64ba9-9976-49c5-bdee-525f1247519a)')
+
+while loading with RobertaForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3037, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 498818054 but has size 33337656 (model.safetensors).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+while loading with TFRobertaForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2784, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 498818054 but has size 31039758 (model.safetensors).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+
+

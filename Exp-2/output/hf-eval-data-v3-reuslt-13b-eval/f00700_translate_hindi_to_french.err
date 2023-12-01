@@ -1,0 +1,24 @@
+tokenizer_config.json:   0%|                                                          | 0.00/531 [00:00<?, ?B/s]tokenizer_config.json: 100%|███████████████████████████████████████████████████| 531/531 [00:00<00:00, 71.0kB/s]
+sentencepiece.bpe.model:   0%|                                                      | 0.00/5.07M [00:00<?, ?B/s]sentencepiece.bpe.model: 100%|██████████████████████████████████████████████| 5.07M/5.07M [00:09<00:00, 545kB/s]sentencepiece.bpe.model: 100%|██████████████████████████████████████████████| 5.07M/5.07M [00:09<00:00, 545kB/s]
+special_tokens_map.json:   0%|                                                        | 0.00/649 [00:00<?, ?B/s]special_tokens_map.json: 100%|██████████████████████████████████████████████████| 649/649 [00:00<00:00, 119kB/s]
+pytorch_model.bin:   0%|                                                            | 0.00/2.44G [00:00<?, ?B/s]pytorch_model.bin:   0%|▏                                                 | 10.5M/2.44G [01:05<4:13:51, 160kB/s]pytorch_model.bin:   0%|▏                                                 | 10.5M/2.44G [01:21<4:13:51, 160kB/s]pytorch_model.bin:   1%|▍                                                 | 21.0M/2.44G [02:24<4:43:19, 143kB/s]pytorch_model.bin:   1%|▍                                                 | 21.0M/2.44G [02:41<4:43:19, 143kB/s]pytorch_model.bin:   1%|▋                                                | 31.5M/2.44G [04:52<6:52:58, 97.4kB/s]pytorch_model.bin:   1%|▋                                                | 31.5M/2.44G [05:11<6:52:58, 97.4kB/s]pytorch_model.bin:   2%|▊                                               | 41.9M/2.44G [09:05<10:29:32, 63.6kB/s]pytorch_model.bin:   2%|▊                                               | 41.9M/2.44G [09:21<10:29:32, 63.6kB/s]pytorch_model.bin:   2%|▉                                               | 47.8M/2.44G [10:28<10:12:15, 65.2kB/s]pytorch_model.bin:   2%|▉                                                | 47.8M/2.44G [10:28<8:44:47, 76.1kB/s]
+Traceback (most recent call last):
+  File "./f00700_translate_hindi_to_french.py", line 49, in <module>
+    test_translate_hindi_to_french()
+  File "./f00700_translate_hindi_to_french.py", line 41, in test_translate_hindi_to_french
+    assert isinstance(translate_hindi_to_french(message1), str)
+  File "./f00700_translate_hindi_to_french.py", line 19, in translate_hindi_to_french
+    translator = MBartForConditionalGeneration.from_pretrained(model_name).cuda()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 2444714899 but has size 47817602 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.

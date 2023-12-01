@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00745_detect_objects.py", line 46, in <module>
+    test_detect_objects()
+  File "./f00745_detect_objects.py", line 34, in test_detect_objects
+    assert isinstance(results, dict)
+AssertionError

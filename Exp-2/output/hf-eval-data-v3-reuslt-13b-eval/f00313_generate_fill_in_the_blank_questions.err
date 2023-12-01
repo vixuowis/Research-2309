@@ -1,0 +1,31 @@
+2023-11-30 18:35:21.937659: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 18:35:22.704086: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+No model was supplied, defaulted to distilroberta-base and revision ec58a5b (https://huggingface.co/distilroberta-base).
+Using a pipeline without specifying a model name and revision in production is not recommended.
+Some weights of the model checkpoint at distilroberta-base were not used when initializing RobertaForMaskedLM: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+- This IS expected if you are initializing RobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+vocab.json:   0%|                                                                    | 0.00/899k [00:00<?, ?B/s]vocab.json: 100%|█████████████████████████████████████████████████████████████| 899k/899k [00:01<00:00, 486kB/s]vocab.json: 100%|█████████████████████████████████████████████████████████████| 899k/899k [00:01<00:00, 486kB/s]
+merges.txt:   0%|                                                                    | 0.00/456k [00:00<?, ?B/s]merges.txt: 100%|████████████████████████████████████████████████████████████| 456k/456k [00:00<00:00, 3.62MB/s]merges.txt: 100%|████████████████████████████████████████████████████████████| 456k/456k [00:00<00:00, 3.60MB/s]
+tokenizer.json:   0%|                                                               | 0.00/1.36M [00:00<?, ?B/s]tokenizer.json: 100%|███████████████████████████████████████████████████████| 1.36M/1.36M [00:03<00:00, 407kB/s]tokenizer.json: 100%|███████████████████████████████████████████████████████| 1.36M/1.36M [00:03<00:00, 407kB/s]
+Traceback (most recent call last):
+  File "./f00313_generate_fill_in_the_blank_questions.py", line 64, in <module>
+    test_generate_fill_in_the_blank_questions()
+  File "./f00313_generate_fill_in_the_blank_questions.py", line 51, in test_generate_fill_in_the_blank_questions
+    result_1 = generate_fill_in_the_blank_questions(test_sentence_1)
+  File "./f00313_generate_fill_in_the_blank_questions.py", line 27, in generate_fill_in_the_blank_questions
+    prediction = fill_mask(masked_sentence)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 270, in __call__
+    outputs = super().__call__(inputs, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 123, in preprocess
+    self.ensure_exactly_one_mask_token(model_inputs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 112, in ensure_exactly_one_mask_token
+    self._ensure_exactly_one_mask_token(input_ids)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 100, in _ensure_exactly_one_mask_token
+    raise PipelineException(
+transformers.pipelines.base.PipelineException: No mask_token (<mask>) found on the input

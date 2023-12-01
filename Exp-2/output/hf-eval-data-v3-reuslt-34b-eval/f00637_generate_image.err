@@ -1,0 +1,11 @@
+2023-12-01 01:21:21.521530: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-01 01:21:22.252444: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00637_generate_image.py", line 62, in <module>
+    test_generate_image()
+  File "./f00637_generate_image.py", line 54, in test_generate_image
+    generate_image('a lighthouse on a foggy island', output_file='test_output.png')
+  File "./f00637_generate_image.py", line 26, in generate_image
+    model, options = StableDiffusionPipeline.from_hub(model_id)
+AttributeError: type object 'StableDiffusionPipeline' has no attribute 'from_hub'

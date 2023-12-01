@@ -1,0 +1,7 @@
+::group::Text-to-Video
+Converting scene description into text-to-video...
+
+An unexpected error occured while generating video...
+(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /gagan3012/VQGAN-CLIP.1-512x48/resolve/main/config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: b5b80684-298a-4205-beeb-1fb34faf893b)')
+::endgroup::
+Test passed

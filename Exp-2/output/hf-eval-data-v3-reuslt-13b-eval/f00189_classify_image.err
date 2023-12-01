@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00189_classify_image.py", line 48, in <module>
+    test_classify_image()
+  File "./f00189_classify_image.py", line 39, in test_classify_image
+    output = classify_image(img_url)
+  File "./f00189_classify_image.py", line 24, in classify_image
+    im_tensor = torch.as_tensor([torchvision.transforms.ToTensor()(im)]).cuda().half()
+NameError: name 'torchvision' is not defined

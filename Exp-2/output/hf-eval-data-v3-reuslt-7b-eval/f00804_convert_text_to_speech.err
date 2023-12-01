@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00804_convert_text_to_speech.py", line 62, in <module>
+    test_convert_text_to_speech()
+  File "./f00804_convert_text_to_speech.py", line 47, in test_convert_text_to_speech
+    assert convert_text_to_speech(text1) is None
+  File "./f00804_convert_text_to_speech.py", line 21, in convert_text_to_speech
+    from gtts import gTTS
+ModuleNotFoundError: No module named 'gtts'

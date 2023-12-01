@@ -26,7 +26,7 @@ Traceback (most recent call last):
     hf_raise_for_status(response)
   File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 320, in hf_raise_for_status
     raise RepositoryNotFoundError(message, response) from e
-huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-65683d88-5c91f6da0c8444ee4d03139f;1da5a7f0-f7a0-423f-9ddd-2177dea46de7)
+huggingface_hub.utils._errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-65684dca-71943c406205a8c3491cdd7b;4dec76a8-558a-4c6d-8f3c-9aa1489a39f5)
 
 Repository Not Found for url: https://huggingface.co/KB/bert-base-swedish-cased-squad2/resolve/main/tokenizer_config.json.
 Please make sure you specified the correct `repo_id` and `repo_type`.

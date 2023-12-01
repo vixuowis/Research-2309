@@ -1,0 +1,1 @@
+Test failed with exception: 'DDPMPipeline' object has no attribute 'sample'

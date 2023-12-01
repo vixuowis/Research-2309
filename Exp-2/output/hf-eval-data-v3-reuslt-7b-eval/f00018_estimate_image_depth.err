@@ -1,4 +1,20 @@
+2023-11-30 16:03:30.757654: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 16:03:31.486806: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
 Traceback (most recent call last):
-  File "./f00018_estimate_image_depth.py", line 6, in <module>
-    from PIL import Image
-ModuleNotFoundError: No module named 'PIL'
+  File "./f00018_estimate_image_depth.py", line 30, in estimate_image_depth
+    img = Image.open(response.content).convert("RGB")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3243, in open
+    fp = builtins.open(filename, "rb")
+ValueError: embedded null byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00018_estimate_image_depth.py", line 78, in <module>
+    test_estimate_image_depth()
+  File "./f00018_estimate_image_depth.py", line 68, in test_estimate_image_depth
+    result = estimate_image_depth(test_image_url)
+  File "./f00018_estimate_image_depth.py", line 32, in estimate_image_depth
+    raise ValueError('Image could not be loaded from the provided URL')
+ValueError: Image could not be loaded from the provided URL

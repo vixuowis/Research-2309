@@ -1,0 +1,1 @@
+__init__() missing 7 required positional arguments: 'vae', 'text_encoder', 'tokenizer', 'unet', 'scheduler', 'safety_checker', and 'feature_extractor'

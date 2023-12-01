@@ -1,0 +1,19 @@
+2023-12-01 00:53:49.337700: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-01 00:53:50.084450: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00500_translate_french_to_english.py", line 46, in <module>
+    test_translate_french_to_english()
+  File "./f00500_translate_french_to_english.py", line 32, in test_translate_french_to_english
+    assert isinstance(translate_french_to_english('Bonjour'), str)
+  File "./f00500_translate_french_to_english.py", line 24, in translate_french_to_english
+    french_to_english = pipeline('translation_fr-en')
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 826, in pipeline
+    normalized_task, targeted_task, task_options = check_task(task)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 512, in check_task
+    return PIPELINE_REGISTRY.check_task(task)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1213, in check_task
+    raise KeyError(f"Invalid translation task {task}, use 'translation_XX_to_YY' format")
+KeyError: "Invalid translation task translation_fr-en, use 'translation_XX_to_YY' format"

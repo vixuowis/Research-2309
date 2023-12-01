@@ -1,0 +1,361 @@
+2023-11-30 17:17:16.775347: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 17:17:17.545561: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+No model was supplied, defaulted to facebook/bart-large-mnli and revision c626438 (https://huggingface.co/facebook/bart-large-mnli).
+Using a pipeline without specifying a model name and revision in production is not recommended.
+config.json:   0%|                                                                  | 0.00/1.15k [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████| 1.15k/1.15k [00:00<00:00, 279kB/s]
+model.safetensors:   0%|                                                            | 0.00/1.63G [00:00<?, ?B/s]Error while downloading from https://cdn-lfs.huggingface.co/facebook/bart-large-mnli/cfbb687dbbd9df99fe865e1860350a22aebac4d26ee4bcb50217f1df606a018e?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701593385&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU5MzM4NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9mYWNlYm9vay9iYXJ0LWxhcmdlLW1ubGkvY2ZiYjY4N2RiYmQ5ZGY5OWZlODY1ZTE4NjAzNTBhMjJhZWJhYzRkMjZlZTRiY2I1MDIxN2YxZGY2MDZhMDE4ZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=e%7ETe6jz6N4iKFkde0GD76Zaza68UgGxj0KFZe2XrWF6fgNhzUt0oxGvuXDB3wI5TCGypi%7EeIgEOKU7VIumE%7E0TAX5XoB3FUdDO0QqB8OJCQG97xsGLXAsofi95PdqoH5h%7EKqA%7Ew-3ZcnNrdx7xJPoBRIDwukNoQ8abHZ6Bz9AoO693oOx83gDQ1LCFfJ8v6nYhxVr3owkSujSXR8fgKDuPVNy5Xbl-K9dQviumnyO%7E3ZZwS3x%7EvIUt3XEQ1LfWL1DwyV4xMk1u1fi9L6CHqSapfQldOol3SXG2VAY%7EW1L1y9GJlF9iWhWuI4Oo5LZOnQ69lsvN10AZuILPf8b-3BNA__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+model.safetensors:   0%|                                                            | 0.00/1.63G [00:00<?, ?B/s][AError while downloading from https://cdn-lfs.huggingface.co/facebook/bart-large-mnli/cfbb687dbbd9df99fe865e1860350a22aebac4d26ee4bcb50217f1df606a018e?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701593385&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU5MzM4NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9mYWNlYm9vay9iYXJ0LWxhcmdlLW1ubGkvY2ZiYjY4N2RiYmQ5ZGY5OWZlODY1ZTE4NjAzNTBhMjJhZWJhYzRkMjZlZTRiY2I1MDIxN2YxZGY2MDZhMDE4ZT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=e%7ETe6jz6N4iKFkde0GD76Zaza68UgGxj0KFZe2XrWF6fgNhzUt0oxGvuXDB3wI5TCGypi%7EeIgEOKU7VIumE%7E0TAX5XoB3FUdDO0QqB8OJCQG97xsGLXAsofi95PdqoH5h%7EKqA%7Ew-3ZcnNrdx7xJPoBRIDwukNoQ8abHZ6Bz9AoO693oOx83gDQ1LCFfJ8v6nYhxVr3owkSujSXR8fgKDuPVNy5Xbl-K9dQviumnyO%7E3ZZwS3x%7EvIUt3XEQ1LfWL1DwyV4xMk1u1fi9L6CHqSapfQldOol3SXG2VAY%7EW1L1y9GJlF9iWhWuI4Oo5LZOnQ69lsvN10AZuILPf8b-3BNA__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+model.safetensors:   0%|                                                            | 0.00/1.63G [08:21<?, ?B/s]
+model.safetensors:   0%|                                                            | 0.00/1.63G [13:59<?, ?B/s]
+model.safetensors:   0%|                                                            | 0.00/1.63G [00:00<?, ?B/s]model.safetensors:   0%|                                                            | 0.00/1.63G [06:39<?, ?B/s]
+Traceback (most recent call last):
+  File "./f00053_news_category_detection.py", line 38, in <module>
+    test_news_category_detection()
+  File "./f00053_news_category_detection.py", line 30, in test_news_category_detection
+    assert news_category_detection('Apple just announced the newest iPhone X') == 'technology'
+  File "./f00053_news_category_detection.py", line 19, in news_category_detection
+    zero_shot_classification = pipeline("zero-shot-classification")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 870, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model facebook/bart-large-mnli with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForSequenceClassification'>, <class 'transformers.models.auto.modeling_tf_auto.TFAutoModelForSequenceClassification'>, <class 'transformers.models.bart.modeling_bart.BartForSequenceClassification'>, <class 'transformers.models.bart.modeling_tf_bart.TFBartForSequenceClassification'>). See the original errors:
+
+while loading with AutoModelForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 812, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 797, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 717, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 812, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 797, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 717, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 776, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1045, in _prepare_proxy
+    conn.connect()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 782, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 470, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 514, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 778, in urlopen
+    self._raise_timeout(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 370, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3037, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 558, in http_get
+    return http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 558, in http_get
+    return http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 468, in http_get
+    r = _request_wrapper(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 425, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 6286cd66-d662-4bdd-a4a2-8d28f0ce1c2c)')
+
+while loading with TFAutoModelForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(9561147 bytes read, 1619876000 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 905, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 729, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(9561147 bytes read, 1619876000 more expected)', IncompleteRead(9561147 bytes read, 1619876000 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2784, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(9561147 bytes read, 1619876000 more expected)', IncompleteRead(9561147 bytes read, 1619876000 more expected))
+
+while loading with BartForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 776, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1045, in _prepare_proxy
+    conn.connect()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 782, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 470, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 514, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 778, in urlopen
+    self._raise_timeout(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 370, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3077, in from_pretrained
+    if has_file(pretrained_model_name_or_path, TF2_WEIGHTS_NAME, **has_file_kwargs):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 650, in has_file
+    r = requests.head(url, headers=headers, allow_redirects=False, proxies=proxies, timeout=10)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/api.py", line 100, in head
+    return request("head", url, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)
+
+while loading with TFBartForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 776, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1045, in _prepare_proxy
+    conn.connect()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 782, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 470, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 514, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 778, in urlopen
+    self._raise_timeout(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 370, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2817, in from_pretrained
+    if has_file(pretrained_model_name_or_path, SAFE_WEIGHTS_INDEX_NAME, **has_file_kwargs):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 650, in has_file
+    r = requests.head(url, headers=headers, allow_redirects=False, proxies=proxies, timeout=10)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/api.py", line 100, in head
+    return request("head", url, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)
+
+
+

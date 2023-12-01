@@ -1,0 +1,16 @@
+2023-11-30 21:59:31.497773: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 21:59:32.247431: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+--2023-11-30 21:59:33--  https://github.com/rosinality/denoising-diffusion-pytorch/releases/download/v1.0-ddim/4096x4096-anime256-std17-new-shorter_attn/checkpoint/model-latest.pth
+Connecting to 192.168.1.174:12798... connected.
+Proxy request sent, awaiting response... 404 Not Found
+2023-11-30 21:59:42 ERROR 404: Not Found.
+
+Traceback (most recent call last):
+  File "./f00731_generate_anime_image.py", line 50, in <module>
+    test_generate_anime_image()
+  File "./f00731_generate_anime_image.py", line 43, in test_generate_anime_image
+    generate_anime_image(prompt, negative_prompt)
+  File "./f00731_generate_anime_image.py", line 25, in generate_anime_image
+    net = StableDiffusionPipeline(path='./checkpoint/model-latest.pth', device=torch.device('cpu'))
+TypeError: __init__() got an unexpected keyword argument 'path'

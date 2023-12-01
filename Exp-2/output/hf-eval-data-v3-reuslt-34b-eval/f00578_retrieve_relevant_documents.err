@@ -1,0 +1,11 @@
+model.safetensors:   0%|                                                             | 0.00/440M [00:00<?, ?B/s]model.safetensors:   7%|███▊                                                 | 31.5M/440M [00:00<00:01, 230MB/s]model.safetensors:  17%|████████▊                                            | 73.4M/440M [00:00<00:01, 316MB/s]model.safetensors:  26%|██████████████▏                                       | 115M/440M [00:00<00:00, 334MB/s]model.safetensors:  36%|███████████████████▎                                  | 157M/440M [00:00<00:00, 348MB/s]model.safetensors:  45%|████████████████████████▍                             | 199M/440M [00:00<00:00, 351MB/s]model.safetensors:  55%|█████████████████████████████▌                        | 241M/440M [00:00<00:00, 353MB/s]model.safetensors:  64%|██████████████████████████████████▋                   | 283M/440M [00:00<00:00, 354MB/s]model.safetensors:  74%|███████████████████████████████████████▊              | 325M/440M [00:00<00:00, 355MB/s]model.safetensors:  83%|████████████████████████████████████████████▉         | 367M/440M [00:01<00:00, 367MB/s]model.safetensors:  93%|██████████████████████████████████████████████████▏   | 409M/440M [00:01<00:00, 372MB/s]model.safetensors: 100%|██████████████████████████████████████████████████████| 440M/440M [00:01<00:00, 352MB/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "./f00578_retrieve_relevant_documents.py", line 60, in <module>
+    test_retrieve_relevant_documents()
+  File "./f00578_retrieve_relevant_documents.py", line 43, in test_retrieve_relevant_documents
+    assert retrieve_relevant_documents(query, documents) == expected_output
+  File "./f00578_retrieve_relevant_documents.py", line 26, in retrieve_relevant_documents
+    input_ids = torch.tensor([tokenizer.encode(query, d) for d in documents])
+ValueError: expected sequence of length 34 at dim 1 (got 22)

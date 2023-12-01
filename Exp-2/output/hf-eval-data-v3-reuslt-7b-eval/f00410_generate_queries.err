@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00410_generate_queries.py", line 58, in <module>
+    test_generate_queries()
+  File "./f00410_generate_queries.py", line 44, in test_generate_queries
+    assert isinstance(generate_queries(document1), str)
+  File "./f00410_generate_queries.py", line 24, in generate_queries
+    document = ' '.join([token.text for token in nlp(document)]) # Tokenize and join tokens
+NameError: name 'nlp' is not defined

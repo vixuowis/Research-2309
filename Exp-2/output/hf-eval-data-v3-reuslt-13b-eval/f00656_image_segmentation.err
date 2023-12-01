@@ -1,0 +1,19 @@
+2023-11-30 21:18:52.956934: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 21:18:53.874611: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+preprocessor_config.json:   0%|                                                     | 0.00/6.82k [00:00<?, ?B/s]preprocessor_config.json: 100%|████████████████████████████████████████████| 6.82k/6.82k [00:00<00:00, 1.42MB/s]
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/oneformer/image_processing_oneformer.py:426: FutureWarning: The `reduce_labels` argument is deprecated and will be removed in v4.27. Please use `do_reduce_labels` instead.
+  warnings.warn(
+coco_panoptic.json:   0%|                                                           | 0.00/5.85k [00:00<?, ?B/s]coco_panoptic.json: 100%|██████████████████████████████████████████████████| 5.85k/5.85k [00:00<00:00, 2.62MB/s]
+tokenizer_config.json:   0%|                                                          | 0.00/806 [00:00<?, ?B/s]tokenizer_config.json: 100%|████████████████████████████████████████████████████| 806/806 [00:00<00:00, 820kB/s]
+vocab.json:   0%|                                                                   | 0.00/1.06M [00:00<?, ?B/s]vocab.json: 100%|███████████████████████████████████████████████████████████| 1.06M/1.06M [00:02<00:00, 478kB/s]vocab.json: 100%|███████████████████████████████████████████████████████████| 1.06M/1.06M [00:02<00:00, 477kB/s]
+merges.txt:   0%|                                                                    | 0.00/525k [00:00<?, ?B/s]merges.txt: 100%|█████████████████████████████████████████████████████████████| 525k/525k [00:00<00:00, 602kB/s]merges.txt: 100%|█████████████████████████████████████████████████████████████| 525k/525k [00:00<00:00, 601kB/s]
+special_tokens_map.json:   0%|                                                        | 0.00/472 [00:00<?, ?B/s]special_tokens_map.json: 100%|██████████████████████████████████████████████████| 472/472 [00:00<00:00, 561kB/s]
+Traceback (most recent call last):
+  File "./f00656_image_segmentation.py", line 54, in <module>
+    test_image_segmentation()
+  File "./f00656_image_segmentation.py", line 45, in test_image_segmentation
+    segmented_image = image_segmentation(image_path)
+  File "./f00656_image_segmentation.py", line 23, in image_segmentation
+    if not os.path.isfile(image_path):
+NameError: name 'os' is not defined

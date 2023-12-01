@@ -1,0 +1,3 @@
+An error has occurred while loading the pre-trained model/tokenizer! Consistency check failed: file should be of size 352824413 but has size 176238756 (model.safetensors).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.

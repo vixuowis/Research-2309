@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00559_extract_invoice_info.py", line 97, in <module>
+    test_extract_invoice_info()
+  File "./f00559_extract_invoice_info.py", line 89, in test_extract_invoice_info
+    assert len(answers) == 3, 'The length of the list should be 3.'
+AssertionError: The length of the list should be 3.

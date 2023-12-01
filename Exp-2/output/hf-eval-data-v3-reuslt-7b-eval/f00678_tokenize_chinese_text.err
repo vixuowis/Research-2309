@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00678_tokenize_chinese_text.py", line 40, in <module>
+    test_tokenize_chinese_text()
+  File "./f00678_tokenize_chinese_text.py", line 34, in test_tokenize_chinese_text
+    assert all(isinstance(token, str) for token in tokens)
+AssertionError

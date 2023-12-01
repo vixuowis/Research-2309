@@ -1,0 +1,9 @@
+2023-11-30 19:56:42.856039: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 19:56:43.609829: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00575_location_recommendation.py", line 56, in <module>
+    test_location_recommendation()
+  File "./f00575_location_recommendation.py", line 44, in test_location_recommendation
+    assert len(result_1) == len(test_case_1[1]), 'The number of cities in the result should be equal to the number of choices.'
+AssertionError: The number of cities in the result should be equal to the number of choices.

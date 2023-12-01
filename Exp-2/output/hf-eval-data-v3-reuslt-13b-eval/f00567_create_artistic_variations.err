@@ -1,0 +1,4 @@
+  File "./f00567_create_artistic_variations.py", line 55
+    def test_create_artistic_variations():
+    ^
+IndentationError: expected an indented block

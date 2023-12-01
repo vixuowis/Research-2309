@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00663_generate_vintage_image.py", line 46, in <module>
+    test_generate_vintage_image()
+  File "./f00663_generate_vintage_image.py", line 38, in test_generate_vintage_image
+    generate_vintage_image(model_name, output_file)
+  File "./f00663_generate_vintage_image.py", line 19, in generate_vintage_image
+    pipeline = DDPMPipeline(model=model_name)
+TypeError: __init__() got an unexpected keyword argument 'model'

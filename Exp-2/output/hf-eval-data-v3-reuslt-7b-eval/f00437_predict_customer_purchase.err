@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00437_predict_customer_purchase.py", line 56, in <module>
+    test_predict_customer_purchase()
+  File "./f00437_predict_customer_purchase.py", line 46, in test_predict_customer_purchase
+    predictions = predict_customer_purchase(model_path, data_path)
+  File "./f00437_predict_customer_purchase.py", line 24, in predict_customer_purchase
+    if not os.path.exists(model_path):
+NameError: name 'os' is not defined

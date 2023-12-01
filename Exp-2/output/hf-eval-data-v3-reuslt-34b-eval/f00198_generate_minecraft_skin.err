@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00198_generate_minecraft_skin.py", line 33, in <module>
+    test_generate_minecraft_skin()
+  File "./f00198_generate_minecraft_skin.py", line 25, in test_generate_minecraft_skin
+    image = generate_minecraft_skin()
+  File "./f00198_generate_minecraft_skin.py", line 15, in generate_minecraft_skin
+    pipeline = DDPMPipeline("EleutherAI/ddpm-dvae-v2-minecraft")
+TypeError: __init__() missing 1 required positional argument: 'scheduler'

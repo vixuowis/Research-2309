@@ -1,0 +1,44 @@
+2023-11-30 16:40:56.673176: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 16:40:57.387286: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+model.safetensors:   0%|                                                             | 0.00/496M [00:00<?, ?B/s]model.safetensors:   2%|█                                                    | 10.5M/496M [00:16<13:01, 622kB/s]model.safetensors:   2%|█                                                    | 10.5M/496M [00:30<13:01, 622kB/s]model.safetensors:   4%|██▏                                                  | 21.0M/496M [00:34<13:16, 597kB/s]model.safetensors:   4%|██▏                                                  | 21.0M/496M [00:50<13:16, 597kB/s]model.safetensors:   6%|███▎                                                 | 31.5M/496M [00:55<13:53, 558kB/s]model.safetensors:   6%|███▎                                                 | 31.5M/496M [01:10<13:53, 558kB/s]model.safetensors:   8%|████▍                                                | 41.9M/496M [01:24<16:31, 458kB/s]model.safetensors:   8%|████▍                                                | 41.9M/496M [01:40<16:31, 458kB/s]model.safetensors:  11%|█████▌                                               | 52.4M/496M [02:09<21:47, 339kB/s]model.safetensors:  11%|█████▌                                               | 52.4M/496M [02:20<21:47, 339kB/s]model.safetensors:  13%|██████▍                                            | 62.9M/496M [05:52<1:06:15, 109kB/s]model.safetensors:  13%|██████▋                                              | 62.9M/496M [06:00<41:24, 174kB/s]
+model.safetensors:   0%|                                                             | 0.00/496M [00:00<?, ?B/s]Error while downloading from https://cdn-lfs.huggingface.co/deepset/roberta-base-squad2-distilled/106dc06a09bae48ef4f4a69b9510e2d7bce9ba6536728f70ca779cdf1b2f6db3?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701593239&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU5MzIzOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9kZWVwc2V0L3JvYmVydGEtYmFzZS1zcXVhZDItZGlzdGlsbGVkLzEwNmRjMDZhMDliYWU0OGVmNGY0YTY5Yjk1MTBlMmQ3YmNlOWJhNjUzNjcyOGY3MGNhNzc5Y2RmMWIyZjZkYjM%7EcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=aBn3pQOIRzPczHvyl4nkQ3wsGYAEAtgiihrt5dORGfjUqRm-evEX8z7DNBQvYF9R9g70oz7KJ1RmN31SlTnxP2YBqkodoeYeJd2JZb%7ESkELPL5p8I0PT2vkaXY6DeBoI8xARey-rYTR2-wYNlFrY5MIlVQb59smP4JiQyB26niiBOv96uwkNKMAFrL4twFEvBEJ06Nm3u%7Em47Y7ct1XLbMu7fnXc7lYdIMSMBC8IEEzCcLepuGsd-0t5%7EWp2ev9GYKPtWANH17X1zJ5zIlLNlLmQsb8BzV3eBdOxpaxIP0uqTba0oa-tCqZdO1jX3eGp3f8Q3iAVuan2awf-OzyIWw__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+model.safetensors:   0%|                                                             | 0.00/496M [00:00<?, ?B/s][A
+model.safetensors:   2%|█                                                    | 10.5M/496M [00:48<37:37, 215kB/s][A
+model.safetensors:   2%|█                                                    | 10.5M/496M [01:02<37:37, 215kB/s][A
+model.safetensors:   4%|██▏                                                | 21.0M/496M [02:51<1:09:36, 114kB/s][A
+model.safetensors:   4%|██▏                                                | 21.0M/496M [03:02<1:09:36, 114kB/s][AError while downloading from https://cdn-lfs.huggingface.co/deepset/roberta-base-squad2-distilled/106dc06a09bae48ef4f4a69b9510e2d7bce9ba6536728f70ca779cdf1b2f6db3?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701593239&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU5MzIzOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9kZWVwc2V0L3JvYmVydGEtYmFzZS1zcXVhZDItZGlzdGlsbGVkLzEwNmRjMDZhMDliYWU0OGVmNGY0YTY5Yjk1MTBlMmQ3YmNlOWJhNjUzNjcyOGY3MGNhNzc5Y2RmMWIyZjZkYjM%7EcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=aBn3pQOIRzPczHvyl4nkQ3wsGYAEAtgiihrt5dORGfjUqRm-evEX8z7DNBQvYF9R9g70oz7KJ1RmN31SlTnxP2YBqkodoeYeJd2JZb%7ESkELPL5p8I0PT2vkaXY6DeBoI8xARey-rYTR2-wYNlFrY5MIlVQb59smP4JiQyB26niiBOv96uwkNKMAFrL4twFEvBEJ06Nm3u%7Em47Y7ct1XLbMu7fnXc7lYdIMSMBC8IEEzCcLepuGsd-0t5%7EWp2ev9GYKPtWANH17X1zJ5zIlLNlLmQsb8BzV3eBdOxpaxIP0uqTba0oa-tCqZdO1jX3eGp3f8Q3iAVuan2awf-OzyIWw__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+
+model.safetensors:   4%|██▌                                                         | 21.0M/496M [00:00<?, ?B/s][A[AError while downloading from https://cdn-lfs.huggingface.co/deepset/roberta-base-squad2-distilled/106dc06a09bae48ef4f4a69b9510e2d7bce9ba6536728f70ca779cdf1b2f6db3?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701593239&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU5MzIzOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9kZWVwc2V0L3JvYmVydGEtYmFzZS1zcXVhZDItZGlzdGlsbGVkLzEwNmRjMDZhMDliYWU0OGVmNGY0YTY5Yjk1MTBlMmQ3YmNlOWJhNjUzNjcyOGY3MGNhNzc5Y2RmMWIyZjZkYjM%7EcmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=aBn3pQOIRzPczHvyl4nkQ3wsGYAEAtgiihrt5dORGfjUqRm-evEX8z7DNBQvYF9R9g70oz7KJ1RmN31SlTnxP2YBqkodoeYeJd2JZb%7ESkELPL5p8I0PT2vkaXY6DeBoI8xARey-rYTR2-wYNlFrY5MIlVQb59smP4JiQyB26niiBOv96uwkNKMAFrL4twFEvBEJ06Nm3u%7Em47Y7ct1XLbMu7fnXc7lYdIMSMBC8IEEzCcLepuGsd-0t5%7EWp2ev9GYKPtWANH17X1zJ5zIlLNlLmQsb8BzV3eBdOxpaxIP0uqTba0oa-tCqZdO1jX3eGp3f8Q3iAVuan2awf-OzyIWw__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+model.safetensors:   4%|██▌                                                         | 21.0M/496M [00:21<?, ?B/s]
+model.safetensors:   4%|██                                                | 21.0M/496M [05:10<1:57:25, 67.5kB/s]
+model.safetensors:   0%|                                                             | 0.00/496M [13:35<?, ?B/s]
+Traceback (most recent call last):
+  File "./f00051_get_answer_from_document.py", line 66, in <module>
+    test_get_answer_from_document()
+  File "./f00051_get_answer_from_document.py", line 51, in test_get_answer_from_document
+    assert get_answer_from_document(context, question) is not None
+  File "./f00051_get_answer_from_document.py", line 24, in get_answer_from_document
+    answer_pipeline = pipeline("question-answering", model="deepset/roberta-base-squad2-distilled")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 870, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2784, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1422, in hf_hub_download
+    with FileLock(lock_path):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/filelock/_api.py", line 297, in __enter__
+    self.acquire()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/filelock/_api.py", line 267, in acquire
+    time.sleep(poll_interval)
+KeyboardInterrupt

@@ -1,0 +1,123 @@
+tokenizer_config.json:   0%|                                                         | 0.00/2.00 [00:00<?, ?B/s]tokenizer_config.json: 100%|███████████████████████████████████████████████████| 2.00/2.00 [00:00<00:00, 273B/s]
+vocab.txt:   0%|                                                                     | 0.00/229k [00:00<?, ?B/s]vocab.txt: 100%|██████████████████████████████████████████████████████████████| 229k/229k [00:01<00:00, 209kB/s]vocab.txt: 100%|██████████████████████████████████████████████████████████████| 229k/229k [00:01<00:00, 209kB/s]
+special_tokens_map.json:   0%|                                                        | 0.00/112 [00:00<?, ?B/s]special_tokens_map.json: 100%|██████████████████████████████████████████████████| 112/112 [00:00<00:00, 102kB/s]
+config.json:   0%|                                                                  | 0.00/1.53k [00:00<?, ?B/s]config.json: 100%|█████████████████████████████████████████████████████████| 1.53k/1.53k [00:00<00:00, 1.83MB/s]
+pytorch_model.bin:   0%|                                                             | 0.00/498M [00:00<?, ?B/s]Error while downloading from https://cdn-lfs.huggingface.co/indobenchmark/indobert-base-p2/37ab1a0f22e5d474658a762c3e538199757bfa481958dc3169a36a4a508c6b6f?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1701628020&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyODAyMH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9pbmRvYmVuY2htYXJrL2luZG9iZXJ0LWJhc2UtcDIvMzdhYjFhMGYyMmU1ZDQ3NDY1OGE3NjJjM2U1MzgxOTk3NTdiZmE0ODE5NThkYzMxNjlhMzZhNGE1MDhjNmI2Zj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=yhmE0I-jnipwpoOw-GBbUxY3rOW%7EkNLe%7Eg4wstu9Fahtk6WwwEcJVOZufwtaDN68MBcykvO99CaL1fzZ5lzU%7Es1FRIj6c2tiDOMRipxYMM0Z39g%7El%7ES3g16TObxJiuLokCZ9UhJnlU21sl7HYbDhGuINGTT8a7wN-99rW6V1p65Kve5pcKff6JJufDWR2ftA%7Esi6OiHl8fx3jgedMZ%7EiGmdTbkmQlZWn0W37-vYGbynvsxgKIAKkJH%7EVK8R94hJ8w5veb9WLEn6ZtVOZqDnow57DEdNTa4RUMwXT5562U40g8%7EVcn8y9P7QL-ZYImHotk3%7EMzVM%7E4L4-yeNi2XLZdA__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+pytorch_model.bin:   0%|                                                             | 0.00/498M [01:06<?, ?B/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 444, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 567, in read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 533, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 628, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 593, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 449, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.")
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 712, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1012, in _prepare_proxy
+    conn.connect()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /indobenchmark/indobert-base-p2/37ab1a0f22e5d474658a762c3e538199757bfa481958dc3169a36a4a508c6b6f?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1701628020&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyODAyMH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9pbmRvYmVuY2htYXJrL2luZG9iZXJ0LWJhc2UtcDIvMzdhYjFhMGYyMmU1ZDQ3NDY1OGE3NjJjM2U1MzgxOTk3NTdiZmE0ODE5NThkYzMxNjlhMzZhNGE1MDhjNmI2Zj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=yhmE0I-jnipwpoOw-GBbUxY3rOW~kNLe~g4wstu9Fahtk6WwwEcJVOZufwtaDN68MBcykvO99CaL1fzZ5lzU~s1FRIj6c2tiDOMRipxYMM0Z39g~l~S3g16TObxJiuLokCZ9UhJnlU21sl7HYbDhGuINGTT8a7wN-99rW6V1p65Kve5pcKff6JJufDWR2ftA~si6OiHl8fx3jgedMZ~iGmdTbkmQlZWn0W37-vYGbynvsxgKIAKkJH~VK8R94hJ8w5veb9WLEn6ZtVOZqDnow57DEdNTa4RUMwXT5562U40g8~Vcn8y9P7QL-ZYImHotk3~MzVM~4L4-yeNi2XLZdA__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00823_extract_features.py", line 23, in extract_features
+    model = AutoModel.from_pretrained("indobenchmark/indobert-base-p2")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 558, in http_get
+    return http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 468, in http_get
+    r = _request_wrapper(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 425, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /indobenchmark/indobert-base-p2/37ab1a0f22e5d474658a762c3e538199757bfa481958dc3169a36a4a508c6b6f?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1701628020&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyODAyMH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9pbmRvYmVuY2htYXJrL2luZG9iZXJ0LWJhc2UtcDIvMzdhYjFhMGYyMmU1ZDQ3NDY1OGE3NjJjM2U1MzgxOTk3NTdiZmE0ODE5NThkYzMxNjlhMzZhNGE1MDhjNmI2Zj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=yhmE0I-jnipwpoOw-GBbUxY3rOW~kNLe~g4wstu9Fahtk6WwwEcJVOZufwtaDN68MBcykvO99CaL1fzZ5lzU~s1FRIj6c2tiDOMRipxYMM0Z39g~l~S3g16TObxJiuLokCZ9UhJnlU21sl7HYbDhGuINGTT8a7wN-99rW6V1p65Kve5pcKff6JJufDWR2ftA~si6OiHl8fx3jgedMZ~iGmdTbkmQlZWn0W37-vYGbynvsxgKIAKkJH~VK8R94hJ8w5veb9WLEn6ZtVOZqDnow57DEdNTa4RUMwXT5562U40g8~Vcn8y9P7QL-ZYImHotk3~MzVM~4L4-yeNi2XLZdA__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 1ac388e2-9b41-4dfd-9129-faa957e198f3)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./f00823_extract_features.py", line 55, in <module>
+    test_extract_features()
+  File "./f00823_extract_features.py", line 47, in test_extract_features
+    output = extract_features(sample_text)
+  File "./f00823_extract_features.py", line 37, in extract_features
+    raise Exception("Problem loading the pretrained models/tokenizers") from e
+Exception: Problem loading the pretrained models/tokenizers

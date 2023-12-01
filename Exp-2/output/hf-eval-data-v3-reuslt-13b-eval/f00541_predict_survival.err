@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00541_predict_survival.py", line 62, in <module>
+    test_predict_survival()
+  File "./f00541_predict_survival.py", line 51, in test_predict_survival
+    predictions = predict_survival('test_data.csv')
+  File "./f00541_predict_survival.py", line 25, in predict_survival
+    if not os.path.isfile(model_file):
+NameError: name 'os' is not defined

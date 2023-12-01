@@ -1,0 +1,4 @@
+  File "./f00359_classify_computer_parts.py", line 55
+    def test_classify_computer_parts():
+    ^
+SyntaxError: invalid syntax

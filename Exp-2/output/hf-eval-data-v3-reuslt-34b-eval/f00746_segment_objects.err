@@ -1,0 +1,4 @@
+  File "./f00746_segment_objects.py", line 58
+    def test_segment_objects():
+    ^
+SyntaxError: invalid syntax

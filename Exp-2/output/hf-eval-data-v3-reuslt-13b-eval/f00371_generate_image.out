@@ -1,0 +1,1 @@
+Test failed with exception: type object 'DDPMPipeline' has no attribute 'load'

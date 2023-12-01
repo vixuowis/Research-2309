@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00199_generate_cat_image.py", line 53, in <module>
+    print(test_generate_cat_image())
+  File "./f00199_generate_cat_image.py", line 46, in test_generate_cat_image
+    generate_cat_image()
+  File "./f00199_generate_cat_image.py", line 22, in generate_cat_image
+    raise ModuleNotFoundError("You must install 'diffuser' before you can call this function")
+ModuleNotFoundError: You must install 'diffuser' before you can call this function

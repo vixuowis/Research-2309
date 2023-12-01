@@ -1,0 +1,13 @@
+2023-11-30 22:17:48.477001: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 22:17:49.311516: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/segformer/feature_extraction_segformer.py:28: FutureWarning: The class SegformerFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use SegformerImageProcessor instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00747_urban_landscape_recognition.py", line 61, in <module>
+    test_urban_landscape_recognition()
+  File "./f00747_urban_landscape_recognition.py", line 53, in test_urban_landscape_recognition
+    logits = urban_landscape_recognition(image_url)
+  File "./f00747_urban_landscape_recognition.py", line 44, in urban_landscape_recognition
+    return logits
+UnboundLocalError: local variable 'logits' referenced before assignment

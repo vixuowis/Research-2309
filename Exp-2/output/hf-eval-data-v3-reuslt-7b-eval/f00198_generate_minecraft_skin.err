@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00198_generate_minecraft_skin.py", line 40, in <module>
+    test_generate_minecraft_skin()
+  File "./f00198_generate_minecraft_skin.py", line 32, in test_generate_minecraft_skin
+    image = generate_minecraft_skin()
+  File "./f00198_generate_minecraft_skin.py", line 16, in generate_minecraft_skin
+    diffuser = DDPMPipeline(model_name)
+TypeError: __init__() missing 1 required positional argument: 'scheduler'

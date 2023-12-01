@@ -1,0 +1,34 @@
+2023-12-01 02:28:55.254246: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-01 02:28:55.960231: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/hub.py:294: UserWarning: You are about to download and run code from an untrusted repository. In a future release, this won't be allowed. To add the repository to your trusted list, change the command to {calling_fn}(..., trust_repo=False) and a command prompt will appear asking for an explicit confirmation of trust, or load(..., trust_repo=True), which will assume that the prompt is to be answered with 'yes'. You can also use load(..., trust_repo='check') which will only prompt for confirmation if the repo is not already trusted. This will eventually be the default behaviour
+  warnings.warn(
+Downloading: "https://github.com/CompVis/taming-transformers/zipball/master" to /root/.cache/torch/hub/master.zip
+Traceback (most recent call last):
+  File "./f00827_generate_image.py", line 44, in <module>
+    generate_image(prompt=prompt, device='cuda')
+  File "./f00827_generate_image.py", line 24, in generate_image
+    model = torch.hub.load('CompVis/taming-transformers', model_id)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/hub.py", line 563, in load
+    repo_or_dir = _get_cache_or_reload(repo_or_dir, force_reload, trust_repo, "load",
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/hub.py", line 238, in _get_cache_or_reload
+    download_url_to_file(url, cached_file, progress=False)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/hub.py", line 651, in download_url_to_file
+    buffer = u.read(8192)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 493, in readinto
+    return self._readinto_chunked(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 588, in _readinto_chunked
+    chunk_left = self._get_chunk_left()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 556, in _get_chunk_left
+    chunk_left = self._read_next_chunk_size()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 516, in _read_next_chunk_size
+    line = self.fp.readline(_MAXLINE + 1)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt

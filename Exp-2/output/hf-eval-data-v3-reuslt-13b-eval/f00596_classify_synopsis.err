@@ -1,0 +1,13 @@
+2023-11-30 20:42:09.586300: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 20:42:10.395476: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+No model was supplied, defaulted to distilbert-base-uncased-finetuned-sst-2-english and revision af0f99b (https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english).
+Using a pipeline without specifying a model name and revision in production is not recommended.
+Traceback (most recent call last):
+  File "./f00596_classify_synopsis.py", line 56, in <module>
+    test_classify_synopsis()
+  File "./f00596_classify_synopsis.py", line 45, in test_classify_synopsis
+    result = classify_synopsis(sequence, candidate_labels, hypothesis_template)
+  File "./f00596_classify_synopsis.py", line 32, in classify_synopsis
+    avg_classification_score = sum([classification_result[label] for label in candidate_labels]) / len(candidate_labels)
+TypeError: unsupported operand type(s) for +: 'int' and 'str'

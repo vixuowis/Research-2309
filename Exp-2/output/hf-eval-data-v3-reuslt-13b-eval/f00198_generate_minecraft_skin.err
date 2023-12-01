@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00198_generate_minecraft_skin.py", line 41, in <module>
+    test_generate_minecraft_skin()
+  File "./f00198_generate_minecraft_skin.py", line 33, in test_generate_minecraft_skin
+    image = generate_minecraft_skin()
+  File "./f00198_generate_minecraft_skin.py", line 16, in generate_minecraft_skin
+    ddpm_model = DDPMPipeline.load_from_checkpoint(path="https://github.com/huggingface/transformers-custom-apis/raw/ddpmpipelining/examples/tutorials/diffusion%20models/assets/ddpm-minecraft-128x128.ckpt")
+AttributeError: type object 'DDPMPipeline' has no attribute 'load_from_checkpoint'

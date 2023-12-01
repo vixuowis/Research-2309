@@ -1,0 +1,28 @@
+Downloading builder script:   0%|                                                   | 0.00/3.79k [00:00<?, ?B/s]Downloading builder script: 100%|██████████████████████████████████████████| 3.79k/3.79k [00:00<00:00, 8.99MB/s]
+Downloading metadata:   0%|                                                          | 0.00/174k [00:00<?, ?B/s]Downloading metadata:  15%|███████▋                                          | 26.6k/174k [00:00<00:01, 113kB/s]Downloading metadata:  25%|████████████                                     | 43.0k/174k [00:00<00:02, 65.6kB/s]Downloading metadata:  58%|█████████████████████████████▎                     | 100k/174k [00:00<00:00, 171kB/s]Downloading metadata:  76%|██████████████████████████████████████▋            | 132k/174k [00:00<00:00, 197kB/s]Downloading metadata: 100%|███████████████████████████████████████████████████| 174k/174k [00:00<00:00, 189kB/s]
+Downloading readme:   0%|                                                           | 0.00/62.4k [00:00<?, ?B/s]Downloading readme:  25%|████████████▎                                     | 15.4k/62.4k [00:00<00:00, 77.6kB/s]Downloading readme: 100%|███████████████████████████████████████████████████| 62.4k/62.4k [00:00<00:00, 268kB/s]
+Traceback (most recent call last):
+  File "./f00612_generate_audio_announcement.py", line 47, in <module>
+    test_dataset = load_dataset("common_voice", "en")["train"][0]
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/datasets/load.py", line 2128, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/datasets/load.py", line 1849, in load_dataset_builder
+    builder_cls = get_dataset_builder_class(dataset_module, dataset_name=dataset_name)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/datasets/load.py", line 196, in get_dataset_builder_class
+    builder_cls = import_main_class(dataset_module.module_path)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/datasets/load.py", line 114, in import_main_class
+    module = importlib.import_module(module_path)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/.cache/huggingface/modules/datasets_modules/datasets/common_voice/81b0db4867a6bed9e1f8bcc543dde1b48d4a1de8f9d629bd97cdabdc08c85b30/common_voice.py", line 1
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+    ^
+SyntaxError: invalid syntax

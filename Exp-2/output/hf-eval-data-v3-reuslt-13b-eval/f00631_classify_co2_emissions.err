@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00631_classify_co2_emissions.py", line 68, in <module>
+    test_classify_co2_emissions()
+  File "./f00631_classify_co2_emissions.py", line 58, in test_classify_co2_emissions
+    predictions = classify_co2_emissions(data_file, model_file, config_file)
+  File "./f00631_classify_co2_emissions.py", line 26, in classify_co2_emissions
+    if not (os.path.isfile(data_file)):
+NameError: name 'os' is not defined

@@ -1,0 +1,12 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py:672: FutureWarning: 'cached_download' is the legacy way to download files from the HF hub, please consider upgrading to 'hf_hub_download'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00083_classify_wine_quality.py", line 58, in <module>
+    test_classify_wine_quality()
+  File "./f00083_classify_wine_quality.py", line 43, in test_classify_wine_quality
+    data_file = cached_download(hf_hub_url('julien-c/wine-quality', 'winequality-red.csv'))
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 770, in cached_download
+    raise LocalEntryNotFoundError(
+huggingface_hub.utils._errors.LocalEntryNotFoundError: Connection error, and we cannot find the requested files in the cached path. Please try again or make sure your Internet connection is on.

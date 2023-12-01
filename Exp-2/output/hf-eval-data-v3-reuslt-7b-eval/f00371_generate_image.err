@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "./f00371_generate_image.py", line 30, in <module>
+    for model_dir in os.listdir('models'):
+FileNotFoundError: [Errno 2] No such file or directory: 'models'

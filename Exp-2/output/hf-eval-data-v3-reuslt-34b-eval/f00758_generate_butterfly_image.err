@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00758_generate_butterfly_image.py", line 47, in <module>
+    test_generate_butterfly_image()
+  File "./f00758_generate_butterfly_image.py", line 40, in test_generate_butterfly_image
+    image = generate_butterfly_image()
+  File "./f00758_generate_butterfly_image.py", line 17, in generate_butterfly_image
+    pipeline = DDPMPipeline(steps = 256, device = "cpu")
+TypeError: __init__() got an unexpected keyword argument 'steps'

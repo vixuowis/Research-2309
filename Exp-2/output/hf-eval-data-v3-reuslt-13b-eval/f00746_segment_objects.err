@@ -1,0 +1,4 @@
+  File "./f00746_segment_objects.py", line 69
+    img_byte_stream =
+                    ^
+SyntaxError: invalid syntax

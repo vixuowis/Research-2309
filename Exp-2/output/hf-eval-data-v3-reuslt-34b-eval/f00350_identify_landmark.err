@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00350_identify_landmark.py", line 60, in <module>
+    test_identify_landmark()
+  File "./f00350_identify_landmark.py", line 52, in test_identify_landmark
+    answer = identify_landmark(img_url, question)
+  File "./f00350_identify_landmark.py", line 23, in identify_landmark
+    img = Image.open(BytesIO(response.content))
+NameError: name 'BytesIO' is not defined

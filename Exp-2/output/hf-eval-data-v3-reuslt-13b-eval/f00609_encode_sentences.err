@@ -1,0 +1,57 @@
+.gitattributes:   0%|                                                                 | 0.00/690 [00:00<?, ?B/s].gitattributes: 100%|███████████████████████████████████████████████████████████| 690/690 [00:00<00:00, 153kB/s]
+1_Pooling/config.json:   0%|                                                          | 0.00/190 [00:00<?, ?B/s]1_Pooling/config.json: 100%|███████████████████████████████████████████████████| 190/190 [00:00<00:00, 82.6kB/s]
+README.md:   0%|                                                                    | 0.00/3.74k [00:00<?, ?B/s]README.md: 100%|███████████████████████████████████████████████████████████| 3.74k/3.74k [00:00<00:00, 4.82MB/s]
+config.json:   0%|                                                                    | 0.00/718 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 718/718 [00:00<00:00, 994kB/s]
+config_sentence_transformers.json:   0%|                                              | 0.00/122 [00:00<?, ?B/s]config_sentence_transformers.json: 100%|████████████████████████████████████████| 122/122 [00:00<00:00, 288kB/s]
+merges.txt:   0%|                                                                    | 0.00/456k [00:00<?, ?B/s]merges.txt: 100%|█████████████████████████████████████████████████████████████| 456k/456k [00:01<00:00, 378kB/s]merges.txt: 100%|█████████████████████████████████████████████████████████████| 456k/456k [00:01<00:00, 377kB/s]
+pytorch_model.bin:   0%|                                                             | 0.00/329M [00:00<?, ?B/s]pytorch_model.bin:   3%|█▋                                                   | 10.5M/329M [00:12<06:07, 867kB/s]pytorch_model.bin:   3%|█▋                                                   | 10.5M/329M [00:22<06:07, 867kB/s]pytorch_model.bin:   6%|███▍                                                 | 21.0M/329M [01:05<17:52, 287kB/s]pytorch_model.bin:   6%|███▍                                                 | 21.0M/329M [01:22<17:52, 287kB/s]pytorch_model.bin:  10%|█████                                                | 31.5M/329M [02:13<23:59, 206kB/s]pytorch_model.bin:  10%|█████                                                | 31.5M/329M [02:32<23:59, 206kB/s]pytorch_model.bin:  12%|██████▎                                              | 39.2M/329M [03:09<27:08, 178kB/s]pytorch_model.bin:  12%|██████▎                                              | 39.2M/329M [03:09<23:20, 207kB/s]
+sentence_bert_config.json:   0%|                                                     | 0.00/53.0 [00:00<?, ?B/s]sentence_bert_config.json: 100%|█████████████████████████████████████████████| 53.0/53.0 [00:00<00:00, 8.70kB/s]
+special_tokens_map.json:   0%|                                                        | 0.00/239 [00:00<?, ?B/s]special_tokens_map.json: 100%|██████████████████████████████████████████████████| 239/239 [00:00<00:00, 207kB/s]
+tokenizer.json:   0%|                                                               | 0.00/1.36M [00:00<?, ?B/s]tokenizer.json: 100%|███████████████████████████████████████████████████████| 1.36M/1.36M [00:03<00:00, 427kB/s]tokenizer.json: 100%|███████████████████████████████████████████████████████| 1.36M/1.36M [00:03<00:00, 427kB/s]
+tokenizer_config.json:   0%|                                                        | 0.00/1.35k [00:00<?, ?B/s]tokenizer_config.json: 100%|███████████████████████████████████████████████| 1.35k/1.35k [00:00<00:00, 1.30MB/s]
+vocab.json:   0%|                                                                    | 0.00/798k [00:00<?, ?B/s]vocab.json: 100%|████████████████████████████████████████████████████████████| 798k/798k [00:00<00:00, 1.09MB/s]vocab.json: 100%|████████████████████████████████████████████████████████████| 798k/798k [00:00<00:00, 1.09MB/s]
+modules.json:   0%|                                                                   | 0.00/229 [00:00<?, ?B/s]modules.json: 100%|█████████████████████████████████████████████████████████████| 229/229 [00:00<00:00, 255kB/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 484, in load_state_dict
+    return torch.load(checkpoint_file, map_location=map_location)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 993, in load
+    with _open_zipfile_reader(opened_file) as opened_zipfile:
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 447, in __init__
+    super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 488, in load_state_dict
+    if f.read(7) == "version":
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 64: invalid start byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00609_encode_sentences.py", line 37, in <module>
+    test_encode_sentences()
+  File "./f00609_encode_sentences.py", line 27, in test_encode_sentences
+    embeddings = encode_sentences(test_sentences)
+  File "./f00609_encode_sentences.py", line 17, in encode_sentences
+    sbert = SentenceTransformer('distilroberta-base-paraphrase-v1')
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/sentence_transformers/SentenceTransformer.py", line 95, in __init__
+    modules = self._load_sbert_model(model_path)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/sentence_transformers/SentenceTransformer.py", line 840, in _load_sbert_model
+    module = module_class.load(os.path.join(model_path, module_config['path']))
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/sentence_transformers/models/Transformer.py", line 137, in load
+    return Transformer(model_name_or_path=input_path, **config)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/sentence_transformers/models/Transformer.py", line 29, in __init__
+    self._load_model(model_name_or_path, config, cache_dir)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/sentence_transformers/models/Transformer.py", line 49, in _load_model
+    self.auto_model = AutoModel.from_pretrained(model_name_or_path, config=config, cache_dir=cache_dir)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3170, in from_pretrained
+    state_dict = load_state_dict(resolved_archive_file)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 500, in load_state_dict
+    raise OSError(
+OSError: Unable to load weights from pytorch checkpoint file for '/root/.cache/torch/sentence_transformers/sentence-transformers_distilroberta-base-paraphrase-v1/pytorch_model.bin' at '/root/.cache/torch/sentence_transformers/sentence-transformers_distilroberta-base-paraphrase-v1/pytorch_model.bin'. If you tried to load a PyTorch model from a TF 2.0 checkpoint, please set from_tf=True.

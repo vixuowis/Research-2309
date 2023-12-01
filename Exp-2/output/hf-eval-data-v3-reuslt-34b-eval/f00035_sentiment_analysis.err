@@ -1,0 +1,11 @@
+2023-11-30 16:47:06.353173: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 16:47:07.136693: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+No model was supplied, defaulted to distilbert-base-uncased-finetuned-sst-2-english and revision af0f99b (https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english).
+Using a pipeline without specifying a model name and revision in production is not recommended.
+Traceback (most recent call last):
+  File "./f00035_sentiment_analysis.py", line 49, in <module>
+    test_sentiment_analysis()
+  File "./f00035_sentiment_analysis.py", line 34, in test_sentiment_analysis
+    assert result[0]['label'] in ['positive', 'negative', 'neutral']
+KeyError: 0

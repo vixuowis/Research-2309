@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00205_image_geolocalization.py", line 63, in <module>
+    test_image_geolocalization()
+  File "./f00205_image_geolocalization.py", line 52, in test_image_geolocalization
+    result = image_geolocalization(url, choices)
+  File "./f00205_image_geolocalization.py", line 23, in image_geolocalization
+    img = Image.open(response.raw).convert("RGB")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3305, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x7fbd464c6810>

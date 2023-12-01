@@ -1,0 +1,99 @@
+2023-11-30 20:42:18.440683: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 20:42:19.234646: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+config.json:   0%|                                                                    | 0.00/433 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 433/433 [00:00<00:00, 113kB/s]
+model.safetensors:   0%|                                                             | 0.00/439M [00:00<?, ?B/s]model.safetensors:   2%|█▏                                                  | 10.5M/439M [00:03<02:15, 3.15MB/s]model.safetensors:   5%|██▍                                                 | 21.0M/439M [00:05<01:38, 4.26MB/s]model.safetensors:   7%|███▋                                                | 31.5M/439M [00:08<01:47, 3.80MB/s]model.safetensors:  10%|████▉                                               | 41.9M/439M [00:11<01:46, 3.73MB/s]model.safetensors:  12%|██████▏                                             | 52.4M/439M [00:13<01:43, 3.74MB/s]model.safetensors:  14%|███████▍                                            | 62.9M/439M [00:17<01:48, 3.48MB/s]model.safetensors:  17%|████████▋                                           | 73.4M/439M [00:21<01:54, 3.19MB/s]model.safetensors:  19%|█████████▉                                          | 83.9M/439M [00:25<02:01, 2.93MB/s]model.safetensors:  22%|███████████▏                                        | 94.4M/439M [00:28<01:56, 2.97MB/s]model.safetensors:  24%|████████████▋                                        | 105M/439M [00:31<01:46, 3.13MB/s]model.safetensors:  26%|█████████████▉                                       | 115M/439M [00:33<01:31, 3.55MB/s]model.safetensors:  29%|███████████████▏                                     | 126M/439M [00:36<01:22, 3.80MB/s]model.safetensors:  31%|████████████████▍                                    | 136M/439M [00:39<01:20, 3.74MB/s]model.safetensors:  33%|█████████████████▋                                   | 147M/439M [00:42<01:19, 3.67MB/s]model.safetensors:  36%|██████████████████▉                                  | 157M/439M [00:45<01:24, 3.33MB/s]model.safetensors:  38%|████████████████████▎                                | 168M/439M [00:48<01:17, 3.52MB/s]model.safetensors:  41%|█████████████████████▌                               | 178M/439M [00:51<01:12, 3.62MB/s]model.safetensors:  43%|██████████████████████▊                              | 189M/439M [00:54<01:10, 3.57MB/s]model.safetensors:  45%|████████████████████████                             | 199M/439M [00:58<01:12, 3.29MB/s]model.safetensors:  48%|█████████████████████████▎                           | 210M/439M [01:00<01:07, 3.38MB/s]model.safetensors:  50%|██████████████████████████▌                          | 220M/439M [01:03<00:58, 3.72MB/s]model.safetensors:  53%|███████████████████████████▊                         | 231M/439M [01:05<00:55, 3.76MB/s]model.safetensors:  55%|█████████████████████████████▏                       | 241M/439M [01:08<00:53, 3.70MB/s]model.safetensors:  57%|██████████████████████████████▍                      | 252M/439M [01:11<00:50, 3.68MB/s]model.safetensors:  60%|███████████████████████████████▋                     | 262M/439M [01:15<00:52, 3.35MB/s]model.safetensors:  62%|████████████████████████████████▉                    | 273M/439M [01:18<00:49, 3.37MB/s]model.safetensors:  65%|██████████████████████████████████▏                  | 283M/439M [01:21<00:46, 3.32MB/s]model.safetensors:  67%|███████████████████████████████████▍                 | 294M/439M [01:24<00:42, 3.41MB/s]model.safetensors:  69%|████████████████████████████████████▋                | 304M/439M [01:27<00:38, 3.48MB/s]model.safetensors:  72%|█████████████████████████████████████▉               | 315M/439M [01:30<00:35, 3.48MB/s]model.safetensors:  74%|███████████████████████████████████████▎             | 325M/439M [01:33<00:31, 3.65MB/s]model.safetensors:  76%|████████████████████████████████████████▌            | 336M/439M [01:36<00:29, 3.55MB/s]model.safetensors:  79%|█████████████████████████████████████████▊           | 346M/439M [01:41<00:31, 2.98MB/s]model.safetensors:  81%|███████████████████████████████████████████          | 357M/439M [01:52<00:45, 1.81MB/s]model.safetensors:  81%|███████████████████████████████████████████          | 357M/439M [02:08<00:45, 1.81MB/s]model.safetensors:  84%|█████████████████████████████████████████████▏        | 367M/439M [02:59<02:46, 431kB/s]model.safetensors:  84%|█████████████████████████████████████████████▏        | 367M/439M [03:18<02:46, 431kB/s]model.safetensors:  86%|██████████████████████████████████████████████▍       | 377M/439M [07:39<09:50, 104kB/s]model.safetensors:  86%|██████████████████████████████████████████████▍       | 377M/439M [07:58<09:50, 104kB/s]model.safetensors:  88%|██████████████████████████████████████████████▊      | 388M/439M [09:58<09:05, 93.3kB/s]model.safetensors:  88%|██████████████████████████████████████████████▊      | 388M/439M [10:18<09:05, 93.3kB/s]model.safetensors:  91%|████████████████████████████████████████████████     | 398M/439M [12:24<07:52, 85.5kB/s]model.safetensors:  91%|████████████████████████████████████████████████     | 398M/439M [12:38<07:52, 85.5kB/s]model.safetensors:  93%|██████████████████████████████████████████████████▎   | 409M/439M [13:23<04:54, 101kB/s]model.safetensors:  93%|██████████████████████████████████████████████████▍   | 409M/439M [13:26<04:47, 102kB/s]model.safetensors:  93%|██████████████████████████████████████████████████▍   | 409M/439M [13:26<00:57, 508kB/s]
+model.safetensors:   0%|                                                             | 0.00/439M [00:00<?, ?B/s]model.safetensors:   2%|█▎                                                   | 10.5M/439M [00:22<15:14, 468kB/s]model.safetensors:   2%|█▎                                                   | 10.5M/439M [00:38<15:14, 468kB/s]model.safetensors:   5%|██▌                                                  | 21.0M/439M [01:07<23:39, 294kB/s]model.safetensors:   5%|██▌                                                  | 21.0M/439M [01:18<23:39, 294kB/s]model.safetensors:   7%|███▊                                                 | 31.5M/439M [01:28<18:53, 359kB/s]model.safetensors:   7%|███▊                                                 | 31.5M/439M [01:48<18:53, 359kB/s]model.safetensors:  10%|█████                                                | 41.9M/439M [02:07<20:48, 318kB/s]model.safetensors:  10%|█████                                                | 41.9M/439M [02:18<20:48, 318kB/s]model.safetensors:  11%|█████▉                                               | 49.4M/439M [02:35<21:27, 303kB/s]model.safetensors:  11%|█████▉                                               | 49.4M/439M [02:35<20:23, 318kB/s]
+model.safetensors:   0%|                                                             | 0.00/439M [00:00<?, ?B/s]model.safetensors:   2%|█▏                                                  | 10.5M/439M [00:06<04:39, 1.53MB/s]model.safetensors:   5%|██▍                                                 | 21.0M/439M [00:11<03:46, 1.85MB/s]model.safetensors:   5%|██▍                                                 | 21.0M/439M [00:29<03:46, 1.85MB/s]model.safetensors:   7%|███▊                                                 | 31.5M/439M [00:39<10:11, 667kB/s]model.safetensors:   7%|███▊                                                 | 31.5M/439M [00:49<10:11, 667kB/s]model.safetensors:  10%|█████                                                | 41.9M/439M [01:40<21:14, 311kB/s]model.safetensors:  10%|█████                                                | 42.0M/439M [01:40<15:51, 417kB/s]
+model.safetensors:   0%|                                                             | 0.00/439M [00:00<?, ?B/s]model.safetensors:   2%|█▏                                                  | 10.5M/439M [00:05<03:37, 1.97MB/s]model.safetensors:   5%|██▍                                                 | 21.0M/439M [00:08<02:51, 2.43MB/s]model.safetensors:   5%|██▍                                                 | 21.0M/439M [00:28<02:51, 2.43MB/s]model.safetensors:   7%|███▊                                                 | 31.5M/439M [00:33<08:46, 773kB/s]model.safetensors:   7%|███▊                                                 | 31.5M/439M [00:48<08:46, 773kB/s]model.safetensors:  10%|█████                                                | 41.9M/439M [01:38<21:15, 311kB/s]model.safetensors:  10%|█████                                                | 41.9M/439M [01:48<21:15, 311kB/s]model.safetensors:  12%|██████▎                                              | 52.4M/439M [02:47<28:30, 226kB/s]model.safetensors:  12%|██████▎                                              | 52.4M/439M [02:58<28:30, 226kB/s]model.safetensors:  13%|███████                                              | 58.6M/439M [03:27<31:14, 203kB/s]model.safetensors:  13%|███████                                              | 58.6M/439M [03:27<22:27, 282kB/s]
+Traceback (most recent call last):
+  File "./f00596_classify_synopsis.py", line 42, in <module>
+    test_classify_synopsis()
+  File "./f00596_classify_synopsis.py", line 31, in test_classify_synopsis
+    result = classify_synopsis(sequence, candidate_labels, hypothesis_template)
+  File "./f00596_classify_synopsis.py", line 20, in classify_synopsis
+    nlp = pipeline('zero-shot-classification', model='bert-base-german-cased')
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 870, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model bert-base-german-cased with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForSequenceClassification'>, <class 'transformers.models.auto.modeling_tf_auto.TFAutoModelForSequenceClassification'>, <class 'transformers.models.bert.modeling_bert.BertForMaskedLM'>, <class 'transformers.models.bert.modeling_tf_bert.TFBertForMaskedLM'>). See the original errors:
+
+while loading with AutoModelForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3037, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 438844124 but has size 409438216 (model.safetensors).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+while loading with TFAutoModelForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2784, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 438844124 but has size 49367333 (model.safetensors).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+while loading with BertForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3037, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 438844124 but has size 41963831 (model.safetensors).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+while loading with TFBertForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2784, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 438844124 but has size 58645040 (model.safetensors).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+
+

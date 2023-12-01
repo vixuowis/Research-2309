@@ -1,0 +1,31 @@
+2023-11-30 19:17:31.365056: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 19:17:32.155973: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/controlnet_aux/mediapipe_face/mediapipe_face_common.py:7: UserWarning: The module 'mediapipe' is not installed. The package will have limited functionality. Please install it using the command: pip install 'mediapipe'
+  warnings.warn(
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/controlnet_aux/segment_anything/modeling/tiny_vit_sam.py:654: UserWarning: Overwriting tiny_vit_5m_224 in registry with controlnet_aux.segment_anything.modeling.tiny_vit_sam.tiny_vit_5m_224. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  return register_model(fn_wrapper)
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/controlnet_aux/segment_anything/modeling/tiny_vit_sam.py:654: UserWarning: Overwriting tiny_vit_11m_224 in registry with controlnet_aux.segment_anything.modeling.tiny_vit_sam.tiny_vit_11m_224. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  return register_model(fn_wrapper)
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/controlnet_aux/segment_anything/modeling/tiny_vit_sam.py:654: UserWarning: Overwriting tiny_vit_21m_224 in registry with controlnet_aux.segment_anything.modeling.tiny_vit_sam.tiny_vit_21m_224. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  return register_model(fn_wrapper)
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/controlnet_aux/segment_anything/modeling/tiny_vit_sam.py:654: UserWarning: Overwriting tiny_vit_21m_384 in registry with controlnet_aux.segment_anything.modeling.tiny_vit_sam.tiny_vit_21m_384. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  return register_model(fn_wrapper)
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/controlnet_aux/segment_anything/modeling/tiny_vit_sam.py:654: UserWarning: Overwriting tiny_vit_21m_512 in registry with controlnet_aux.segment_anything.modeling.tiny_vit_sam.tiny_vit_21m_512. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  return register_model(fn_wrapper)
+Traceback (most recent call last):
+  File "./f00472_estimate_human_pose.py", line 78, in <module>
+    test_estimate_human_pose()
+  File "./f00472_estimate_human_pose.py", line 62, in test_estimate_human_pose
+    estimate_human_pose('test_images/exercise1.jpg', 'test_output/pose1_out.png')
+  File "./f00472_estimate_human_pose.py", line 27, in estimate_human_pose
+    model = ControlNetModel(diffuser_model_path, controlnet_model_path).to(device)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/diffusers/configuration_utils.py", line 645, in inner_init
+    init(self, *args, **init_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/diffusers/models/controlnet.py", line 249, in __init__
+    self.conv_in = nn.Conv2d(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 447, in __init__
+    super().__init__(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 88, in __init__
+    if in_channels % groups != 0:
+TypeError: unsupported operand type(s) for %: 'NoneType' and 'int'

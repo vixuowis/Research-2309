@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "./f00385_identify_company_names.py", line 64, in <module>
+    test_identify_company_names()
+  File "./f00385_identify_company_names.py", line 46, in test_identify_company_names
+    outputs = identify_company_names(text)
+  File "./f00385_identify_company_names.py", line 30, in identify_company_names
+    pretrained_weights = torch.load('models/bert-ner.pt', map_location=device)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 986, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 435, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/serialization.py", line 416, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'models/bert-ner.pt'

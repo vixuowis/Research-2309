@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00644_generate_video_from_text.py", line 57, in <module>
+    test_generate_video_from_text()
+  File "./f00644_generate_video_from_text.py", line 48, in test_generate_video_from_text
+    video_path = generate_video_from_text(prompt)
+  File "./f00644_generate_video_from_text.py", line 24, in generate_video_from_text
+    diffusion = DiffusionPipeline(model_name)
+TypeError: DiffusionPipeline() takes no arguments

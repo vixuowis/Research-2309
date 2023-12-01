@@ -1,0 +1,2 @@
+ERROR - Could not allocate GPU.
+Physical devices cannot be modified after being initialized

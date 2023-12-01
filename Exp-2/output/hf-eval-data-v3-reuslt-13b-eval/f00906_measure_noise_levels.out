@@ -1,0 +1,23 @@
+
+Could not download 'pyannote/voice-activity-detection' model.
+It might be because the model is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Model.from_pretrained('pyannote/voice-activity-detection',
+   ...                       use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the model is gated:
+visit https://hf.co/pyannote/voice-activity-detection to accept the user conditions.
+Error: Error opening 'valid_audio_file.wav': System error.
+
+Could not download 'pyannote/voice-activity-detection' model.
+It might be because the model is private or gated so make
+sure to authenticate. Visit https://hf.co/settings/tokens to
+create your access token and retry with:
+
+   >>> Model.from_pretrained('pyannote/voice-activity-detection',
+   ...                       use_auth_token=YOUR_AUTH_TOKEN)
+
+If this still does not work, it might be because the model is gated:
+visit https://hf.co/pyannote/voice-activity-detection to accept the user conditions.

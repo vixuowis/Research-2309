@@ -1,0 +1,13 @@
+2023-11-30 23:46:46.150937: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 23:46:46.867941: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00827_generate_image.py", line 48, in <module>
+    test_generate_image()
+  File "./f00827_generate_image.py", line 37, in test_generate_image
+    generate_image('a futuristic 3D printed car', save_path='3D_printed_car.png')
+  File "./f00827_generate_image.py", line 23, in generate_image
+    model = StableDiffusionPipeline(model=model_id)
+TypeError: __init__() got an unexpected keyword argument 'model'

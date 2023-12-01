@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00415_get_sentence_similarity.py", line 38, in <module>
+    test_get_sentence_similarity()
+  File "./f00415_get_sentence_similarity.py", line 30, in test_get_sentence_similarity
+    similarity_matrix = get_sentence_similarity(sentences)
+  File "./f00415_get_sentence_similarity.py", line 21, in get_sentence_similarity
+    sentence_embeddings = get_sentence_encoding(sentences)
+NameError: name 'get_sentence_encoding' is not defined

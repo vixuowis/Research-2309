@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "./f00721_predict_wine_quality.py", line 24, in predict_wine_quality
+    alcohol = float(request.form['alcohol'])
+NameError: name 'request' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00721_predict_wine_quality.py", line 72, in <module>
+    test_predict_wine_quality()
+  File "./f00721_predict_wine_quality.py", line 63, in test_predict_wine_quality
+    labels, score = predict_wine_quality()
+  File "./f00721_predict_wine_quality.py", line 30, in predict_wine_quality
+    alcohol = request.args.get('alcohol')
+NameError: name 'request' is not defined

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 指定要遍历的文件夹
-base_dir="output/hf-eval-data-v3-reuslt-13b-eval"
+base_dir="output/hf-eval-data-v3-reuslt-34b-eval"
 cd ${base_dir}
 
 # 设置计数器

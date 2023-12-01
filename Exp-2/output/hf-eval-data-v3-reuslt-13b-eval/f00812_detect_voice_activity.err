@@ -1,0 +1,17 @@
+2023-11-30 22:56:44.499814: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 22:56:45.240469: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00812_detect_voice_activity.py", line 46, in <module>
+    test_detect_voice_activity()
+  File "./f00812_detect_voice_activity.py", line 36, in test_detect_voice_activity
+    voice_activity = detect_voice_activity(sample_audio_file_path)
+  File "./f00812_detect_voice_activity.py", line 21, in detect_voice_activity
+    speech_detection = pipeline('speech-segmentation')
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 826, in pipeline
+    normalized_task, targeted_task, task_options = check_task(task)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 512, in check_task
+    return PIPELINE_REGISTRY.check_task(task)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1215, in check_task
+    raise KeyError(
+KeyError: "Unknown task speech-segmentation, available tasks are ['audio-classification', 'automatic-speech-recognition', 'conversational', 'depth-estimation', 'document-question-answering', 'feature-extraction', 'fill-mask', 'image-classification', 'image-segmentation', 'image-to-image', 'image-to-text', 'mask-generation', 'ner', 'object-detection', 'question-answering', 'sentiment-analysis', 'summarization', 'table-question-answering', 'text-classification', 'text-generation', 'text-to-audio', 'text-to-speech', 'text2text-generation', 'token-classification', 'translation', 'video-classification', 'visual-question-answering', 'vqa', 'zero-shot-audio-classification', 'zero-shot-classification', 'zero-shot-image-classification', 'zero-shot-object-detection', 'translation_XX_to_YY']"

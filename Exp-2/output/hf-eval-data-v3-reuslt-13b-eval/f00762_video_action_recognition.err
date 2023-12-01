@@ -1,0 +1,11 @@
+2023-11-30 22:18:39.463756: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 22:18:40.198239: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00762_video_action_recognition.py", line 63, in <module>
+    test_video_action_recognition()
+  File "./f00762_video_action_recognition.py", line 55, in test_video_action_recognition
+    file_path = hf_hub_download('archery.mp4')
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+TypeError: hf_hub_download() missing 1 required positional argument: 'filename'

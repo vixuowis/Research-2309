@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00372_generate_human_face.py", line 46, in <module>
+    test_generate_human_face()
+  File "./f00372_generate_human_face.py", line 38, in test_generate_human_face
+    generate_human_face()
+  File "./f00372_generate_human_face.py", line 21, in generate_human_face
+    device='cuda:0' if torch.cuda.is_available() else 'cpu',
+NameError: name 'torch' is not defined

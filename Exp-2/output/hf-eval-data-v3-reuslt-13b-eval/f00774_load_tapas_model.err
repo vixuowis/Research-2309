@@ -1,0 +1,22 @@
+config.json:   0%|                                                                  | 0.00/1.66k [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████| 1.66k/1.66k [00:00<00:00, 454kB/s]
+pytorch_model.bin:   0%|                                                             | 0.00/443M [00:00<?, ?B/s]pytorch_model.bin:   2%|█▏                                                | 10.5M/443M [10:31<7:13:47, 16.6kB/s]pytorch_model.bin:   2%|█▏                                                | 10.5M/443M [10:51<7:13:47, 16.6kB/s]pytorch_model.bin:   3%|█▍                                                | 12.6M/443M [11:02<5:59:26, 19.9kB/s]pytorch_model.bin:   3%|█▍                                                | 12.6M/443M [11:02<6:17:29, 19.0kB/s]
+Traceback (most recent call last):
+  File "./f00774_load_tapas_model.py", line 33, in <module>
+    test_load_tapas_model()
+  File "./f00774_load_tapas_model.py", line 25, in test_load_tapas_model
+    model = load_tapas_model()
+  File "./f00774_load_tapas_model.py", line 15, in load_tapas_model
+    model = TapasForQuestionAnswering.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 442791751 but has size 12592027 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.

@@ -1,0 +1,4 @@
+  File "./f00834_extract_property_info.py", line 63
+    outputs_idx = outputs.
+                         ^
+SyntaxError: invalid syntax

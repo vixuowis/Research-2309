@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00653_detect_license_plate.py", line 53, in <module>
+    test_detect_license_plate()
+  File "./f00653_detect_license_plate.py", line 44, in test_detect_license_plate
+    assert 'boxes' in result1, 'Result dictionary should contain boxes.'
+AssertionError: Result dictionary should contain boxes.

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00656_image_segmentation.py", line 62, in <module>
+    test_image_segmentation()
+  File "./f00656_image_segmentation.py", line 53, in test_image_segmentation
+    segmented_image = image_segmentation(image_path)
+  File "./f00656_image_segmentation.py", line 23, in image_segmentation
+    processor = OneFormerProcessor()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/oneformer/processing_oneformer.py", line 53, in __init__
+    raise ValueError("You need to specify an `image_processor`.")
+ValueError: You need to specify an `image_processor`.

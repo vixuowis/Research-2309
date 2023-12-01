@@ -1,0 +1,29 @@
+2023-11-30 21:04:03.896611: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 21:04:04.665180: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/vit/feature_extraction_vit.py:28: FutureWarning: The class ViTFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use ViTImageProcessor instead.
+  warnings.warn(
+tokenizer_config.json:   0%|                                                         | 0.00/27.0 [00:00<?, ?B/s]tokenizer_config.json: 100%|█████████████████████████████████████████████████| 27.0/27.0 [00:00<00:00, 5.78kB/s]
+config.json:   0%|                                                                  | 0.00/1.29k [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████| 1.29k/1.29k [00:00<00:00, 300kB/s]
+vocab.json:   0%|                                                                    | 0.00/899k [00:00<?, ?B/s]vocab.json: 100%|█████████████████████████████████████████████████████████████| 899k/899k [00:02<00:00, 301kB/s]vocab.json: 100%|█████████████████████████████████████████████████████████████| 899k/899k [00:02<00:00, 301kB/s]
+merges.txt:   0%|                                                                    | 0.00/456k [00:00<?, ?B/s]merges.txt: 100%|████████████████████████████████████████████████████████████| 456k/456k [00:00<00:00, 1.46MB/s]merges.txt: 100%|████████████████████████████████████████████████████████████| 456k/456k [00:00<00:00, 1.46MB/s]
+special_tokens_map.json:   0%|                                                        | 0.00/772 [00:00<?, ?B/s]special_tokens_map.json: 100%|█████████████████████████████████████████████████| 772/772 [00:00<00:00, 1.00MB/s]
+You are using a model of type led to instantiate a model of type vision-encoder-decoder. This is not supported for all configurations of models and can yield errors.
+Traceback (most recent call last):
+  File "./f00642_extract_captions.py", line 79, in <module>
+    print(test_extract_captions())
+  File "./f00642_extract_captions.py", line 71, in test_extract_captions
+    captions = extract_captions(url)
+  File "./f00642_extract_captions.py", line 31, in extract_captions
+    model = VisionEncoderDecoderModel.from_pretrained('allenai/led-large-16384-arxiv').to(device)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/vision_encoder_decoder/modeling_vision_encoder_decoder.py", line 358, in from_pretrained
+    return super().from_pretrained(pretrained_model_name_or_path, *model_args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2760, in from_pretrained
+    config, model_kwargs = cls.config_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 600, in from_pretrained
+    return cls.from_dict(config_dict, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/configuration_utils.py", line 749, in from_dict
+    config = cls(**config_dict)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/vision_encoder_decoder/configuration_vision_encoder_decoder.py", line 85, in __init__
+    raise ValueError(
+ValueError: A configuraton of type led cannot be instantiated because not both `encoder` and `decoder` sub-configurations are passed, but only {'_name_or_path': './', '_num_labels': 3, 'activation_dropout': 0.0, 'activation_function': 'gelu', 'architectures': ['LEDForConditionalGeneration'], 'attention_dropout': 0.0, 'attention_window': [1024, 1024, 1024, 1024, 1024, 1024, 1024, 1024, 1024, 1024, 1024, 1024], 'bos_token_id': 0, 'classif_dropout': 0.0, 'classifier_dropout': 0.0, 'd_model': 1024, 'decoder_attention_heads': 16, 'decoder_ffn_dim': 4096, 'decoder_layerdrop': 0.0, 'decoder_layers': 12, 'decoder_start_token_id': 2, 'dropout': 0.1, 'encoder_attention_heads': 16, 'encoder_ffn_dim': 4096, 'encoder_layerdrop': 0.0, 'encoder_layers': 12, 'eos_token_id': 2, 'gradient_checkpointing': False, 'id2label': {'0': 'LABEL_0', '1': 'LABEL_1', '2': 'LABEL_2'}, 'init_std': 0.02, 'is_encoder_decoder': True, 'label2id': {'LABEL_0': 0, 'LABEL_1': 1, 'LABEL_2': 2}, 'max_decoder_position_embeddings': 1024, 'max_encoder_position_embeddings': 16384, 'max_length': 512, 'max_position_embeddings': 1024, 'model_type': 'led', 'num_beams': 4, 'num_hidden_layers': 12, 'output_past': False, 'pad_token_id': 1, 'prefix': ' ', 'use_cache': True, 'vocab_size': 50265, '_commit_hash': '0f8b26971c44af9d4e21edd17ccb5e000f22dac1'}

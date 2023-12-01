@@ -1,0 +1,5 @@
+[ERROR] dslim/roberta-base-deepset-model-coral is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[ERROR] [Errno 2] No such file or directory: 'test_invoice.jpg'
+[ERROR] [Errno 2] No such file or directory: 'test_invoice.jpg'
+[ERROR] [Errno 2] No such file or directory: 'test_invoice.jpg'

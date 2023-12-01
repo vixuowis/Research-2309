@@ -1,0 +1,12 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/pyannote/audio/core/io.py:43: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch_audiomentations/utils/io.py:27: UserWarning: torchaudio._backend.set_audio_backend has been deprecated. With dispatcher enabled, this function is no-op. You can remove the function call.
+  torchaudio.set_audio_backend("soundfile")
+Traceback (most recent call last):
+  File "./f00540_load_voice_activity_detection_model.py", line 39, in <module>
+    test_load_voice_activity_detection_model()
+  File "./f00540_load_voice_activity_detection_model.py", line 32, in test_load_voice_activity_detection_model
+    model = load_voice_activity_detection_model()
+  File "./f00540_load_voice_activity_detection_model.py", line 19, in load_voice_activity_detection_model
+    model = Model(architecture='HuBERTPretrain_VAD', device=None if torch.cuda.is_available() else 'cpu')
+TypeError: __init__() got an unexpected keyword argument 'architecture'

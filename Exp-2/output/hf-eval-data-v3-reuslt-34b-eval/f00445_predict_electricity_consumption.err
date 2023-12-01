@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "./f00445_predict_electricity_consumption.py", line 69, in <module>
+    test_predict_electricity_consumption()
+  File "./f00445_predict_electricity_consumption.py", line 58, in test_predict_electricity_consumption
+    mse = predict_electricity_consumption(data)
+  File "./f00445_predict_electricity_consumption.py", line 23, in predict_electricity_consumption
+    train = data.drop(columns=['Electricity'])
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/pandas/core/frame.py", line 5258, in drop
+    return super().drop(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/pandas/core/generic.py", line 4549, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/pandas/core/generic.py", line 4591, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 6699, in drop
+    raise KeyError(f"{list(labels[mask])} not found in axis")
+KeyError: "['Electricity'] not found in axis"

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "./f00794_complete_code.py", line 64, in <module>
+    test_complete_code()
+  File "./f00794_complete_code.py", line 54, in test_complete_code
+    assert complete_code(incomplete_code1).startswith('def print_hello_world():')
+  File "./f00794_complete_code.py", line 35, in complete_code
+    outputs = model.generate(inputs, max_length=256, top_k=50, num_return_sequences=10)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/generation/utils.py", line 1484, in generate
+    generation_config.validate()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/generation/configuration_utils.py", line 486, in validate
+    raise ValueError(
+ValueError: Greedy methods without beam search do not support `num_return_sequences` different than 1 (got 10).

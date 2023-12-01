@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00663_generate_vintage_image.py", line 47, in <module>
+    test_generate_vintage_image()
+  File "./f00663_generate_vintage_image.py", line 39, in test_generate_vintage_image
+    generate_vintage_image(model_name, output_file)
+  File "./f00663_generate_vintage_image.py", line 21, in generate_vintage_image
+    diffmodel = DDPMPipeline.create(
+AttributeError: type object 'DDPMPipeline' has no attribute 'create'

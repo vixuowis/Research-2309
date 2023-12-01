@@ -1,0 +1,15 @@
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /root/nltk_data...
+[nltk_data]   Unzipping taggers/averaged_perceptron_tagger.zip.
+[nltk_data] Downloading package cmudict to /root/nltk_data...
+[nltk_data]   Unzipping corpora/cmudict.zip.
+Traceback (most recent call last):
+  File "./f00706_convert_text_to_speech.py", line 47, in <module>
+    test_convert_text_to_speech()
+  File "./f00706_convert_text_to_speech.py", line 38, in test_convert_text_to_speech
+    convert_text_to_speech('汉语很有趣', 'lesson_audio_example.wav')
+  File "./f00706_convert_text_to_speech.py", line 27, in convert_text_to_speech
+    tts = Text2Speech.from_pretrained(os.environ['TTS_MODEL'])
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/os.py", line 675, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'TTS_MODEL'

@@ -1,0 +1,4 @@
+  File "./f00885_generate_response.py", line 53
+    response += '\n' + resp[0].replace('summarize: ', '').replace("'
+                                                                   ^
+SyntaxError: EOL while scanning string literal

@@ -1,0 +1,61 @@
+2023-11-30 20:47:33.746826: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 20:47:34.500919: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+config.json:   0%|                                                                    | 0.00/474 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 474/474 [00:00<00:00, 110kB/s]
+pytorch_model.bin:   0%|                                                             | 0.00/559M [00:00<?, ?B/s]pytorch_model.bin:   2%|▉                                                    | 10.5M/559M [00:51<44:41, 204kB/s]pytorch_model.bin:   2%|▉                                                    | 10.5M/559M [01:05<44:41, 204kB/s]pytorch_model.bin:   4%|█▉                                                | 21.0M/559M [03:45<1:45:45, 84.7kB/s]pytorch_model.bin:   4%|█▉                                                | 21.0M/559M [04:05<1:45:45, 84.7kB/s]pytorch_model.bin:   6%|██▊                                               | 31.5M/559M [06:19<1:55:13, 76.2kB/s]pytorch_model.bin:   6%|██▊                                               | 31.5M/559M [06:35<1:55:13, 76.2kB/s]pytorch_model.bin:   6%|██▉                                               | 33.1M/559M [06:44<1:56:53, 74.9kB/s]pytorch_model.bin:   6%|██▉                                               | 33.1M/559M [06:44<1:47:14, 81.7kB/s]
+tf_model.h5:   0%|                                                                   | 0.00/555M [00:00<?, ?B/s]tf_model.h5:   2%|█                                                       | 10.5M/555M [01:57<1:41:27, 89.4kB/s]tf_model.h5:   2%|█                                                       | 10.5M/555M [02:14<1:41:27, 89.4kB/s]tf_model.h5:   3%|█▉                                                      | 19.1M/555M [04:20<2:06:02, 70.8kB/s]tf_model.h5:   3%|█▉                                                      | 19.1M/555M [04:20<2:01:43, 73.3kB/s]
+Traceback (most recent call last):
+  File "./f00606_generate_synonyms.py", line 39, in <module>
+    test_generate_synonyms()
+  File "./f00606_generate_synonyms.py", line 30, in test_generate_synonyms
+    synonyms = generate_synonyms('happy')
+  File "./f00606_generate_synonyms.py", line 18, in generate_synonyms
+    pipe = pipeline(task="fill-mask", device=0, model='microsoft/deberta-base')
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 870, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model microsoft/deberta-base with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForMaskedLM'>, <class 'transformers.models.auto.modeling_tf_auto.TFAutoModelForMaskedLM'>). See the original errors:
+
+while loading with AutoModelForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 558614189 but has size 33059858 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+while loading with TFAutoModelForMaskedLM, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2792, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 554669920 but has size 19081899 (tf_model.h5).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+
+

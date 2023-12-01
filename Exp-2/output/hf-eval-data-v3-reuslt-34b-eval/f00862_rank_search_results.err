@@ -1,0 +1,65 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+config.json:   0%|                                                                    | 0.00/847 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 847/847 [00:00<00:00, 128kB/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 712, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1012, in _prepare_proxy
+    conn.connect()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /mrm8488/bert-mini-finetuned-age_news-classification/856439f4d304f672f9ed1a2df95fb5c10c50ee067b4da81b46606d1d9fed118f?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701624876&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyNDg3Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9tcm04NDg4L2JlcnQtbWluaS1maW5ldHVuZWQtYWdlX25ld3MtY2xhc3NpZmljYXRpb24vODU2NDM5ZjRkMzA0ZjY3MmY5ZWQxYTJkZjk1ZmI1YzEwYzUwZWUwNjdiNGRhODFiNDY2MDZkMWQ5ZmVkMTE4Zj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=eW6zSUL-KzupChDa1JOYfN2eURg0MlOnQ8IRR2g7pIOCbLDpuBiQOUtf0kKBEIuPl0GOfqn2jJzAW3iamvHH69KcF16a~OrTR0Su847TJqJbxv4DScIQwkZgIVByGIJ~aSgDlBVn2u3z9QV6~mLq-9Ao7p2GGK3uGx~hIXDRWGCggquI9VqvxCKb4-~6KmZDxmy1BaWi889G5UXpCuD1ZDNJVFoVvC~-8kNfMwKRTIK7P7F8h8CZIZ11K~v-vMh5IR701839QHHoVETzcSCAqEHqAWE10aCPhR11Hb3vmX299MP80EXo2DazVjfg~wRRlxI0tb045GUfaKf73E7pSA__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00862_rank_search_results.py", line 71, in <module>
+    test_rank_search_results()
+  File "./f00862_rank_search_results.py", line 61, in test_rank_search_results
+    result = rank_search_results(query, passages)
+  File "./f00862_rank_search_results.py", line 22, in rank_search_results
+    model = AutoModelForSequenceClassification.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3037, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 468, in http_get
+    r = _request_wrapper(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 425, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /mrm8488/bert-mini-finetuned-age_news-classification/856439f4d304f672f9ed1a2df95fb5c10c50ee067b4da81b46606d1d9fed118f?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701624876&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyNDg3Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9tcm04NDg4L2JlcnQtbWluaS1maW5ldHVuZWQtYWdlX25ld3MtY2xhc3NpZmljYXRpb24vODU2NDM5ZjRkMzA0ZjY3MmY5ZWQxYTJkZjk1ZmI1YzEwYzUwZWUwNjdiNGRhODFiNDY2MDZkMWQ5ZmVkMTE4Zj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=eW6zSUL-KzupChDa1JOYfN2eURg0MlOnQ8IRR2g7pIOCbLDpuBiQOUtf0kKBEIuPl0GOfqn2jJzAW3iamvHH69KcF16a~OrTR0Su847TJqJbxv4DScIQwkZgIVByGIJ~aSgDlBVn2u3z9QV6~mLq-9Ao7p2GGK3uGx~hIXDRWGCggquI9VqvxCKb4-~6KmZDxmy1BaWi889G5UXpCuD1ZDNJVFoVvC~-8kNfMwKRTIK7P7F8h8CZIZ11K~v-vMh5IR701839QHHoVETzcSCAqEHqAWE10aCPhR11Hb3vmX299MP80EXo2DazVjfg~wRRlxI0tb045GUfaKf73E7pSA__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 890dde9a-82e1-417a-8cbf-8d559e0b7cc7)')

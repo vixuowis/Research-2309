@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00443_predict_carbon_emissions.py", line 75, in <module>
+    test_predict_carbon_emissions()
+  File "./f00443_predict_carbon_emissions.py", line 53, in test_predict_carbon_emissions
+    predictions = predict_carbon_emissions('model.joblib', 'historical_data.csv')
+  File "./f00443_predict_carbon_emissions.py", line 24, in predict_carbon_emissions
+    if (not os.path.exists(model_path)) or (not os.path.isfile(model_path)):
+NameError: name 'os' is not defined

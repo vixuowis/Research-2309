@@ -1,0 +1,11 @@
+2023-11-30 23:41:57.097298: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 23:41:57.815639: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00827_generate_image.py", line 54, in <module>
+    test_generate_image()
+  File "./f00827_generate_image.py", line 43, in test_generate_image
+    generate_image('a futuristic 3D printed car', save_path='3D_printed_car.png')
+  File "./f00827_generate_image.py", line 26, in generate_image
+    model = StableDiffusionPipeline(model_id, prompt)    
+TypeError: __init__() missing 5 required positional arguments: 'tokenizer', 'unet', 'scheduler', 'safety_checker', and 'feature_extractor'

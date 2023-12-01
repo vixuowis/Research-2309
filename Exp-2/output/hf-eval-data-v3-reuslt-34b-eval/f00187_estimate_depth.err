@@ -1,0 +1,28 @@
+2023-11-30 17:58:31.541737: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 17:58:32.372474: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+config.json:   0%|                                                                    | 0.00/642 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 642/642 [00:00<00:00, 172kB/s]
+Traceback (most recent call last):
+  File "./f00187_estimate_depth.py", line 60, in <module>
+    test_estimate_depth()
+  File "./f00187_estimate_depth.py", line 43, in test_estimate_depth
+    result = estimate_depth(image_path)
+  File "./f00187_estimate_depth.py", line 21, in estimate_depth
+    estimator = pipeline("depth-estimation", model="hf-internal-testing/tiny-random-beit")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 870, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model hf-internal-testing/tiny-random-beit with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForDepthEstimation'>,). See the original errors:
+
+while loading with AutoModelForDepthEstimation, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 569, in from_pretrained
+    raise ValueError(
+ValueError: Unrecognized configuration class <class 'transformers.models.beit.configuration_beit.BeitConfig'> for this kind of AutoModel: AutoModelForDepthEstimation.
+Model type should be one of DPTConfig, GLPNConfig.
+
+
+

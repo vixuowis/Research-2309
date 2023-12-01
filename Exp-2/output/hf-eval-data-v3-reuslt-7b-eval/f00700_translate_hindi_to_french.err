@@ -1,0 +1,61 @@
+tokenizer_config.json:   0%|                                                          | 0.00/529 [00:00<?, ?B/s]tokenizer_config.json: 100%|████████████████████████████████████████████████████| 529/529 [00:00<00:00, 113kB/s]
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 712, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1012, in _prepare_proxy
+    conn.connect()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    retries = retries.increment(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /facebook/mbart-large-50-many-to-many-mmt/cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27sentencepiece.bpe.model%3B+filename%3D%22sentencepiece.bpe.model%22%3B&Expires=1701614425&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYxNDQyNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9mYWNlYm9vay9tYmFydC1sYXJnZS01MC1tYW55LXRvLW1hbnktbW10L2NmYzgxNDZhYmUyYTA0ODhlOWUyYTBjNTZkZTc5NTJmN2MxMWFiMDU5ZWNhMTQ1YTBhNzI3YWZjZTBkYjI4NjU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=g6Bu4BW4IzrQFUGe0l1bNKg0x5nRZKriupHKrpvDIj4OW4E0BDeIbh7lDQv7zR01VY50Om8WgNdnDgPVzP3hq55TS831S7p5XF0oIloxSbugQOpCwfa6KnfZaOLQoa4PaFlioBPEuU4qvrzLh9zXYphoetVj8Fw9cL6PcFHwk9vNlJPrm1GEM~t7nSVJcGhrOr8tXVyn1vLcmmlEs8TeU7PJVXZwWbQLcLJWFa8MEfc88uuI6oGCiOvS2REVs3Eg-4zB9Qah6jKfrt~mtnXm7rQxbrDy2qqKkLythdIyN5S7uxlLEvg8vWfrLT56IGAdQa3jrqH5-eVATBs1C9pIug__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00700_translate_hindi_to_french.py", line 44, in <module>
+    test_translate_hindi_to_french()
+  File "./f00700_translate_hindi_to_french.py", line 36, in test_translate_hindi_to_french
+    assert isinstance(translate_hindi_to_french(message1), str)
+  File "./f00700_translate_hindi_to_french.py", line 17, in translate_hindi_to_french
+    tokenizer = MBart50TokenizerFast.from_pretrained("facebook/mbart-large-50-many-to-many-mmt")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 1983, in from_pretrained
+    resolved_vocab_files[file_id] = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 468, in http_get
+    r = _request_wrapper(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 425, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: (MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /facebook/mbart-large-50-many-to-many-mmt/cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27sentencepiece.bpe.model%3B+filename%3D%22sentencepiece.bpe.model%22%3B&Expires=1701614425&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYxNDQyNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9mYWNlYm9vay9tYmFydC1sYXJnZS01MC1tYW55LXRvLW1hbnktbW10L2NmYzgxNDZhYmUyYTA0ODhlOWUyYTBjNTZkZTc5NTJmN2MxMWFiMDU5ZWNhMTQ1YTBhNzI3YWZjZTBkYjI4NjU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=g6Bu4BW4IzrQFUGe0l1bNKg0x5nRZKriupHKrpvDIj4OW4E0BDeIbh7lDQv7zR01VY50Om8WgNdnDgPVzP3hq55TS831S7p5XF0oIloxSbugQOpCwfa6KnfZaOLQoa4PaFlioBPEuU4qvrzLh9zXYphoetVj8Fw9cL6PcFHwk9vNlJPrm1GEM~t7nSVJcGhrOr8tXVyn1vLcmmlEs8TeU7PJVXZwWbQLcLJWFa8MEfc88uuI6oGCiOvS2REVs3Eg-4zB9Qah6jKfrt~mtnXm7rQxbrDy2qqKkLythdIyN5S7uxlLEvg8vWfrLT56IGAdQa3jrqH5-eVATBs1C9pIug__&Key-Pair-Id=KVTP0A1DKRTAX (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 428694e3-388a-4e25-ac46-683f97338a15)')

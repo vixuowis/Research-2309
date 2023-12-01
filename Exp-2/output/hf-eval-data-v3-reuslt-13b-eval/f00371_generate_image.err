@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00371_generate_image.py", line 53, in <module>
+    print(test_generate_image())
+  File "./f00371_generate_image.py", line 47, in test_generate_image
+    raise e
+  File "./f00371_generate_image.py", line 43, in test_generate_image
+    generate_image('google/ddpm-church-256')
+  File "./f00371_generate_image.py", line 25, in generate_image
+    model = DDPMPipeline.load(f'models/pre-trained/{model_id}', device='cpu')
+AttributeError: type object 'DDPMPipeline' has no attribute 'load'

@@ -1,0 +1,26 @@
+config.json:   0%|                                                                  | 0.00/1.38k [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████| 1.38k/1.38k [00:00<00:00, 325kB/s]
+pytorch_model.bin:   0%|                                                            | 0.00/2.87G [00:00<?, ?B/s]pytorch_model.bin:   0%|▏                                                 | 10.5M/2.87G [01:33<7:04:24, 112kB/s]pytorch_model.bin:   1%|▎                                                 | 21.0M/2.87G [01:48<3:34:22, 222kB/s]pytorch_model.bin:   1%|▎                                                 | 21.0M/2.87G [02:01<3:34:22, 222kB/s]pytorch_model.bin:   1%|▌                                                 | 31.5M/2.87G [02:11<2:43:26, 290kB/s]pytorch_model.bin:   1%|▌                                                 | 31.5M/2.87G [02:21<2:43:26, 290kB/s]pytorch_model.bin:   1%|▋                                                | 41.9M/2.87G [05:52<8:12:31, 95.9kB/s]pytorch_model.bin:   1%|▋                                                | 41.9M/2.87G [06:11<8:12:31, 95.9kB/s]pytorch_model.bin:   2%|▋                                                | 44.0M/2.87G [06:53<9:42:32, 81.0kB/s]pytorch_model.bin:   2%|▊                                                 | 44.0M/2.87G [06:53<7:23:40, 106kB/s]
+Traceback (most recent call last):
+  File "./f00696_chatbot_response.py", line 51, in <module>
+    test_chatbot_response()
+  File "./f00696_chatbot_response.py", line 43, in test_chatbot_response
+    assert chatbot_response('Hello, how are you?') != ''
+  File "./f00696_chatbot_response.py", line 21, in chatbot_response
+    model = AutoModelForSeq2SeqLM.from_pretrained("facebook/blenderbot-1B-distill")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/blenderbot/modeling_blenderbot.py", line 1214, in from_pretrained
+    return super(BlenderbotForConditionalGeneration, cls).from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 2874938703 but has size 43950347 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.

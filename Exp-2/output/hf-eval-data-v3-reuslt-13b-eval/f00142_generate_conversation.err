@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "./f00142_generate_conversation.py", line 71, in <module>
+    test_generate_conversation()
+  File "./f00142_generate_conversation.py", line 63, in test_generate_conversation
+    response = generate_conversation(situation, instruction, conversation)
+  File "./f00142_generate_conversation.py", line 29, in generate_conversation
+    tokenizer = AutoTokenizer.from_pretrained('/work/qfw1729-mcd1830/checkpoints/conversational-bart')
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 718, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 550, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/work/qfw1729-mcd1830/checkpoints/conversational-bart'. Use `repo_type` argument if needed.

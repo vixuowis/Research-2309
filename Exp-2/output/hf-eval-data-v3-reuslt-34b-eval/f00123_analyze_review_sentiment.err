@@ -1,0 +1,19 @@
+2023-11-30 17:43:45.215657: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 17:43:46.011882: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00123_analyze_review_sentiment.py", line 54, in <module>
+    test_analyze_review_sentiment()
+  File "./f00123_analyze_review_sentiment.py", line 35, in test_analyze_review_sentiment
+    result = analyze_review_sentiment('I love this product!')
+  File "./f00123_analyze_review_sentiment.py", line 18, in analyze_review_sentiment
+    analyzeSentiment = pipeline('sentiment-analysis', model="./api/models/review_model", tokenizer="./api/models/tokenizer")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 747, in pipeline
+    resolved_config_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': './api/models/review_model'. Use `repo_type` argument if needed.

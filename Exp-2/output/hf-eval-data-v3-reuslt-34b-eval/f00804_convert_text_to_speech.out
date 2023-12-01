@@ -1,0 +1,6 @@
+Consistency check failed: file should be of size 1369713080 but has size 26601263 (model.safetensors).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /rinna/japanese-gpt2-medium/resolve/main/config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 14aa527b-6e28-412d-8889-0fae831773b6)')
+All Tests Passed

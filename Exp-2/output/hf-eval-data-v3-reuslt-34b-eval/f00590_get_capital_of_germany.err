@@ -1,0 +1,9 @@
+2023-12-01 01:01:01.089603: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-01 01:01:01.828680: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00590_get_capital_of_germany.py", line 37, in <module>
+    test_get_capital_of_germany()
+  File "./f00590_get_capital_of_germany.py", line 31, in test_get_capital_of_germany
+    assert get_capital_of_germany() == 'Berlin'
+AssertionError

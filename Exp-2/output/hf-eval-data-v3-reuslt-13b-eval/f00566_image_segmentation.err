@@ -1,0 +1,19 @@
+2023-11-30 20:15:04.523196: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 20:15:05.263074: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00566_image_segmentation.py", line 63, in <module>
+    test_image_segmentation()
+  File "./f00566_image_segmentation.py", line 51, in test_image_segmentation
+    result = image_segmentation(test_image_url)
+  File "./f00566_image_segmentation.py", line 21, in image_segmentation
+    model = MaskFormerForInstanceSegmentation.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3480, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3931, in _load_pretrained_model
+    raise RuntimeError(f"Error(s) in loading state_dict for {model.__class__.__name__}:\n\t{error_msg}")
+RuntimeError: Error(s) in loading state_dict for MaskFormerForInstanceSegmentation:
+	size mismatch for class_predictor.weight: copying a param with shape torch.Size([151, 256]) from checkpoint, the shape in current model is torch.Size([172, 256]).
+	size mismatch for class_predictor.bias: copying a param with shape torch.Size([151]) from checkpoint, the shape in current model is torch.Size([172]).
+	size mismatch for criterion.empty_weight: copying a param with shape torch.Size([151]) from checkpoint, the shape in current model is torch.Size([172]).
+	You may consider adding `ignore_mismatched_sizes=True` in the model `from_pretrained` method.

@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "./f00349_generate_image_caption.py", line 20, in generate_image_caption
+    img = Image.open(image_path)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3243, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'test_image.jpg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "./f00349_generate_image_caption.py", line 66, in <module>
+    print(test_generate_image_caption())
+  File "./f00349_generate_image_caption.py", line 58, in test_generate_image_caption
+    assert isinstance(generate_image_caption('test_image.jpg', 'product photography'), str)
+  File "./f00349_generate_image_caption.py", line 22, in generate_image_caption
+    raise Exception("Image file not found.") from e
+Exception: Image file not found.

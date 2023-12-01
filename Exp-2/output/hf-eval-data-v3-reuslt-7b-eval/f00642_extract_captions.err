@@ -1,0 +1,13 @@
+2023-11-30 21:09:05.666609: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 21:09:06.402278: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/vit/feature_extraction_vit.py:28: FutureWarning: The class ViTFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use ViTImageProcessor instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00642_extract_captions.py", line 69, in <module>
+    print(test_extract_captions())
+  File "./f00642_extract_captions.py", line 61, in test_extract_captions
+    captions = extract_captions(url)
+  File "./f00642_extract_captions.py", line 40, in extract_captions
+    generated_tokens = model.generate(
+UnboundLocalError: local variable 'model' referenced before assignment

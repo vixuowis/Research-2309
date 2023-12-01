@@ -1,0 +1,4 @@
+  File "./f00762_video_action_recognition.py", line 61
+    def test_video_action_recognition():
+    ^
+IndentationError: expected an indented block

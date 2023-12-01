@@ -1,0 +1,3 @@
+Test case failed: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/bart-large-mnli/resolve/main/config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: cb3fc676-afc7-434a-a6f2-feafda02e427)')
+Test case failed: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/bart-large-mnli/resolve/main/config.json (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1114: The handshake operation timed out')))"), '(Request ID: 6dfdf655-9595-419d-8156-ecff8f10216d)')
+All tests passed.

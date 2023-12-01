@@ -1,0 +1,1 @@
+Test failed with exception: __init__() missing 2 required positional arguments: 'unet' and 'scheduler'

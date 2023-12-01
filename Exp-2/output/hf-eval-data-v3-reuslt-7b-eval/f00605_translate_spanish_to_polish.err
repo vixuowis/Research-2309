@@ -1,0 +1,23 @@
+config.json:   0%|                                                                  | 0.00/1.38k [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████| 1.38k/1.38k [00:00<00:00, 212kB/s]
+You are using a model of type marian to instantiate a model of type mbart. This is not supported for all configurations of models and can yield errors.
+pytorch_model.bin:   0%|                                                             | 0.00/301M [00:00<?, ?B/s]pytorch_model.bin:   3%|█▊                                                   | 10.5M/301M [00:26<12:13, 396kB/s]pytorch_model.bin:   3%|█▊                                                   | 10.5M/301M [00:46<12:13, 396kB/s]pytorch_model.bin:   7%|███▋                                                 | 21.0M/301M [01:36<23:16, 201kB/s]pytorch_model.bin:   7%|███▉                                                 | 22.2M/301M [01:45<23:53, 195kB/s]pytorch_model.bin:   7%|███▉                                                 | 22.2M/301M [01:45<22:00, 211kB/s]
+Traceback (most recent call last):
+  File "./f00605_translate_spanish_to_polish.py", line 47, in <module>
+    test_translate_spanish_to_polish()
+  File "./f00605_translate_spanish_to_polish.py", line 39, in test_translate_spanish_to_polish
+    polish_text = translate_spanish_to_polish(spanish_text)
+  File "./f00605_translate_spanish_to_polish.py", line 18, in translate_spanish_to_polish
+    mbart = MBartForConditionalGeneration.from_pretrained("Helsinki-NLP/opus-mt-es-pl")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 301164213 but has size 22211780 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.

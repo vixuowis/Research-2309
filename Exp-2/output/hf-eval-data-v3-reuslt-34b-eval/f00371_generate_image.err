@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00371_generate_image.py", line 50, in <module>
+    print(test_generate_image())
+  File "./f00371_generate_image.py", line 44, in test_generate_image
+    raise e
+  File "./f00371_generate_image.py", line 40, in test_generate_image
+    generate_image('google/ddpm-church-256')
+  File "./f00371_generate_image.py", line 26, in generate_image
+    pipeline = DDPMPipeline()
+TypeError: __init__() missing 2 required positional arguments: 'unet' and 'scheduler'

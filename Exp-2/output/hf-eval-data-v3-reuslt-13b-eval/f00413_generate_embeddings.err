@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00413_generate_embeddings.py", line 36, in <module>
+    test_generate_embeddings()
+  File "./f00413_generate_embeddings.py", line 30, in test_generate_embeddings
+    assert embeddings.shape[1] == 768, 'Each embedding should have 768 dimensions'
+AssertionError: Each embedding should have 768 dimensions

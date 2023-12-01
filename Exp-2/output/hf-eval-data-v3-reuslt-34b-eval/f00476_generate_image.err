@@ -1,0 +1,10 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00476_generate_image.py", line 47, in <module>
+    test_generate_image()
+  File "./f00476_generate_image.py", line 38, in test_generate_image
+    generate_image(model_id, save_path)
+  File "./f00476_generate_image.py", line 20, in generate_image
+    model = DDPMPipeline.load_from_checkpoint(f's3://{os.environ["BUCKET"]}/pretrained/{model_id}.ckpt')
+AttributeError: type object 'DDPMPipeline' has no attribute 'load_from_checkpoint'

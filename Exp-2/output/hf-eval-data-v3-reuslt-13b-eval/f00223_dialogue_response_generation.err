@@ -1,0 +1,9 @@
+A decoder-only architecture is being used, but right-padding was detected! For correct generation results, please set `padding_side='left'` when initializing the tokenizer.
+Traceback (most recent call last):
+  File "./f00223_dialogue_response_generation.py", line 61, in <module>
+    test_dialogue_response_generation()
+  File "./f00223_dialogue_response_generation.py", line 53, in test_dialogue_response_generation
+    response = dialogue_response_generation('Hello, how are you?', 1)
+  File "./f00223_dialogue_response_generation.py", line 44, in dialogue_response_generation
+    return tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
+NameError: name 'bot_input_ids' is not defined

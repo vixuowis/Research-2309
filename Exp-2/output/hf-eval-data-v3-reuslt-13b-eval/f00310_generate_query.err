@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "./f00310_generate_query.py", line 53, in <module>
+    with open('./data/documents/doc-1.txt', 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: './data/documents/doc-1.txt'

@@ -1,0 +1,18 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00510_generate_response.py", line 76, in <module>
+    test_generate_response()
+  File "./f00510_generate_response.py", line 57, in test_generate_response
+    response = generate_response(user_input)
+  File "./f00510_generate_response.py", line 36, in generate_response
+    inputs = tokenizer(history, return_tensors='pt', padding=True).to(device)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2798, in __call__
+    encodings = self._call_one(text=text, text_pair=text_pair, **all_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2884, in _call_one
+    return self.batch_encode_plus(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 3066, in batch_encode_plus
+    padding_strategy, truncation_strategy, max_length, kwargs = self._get_padding_truncation_strategies(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2703, in _get_padding_truncation_strategies
+    raise ValueError(
+ValueError: Asking to pad but the tokenizer does not have a padding token. Please select a token to use as `pad_token` `(tokenizer.pad_token = tokenizer.eos_token e.g.)` or add a new pad token via `tokenizer.add_special_tokens({'pad_token': '[PAD]'})`.

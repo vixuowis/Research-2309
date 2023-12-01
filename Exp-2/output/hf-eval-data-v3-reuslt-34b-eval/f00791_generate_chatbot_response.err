@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "./f00791_generate_chatbot_response.py", line 71, in <module>
+    test_generate_chatbot_response()
+  File "./f00791_generate_chatbot_response.py", line 51, in test_generate_chatbot_response
+    output = generate_chatbot_response(instruction, knowledge, dialog)
+  File "./f00791_generate_chatbot_response.py", line 24, in generate_chatbot_response
+    model = AutoModelForSeq2SeqLM.from_pretrained("microsoft/DialoGPT-medium")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 569, in from_pretrained
+    raise ValueError(
+ValueError: Unrecognized configuration class <class 'transformers.models.gpt2.configuration_gpt2.GPT2Config'> for this kind of AutoModel: AutoModelForSeq2SeqLM.
+Model type should be one of BartConfig, BigBirdPegasusConfig, BlenderbotConfig, BlenderbotSmallConfig, EncoderDecoderConfig, FSMTConfig, GPTSanJapaneseConfig, LEDConfig, LongT5Config, M2M100Config, MarianConfig, MBartConfig, MT5Config, MvpConfig, NllbMoeConfig, PegasusConfig, PegasusXConfig, PLBartConfig, ProphetNetConfig, SeamlessM4TConfig, SwitchTransformersConfig, T5Config, UMT5Config, XLMProphetNetConfig.

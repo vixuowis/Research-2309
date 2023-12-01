@@ -1,0 +1,9 @@
+Batches:   0%|                                                                            | 0/1 [00:00<?, ?it/s]Batches: 100%|████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.10s/it]Batches: 100%|████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.10s/it]
+Traceback (most recent call last):
+  File "./f00415_get_sentence_similarity.py", line 43, in <module>
+    test_get_sentence_similarity()
+  File "./f00415_get_sentence_similarity.py", line 35, in test_get_sentence_similarity
+    similarity_matrix = get_sentence_similarity(sentences)
+  File "./f00415_get_sentence_similarity.py", line 28, in get_sentence_similarity
+    return cosine_similarity(X=np.array(sentence_embeddings), Y=None ,dense_output=False).todense()
+AttributeError: 'numpy.ndarray' object has no attribute 'todense'

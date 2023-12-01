@@ -1,0 +1,14 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00895_text_to_speech.py", line 71, in <module>
+    test_text_to_speech()
+  File "./f00895_text_to_speech.py", line 63, in test_text_to_speech
+    text_to_speech('The sun was shining brightly, and the birds were singing sweetly.', 'test_TTS.wav')
+  File "./f00895_text_to_speech.py", line 30, in text_to_speech
+    model = HIFIGAN()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/speechbrain/pretrained/interfaces.py", line 3430, in __init__
+    super().__init__(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/speechbrain/pretrained/interfaces.py", line 239, in __init__
+    raise ValueError("Need to provide hparams dict.")
+ValueError: Need to provide hparams dict.

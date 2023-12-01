@@ -1,0 +1,4 @@
+  File "./f00554_detect_intruder.py", line 60
+    def test_detect_intruder():
+    ^
+SyntaxError: invalid syntax

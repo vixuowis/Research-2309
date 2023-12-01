@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00221_generate_response.py", line 59, in <module>
+    print(test_generate_response())
+  File "./f00221_generate_response.py", line 47, in test_generate_response
+    response, chat_history = generate_response(user_input)
+  File "./f00221_generate_response.py", line 23, in generate_response
+    inputs = tokenizer([user_input], return_tensors='pt')
+NameError: name 'tokenizer' is not defined

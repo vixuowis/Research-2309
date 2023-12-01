@@ -1,0 +1,24 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00469_segment_clothes.py", line 32, in segment_clothes
+    img = Image.open(BytesIO(response.content))
+NameError: name 'BytesIO' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00469_segment_clothes.py", line 55, in test_segment_clothes
+    segmented_image = segment_clothes(test_image_url)
+  File "./f00469_segment_clothes.py", line 33, in segment_clothes
+    except PIL.UnidentifiedImageError:
+NameError: name 'PIL' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00469_segment_clothes.py", line 65, in <module>
+    test_segment_clothes()
+  File "./f00469_segment_clothes.py", line 58, in test_segment_clothes
+    except PIL.UnidentifiedImageError:
+NameError: name 'PIL' is not defined

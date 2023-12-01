@@ -1,0 +1,9 @@
+Some weights of the model checkpoint at facebook/dpr-question_encoder-single-nq-base were not used when initializing DPRQuestionEncoder: ['question_encoder.bert_model.pooler.dense.bias', 'question_encoder.bert_model.pooler.dense.weight']
+- This IS expected if you are initializing DPRQuestionEncoder from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DPRQuestionEncoder from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "./f00825_generate_question_embedding.py", line 59, in <module>
+    print(test_generate_question_embedding())
+  File "./f00825_generate_question_embedding.py", line 42, in test_generate_question_embedding
+    assert embedding.size() == torch.Size([1, 768])
+AssertionError

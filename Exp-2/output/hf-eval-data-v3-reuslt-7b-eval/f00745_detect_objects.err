@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00745_detect_objects.py", line 68, in <module>
+    test_detect_objects()
+  File "./f00745_detect_objects.py", line 55, in test_detect_objects
+    results = detect_objects(image_path)
+  File "./f00745_detect_objects.py", line 19, in detect_objects
+    img = Image.open(image_path)
+NameError: name 'Image' is not defined

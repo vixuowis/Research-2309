@@ -1,0 +1,7 @@
+preprocessor_config.json:   0%|                                                       | 0.00/242 [00:00<?, ?B/s]preprocessor_config.json: 100%|████████████████████████████████████████████████| 242/242 [00:00<00:00, 63.1kB/s]
+tokenizer_config.json:   0%|                                                          | 0.00/456 [00:00<?, ?B/s]tokenizer_config.json: 100%|████████████████████████████████████████████████████| 456/456 [00:00<00:00, 144kB/s]
+special_tokens_map.json:   0%|                                                       | 0.00/85.0 [00:00<?, ?B/s]special_tokens_map.json: 100%|████████████████████████████████████████████████| 85.0/85.0 [00:00<00:00, 180kB/s]
+config.json:   0%|                                                                  | 0.00/1.14k [00:00<?, ?B/s]config.json: 100%|█████████████████████████████████████████████████████████| 1.14k/1.14k [00:00<00:00, 1.25MB/s]
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'Speech2TextTokenizer'. 
+The class this function is called from is 'SpeechT5Tokenizer'.

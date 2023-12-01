@@ -1,0 +1,10 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00847_detect_vehicles.py", line 40, in <module>
+    test_detect_vehicles()
+  File "./f00847_detect_vehicles.py", line 30, in test_detect_vehicles
+    result = detect_vehicles(image_url)
+  File "./f00847_detect_vehicles.py", line 17, in detect_vehicles
+    model = yolov5.YoloV5()  # Load the model at first time only
+AttributeError: module 'yolov5' has no attribute 'YoloV5'

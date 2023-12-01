@@ -1,0 +1,35 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/blenderbot/modeling_blenderbot.py:1206: FutureWarning: The checkpoint `facebook/blenderbot-90M` is deprecated. In the future, please use the identical checkpoint `facebook/small_blenderbot-90M` with `BlenderbotSmallForConditionalGeneration.from_pretrained('facebook/small_blenderbot-90M')` instead.
+  warnings.warn(
+config.json:   0%|                                                                  | 0.00/1.45k [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████| 1.45k/1.45k [00:00<00:00, 196kB/s]
+pytorch_model.bin:   0%|                                                             | 0.00/350M [00:00<?, ?B/s]pytorch_model.bin:   3%|█▌                                                   | 10.5M/350M [00:23<12:27, 455kB/s]pytorch_model.bin:   3%|█▌                                                   | 10.5M/350M [00:36<12:27, 455kB/s]pytorch_model.bin:   6%|███▏                                                 | 21.0M/350M [00:59<16:04, 341kB/s]pytorch_model.bin:   6%|███▏                                                 | 21.0M/350M [01:16<16:04, 341kB/s]pytorch_model.bin:   9%|████▋                                                | 30.9M/350M [02:38<32:23, 164kB/s]pytorch_model.bin:   9%|████▋                                                | 30.9M/350M [02:38<27:22, 194kB/s]
+Traceback (most recent call last):
+  File "./f00884_generate_response.py", line 25, in generate_response
+    model = BlenderbotForConditionalGeneration.from_pretrained("facebook/blenderbot-90M")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/blenderbot/modeling_blenderbot.py", line 1212, in from_pretrained
+    return BlenderbotSmallForConditionalGeneration.from_pretrained(pretrained_model_name_or_path)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 350387079 but has size 30899656 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00884_generate_response.py", line 77, in <module>
+    test_generate_response()
+  File "./f00884_generate_response.py", line 61, in test_generate_response
+    output = generate_response(user_input)
+  File "./f00884_generate_response.py", line 29, in generate_response
+    raise OSError("Disk quota exceeded")
+OSError: Disk quota exceeded

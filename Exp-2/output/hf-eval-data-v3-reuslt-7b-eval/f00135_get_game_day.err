@@ -1,0 +1,13 @@
+2023-11-30 17:43:26.502732: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 17:43:27.376239: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00135_get_game_day.py", line 40, in <module>
+    test_get_game_day()
+  File "./f00135_get_game_day.py", line 32, in test_get_game_day
+    assert get_game_day("The game was played on February 7, 2016 at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California.", "What day was the game played on?") == 'February 7, 2016'
+  File "./f00135_get_game_day.py", line 20, in get_game_day
+    pipeline()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 717, in pipeline
+    raise RuntimeError(
+RuntimeError: Impossible to instantiate a pipeline without either a task or a model being specified. Please provide a task class or a model

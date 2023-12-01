@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00372_generate_human_face.py", line 42, in <module>
+    test_generate_human_face()
+  File "./f00372_generate_human_face.py", line 34, in test_generate_human_face
+    generate_human_face()
+  File "./f00372_generate_human_face.py", line 20, in generate_human_face
+    diffusion = DiffusionPipeline(model_id=model_id)
+TypeError: DiffusionPipeline() takes no arguments

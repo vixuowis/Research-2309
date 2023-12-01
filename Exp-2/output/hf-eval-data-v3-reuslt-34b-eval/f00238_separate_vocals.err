@@ -1,0 +1,11 @@
+2023-11-30 18:04:27.752797: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 18:04:28.509415: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00238_separate_vocals.py", line 51, in <module>
+    test_separate_vocals()
+  File "./f00238_separate_vocals.py", line 41, in test_separate_vocals
+    separated_audio_sources = separate_vocals(sample_audio_file_path)
+  File "./f00238_separate_vocals.py", line 31, in separate_vocals
+    return separated_audio_sources
+UnboundLocalError: local variable 'separated_audio_sources' referenced before assignment

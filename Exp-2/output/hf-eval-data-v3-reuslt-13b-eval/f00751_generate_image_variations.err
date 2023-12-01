@@ -1,0 +1,13 @@
+2023-11-30 22:18:19.173778: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 22:18:19.924534: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00751_generate_image_variations.py", line 67, in <module>
+    test_generate_image_variations()
+  File "./f00751_generate_image_variations.py", line 53, in test_generate_image_variations
+    generate_image_variations('test.jpg', 'result.jpg')
+  File "./f00751_generate_image_variations.py", line 28, in generate_image_variations
+    target_image = Image.open("assets/target-images/flower.jpg")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3243, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'assets/target-images/flower.jpg'

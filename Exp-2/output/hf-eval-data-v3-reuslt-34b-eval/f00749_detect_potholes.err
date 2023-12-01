@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "./f00749_detect_potholes.py", line 40, in <module>
+    test_detect_potholes()
+  File "./f00749_detect_potholes.py", line 30, in test_detect_potholes
+    result = detect_potholes(image_path)
+  File "./f00749_detect_potholes.py", line 17, in detect_potholes
+    yolo = YOLO(img_shape=(1080, 1920), device='cuda')
+TypeError: __init__() got an unexpected keyword argument 'img_shape'
+Sentry is attempting to send 2 pending events
+Waiting up to 2 seconds
+Press Ctrl-C to quit
+12/01/2023 02:06:11 - WARNING - urllib3.connectionpool -   Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1131)'))': /api/4504521592406016/envelope/
+12/01/2023 02:06:12 - WARNING - urllib3.connectionpool -   Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1131)'))': /api/4504521592406016/envelope/
+12/01/2023 02:06:12 - WARNING - urllib3.connectionpool -   Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1131)'))': /api/4504521592406016/envelope/

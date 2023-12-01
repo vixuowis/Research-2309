@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00375_load_and_classify_video.py", line 47, in <module>
+    test_load_and_classify_video()
+  File "./f00375_load_and_classify_video.py", line 37, in test_load_and_classify_video
+    result = load_and_classify_video('lmazzon70/videomae-base-finetuned-kinetics-finetuned-rwf2000mp4-epochs8-batch8-kb', 'test_video.mp4')
+  File "./f00375_load_and_classify_video.py", line 22, in load_and_classify_video
+    if os.path.exists(video_path) is False:
+NameError: name 'os' is not defined

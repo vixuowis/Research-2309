@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "./f00635_extract_code_syntax_and_entities.py", line 53, in <module>
+    test_extract_code_syntax_and_entities()
+  File "./f00635_extract_code_syntax_and_entities.py", line 42, in test_extract_code_syntax_and_entities
+    result = extract_code_syntax_and_entities(test_text)
+  File "./f00635_extract_code_syntax_and_entities.py", line 23, in extract_code_syntax_and_entities
+    tokenizer = AutoTokenizer.from_pretrained('./syntax_entity_code/tokenizer', do_lower_case=False)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 718, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/tokenization_auto.py", line 550, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': './syntax_entity_code/tokenizer'. Use `repo_type` argument if needed.

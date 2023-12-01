@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "./f00749_detect_potholes.py", line 48, in <module>
+    test_detect_potholes()
+  File "./f00749_detect_potholes.py", line 38, in test_detect_potholes
+    result = detect_potholes(image_path)
+  File "./f00749_detect_potholes.py", line 19, in detect_potholes
+    img = YOLO(image_path, 1)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/ultralyticsplus/ultralytics_utils.py", line 46, in __init__
+    self._load_from_hf_hub(model, hf_token=hf_token)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/ultralyticsplus/ultralytics_utils.py", line 59, in _load_from_hf_hub
+    weights = download_from_hub(weights, hf_token=hf_token)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/ultralyticsplus/hf_utils.py", line 566, in download_from_hub
+    repo_files = list_repo_files(repo_id=hf_model_id, repo_type="model", token=hf_token)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'https://github.com/ultralytics/yolov5/raw/master/data/images/zidane.jpg'. Use `repo_type` argument if needed.
+Sentry is attempting to send 2 pending events
+Waiting up to 2 seconds
+Press Ctrl-C to quit
+11/30/2023 23:14:06 - WARNING - urllib3.connectionpool -   Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1131)'))': /api/4504521592406016/envelope/
+11/30/2023 23:14:06 - WARNING - urllib3.connectionpool -   Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1131)'))': /api/4504521592406016/envelope/
+11/30/2023 23:14:06 - WARNING - urllib3.connectionpool -   Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1131)'))': /api/4504521592406016/envelope/

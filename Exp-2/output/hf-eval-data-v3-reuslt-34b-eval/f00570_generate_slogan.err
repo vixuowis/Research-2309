@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00570_generate_slogan.py", line 62, in <module>
+    test_generate_slogan()
+  File "./f00570_generate_slogan.py", line 52, in test_generate_slogan
+    best_slogan = generate_slogan(api_key, prompt, engine, max_tokens, n, temperature)
+  File "./f00570_generate_slogan.py", line 27, in generate_slogan
+    completion = openai.Completion()
+TypeError: 'APIRemovedInV1Proxy' object is not callable

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00663_generate_vintage_image.py", line 38, in <module>
+    output_file = f"{os.path.basename(args.model_name)}.png"
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/posixpath.py", line 142, in basename
+    p = os.fspath(p)
+TypeError: expected str, bytes or os.PathLike object, not NoneType

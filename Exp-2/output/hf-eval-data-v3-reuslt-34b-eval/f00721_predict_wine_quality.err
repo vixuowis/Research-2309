@@ -1,0 +1,4 @@
+  File "./f00721_predict_wine_quality.py", line 79
+    def test_predict_wine_quality():
+    ^
+IndentationError: expected an indented block

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00333_predict_carbon_emissions.py", line 75, in <module>
+    test_predict_carbon_emissions()
+  File "./f00333_predict_carbon_emissions.py", line 57, in test_predict_carbon_emissions
+    predictions = predict_carbon_emissions('test_data.csv')
+  File "./f00333_predict_carbon_emissions.py", line 33, in predict_carbon_emissions
+    X = np.asarray(historical_data['CO2'])
+UnboundLocalError: local variable 'historical_data' referenced before assignment

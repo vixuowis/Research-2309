@@ -1,0 +1,11 @@
+2023-11-30 19:56:24.474403: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 19:56:25.242897: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00567_create_artistic_variations.py", line 74, in <module>
+    test_create_artistic_variations()
+  File "./f00567_create_artistic_variations.py", line 60, in test_create_artistic_variations
+    create_artistic_variations('test.jpg', 'output.jpg')
+  File "./f00567_create_artistic_variations.py", line 23, in create_artistic_variations
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+NameError: name 'torch' is not defined

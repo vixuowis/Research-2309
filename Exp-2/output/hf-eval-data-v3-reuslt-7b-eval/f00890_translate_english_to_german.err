@@ -1,0 +1,10 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00890_translate_english_to_german.py", line 50, in <module>
+    test_translate_english_to_german()
+  File "./f00890_translate_english_to_german.py", line 42, in test_translate_english_to_german
+    assert translate_english_to_german('Hello, how are you?') is not None
+  File "./f00890_translate_english_to_german.py", line 24, in translate_english_to_german
+    tokenizer_src = MBartTokenizerFast.from_pretrained("facebook/mbart-large-cc25")
+NameError: name 'MBartTokenizerFast' is not defined

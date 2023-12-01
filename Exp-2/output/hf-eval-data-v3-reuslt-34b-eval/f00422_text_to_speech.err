@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "./f00422_text_to_speech.py", line 52, in <module>
+    text_to_speech(input("Enter the text you want to convert into speech: "))
+KeyboardInterrupt

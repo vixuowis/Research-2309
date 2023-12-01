@@ -1,0 +1,13 @@
+--2023-11-30 18:00:00--  https://cdn.huggingface.co/diffusers/ddpm_diffuser.pt
+Connecting to 192.168.1.174:12798... connected.
+Proxy request sent, awaiting response... 503 Service Unavailable
+2023-11-30 18:00:20 ERROR 503: Service Unavailable.
+
+Traceback (most recent call last):
+  File "./f00199_generate_cat_image.py", line 49, in <module>
+    print(test_generate_cat_image())
+  File "./f00199_generate_cat_image.py", line 42, in test_generate_cat_image
+    generate_cat_image()
+  File "./f00199_generate_cat_image.py", line 27, in generate_cat_image
+    pipeline = DDPMPipeline(model_id)
+TypeError: __init__() missing 1 required positional argument: 'scheduler'

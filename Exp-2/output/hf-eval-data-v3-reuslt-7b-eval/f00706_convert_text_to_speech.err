@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00706_convert_text_to_speech.py", line 61, in <module>
+    test_convert_text_to_speech()
+  File "./f00706_convert_text_to_speech.py", line 52, in test_convert_text_to_speech
+    convert_text_to_speech('汉语很有趣', 'lesson_audio_example.wav')
+  File "./f00706_convert_text_to_speech.py", line 24, in convert_text_to_speech
+    model_path = os.environ['MODEL_PATH']
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/os.py", line 675, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'MODEL_PATH'

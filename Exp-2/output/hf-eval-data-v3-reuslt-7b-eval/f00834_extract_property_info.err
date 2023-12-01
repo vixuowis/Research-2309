@@ -1,0 +1,17 @@
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00834_extract_property_info.py", line 42, in test_extract_property_info
+    extract_property_info('non_existing_file.jpg')
+  File "./f00834_extract_property_info.py", line 23, in extract_property_info
+    raise FileNotFoundError('The provided file path is invalid or empty!')
+FileNotFoundError: The provided file path is invalid or empty!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00834_extract_property_info.py", line 53, in <module>
+    test_extract_property_info()
+  File "./f00834_extract_property_info.py", line 44, in test_extract_property_info
+    assert str(e) == 'non_existing_file.jpg does not exist'
+AssertionError

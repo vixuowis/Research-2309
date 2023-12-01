@@ -1,0 +1,15 @@
+tokenizer_config.json:   0%|                                                         | 0.00/28.0 [00:00<?, ?B/s]tokenizer_config.json: 100%|█████████████████████████████████████████████████| 28.0/28.0 [00:00<00:00, 7.75kB/s]
+config.json:   0%|                                                                    | 0.00/571 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 571/571 [00:00<00:00, 263kB/s]
+vocab.txt:   0%|                                                                     | 0.00/232k [00:00<?, ?B/s]vocab.txt: 100%|█████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 89.5MB/s]
+tokenizer.json:   0%|                                                                | 0.00/466k [00:00<?, ?B/s]tokenizer.json: 100%|█████████████████████████████████████████████████████████| 466k/466k [00:02<00:00, 229kB/s]tokenizer.json: 100%|█████████████████████████████████████████████████████████| 466k/466k [00:02<00:00, 229kB/s]
+model.safetensors:   0%|                                                            | 0.00/1.34G [00:00<?, ?B/s]model.safetensors:   1%|▍                                                 | 10.5M/1.34G [00:58<2:03:46, 180kB/s]model.safetensors:   1%|▍                                                 | 10.5M/1.34G [01:11<2:03:46, 180kB/s]model.safetensors:   2%|▊                                                 | 21.0M/1.34G [02:08<2:16:59, 161kB/s]model.safetensors:   2%|▊                                                 | 21.0M/1.34G [02:21<2:16:59, 161kB/s]model.safetensors:   2%|█▏                                                | 31.5M/1.34G [03:16<2:18:50, 158kB/s]model.safetensors:   2%|█▏                                                | 32.9M/1.34G [03:26<2:20:08, 156kB/s]model.safetensors:   2%|█▏                                                | 32.9M/1.34G [03:26<2:17:21, 159kB/s]
+Traceback (most recent call last):
+  File "./f00672_find_relevant_passage.py", line 69, in <module>
+    test_find_relevant_passage()
+  File "./f00672_find_relevant_passage.py", line 57, in test_find_relevant_passage
+    assert isinstance(find_relevant_passage(question, candidate_passages), str)
+  File "./f00672_find_relevant_passage.py", line 31, in find_relevant_passage
+    passage_inputs = [tokenizer(" ".join([x["title"], x["text"]]), padding="max_length", truncation=True, max_length=512) for x in candidate_passages]
+  File "./f00672_find_relevant_passage.py", line 31, in <listcomp>
+    passage_inputs = [tokenizer(" ".join([x["title"], x["text"]]), padding="max_length", truncation=True, max_length=512) for x in candidate_passages]
+TypeError: string indices must be integers

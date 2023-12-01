@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00476_generate_image.py", line 42, in <module>
+    test_generate_image()
+  File "./f00476_generate_image.py", line 33, in test_generate_image
+    generate_image(model_id, save_path)
+  File "./f00476_generate_image.py", line 20, in generate_image
+    ddpmp = DDPMPipeline(model_id)
+TypeError: __init__() missing 1 required positional argument: 'scheduler'

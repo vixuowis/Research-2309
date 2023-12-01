@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00575_location_recommendation.py", line 64, in <module>
+    test_location_recommendation()
+  File "./f00575_location_recommendation.py", line 50, in test_location_recommendation
+    result_1 = location_recommendation(*test_case_1)
+  File "./f00575_location_recommendation.py", line 26, in location_recommendation
+    encoder = CLIPImageEncoder()
+NameError: name 'CLIPImageEncoder' is not defined

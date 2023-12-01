@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "./f00580_extract_entities.py", line 73, in <module>
+    test_extract_entities()
+  File "./f00580_extract_entities.py", line 65, in test_extract_entities
+    assert isinstance(extract_entities(sentence1), dict)
+  File "./f00580_extract_entities.py", line 21, in extract_entities
+    model = AutoModelForTokenClassification.from_pretrained("./model/")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 488, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': './model/'. Use `repo_type` argument if needed.

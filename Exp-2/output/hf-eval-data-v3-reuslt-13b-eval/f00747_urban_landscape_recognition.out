@@ -1,0 +1,1 @@
+OSError while processing image:  OSError("nicolalandro/segformer_humanseg_mobile is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'\nIf this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`")

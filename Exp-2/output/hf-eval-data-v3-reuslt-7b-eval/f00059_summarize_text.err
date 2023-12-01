@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00059_summarize_text.py", line 53, in <module>
+    test_summarize_text()
+  File "./f00059_summarize_text.py", line 45, in test_summarize_text
+    assert len(summarize_text(input_text1)) > 0
+  File "./f00059_summarize_text.py", line 22, in summarize_text
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+NameError: name 'torch' is not defined

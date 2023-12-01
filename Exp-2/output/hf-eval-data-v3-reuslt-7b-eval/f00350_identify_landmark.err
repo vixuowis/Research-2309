@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00350_identify_landmark.py", line 55, in <module>
+    test_identify_landmark()
+  File "./f00350_identify_landmark.py", line 47, in test_identify_landmark
+    answer = identify_landmark(img_url, question)
+  File "./f00350_identify_landmark.py", line 22, in identify_landmark
+    with open('img/downloaded-img.jpg', 'wb') as fd:
+FileNotFoundError: [Errno 2] No such file or directory: 'img/downloaded-img.jpg'

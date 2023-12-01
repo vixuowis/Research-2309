@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00475_generate_car_image.py", line 56, in <module>
+    print(test_generate_car_image())
+  File "./f00475_generate_car_image.py", line 44, in test_generate_car_image
+    generate_car_image()
+  File "./f00475_generate_car_image.py", line 22, in generate_car_image
+    if not _check_module(): 
+NameError: name '_check_module' is not defined

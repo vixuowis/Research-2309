@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./f00020_classify_image.py", line 53, in <module>
+    test_classify_image()
+  File "./f00020_classify_image.py", line 45, in test_classify_image
+    assert isinstance(classify_image('https://placekitten.com/200/300'), int)
+  File "./f00020_classify_image.py", line 27, in classify_image
+    model = timm.create_model("mobilenetv3_small", pretrained=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/timm/models/_factory.py", line 113, in create_model
+    raise RuntimeError('Unknown model (%s)' % model_name)
+RuntimeError: Unknown model (mobilenetv3_small)

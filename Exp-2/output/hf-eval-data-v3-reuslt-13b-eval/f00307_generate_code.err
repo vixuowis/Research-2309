@@ -1,0 +1,24 @@
+tokenizer_config.json:   0%|                                                          | 0.00/177 [00:00<?, ?B/s]tokenizer_config.json: 100%|███████████████████████████████████████████████████| 177/177 [00:00<00:00, 38.5kB/s]
+config.json:   0%|                                                                    | 0.00/720 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 720/720 [00:00<00:00, 212kB/s]
+vocab.json:   0%|                                                                    | 0.00/899k [00:00<?, ?B/s]vocab.json: 100%|█████████████████████████████████████████████████████████████| 899k/899k [00:01<00:00, 569kB/s]vocab.json: 100%|█████████████████████████████████████████████████████████████| 899k/899k [00:01<00:00, 569kB/s]
+merges.txt:   0%|                                                                    | 0.00/456k [00:00<?, ?B/s]merges.txt: 100%|████████████████████████████████████████████████████████████| 456k/456k [00:00<00:00, 1.52MB/s]merges.txt: 100%|████████████████████████████████████████████████████████████| 456k/456k [00:00<00:00, 1.52MB/s]
+added_tokens.json:   0%|                                                             | 0.00/45.0 [00:00<?, ?B/s]added_tokens.json: 100%|█████████████████████████████████████████████████████| 45.0/45.0 [00:00<00:00, 18.6kB/s]
+special_tokens_map.json:   0%|                                                        | 0.00/358 [00:00<?, ?B/s]special_tokens_map.json: 100%|██████████████████████████████████████████████████| 358/358 [00:00<00:00, 250kB/s]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Traceback (most recent call last):
+  File "./f00307_generate_code.py", line 41, in <module>
+    test_generate_code()
+  File "./f00307_generate_code.py", line 33, in test_generate_code
+    assert generate_code('Create a simple loading spinner for maintenance.') is not None
+  File "./f00307_generate_code.py", line 20, in generate_code
+    model = AutoModelForCausalLM.from_pretrained("https://huggingface.co/microsoft/CodeGPT-small-java-adaptedGPT2", return_dict=True)  # pylint: disable=line-too-long
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 488, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'https://huggingface.co/microsoft/CodeGPT-small-java-adaptedGPT2'. Use `repo_type` argument if needed.

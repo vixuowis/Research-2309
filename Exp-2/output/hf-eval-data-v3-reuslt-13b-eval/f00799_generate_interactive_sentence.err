@@ -1,0 +1,28 @@
+2023-11-30 22:45:52.840672: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 22:45:53.681521: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+No model was supplied, defaulted to distilroberta-base and revision ec58a5b (https://huggingface.co/distilroberta-base).
+Using a pipeline without specifying a model name and revision in production is not recommended.
+Some weights of the model checkpoint at distilroberta-base were not used when initializing RobertaForMaskedLM: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing RobertaForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "./f00799_generate_interactive_sentence.py", line 50, in <module>
+    test_generate_interactive_sentence()
+  File "./f00799_generate_interactive_sentence.py", line 39, in test_generate_interactive_sentence
+    assert generate_interactive_sentence('Tell me more about your [MASK] hobbies.') is not None
+  File "./f00799_generate_interactive_sentence.py", line 28, in generate_interactive_sentence
+    interactive_sentence = fill_mask(masked_sentence)[0]["sequence"]
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 270, in __call__
+    outputs = super().__call__(inputs, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1140, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 1146, in run_single
+    model_inputs = self.preprocess(inputs, **preprocess_params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 123, in preprocess
+    self.ensure_exactly_one_mask_token(model_inputs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 112, in ensure_exactly_one_mask_token
+    self._ensure_exactly_one_mask_token(input_ids)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/fill_mask.py", line 100, in _ensure_exactly_one_mask_token
+    raise PipelineException(
+transformers.pipelines.base.PipelineException: No mask_token (<mask>) found on the input

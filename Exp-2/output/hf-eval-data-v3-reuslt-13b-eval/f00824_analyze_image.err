@@ -1,0 +1,11 @@
+2023-11-30 23:04:09.194052: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 23:04:09.937136: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "./f00824_analyze_image.py", line 60, in <module>
+    test_analyze_image()
+  File "./f00824_analyze_image.py", line 52, in test_analyze_image
+    assert analyze_image(url1).shape == torch.Size([1, 197, 768])
+  File "./f00824_analyze_image.py", line 40, in analyze_image
+    raise OSError("Problem with network or image file.") from None
+OSError: Problem with network or image file.

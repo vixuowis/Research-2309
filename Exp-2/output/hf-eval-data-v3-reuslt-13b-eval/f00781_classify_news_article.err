@@ -1,0 +1,13 @@
+2023-11-30 22:31:29.018384: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 22:31:29.767048: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+No model was supplied, defaulted to facebook/bart-large-mnli and revision c626438 (https://huggingface.co/facebook/bart-large-mnli).
+Using a pipeline without specifying a model name and revision in production is not recommended.
+Traceback (most recent call last):
+  File "./f00781_classify_news_article.py", line 62, in <module>
+    test_classify_news_article()
+  File "./f00781_classify_news_article.py", line 51, in test_classify_news_article
+    result1 = classify_news_article(news_article1)
+  File "./f00781_classify_news_article.py", line 25, in classify_news_article
+    scores_dict = classifier(news_article, candidate_labels=[
+KeyError: 0

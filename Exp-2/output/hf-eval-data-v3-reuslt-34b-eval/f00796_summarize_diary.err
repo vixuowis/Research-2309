@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00796_summarize_diary.py", line 51, in <module>
+    test_summarize_diary()
+  File "./f00796_summarize_diary.py", line 42, in test_summarize_diary
+    assert len(summarize_diary(diary_entry1)) > 0
+  File "./f00796_summarize_diary.py", line 18, in summarize_diary
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+NameError: name 'torch' is not defined

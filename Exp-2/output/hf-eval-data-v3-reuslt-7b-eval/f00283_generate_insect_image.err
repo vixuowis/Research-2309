@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00283_generate_insect_image.py", line 59, in <module>
+    generate_insect_image(model)
+  File "./f00283_generate_insect_image.py", line 25, in generate_insect_image
+    from diffusers import DiffuserPipeline, get_model
+ImportError: cannot import name 'DiffuserPipeline' from 'diffusers' (/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/diffusers/__init__.py)

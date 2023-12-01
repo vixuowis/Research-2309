@@ -1,0 +1,25 @@
+pytorch_model.bin:   0%|                                                            | 0.00/2.87G [00:00<?, ?B/s]pytorch_model.bin:   0%|▏                                                 | 10.5M/2.87G [00:41<3:08:22, 253kB/s]pytorch_model.bin:   0%|▏                                                 | 10.5M/2.87G [01:00<3:08:22, 253kB/s]pytorch_model.bin:   1%|▎                                                 | 21.0M/2.87G [02:57<7:21:13, 108kB/s]pytorch_model.bin:   1%|▎                                                 | 21.0M/2.87G [03:10<7:21:13, 108kB/s]pytorch_model.bin:   1%|▍                                                 | 22.2M/2.87G [03:16<7:46:17, 102kB/s]pytorch_model.bin:   1%|▍                                                 | 22.2M/2.87G [03:16<7:00:49, 113kB/s]
+Traceback (most recent call last):
+  File "./f00696_chatbot_response.py", line 46, in <module>
+    test_chatbot_response()
+  File "./f00696_chatbot_response.py", line 38, in test_chatbot_response
+    assert chatbot_response('Hello, how are you?') != ''
+  File "./f00696_chatbot_response.py", line 20, in chatbot_response
+    chatbot = AutoModelForSeq2SeqLM.from_pretrained("facebook/blenderbot-1B-distill")
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/blenderbot/modeling_blenderbot.py", line 1214, in from_pretrained
+    return super(BlenderbotForConditionalGeneration, cls).from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 569, in http_get
+    raise EnvironmentError(
+OSError: Consistency check failed: file should be of size 2874938703 but has size 22245168 (pytorch_model.bin).
+We are sorry for the inconvenience. Please retry download and pass `force_download=True, resume_download=False` as argument.
+If the issue persists, please let us know by opening an issue on https://github.com/huggingface/huggingface_hub.

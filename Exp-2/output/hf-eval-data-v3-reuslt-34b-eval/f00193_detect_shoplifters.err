@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00193_detect_shoplifters.py", line 47, in <module>
+    test_detect_shoplifters()
+  File "./f00193_detect_shoplifters.py", line 37, in test_detect_shoplifters
+    results = detect_shoplifters(image_path)
+  File "./f00193_detect_shoplifters.py", line 19, in detect_shoplifters
+    results = yolov5.model('./yolov5/weights/best.pt').infer(source=image_path)
+AttributeError: module 'yolov5' has no attribute 'model'

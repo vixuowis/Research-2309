@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00704_find_most_related_faq.py", line 46, in <module>
+    test_find_most_related_faq()
+  File "./f00704_find_most_related_faq.py", line 37, in test_find_most_related_faq
+    assert isinstance(find_most_related_faq(faq_sentences, query), str)
+  File "./f00704_find_most_related_faq.py", line 22, in find_most_related_faq
+    embeddings1 = model.encode(faq_sentences, convert_to_tensor=True)
+NameError: name 'model' is not defined

@@ -1,8 +1,48 @@
-2023-11-30 15:39:59.115070: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2023-11-30 16:03:42.901805: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2023-11-30 15:40:00.003835: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-config.json:   0%|                                                                    | 0.00/841 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 841/841 [00:00<00:00, 124kB/s]
-pytorch_model.bin:   0%|                                                            | 0.00/1.11G [00:00<?, ?B/s]pytorch_model.bin:   1%|▍                                                   | 10.5M/1.11G [00:14<24:33, 748kB/s]pytorch_model.bin:   1%|▍                                                   | 10.5M/1.11G [00:27<24:33, 748kB/s]pytorch_model.bin:   2%|▉                                                   | 21.0M/1.11G [00:32<29:10, 623kB/s]pytorch_model.bin:   2%|▉                                                   | 21.0M/1.11G [00:47<29:10, 623kB/s]pytorch_model.bin:   3%|█▍                                                  | 31.5M/1.11G [00:51<30:16, 595kB/s]pytorch_model.bin:   3%|█▍                                                  | 31.5M/1.11G [01:07<30:16, 595kB/s]pytorch_model.bin:   4%|█▉                                                  | 41.9M/1.11G [01:15<34:07, 523kB/s]pytorch_model.bin:   4%|█▉                                                  | 41.9M/1.11G [01:27<34:07, 523kB/s]pytorch_model.bin:   5%|██▍                                                 | 52.4M/1.11G [01:33<32:48, 538kB/s]pytorch_model.bin:   5%|██▍                                                 | 52.4M/1.11G [01:47<32:48, 538kB/s]pytorch_model.bin:   6%|██▉                                                 | 62.9M/1.11G [01:55<33:44, 518kB/s]pytorch_model.bin:   6%|██▉                                                 | 62.9M/1.11G [02:07<33:44, 518kB/s]pytorch_model.bin:   7%|███▍                                                | 73.4M/1.11G [02:14<33:05, 523kB/s]pytorch_model.bin:   7%|███▍                                                | 73.4M/1.11G [02:27<33:05, 523kB/s]pytorch_model.bin:   8%|███▉                                                | 83.9M/1.11G [02:31<31:02, 552kB/s]pytorch_model.bin:   8%|███▉                                                | 83.9M/1.11G [02:47<31:02, 552kB/s]pytorch_model.bin:   8%|████▍                                               | 94.4M/1.11G [02:52<31:37, 536kB/s]pytorch_model.bin:   8%|████▍                                               | 94.4M/1.11G [03:07<31:37, 536kB/s]pytorch_model.bin:   9%|████▉                                                | 105M/1.11G [03:19<35:13, 477kB/s]pytorch_model.bin:   9%|████▉                                                | 105M/1.11G [03:37<35:13, 477kB/s]pytorch_model.bin:  10%|█████▍                                               | 115M/1.11G [03:54<40:45, 408kB/s]pytorch_model.bin:  10%|█████▍                                               | 115M/1.11G [04:02<34:57, 475kB/s]
+2023-11-30 16:03:43.676385: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+pytorch_model.bin:   0%|                                                            | 0.00/1.11G [00:00<?, ?B/s]pytorch_model.bin:   1%|▍                                                   | 10.5M/1.11G [00:17<29:57, 613kB/s]pytorch_model.bin:   1%|▍                                                   | 10.5M/1.11G [00:30<29:57, 613kB/s]pytorch_model.bin:   2%|▉                                                   | 21.0M/1.11G [00:40<35:36, 511kB/s]pytorch_model.bin:   3%|█▍                                                  | 31.5M/1.11G [00:59<34:36, 521kB/s]pytorch_model.bin:   3%|█▍                                                  | 31.5M/1.11G [01:10<34:36, 521kB/s]pytorch_model.bin:   4%|█▉                                                  | 41.9M/1.11G [01:27<39:36, 450kB/s]pytorch_model.bin:   4%|█▉                                                  | 41.9M/1.11G [01:40<39:36, 450kB/s]pytorch_model.bin:   5%|██▍                                                 | 52.4M/1.11G [02:02<46:07, 383kB/s]pytorch_model.bin:   5%|██▍                                                 | 52.4M/1.11G [02:20<46:07, 383kB/s]pytorch_model.bin:   6%|██▉                                                 | 62.9M/1.11G [02:27<44:30, 393kB/s]pytorch_model.bin:   6%|██▉                                                 | 62.9M/1.11G [02:40<44:30, 393kB/s]pytorch_model.bin:   7%|███▍                                                | 73.4M/1.11G [02:47<40:15, 430kB/s]pytorch_model.bin:   7%|███▍                                                | 73.4M/1.11G [03:00<40:15, 430kB/s]pytorch_model.bin:   8%|███▉                                                | 83.9M/1.11G [03:09<38:31, 445kB/s]pytorch_model.bin:   8%|███▉                                                | 83.9M/1.11G [03:20<38:31, 445kB/s]pytorch_model.bin:   8%|████▍                                               | 94.4M/1.11G [03:30<37:03, 458kB/s]pytorch_model.bin:   8%|████▍                                               | 94.4M/1.11G [03:50<37:03, 458kB/s]pytorch_model.bin:   9%|████▉                                                | 105M/1.11G [03:55<37:35, 447kB/s]pytorch_model.bin:   9%|████▉                                                | 105M/1.11G [04:10<37:35, 447kB/s]pytorch_model.bin:  10%|█████▍                                               | 115M/1.11G [04:22<38:53, 427kB/s]pytorch_model.bin:  10%|█████▍                                               | 115M/1.11G [04:40<38:53, 427kB/s]pytorch_model.bin:  11%|█████▉                                               | 126M/1.11G [04:52<41:00, 401kB/s]pytorch_model.bin:  11%|█████▉                                               | 126M/1.11G [05:10<41:00, 401kB/s]pytorch_model.bin:  12%|██████▍                                              | 136M/1.11G [05:18<40:41, 400kB/s]pytorch_model.bin:  12%|██████▍                                              | 136M/1.11G [05:30<40:41, 400kB/s]pytorch_model.bin:  13%|██████▉                                              | 147M/1.11G [05:39<37:46, 426kB/s]pytorch_model.bin:  13%|██████▉                                              | 147M/1.11G [05:50<37:46, 426kB/s]pytorch_model.bin:  14%|███████▍                                             | 157M/1.11G [05:57<34:22, 463kB/s]pytorch_model.bin:  14%|███████▍                                             | 157M/1.11G [06:10<34:22, 463kB/s]pytorch_model.bin:  15%|███████▉                                             | 168M/1.11G [06:18<33:09, 475kB/s]pytorch_model.bin:  15%|███████▉                                             | 168M/1.11G [06:30<33:09, 475kB/s]pytorch_model.bin:  16%|████████▍                                            | 178M/1.11G [06:39<32:08, 484kB/s]pytorch_model.bin:  16%|████████▍                                            | 178M/1.11G [06:50<32:08, 484kB/s]pytorch_model.bin:  17%|████████▉                                            | 189M/1.11G [06:52<27:59, 550kB/s]pytorch_model.bin:  18%|█████████▍                                           | 199M/1.11G [07:04<24:48, 613kB/s]pytorch_model.bin:  19%|█████████▉                                           | 210M/1.11G [07:17<22:49, 659kB/s]pytorch_model.bin:  19%|█████████▉                                           | 210M/1.11G [07:30<22:49, 659kB/s]pytorch_model.bin:  20%|██████████▍                                          | 220M/1.11G [07:32<21:59, 676kB/s]pytorch_model.bin:  21%|██████████▉                                          | 231M/1.11G [07:48<21:51, 672kB/s]pytorch_model.bin:  21%|██████████▉                                          | 231M/1.11G [08:00<21:51, 672kB/s]pytorch_model.bin:  22%|███████████▍                                         | 241M/1.11G [08:10<24:21, 596kB/s]pytorch_model.bin:  22%|███████████▍                                         | 241M/1.11G [08:30<24:21, 596kB/s]pytorch_model.bin:  23%|███████████▉                                         | 252M/1.11G [08:49<32:59, 435kB/s]pytorch_model.bin:  23%|███████████▉                                         | 252M/1.11G [09:00<32:59, 435kB/s]pytorch_model.bin:  24%|████████████▍                                        | 262M/1.11G [09:21<35:45, 396kB/s]pytorch_model.bin:  24%|████████████▍                                        | 262M/1.11G [09:40<35:45, 396kB/s]pytorch_model.bin:  25%|████████████▉                                        | 273M/1.11G [09:57<39:11, 357kB/s]pytorch_model.bin:  25%|████████████▉                                        | 273M/1.11G [10:10<39:11, 357kB/s]pytorch_model.bin:  25%|█████████████▍                                       | 283M/1.11G [10:29<39:31, 350kB/s]pytorch_model.bin:  25%|█████████████▍                                       | 283M/1.11G [10:40<39:31, 350kB/s]pytorch_model.bin:  26%|█████████████▉                                       | 294M/1.11G [10:54<37:10, 367kB/s]pytorch_model.bin:  26%|█████████████▉                                       | 294M/1.11G [11:10<37:10, 367kB/s]pytorch_model.bin:  27%|██████████████▍                                      | 304M/1.11G [11:17<34:33, 390kB/s]pytorch_model.bin:  27%|██████████████▍                                      | 304M/1.11G [11:30<34:33, 390kB/s]pytorch_model.bin:  28%|██████████████▉                                      | 315M/1.11G [11:35<30:48, 432kB/s]pytorch_model.bin:  28%|██████████████▉                                      | 315M/1.11G [11:50<30:48, 432kB/s]pytorch_model.bin:  29%|███████████████▍                                     | 325M/1.11G [11:50<27:00, 486kB/s]pytorch_model.bin:  30%|███████████████▉                                     | 336M/1.11G [12:06<24:16, 533kB/s]pytorch_model.bin:  30%|███████████████▉                                     | 336M/1.11G [12:20<24:16, 533kB/s]pytorch_model.bin:  31%|████████████████▍                                    | 346M/1.11G [12:29<25:13, 506kB/s]pytorch_model.bin:  31%|████████████████▍                                    | 346M/1.11G [12:40<25:13, 506kB/s]pytorch_model.bin:  32%|████████████████▉                                    | 357M/1.11G [12:56<27:18, 461kB/s]pytorch_model.bin:  32%|████████████████▉                                    | 357M/1.11G [13:10<27:18, 461kB/s]pytorch_model.bin:  33%|█████████████████▍                                   | 367M/1.11G [13:23<28:27, 436kB/s]pytorch_model.bin:  33%|█████████████████▍                                   | 367M/1.11G [13:40<28:27, 436kB/s]pytorch_model.bin:  34%|█████████████████▉                                   | 377M/1.11G [13:53<29:56, 409kB/s]pytorch_model.bin:  34%|█████████████████▉                                   | 377M/1.11G [14:10<29:56, 409kB/s]pytorch_model.bin:  35%|██████████████████▍                                  | 388M/1.11G [14:17<29:03, 415kB/s]pytorch_model.bin:  35%|██████████████████▍                                  | 388M/1.11G [14:30<29:03, 415kB/s]pytorch_model.bin:  36%|██████████████████▉                                  | 398M/1.11G [14:39<27:27, 433kB/s]pytorch_model.bin:  36%|██████████████████▉                                  | 398M/1.11G [14:50<27:27, 433kB/s]pytorch_model.bin:  37%|███████████████████▍                                 | 409M/1.11G [14:55<24:27, 479kB/s]pytorch_model.bin:  37%|███████████████████▍                                 | 409M/1.11G [15:10<24:27, 479kB/s]pytorch_model.bin:  38%|███████████████████▉                                 | 419M/1.11G [15:14<22:57, 503kB/s]pytorch_model.bin:  38%|███████████████████▉                                 | 419M/1.11G [15:30<22:57, 503kB/s]pytorch_model.bin:  39%|████████████████████▍                                | 430M/1.11G [15:41<24:37, 462kB/s]pytorch_model.bin:  40%|████████████████████▉                                | 440M/1.11G [15:58<22:31, 497kB/s]pytorch_model.bin:  40%|████████████████████▉                                | 440M/1.11G [16:10<22:31, 497kB/s]pytorch_model.bin:  41%|█████████████████████▍                               | 451M/1.11G [16:15<21:00, 525kB/s]pytorch_model.bin:  41%|█████████████████████▍                               | 451M/1.11G [16:30<21:00, 525kB/s]pytorch_model.bin:  41%|█████████████████████▉                               | 461M/1.11G [16:40<22:04, 491kB/s]pytorch_model.bin:  41%|█████████████████████▉                               | 461M/1.11G [17:00<22:04, 491kB/s]pytorch_model.bin:  42%|██████████████████████▍                              | 472M/1.11G [17:01<21:44, 491kB/s]pytorch_model.bin:  42%|██████████████████████▍                              | 472M/1.11G [17:20<21:44, 491kB/s]pytorch_model.bin:  43%|██████████████████████▉                              | 482M/1.11G [17:24<21:46, 482kB/s]pytorch_model.bin:  43%|██████████████████████▉                              | 482M/1.11G [17:40<21:46, 482kB/s]pytorch_model.bin:  44%|███████████████████████▍                             | 493M/1.11G [17:44<21:02, 491kB/s]pytorch_model.bin:  44%|███████████████████████▍                             | 493M/1.11G [18:00<21:02, 491kB/s]pytorch_model.bin:  45%|███████████████████████▉                             | 503M/1.11G [18:03<19:53, 510kB/s]pytorch_model.bin:  45%|███████████████████████▉                             | 503M/1.11G [18:20<19:53, 510kB/s]pytorch_model.bin:  46%|████████████████████████▍                            | 514M/1.11G [18:25<19:58, 499kB/s]pytorch_model.bin:  46%|████████████████████████▍                            | 514M/1.11G [18:40<19:58, 499kB/s]pytorch_model.bin:  47%|████████████████████████▉                            | 524M/1.11G [18:46<19:27, 504kB/s]pytorch_model.bin:  47%|████████████████████████▉                            | 524M/1.11G [19:00<19:27, 504kB/s]pytorch_model.bin:  48%|█████████████████████████▍                           | 535M/1.11G [19:07<19:19, 498kB/s]pytorch_model.bin:  48%|█████████████████████████▍                           | 535M/1.11G [19:20<19:19, 498kB/s]pytorch_model.bin:  49%|█████████████████████████▉                           | 545M/1.11G [19:27<18:40, 506kB/s]pytorch_model.bin:  49%|█████████████████████████▉                           | 545M/1.11G [19:40<18:40, 506kB/s]pytorch_model.bin:  50%|██████████████████████████▍                          | 556M/1.11G [19:44<17:23, 533kB/s]pytorch_model.bin:  50%|██████████████████████████▍                          | 556M/1.11G [20:00<17:23, 533kB/s]pytorch_model.bin:  51%|██████████████████████████▉                          | 566M/1.11G [20:04<17:05, 532kB/s]pytorch_model.bin:  51%|██████████████████████████▉                          | 566M/1.11G [20:20<17:05, 532kB/s]pytorch_model.bin:  52%|███████████████████████████▍                         | 577M/1.11G [20:33<19:02, 469kB/s]pytorch_model.bin:  52%|███████████████████████████▍                         | 577M/1.11G [20:50<19:02, 469kB/s]pytorch_model.bin:  53%|███████████████████████████▉                         | 587M/1.11G [21:02<20:19, 431kB/s]pytorch_model.bin:  53%|███████████████████████████▉                         | 587M/1.11G [21:20<20:19, 431kB/s]pytorch_model.bin:  54%|████████████████████████████▍                        | 598M/1.11G [21:35<22:02, 389kB/s]pytorch_model.bin:  54%|████████████████████████████▍                        | 598M/1.11G [21:50<22:02, 389kB/s]pytorch_model.bin:  55%|████████████████████████████▉                        | 608M/1.11G [22:01<21:26, 392kB/s]pytorch_model.bin:  55%|████████████████████████████▉                        | 608M/1.11G [22:20<21:26, 392kB/s]pytorch_model.bin:  56%|█████████████████████████████▍                       | 619M/1.11G [22:31<21:48, 377kB/s]pytorch_model.bin:  56%|█████████████████████████████▍                       | 619M/1.11G [22:50<21:48, 377kB/s]pytorch_model.bin:  57%|█████████████████████████████▉                       | 629M/1.11G [22:59<21:26, 376kB/s]pytorch_model.bin:  57%|█████████████████████████████▉                       | 629M/1.11G [23:10<21:26, 376kB/s]pytorch_model.bin:  58%|██████████████████████████████▍                      | 640M/1.11G [23:42<24:20, 324kB/s]pytorch_model.bin:  58%|██████████████████████████████▍                      | 640M/1.11G [24:00<24:20, 324kB/s]pytorch_model.bin:  58%|██████████████████████████████▉                      | 650M/1.11G [24:18<24:35, 313kB/s]pytorch_model.bin:  58%|██████████████████████████████▉                      | 650M/1.11G [24:30<24:35, 313kB/s]pytorch_model.bin:  59%|███████████████████████████████▍                     | 661M/1.11G [24:52<24:03, 313kB/s]pytorch_model.bin:  59%|███████████████████████████████▍                     | 661M/1.11G [25:10<24:03, 313kB/s]pytorch_model.bin:  60%|███████████████████████████████▉                     | 671M/1.11G [25:24<23:07, 318kB/s]pytorch_model.bin:  60%|███████████████████████████████▉                     | 671M/1.11G [25:40<23:07, 318kB/s]pytorch_model.bin:  61%|████████████████████████████████▍                    | 682M/1.11G [25:52<21:42, 331kB/s]pytorch_model.bin:  61%|████████████████████████████████▍                    | 682M/1.11G [26:10<21:42, 331kB/s]pytorch_model.bin:  62%|████████████████████████████████▉                    | 692M/1.11G [26:32<22:52, 306kB/s]pytorch_model.bin:  62%|████████████████████████████████▉                    | 692M/1.11G [26:50<22:52, 306kB/s]pytorch_model.bin:  63%|█████████████████████████████████▍                   | 703M/1.11G [27:03<21:32, 317kB/s]pytorch_model.bin:  63%|█████████████████████████████████▍                   | 703M/1.11G [27:20<21:32, 317kB/s]pytorch_model.bin:  64%|█████████████████████████████████▉                   | 713M/1.11G [27:34<20:32, 324kB/s]pytorch_model.bin:  64%|█████████████████████████████████▉                   | 713M/1.11G [27:50<20:32, 324kB/s]pytorch_model.bin:  65%|██████████████████████████████████▍                  | 724M/1.11G [27:58<18:37, 348kB/s]pytorch_model.bin:  65%|██████████████████████████████████▍                  | 724M/1.11G [28:10<18:37, 348kB/s]pytorch_model.bin:  66%|██████████████████████████████████▉                  | 734M/1.11G [28:28<18:04, 349kB/s]pytorch_model.bin:  66%|██████████████████████████████████▉                  | 734M/1.11G [28:40<18:04, 349kB/s]pytorch_model.bin:  67%|███████████████████████████████████▍                 | 744M/1.11G [28:51<16:14, 377kB/s]pytorch_model.bin:  67%|███████████████████████████████████▍                 | 744M/1.11G [29:10<16:14, 377kB/s]pytorch_model.bin:  68%|███████████████████████████████████▉                 | 755M/1.11G [29:14<14:57, 398kB/s]pytorch_model.bin:  68%|███████████████████████████████████▉                 | 755M/1.11G [29:30<14:57, 398kB/s]pytorch_model.bin:  69%|████████████████████████████████████▍                | 765M/1.11G [29:44<15:11, 380kB/s]pytorch_model.bin:  69%|████████████████████████████████████▍                | 765M/1.11G [30:00<15:11, 380kB/s]pytorch_model.bin:  70%|████████████████████████████████████▉                | 776M/1.11G [30:09<14:18, 392kB/s]pytorch_model.bin:  70%|████████████████████████████████████▉                | 776M/1.11G [30:20<14:18, 392kB/s]pytorch_model.bin:  71%|█████████████████████████████████████▍               | 786M/1.11G [30:39<14:17, 380kB/s]pytorch_model.bin:  71%|█████████████████████████████████████▍               | 786M/1.11G [30:50<14:17, 380kB/s]pytorch_model.bin:  72%|█████████████████████████████████████▉               | 797M/1.11G [31:10<14:26, 364kB/s]pytorch_model.bin:  72%|█████████████████████████████████████▉               | 797M/1.11G [31:30<14:26, 364kB/s]pytorch_model.bin:  72%|█████████████████████████████████████▉               | 797M/1.11G [31:47<12:34, 418kB/s]
+tf_model.h5:   0%|                                                                  | 0.00/1.11G [00:00<?, ?B/s]tf_model.h5:   1%|▌                                                       | 10.5M/1.11G [00:54<1:36:30, 191kB/s]tf_model.h5:   1%|▌                                                       | 10.5M/1.11G [01:07<1:36:30, 191kB/s]tf_model.h5:   1%|▌                                                      | 10.5M/1.11G [02:42<4:45:01, 64.6kB/s]
+pytorch_model.bin:   0%|                                                            | 0.00/1.11G [00:00<?, ?B/s]pytorch_model.bin:   1%|▍                                                   | 10.5M/1.11G [00:20<36:23, 505kB/s]pytorch_model.bin:   1%|▍                                                   | 10.5M/1.11G [00:40<36:23, 505kB/s]pytorch_model.bin:   2%|▉                                                   | 21.0M/1.11G [01:01<56:12, 324kB/s]pytorch_model.bin:   2%|▉                                                   | 21.0M/1.11G [01:20<56:12, 324kB/s]pytorch_model.bin:   3%|█▍                                                  | 31.5M/1.11G [01:36<57:34, 313kB/s]pytorch_model.bin:   3%|█▍                                                  | 31.5M/1.11G [01:50<57:34, 313kB/s]pytorch_model.bin:   4%|█▉                                                | 41.9M/1.11G [02:18<1:02:49, 284kB/s]pytorch_model.bin:   4%|█▉                                                | 41.9M/1.11G [02:30<1:02:49, 284kB/s]pytorch_model.bin:   5%|██▎                                               | 52.4M/1.11G [02:53<1:01:07, 289kB/s]pytorch_model.bin:   5%|██▎                                               | 52.4M/1.11G [03:10<1:01:07, 289kB/s]pytorch_model.bin:   6%|██▉                                                 | 62.9M/1.11G [03:21<56:03, 312kB/s]pytorch_model.bin:   6%|██▉                                                 | 62.9M/1.11G [03:40<56:03, 312kB/s]pytorch_model.bin:   7%|███▍                                                | 73.4M/1.11G [03:54<54:52, 316kB/s]pytorch_model.bin:   7%|███▍                                                | 73.4M/1.11G [04:10<54:52, 316kB/s]pytorch_model.bin:   8%|███▉                                                | 83.9M/1.11G [04:32<56:56, 301kB/s]pytorch_model.bin:   8%|███▉                                                | 83.9M/1.11G [04:50<56:56, 301kB/s]Error while downloading from https://cdn-lfs.huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment/93316a86051c359748c5d5453e7660c69a21a57cfb477892f95f539e3e171196?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1701589535&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU4OTUzNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYXJkaWZmbmxwL3R3aXR0ZXIteGxtLXJvYmVydGEtYmFzZS1zZW50aW1lbnQvOTMzMTZhODYwNTFjMzU5NzQ4YzVkNTQ1M2U3NjYwYzY5YTIxYTU3Y2ZiNDc3ODkyZjk1ZjUzOWUzZTE3MTE5Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=MBh1y0-FVL-mwenCLpjx1MYMyO6T73SwsuNzjZaDiOC%7ENuq4R6enyY7BkvgwrGHiW4BkhQxXIB-4eeQ9ugm1LCo5dlqF-tR8Qz-uTtYBVisVIPidB2qqE4hYsbmRVakBnSisI1IPCYi8931rQQYkTDHBNEimZ4rliXb5F3iRh4no8vDepC2ImmBP2dxb02ott6lYHCk102p6YZL-q8knUuK3oBdx58yvsxVwMbQSLahlLmR8XtX5biQ68EFBXyfq-taEBVEkyrC8J9Bpbk-DhEh-IpMVkR1jIVunAeV5l6FwO3JJfesFvFyR5qPfnr50L43mHZXbGLPUUwBoflSufA__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+pytorch_model.bin:   8%|████▍                                                      | 83.9M/1.11G [00:00<?, ?B/s][AError while downloading from https://cdn-lfs.huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment/93316a86051c359748c5d5453e7660c69a21a57cfb477892f95f539e3e171196?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1701589535&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU4OTUzNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYXJkaWZmbmxwL3R3aXR0ZXIteGxtLXJvYmVydGEtYmFzZS1zZW50aW1lbnQvOTMzMTZhODYwNTFjMzU5NzQ4YzVkNTQ1M2U3NjYwYzY5YTIxYTU3Y2ZiNDc3ODkyZjk1ZjUzOWUzZTE3MTE5Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=MBh1y0-FVL-mwenCLpjx1MYMyO6T73SwsuNzjZaDiOC%7ENuq4R6enyY7BkvgwrGHiW4BkhQxXIB-4eeQ9ugm1LCo5dlqF-tR8Qz-uTtYBVisVIPidB2qqE4hYsbmRVakBnSisI1IPCYi8931rQQYkTDHBNEimZ4rliXb5F3iRh4no8vDepC2ImmBP2dxb02ott6lYHCk102p6YZL-q8knUuK3oBdx58yvsxVwMbQSLahlLmR8XtX5biQ68EFBXyfq-taEBVEkyrC8J9Bpbk-DhEh-IpMVkR1jIVunAeV5l6FwO3JJfesFvFyR5qPfnr50L43mHZXbGLPUUwBoflSufA__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+
+pytorch_model.bin:   8%|████▍                                                      | 83.9M/1.11G [00:00<?, ?B/s][A[AError while downloading from https://cdn-lfs.huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment/93316a86051c359748c5d5453e7660c69a21a57cfb477892f95f539e3e171196?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1701589535&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU4OTUzNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYXJkaWZmbmxwL3R3aXR0ZXIteGxtLXJvYmVydGEtYmFzZS1zZW50aW1lbnQvOTMzMTZhODYwNTFjMzU5NzQ4YzVkNTQ1M2U3NjYwYzY5YTIxYTU3Y2ZiNDc3ODkyZjk1ZjUzOWUzZTE3MTE5Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=MBh1y0-FVL-mwenCLpjx1MYMyO6T73SwsuNzjZaDiOC%7ENuq4R6enyY7BkvgwrGHiW4BkhQxXIB-4eeQ9ugm1LCo5dlqF-tR8Qz-uTtYBVisVIPidB2qqE4hYsbmRVakBnSisI1IPCYi8931rQQYkTDHBNEimZ4rliXb5F3iRh4no8vDepC2ImmBP2dxb02ott6lYHCk102p6YZL-q8knUuK3oBdx58yvsxVwMbQSLahlLmR8XtX5biQ68EFBXyfq-taEBVEkyrC8J9Bpbk-DhEh-IpMVkR1jIVunAeV5l6FwO3JJfesFvFyR5qPfnr50L43mHZXbGLPUUwBoflSufA__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+
+
+pytorch_model.bin:   8%|████▍                                                      | 83.9M/1.11G [00:00<?, ?B/s][A[A[AError while downloading from https://cdn-lfs.huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment/93316a86051c359748c5d5453e7660c69a21a57cfb477892f95f539e3e171196?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1701589535&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU4OTUzNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYXJkaWZmbmxwL3R3aXR0ZXIteGxtLXJvYmVydGEtYmFzZS1zZW50aW1lbnQvOTMzMTZhODYwNTFjMzU5NzQ4YzVkNTQ1M2U3NjYwYzY5YTIxYTU3Y2ZiNDc3ODkyZjk1ZjUzOWUzZTE3MTE5Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=MBh1y0-FVL-mwenCLpjx1MYMyO6T73SwsuNzjZaDiOC%7ENuq4R6enyY7BkvgwrGHiW4BkhQxXIB-4eeQ9ugm1LCo5dlqF-tR8Qz-uTtYBVisVIPidB2qqE4hYsbmRVakBnSisI1IPCYi8931rQQYkTDHBNEimZ4rliXb5F3iRh4no8vDepC2ImmBP2dxb02ott6lYHCk102p6YZL-q8knUuK3oBdx58yvsxVwMbQSLahlLmR8XtX5biQ68EFBXyfq-taEBVEkyrC8J9Bpbk-DhEh-IpMVkR1jIVunAeV5l6FwO3JJfesFvFyR5qPfnr50L43mHZXbGLPUUwBoflSufA__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+
+
+
+pytorch_model.bin:   8%|████▍                                                      | 83.9M/1.11G [00:00<?, ?B/s][A[A[A[AError while downloading from https://cdn-lfs.huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment/93316a86051c359748c5d5453e7660c69a21a57cfb477892f95f539e3e171196?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1701589535&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU4OTUzNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYXJkaWZmbmxwL3R3aXR0ZXIteGxtLXJvYmVydGEtYmFzZS1zZW50aW1lbnQvOTMzMTZhODYwNTFjMzU5NzQ4YzVkNTQ1M2U3NjYwYzY5YTIxYTU3Y2ZiNDc3ODkyZjk1ZjUzOWUzZTE3MTE5Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=MBh1y0-FVL-mwenCLpjx1MYMyO6T73SwsuNzjZaDiOC%7ENuq4R6enyY7BkvgwrGHiW4BkhQxXIB-4eeQ9ugm1LCo5dlqF-tR8Qz-uTtYBVisVIPidB2qqE4hYsbmRVakBnSisI1IPCYi8931rQQYkTDHBNEimZ4rliXb5F3iRh4no8vDepC2ImmBP2dxb02ott6lYHCk102p6YZL-q8knUuK3oBdx58yvsxVwMbQSLahlLmR8XtX5biQ68EFBXyfq-taEBVEkyrC8J9Bpbk-DhEh-IpMVkR1jIVunAeV5l6FwO3JJfesFvFyR5qPfnr50L43mHZXbGLPUUwBoflSufA__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+
+
+
+
+pytorch_model.bin:   8%|████▍                                                      | 83.9M/1.11G [00:00<?, ?B/s][A[A[A[A[AError while downloading from https://cdn-lfs.huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment/93316a86051c359748c5d5453e7660c69a21a57cfb477892f95f539e3e171196?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1701589535&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU4OTUzNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYXJkaWZmbmxwL3R3aXR0ZXIteGxtLXJvYmVydGEtYmFzZS1zZW50aW1lbnQvOTMzMTZhODYwNTFjMzU5NzQ4YzVkNTQ1M2U3NjYwYzY5YTIxYTU3Y2ZiNDc3ODkyZjk1ZjUzOWUzZTE3MTE5Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=MBh1y0-FVL-mwenCLpjx1MYMyO6T73SwsuNzjZaDiOC%7ENuq4R6enyY7BkvgwrGHiW4BkhQxXIB-4eeQ9ugm1LCo5dlqF-tR8Qz-uTtYBVisVIPidB2qqE4hYsbmRVakBnSisI1IPCYi8931rQQYkTDHBNEimZ4rliXb5F3iRh4no8vDepC2ImmBP2dxb02ott6lYHCk102p6YZL-q8knUuK3oBdx58yvsxVwMbQSLahlLmR8XtX5biQ68EFBXyfq-taEBVEkyrC8J9Bpbk-DhEh-IpMVkR1jIVunAeV5l6FwO3JJfesFvFyR5qPfnr50L43mHZXbGLPUUwBoflSufA__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Max retries exceeded.
+pytorch_model.bin:   8%|████▍                                                      | 83.9M/1.11G [00:10<?, ?B/s]
+pytorch_model.bin:   8%|████▍                                                      | 83.9M/1.11G [00:26<?, ?B/s]
+pytorch_model.bin:   8%|████▍                                                      | 83.9M/1.11G [00:46<?, ?B/s]
+pytorch_model.bin:   8%|████▍                                                      | 83.9M/1.11G [01:02<?, ?B/s]
+pytorch_model.bin:   8%|████▍                                                      | 83.9M/1.11G [01:24<?, ?B/s]
+pytorch_model.bin:   8%|███▊                                              | 83.9M/1.11G [06:42<1:22:10, 209kB/s]
+tf_model.h5:   0%|                                                                  | 0.00/1.11G [00:00<?, ?B/s]Error while downloading from https://cdn-lfs.huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment/52c751d49a0c68a9d14ef218053b1baee3d5713dc6d22ca7ec05486f9337cdf1?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27tf_model.h5%3B+filename%3D%22tf_model.h5%22%3B&Expires=1701593118&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU5MzExOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYXJkaWZmbmxwL3R3aXR0ZXIteGxtLXJvYmVydGEtYmFzZS1zZW50aW1lbnQvNTJjNzUxZDQ5YTBjNjhhOWQxNGVmMjE4MDUzYjFiYWVlM2Q1NzEzZGM2ZDIyY2E3ZWMwNTQ4NmY5MzM3Y2RmMT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=Na1R-tQfhRZEZNx--kDmTEGoQ1quNZHOmUG7pP87aCL61orgFIYD9iS9LBALFEC%7E3-ZJIbzz234R5XC7XKwLwlTzMb9EwqP8QdiSzlveOLhq0Ywj%7EEE6UQWu8cCeSeusLh3czS09qS9z-3U7n1jnTzTDstH%7EcAVP7nonATmRXwI0WB4cjrfDDQZkRy%7ETXj606UhF5ksGF6sb1-rXn21JEgy4hsX93juNpso5PXfgFE8xVymbq7piVmCFYIxl4tLsQH44l0FPEDBGWKcxqXj-Y4jMbT6qQGqGp7u-9caSvNNziTEuMhTz0wVMr2bcg-9eNkCnlr7CDWBKhYfQhzUsnA__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+tf_model.h5:   0%|                                                                  | 0.00/1.11G [00:00<?, ?B/s][AError while downloading from https://cdn-lfs.huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment/52c751d49a0c68a9d14ef218053b1baee3d5713dc6d22ca7ec05486f9337cdf1?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27tf_model.h5%3B+filename%3D%22tf_model.h5%22%3B&Expires=1701593118&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTU5MzExOH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9jYXJkaWZmbmxwL3R3aXR0ZXIteGxtLXJvYmVydGEtYmFzZS1zZW50aW1lbnQvNTJjNzUxZDQ5YTBjNjhhOWQxNGVmMjE4MDUzYjFiYWVlM2Q1NzEzZGM2ZDIyY2E3ZWMwNTQ4NmY5MzM3Y2RmMT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=Na1R-tQfhRZEZNx--kDmTEGoQ1quNZHOmUG7pP87aCL61orgFIYD9iS9LBALFEC%7E3-ZJIbzz234R5XC7XKwLwlTzMb9EwqP8QdiSzlveOLhq0Ywj%7EEE6UQWu8cCeSeusLh3czS09qS9z-3U7n1jnTzTDstH%7EcAVP7nonATmRXwI0WB4cjrfDDQZkRy%7ETXj606UhF5ksGF6sb1-rXn21JEgy4hsX93juNpso5PXfgFE8xVymbq7piVmCFYIxl4tLsQH44l0FPEDBGWKcxqXj-Y4jMbT6qQGqGp7u-9caSvNNziTEuMhTz0wVMr2bcg-9eNkCnlr7CDWBKhYfQhzUsnA__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+tf_model.h5:   0%|                                                                  | 0.00/1.11G [04:01<?, ?B/s]
+tf_model.h5:   0%|                                                                  | 0.00/1.11G [08:48<?, ?B/s]
 Traceback (most recent call last):
   File "./f00035_sentiment_analysis.py", line 48, in <module>
     test_sentiment_analysis()
@@ -12,6 +52,38 @@ Traceback (most recent call last):
     classifier = pipeline("sentiment-analysis", model="cardiffnlp/twitter-xlm-roberta-base-sentiment")
   File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 870, in pipeline
     framework, model = infer_framework_load_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 282, in infer_framework_load_model
+    raise ValueError(
+ValueError: Could not load model cardiffnlp/twitter-xlm-roberta-base-sentiment with any of the following classes: (<class 'transformers.models.auto.modeling_auto.AutoModelForSequenceClassification'>, <class 'transformers.models.auto.modeling_tf_auto.TFAutoModelForSequenceClassification'>, <class 'transformers.models.xlm_roberta.modeling_xlm_roberta.XLMRobertaForSequenceClassification'>, <class 'transformers.models.xlm_roberta.modeling_tf_xlm_roberta.TFXLMRobertaForSequenceClassification'>). See the original errors:
+
+while loading with AutoModelForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(807330933 bytes read, 304940628 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 905, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 729, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(807330933 bytes read, 304940628 more expected)', IncompleteRead(807330933 bytes read, 304940628 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
     model = model_class.from_pretrained(model, **kwargs)
   File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
@@ -26,12 +98,60 @@ Traceback (most recent call last):
     http_get(
   File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
     for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(807330933 bytes read, 304940628 more expected)', IncompleteRead(807330933 bytes read, 304940628 more expected))
+
+while loading with TFAutoModelForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+urllib3.exceptions.IncompleteRead: IncompleteRead(20862455 bytes read, 1093960513 more expected)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
   File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
     yield from self.raw.stream(chunk_size, decode_content=True)
   File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
     data = self.read(amt=amt, decode_content=decode_content)
-  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 905, in read
     data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 729, in _error_catcher
+    raise ProtocolError(f"Connection broken: {e!r}", e) from e
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(20862455 bytes read, 1093960513 more expected)', IncompleteRead(20862455 bytes read, 1093960513 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2792, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(20862455 bytes read, 1093960513 more expected)', IncompleteRead(20862455 bytes read, 1093960513 more expected))
+
+while loading with XLMRobertaForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
   File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 812, in _raw_read
     data = self._fp_read(amt) if not fp_closed else b""
   File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 797, in _fp_read
@@ -46,4 +166,449 @@ Traceback (most recent call last):
     return self.read(nbytes, buffer)
   File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
     return self._sslobj.read(len, buffer)
-KeyboardInterrupt
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 717, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 812, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 797, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 717, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 812, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 797, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 717, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 812, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 797, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 717, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 812, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 797, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 717, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 812, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 797, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 717, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_utils.py", line 3057, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 558, in http_get
+    return http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 558, in http_get
+    return http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 558, in http_get
+    return http_get(
+  [Previous line repeated 2 more times]
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+while loading with TFXLMRobertaForSequenceClassification, an error is thrown:
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 812, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 797, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 717, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 712, in _error_catcher
+    yield
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 812, in _raw_read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 797, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 934, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 877, in read
+    data = self._raw_read(amt)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 833, in _raw_read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 717, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 822, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 776, in urlopen
+    self._prepare_proxy(conn)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1045, in _prepare_proxy
+    conn.connect()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connection.py", line 782, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 470, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/ssl_.py", line 514, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1073, in _create
+    self.do_handshake()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+socket.timeout: _ssl.c:1114: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 778, in urlopen
+    self._raise_timeout(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/connectionpool.py", line 370, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2792, in from_pretrained
+    resolved_archive_file = cached_file(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 558, in http_get
+    return http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 558, in http_get
+    return http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 468, in http_get
+    r = _request_wrapper(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 425, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_http.py", line 63, in send
+    return super().send(request, *args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/adapters.py", line 532, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 2b5f775e-3264-432c-912c-c631fdba7472)')
+
+
+

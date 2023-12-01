@@ -1,0 +1,114 @@
+2023-12-01 01:32:10.514670: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-01 01:32:11.241223: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+model.safetensors:   0%|                                                             | 0.00/499M [00:00<?, ?B/s]Error while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701620955&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMDk1NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=UIU52USjYoaOrPLbI3qXe4HR6Psea1RLtqBfEB1Btf9stNrZFWDoStxWX6mmUrEWIofjftU4mK0sGz0enveyKStoKX%7Er3nEQBtfAnXwF%7E1q5tyo2DkWyypuLjK9ORVSg050PC1hGa1%7ENInKMLCmOv1uG663AV2mzpb0CYqE2vYBq3e0W4NND8NnaUp9i43KrcWyvgnZFFYc-0gm5O9i5juZfnfPtEkfQ2pS4t08l0ALL1M8zChxMTKAH8XUc9b8xjmQwJK6HsGtygX1xommjBkSvlIqc4U9s6Vw1Mq5kCnF%7EQYZbcmqf5q6ZzZohTeQzTCB%7EhxpIvKGfQQYa6oF7ng__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+model.safetensors:   0%|                                                             | 0.00/499M [00:00<?, ?B/s][AError while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701620955&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMDk1NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=UIU52USjYoaOrPLbI3qXe4HR6Psea1RLtqBfEB1Btf9stNrZFWDoStxWX6mmUrEWIofjftU4mK0sGz0enveyKStoKX%7Er3nEQBtfAnXwF%7E1q5tyo2DkWyypuLjK9ORVSg050PC1hGa1%7ENInKMLCmOv1uG663AV2mzpb0CYqE2vYBq3e0W4NND8NnaUp9i43KrcWyvgnZFFYc-0gm5O9i5juZfnfPtEkfQ2pS4t08l0ALL1M8zChxMTKAH8XUc9b8xjmQwJK6HsGtygX1xommjBkSvlIqc4U9s6Vw1Mq5kCnF%7EQYZbcmqf5q6ZzZohTeQzTCB%7EhxpIvKGfQQYa6oF7ng__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+model.safetensors:   0%|                                                             | 0.00/499M [01:47<?, ?B/s]
+model.safetensors:   0%|                                                             | 0.00/499M [04:12<?, ?B/s]
+model.safetensors:   0%|                                                             | 0.00/499M [00:00<?, ?B/s]Error while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701622288&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMjI4OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=BF9GyI42OhzEVk9qDepRAzuGyNgZlrcYy%7EYxXd9M1GVGP7KexcDkRrOsxDLc5lvLWopxr7CMNf7ufID9aUviaFc7TmyCLWz0PnRM8UZIgGOXPWxJffdZgNOkIMoHDFy%7E-kwkFiUebF2M37wn1neGCtFzyqo8nM3RS3w-EOsNmoHJx-qQqq2dY2wjSs4mpJYP2o%7ETE2gu6m9FgirNEWzk1pTUlQUMP8P-V88SJp%7EHUOYwC-ho8p6ae9CkRMDKFowySWFHRQu3wldSoLFJdagKa%7EmFWS94rX5JK8UkUN8rKuh9OMHO2eL6YwktBPR4lF7ovLbGFrkyJ951mm0sRVvXnQ__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+model.safetensors:   0%|                                                             | 0.00/499M [00:00<?, ?B/s][AError while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701622288&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMjI4OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=BF9GyI42OhzEVk9qDepRAzuGyNgZlrcYy%7EYxXd9M1GVGP7KexcDkRrOsxDLc5lvLWopxr7CMNf7ufID9aUviaFc7TmyCLWz0PnRM8UZIgGOXPWxJffdZgNOkIMoHDFy%7E-kwkFiUebF2M37wn1neGCtFzyqo8nM3RS3w-EOsNmoHJx-qQqq2dY2wjSs4mpJYP2o%7ETE2gu6m9FgirNEWzk1pTUlQUMP8P-V88SJp%7EHUOYwC-ho8p6ae9CkRMDKFowySWFHRQu3wldSoLFJdagKa%7EmFWS94rX5JK8UkUN8rKuh9OMHO2eL6YwktBPR4lF7ovLbGFrkyJ951mm0sRVvXnQ__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+model.safetensors:   0%|                                                             | 0.00/499M [04:56<?, ?B/s]
+model.safetensors:   0%|                                                             | 0.00/499M [05:56<?, ?B/s]
+model.safetensors:   0%|                                                             | 0.00/499M [00:00<?, ?B/s]Error while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701621401&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMTQwMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=tHvCqXTmtX2%7EW%7E-prAQDFOMu33mSo4z0rsH9kS355JNDyoSpJ3x2AS8ttScGlqSbnKkeSq%7E8YWVzWxpn3hQRT83tY1hkCF1QKkCpaPu49ImcivAMZ-grNqeO4MO5qQLceI%7ESR2y9wAsz7APjtqlh-s1KjUKkHJE%7Eavi162R4CBnWTyaWo4YDlvR90a-MMJm70XmxzXbGAhf7sIEtPdrB8dT28Vf66AR2ZEup-Z4GT2Wd6FeAq3gyzgoD7IRSvjh1mxzL2OLAbfdzBuIjvstk2ROe9Q4bfK2MMQLUcruQdM%7EFXHBLDRDB8JICg0NHS4h0BYVkkWg3nR%7ELgOK-PMnxvw__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+model.safetensors:   0%|                                                             | 0.00/499M [00:00<?, ?B/s][AError while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701621401&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMTQwMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=tHvCqXTmtX2%7EW%7E-prAQDFOMu33mSo4z0rsH9kS355JNDyoSpJ3x2AS8ttScGlqSbnKkeSq%7E8YWVzWxpn3hQRT83tY1hkCF1QKkCpaPu49ImcivAMZ-grNqeO4MO5qQLceI%7ESR2y9wAsz7APjtqlh-s1KjUKkHJE%7Eavi162R4CBnWTyaWo4YDlvR90a-MMJm70XmxzXbGAhf7sIEtPdrB8dT28Vf66AR2ZEup-Z4GT2Wd6FeAq3gyzgoD7IRSvjh1mxzL2OLAbfdzBuIjvstk2ROe9Q4bfK2MMQLUcruQdM%7EFXHBLDRDB8JICg0NHS4h0BYVkkWg3nR%7ELgOK-PMnxvw__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+
+model.safetensors:   0%|                                                             | 0.00/499M [00:00<?, ?B/s][A[A
+
+model.safetensors:   2%|█                                                 | 10.5M/499M [03:31<2:44:20, 49.5kB/s][A[A
+
+model.safetensors:   2%|█                                                 | 10.5M/499M [03:46<2:44:20, 49.5kB/s][A[AError while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701621401&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMTQwMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=tHvCqXTmtX2%7EW%7E-prAQDFOMu33mSo4z0rsH9kS355JNDyoSpJ3x2AS8ttScGlqSbnKkeSq%7E8YWVzWxpn3hQRT83tY1hkCF1QKkCpaPu49ImcivAMZ-grNqeO4MO5qQLceI%7ESR2y9wAsz7APjtqlh-s1KjUKkHJE%7Eavi162R4CBnWTyaWo4YDlvR90a-MMJm70XmxzXbGAhf7sIEtPdrB8dT28Vf66AR2ZEup-Z4GT2Wd6FeAq3gyzgoD7IRSvjh1mxzL2OLAbfdzBuIjvstk2ROe9Q4bfK2MMQLUcruQdM%7EFXHBLDRDB8JICg0NHS4h0BYVkkWg3nR%7ELgOK-PMnxvw__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+
+
+model.safetensors:   2%|█▎                                                          | 10.5M/499M [00:00<?, ?B/s][A[A[AError while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701621401&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMTQwMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=tHvCqXTmtX2%7EW%7E-prAQDFOMu33mSo4z0rsH9kS355JNDyoSpJ3x2AS8ttScGlqSbnKkeSq%7E8YWVzWxpn3hQRT83tY1hkCF1QKkCpaPu49ImcivAMZ-grNqeO4MO5qQLceI%7ESR2y9wAsz7APjtqlh-s1KjUKkHJE%7Eavi162R4CBnWTyaWo4YDlvR90a-MMJm70XmxzXbGAhf7sIEtPdrB8dT28Vf66AR2ZEup-Z4GT2Wd6FeAq3gyzgoD7IRSvjh1mxzL2OLAbfdzBuIjvstk2ROe9Q4bfK2MMQLUcruQdM%7EFXHBLDRDB8JICg0NHS4h0BYVkkWg3nR%7ELgOK-PMnxvw__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+
+
+
+model.safetensors:   2%|█▎                                                          | 10.5M/499M [00:00<?, ?B/s][A[A[A[AError while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701621401&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMTQwMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=tHvCqXTmtX2%7EW%7E-prAQDFOMu33mSo4z0rsH9kS355JNDyoSpJ3x2AS8ttScGlqSbnKkeSq%7E8YWVzWxpn3hQRT83tY1hkCF1QKkCpaPu49ImcivAMZ-grNqeO4MO5qQLceI%7ESR2y9wAsz7APjtqlh-s1KjUKkHJE%7Eavi162R4CBnWTyaWo4YDlvR90a-MMJm70XmxzXbGAhf7sIEtPdrB8dT28Vf66AR2ZEup-Z4GT2Wd6FeAq3gyzgoD7IRSvjh1mxzL2OLAbfdzBuIjvstk2ROe9Q4bfK2MMQLUcruQdM%7EFXHBLDRDB8JICg0NHS4h0BYVkkWg3nR%7ELgOK-PMnxvw__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+
+
+
+
+model.safetensors:   2%|█▎                                                          | 10.5M/499M [00:00<?, ?B/s][A[A[A[A[AError while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701621401&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMTQwMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=tHvCqXTmtX2%7EW%7E-prAQDFOMu33mSo4z0rsH9kS355JNDyoSpJ3x2AS8ttScGlqSbnKkeSq%7E8YWVzWxpn3hQRT83tY1hkCF1QKkCpaPu49ImcivAMZ-grNqeO4MO5qQLceI%7ESR2y9wAsz7APjtqlh-s1KjUKkHJE%7Eavi162R4CBnWTyaWo4YDlvR90a-MMJm70XmxzXbGAhf7sIEtPdrB8dT28Vf66AR2ZEup-Z4GT2Wd6FeAq3gyzgoD7IRSvjh1mxzL2OLAbfdzBuIjvstk2ROe9Q4bfK2MMQLUcruQdM%7EFXHBLDRDB8JICg0NHS4h0BYVkkWg3nR%7ELgOK-PMnxvw__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+
+
+
+
+
+model.safetensors:   2%|█▎                                                          | 10.5M/499M [00:00<?, ?B/s][A[A[A[A[A[AError while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701621401&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMTQwMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=tHvCqXTmtX2%7EW%7E-prAQDFOMu33mSo4z0rsH9kS355JNDyoSpJ3x2AS8ttScGlqSbnKkeSq%7E8YWVzWxpn3hQRT83tY1hkCF1QKkCpaPu49ImcivAMZ-grNqeO4MO5qQLceI%7ESR2y9wAsz7APjtqlh-s1KjUKkHJE%7Eavi162R4CBnWTyaWo4YDlvR90a-MMJm70XmxzXbGAhf7sIEtPdrB8dT28Vf66AR2ZEup-Z4GT2Wd6FeAq3gyzgoD7IRSvjh1mxzL2OLAbfdzBuIjvstk2ROe9Q4bfK2MMQLUcruQdM%7EFXHBLDRDB8JICg0NHS4h0BYVkkWg3nR%7ELgOK-PMnxvw__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Trying to resume download...
+
+
+
+
+
+
+
+model.safetensors:   2%|█▎                                                          | 10.5M/499M [00:00<?, ?B/s][A[A[A[A[A[A[AError while downloading from https://cdn-lfs.huggingface.co/roberta-base/5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1701621401&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMTYyMTQwMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yb2JlcnRhLWJhc2UvNWJkZTFkMjhhZmIzNjNkMDEwMzMyNGVmZWI1YWZjOGIyYjM5N2ZlNWUwNGJlYWJiOWIxZWYzNTUyNTVhZGU4MT9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=tHvCqXTmtX2%7EW%7E-prAQDFOMu33mSo4z0rsH9kS355JNDyoSpJ3x2AS8ttScGlqSbnKkeSq%7E8YWVzWxpn3hQRT83tY1hkCF1QKkCpaPu49ImcivAMZ-grNqeO4MO5qQLceI%7ESR2y9wAsz7APjtqlh-s1KjUKkHJE%7Eavi162R4CBnWTyaWo4YDlvR90a-MMJm70XmxzXbGAhf7sIEtPdrB8dT28Vf66AR2ZEup-Z4GT2Wd6FeAq3gyzgoD7IRSvjh1mxzL2OLAbfdzBuIjvstk2ROe9Q4bfK2MMQLUcruQdM%7EFXHBLDRDB8JICg0NHS4h0BYVkkWg3nR%7ELgOK-PMnxvw__&Key-Pair-Id=KVTP0A1DKRTAX: HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Read timed out.
+Max retries exceeded.
+model.safetensors:   2%|█▎                                                          | 10.5M/499M [00:10<?, ?B/s]
+model.safetensors:   2%|█▎                                                          | 10.5M/499M [00:23<?, ?B/s]
+model.safetensors:   2%|█▎                                                          | 10.5M/499M [00:37<?, ?B/s]
+model.safetensors:   2%|█▎                                                          | 10.5M/499M [00:57<?, ?B/s]
+model.safetensors:   2%|█▎                                                          | 10.5M/499M [01:10<?, ?B/s]
+model.safetensors:   2%|█                                                 | 10.5M/499M [09:02<7:01:01, 19.3kB/s]
+model.safetensors:   0%|                                                             | 0.00/499M [12:25<?, ?B/s]
+model.safetensors:   0%|                                                             | 0.00/499M [14:09<?, ?B/s]
+model.safetensors:   0%|                                                             | 0.00/499M [00:00<?, ?B/s]model.safetensors:   0%|                                                             | 0.00/499M [01:51<?, ?B/s]
+Traceback (most recent call last):
+  File "./f00697_complete_sentence.py", line 46, in <module>
+    test_complete_sentence()
+  File "./f00697_complete_sentence.py", line 38, in test_complete_sentence
+    assert complete_sentence('In the story, the antagonist represents the <mask> nature of humanity.')
+  File "./f00697_complete_sentence.py", line 20, in complete_sentence
+    fill_mask = pipeline(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 870, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2784, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 628, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 567, in read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 533, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt

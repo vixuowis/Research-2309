@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./f00826_encode_sentences.py", line 52, in <module>
+    test_encode_sentences()
+  File "./f00826_encode_sentences.py", line 44, in test_encode_sentences
+    embeddings = encode_sentences(sentences)
+  File "./f00826_encode_sentences.py", line 25, in encode_sentences
+    input_ids, attention_mask = tokenizer(sentence, return_tensors='pt', padding=True)
+ValueError: too many values to unpack (expected 2)

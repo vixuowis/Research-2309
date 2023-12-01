@@ -1,0 +1,11 @@
+2023-12-01 00:55:41.240675: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-01 00:55:42.014709: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00553_get_image_answer.py", line 60, in <module>
+    test_get_image_answer()
+  File "./f00553_get_image_answer.py", line 52, in test_get_image_answer
+    assert isinstance(get_image_answer('http://images.cocodataset.org/val2017/000000039769.jpg', 'How many people are in this photo?'), str)
+AssertionError

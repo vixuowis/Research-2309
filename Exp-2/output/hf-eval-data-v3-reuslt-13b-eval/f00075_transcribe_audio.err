@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "./f00075_transcribe_audio.py", line 46, in <module>
+    test_transcribe_audio()
+  File "./f00075_transcribe_audio.py", line 37, in test_transcribe_audio
+    ds = load_dataset('hf-internal-testing/librispeech_asr_dummy', 'clean', split='validation')
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/datasets/load.py", line 2128, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/datasets/load.py", line 1814, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/datasets/load.py", line 1511, in dataset_module_factory
+    raise e1 from None
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/datasets/load.py", line 1478, in dataset_module_factory
+    raise e
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/datasets/load.py", line 1452, in dataset_module_factory
+    dataset_info = hf_api.dataset_info(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/hf_api.py", line 1985, in dataset_info
+    hf_raise_for_status(r)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_errors.py", line 330, in hf_raise_for_status
+    raise HfHubHTTPError(str(e), response=response) from e
+huggingface_hub.utils._errors.HfHubHTTPError: 503 Server Error: Service Unavailable for url: https://huggingface.co/api/datasets/hf-internal-testing/librispeech_asr_dummy

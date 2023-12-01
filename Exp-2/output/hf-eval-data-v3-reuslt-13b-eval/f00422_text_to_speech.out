@@ -1,0 +1,6 @@
+Error in loading the pretrained model or tokenizer
+Test case 1 failed: local variable 'tok' referenced before assignment
+Error in loading the pretrained model or tokenizer
+Test case 2 failed: local variable 'tok' referenced before assignment
+Error in loading the pretrained model or tokenizer
+Test case 3 failed: local variable 'tok' referenced before assignment

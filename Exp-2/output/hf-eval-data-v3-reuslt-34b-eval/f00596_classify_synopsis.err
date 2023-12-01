@@ -1,0 +1,48 @@
+2023-12-01 01:01:44.056235: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-01 01:01:44.884109: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+config.json:   0%|                                                                    | 0.00/665 [00:00<?, ?B/s]config.json: 100%|██████████████████████████████████████████████████████████████| 665/665 [00:00<00:00, 182kB/s]
+model.safetensors:   0%|                                                             | 0.00/436M [00:00<?, ?B/s]model.safetensors:   2%|█▏                                                | 10.5M/436M [02:56<1:59:11, 59.5kB/s]model.safetensors:   2%|█▏                                                | 10.5M/436M [03:12<1:59:11, 59.5kB/s]model.safetensors:   5%|██▍                                               | 21.0M/436M [05:23<1:45:07, 65.9kB/s]model.safetensors:   5%|██▍                                               | 21.0M/436M [05:42<1:45:07, 65.9kB/s]model.safetensors:   7%|███▌                                              | 31.5M/436M [07:58<1:41:09, 66.7kB/s]model.safetensors:   7%|███▌                                              | 31.5M/436M [08:12<1:41:09, 66.7kB/s]model.safetensors:   9%|████▎                                             | 37.7M/436M [09:25<1:37:20, 68.2kB/s]model.safetensors:   9%|████▎                                             | 37.7M/436M [09:25<1:39:26, 66.8kB/s]
+model.safetensors:   0%|                                                             | 0.00/436M [00:00<?, ?B/s]model.safetensors:   2%|█▎                                                   | 10.5M/436M [00:23<15:34, 456kB/s]model.safetensors:   2%|█▎                                                   | 10.5M/436M [00:41<15:34, 456kB/s]model.safetensors:   2%|█▎                                                   | 10.5M/436M [01:16<51:45, 137kB/s]
+Traceback (most recent call last):
+  File "./f00596_classify_synopsis.py", line 45, in <module>
+    test_classify_synopsis()
+  File "./f00596_classify_synopsis.py", line 34, in test_classify_synopsis
+    result = classify_synopsis(sequence, candidate_labels, hypothesis_template)
+  File "./f00596_classify_synopsis.py", line 21, in classify_synopsis
+    classifier = pipeline('text-classification', model='oliverguhr/german-sentiment-bert', return_all_scores=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/__init__.py", line 870, in pipeline
+    framework, model = infer_framework_load_model(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/pipelines/base.py", line 269, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/auto/auto_factory.py", line 566, in from_pretrained
+    return model_class.from_pretrained(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/modeling_tf_utils.py", line 2784, in from_pretrained
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/utils/hub.py", line 430, in cached_file
+    resolved_file = hf_hub_download(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 1461, in hf_hub_download
+    http_get(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/file_download.py", line 541, in http_get
+    for chunk in r.iter_content(chunk_size=DOWNLOAD_CHUNK_SIZE):
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 628, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 567, in read
+    data = self._fp_read(amt) if not fp_closed else b""
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/urllib3/response.py", line 533, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 459, in read
+    n = self.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/http/client.py", line 503, in readinto
+    n = self.fp.readinto(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/ssl.py", line 1132, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt

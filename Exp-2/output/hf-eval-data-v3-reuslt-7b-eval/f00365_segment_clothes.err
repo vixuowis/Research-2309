@@ -1,0 +1,50 @@
+preprocessor_config.json:   0%|                                                       | 0.00/271 [00:00<?, ?B/s]preprocessor_config.json: 100%|████████████████████████████████████████████████| 271/271 [00:00<00:00, 35.3kB/s]2023-11-30 18:10:24.366396: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-30 18:10:25.277181: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/segformer/feature_extraction_segformer.py:28: FutureWarning: The class SegformerFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use SegformerImageProcessor instead.
+  warnings.warn(
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/segformer/image_processing_segformer.py:101: FutureWarning: The `reduce_labels` parameter is deprecated and will be removed in a future version. Please use `do_reduce_labels` instead.
+  warnings.warn(
+config.json:   0%|                                                                  | 0.00/6.88k [00:00<?, ?B/s]config.json: 100%|█████████████████████████████████████████████████████████| 6.88k/6.88k [00:00<00:00, 2.09MB/s]
+pytorch_model.bin:   0%|                                                            | 0.00/15.1M [00:00<?, ?B/s]pytorch_model.bin:  69%|███████████████████████████████████▍               | 10.5M/15.1M [00:02<00:01, 4.42MB/s]pytorch_model.bin: 100%|███████████████████████████████████████████████████| 15.1M/15.1M [00:02<00:00, 6.06MB/s]pytorch_model.bin: 100%|███████████████████████████████████████████████████| 15.1M/15.1M [00:02<00:00, 5.62MB/s]
+Traceback (most recent call last):
+  File "./f00365_segment_clothes.py", line 71, in <module>
+    test_segment_clothes()
+  File "./f00365_segment_clothes.py", line 53, in test_segment_clothes
+    result1 = segment_clothes(url1)
+  File "./f00365_segment_clothes.py", line 33, in segment_clothes
+    outputs = model(**inputs)['logits']
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/segformer/modeling_segformer.py", line 793, in forward
+    outputs = self.segformer(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/segformer/modeling_segformer.py", line 550, in forward
+    encoder_outputs = self.encoder(
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/segformer/modeling_segformer.py", line 424, in forward
+    hidden_states, height, width = embedding_layer(hidden_states)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/models/segformer/modeling_segformer.py", line 139, in forward
+    embeddings = self.proj(pixel_values)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor

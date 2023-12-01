@@ -1,0 +1,4 @@
+  File "./f00138_summarize_text.py", line 58
+    def test_summarize_text():
+    ^
+SyntaxError: invalid syntax

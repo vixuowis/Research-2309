@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00768_analyze_review_sentiment.py", line 42, in <module>
+    print(test_analyze_review_sentiment())
+  File "./f00768_analyze_review_sentiment.py", line 34, in test_analyze_review_sentiment
+    assert analyze_review_sentiment(positive_review) == 'positive'
+AssertionError

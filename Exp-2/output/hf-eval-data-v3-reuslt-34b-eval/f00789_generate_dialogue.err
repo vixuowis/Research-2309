@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./f00789_generate_dialogue.py", line 79, in <module>
+    test_generate_dialogue()
+  File "./f00789_generate_dialogue.py", line 64, in test_generate_dialogue
+    assert isinstance(response, str), 'The response should be a string.'
+AssertionError: The response should be a string.

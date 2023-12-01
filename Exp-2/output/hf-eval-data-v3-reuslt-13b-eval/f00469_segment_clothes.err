@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "./f00469_segment_clothes.py", line 61, in test_segment_clothes
+    assert segmented_image is not None
+AssertionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00469_segment_clothes.py", line 70, in <module>
+    test_segment_clothes()
+  File "./f00469_segment_clothes.py", line 63, in test_segment_clothes
+    except PIL.UnidentifiedImageError:
+NameError: name 'PIL' is not defined
