@@ -1,0 +1,8 @@
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00006_generate_product_description.py", line 12, in <module>
+    from transformers import GenerativeImage2TextModel
+ImportError: cannot import name 'GenerativeImage2TextModel' from 'transformers' (/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/transformers/__init__.py)

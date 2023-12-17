@@ -1,0 +1,25 @@
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/pydub/utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "./f00003_extract_features_from_audio.py", line 64, in test_extract_features_from_audio
+    result = extract_features_from_audio(mock_audio_path)
+  File "./f00003_extract_features_from_audio.py", line 38, in extract_features_from_audio
+    audio_data = AudioSegment.from_file(crowd_audio)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/pydub/audio_segment.py", line 651, in from_file
+    file, close_file = _fd_or_path_or_tempfile(file, 'rb', tempfile=False)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/pydub/utils.py", line 60, in _fd_or_path_or_tempfile
+    fd = open(fd, mode=mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'mock_crowd_audio.wav'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00003_extract_features_from_audio.py", line 90, in <module>
+    test_extract_features_from_audio()
+  File "./f00003_extract_features_from_audio.py", line 67, in test_extract_features_from_audio
+    assert False, f"Test case [1/3] failed with exception: {e}"
+AssertionError: Test case [1/3] failed with exception: [Errno 2] No such file or directory: 'mock_crowd_audio.wav'

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 指定要遍历的文件夹
-base_dir="output/hf-eval-data-v3-reuslt-7b-eval"
+base_dir="output/hf-eval-data-v4_3"
 cd ${base_dir}
 
 # 设置计数器
@@ -20,7 +20,7 @@ for file in ./*.py; do
     fi
     
     # 安装必要的包
-    pip install -r ${prefix}.txt
+    # pip install -r ${prefix}.txt
 
     # 运行 _test.py 文件，输出到 output/{prefix}_test.out，错误输出到 output/{prefix}_test.err
     python ${file} > ${prefix}.out 2> ${prefix}.err

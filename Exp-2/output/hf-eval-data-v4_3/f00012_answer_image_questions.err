@@ -1,0 +1,31 @@
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2023-12-17 16:17:51.873188: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-17 16:17:53.615774: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/huggingface_hub/utils/_runtime.py:184: UserWarning: Pydantic is installed but cannot be imported. Please check your installation. `huggingface_hub` will default to not using Pydantic. Error message: '{e}'
+  warnings.warn(
+Traceback (most recent call last):
+  File "./f00012_answer_image_questions.py", line 34, in answer_image_questions
+    image = Image.open(image_path)
+  File "/root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages/PIL/Image.py", line 3243, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'sample.jpg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00012_answer_image_questions.py", line 59, in test_answer_image_questions
+    result = answer_image_questions(sample_image_path, sample_question)
+  File "./f00012_answer_image_questions.py", line 36, in answer_image_questions
+    raise FileNotFoundError('The provided image path does not lead to a valid file.')
+FileNotFoundError: The provided image path does not lead to a valid file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./f00012_answer_image_questions.py", line 75, in <module>
+    test_answer_image_questions()
+  File "./f00012_answer_image_questions.py", line 62, in test_answer_image_questions
+    assert False, f"Test case [1/2] failed: {e}"
+AssertionError: Test case [1/2] failed: The provided image path does not lead to a valid file.

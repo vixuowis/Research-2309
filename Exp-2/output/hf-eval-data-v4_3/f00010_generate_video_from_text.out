@@ -1,0 +1,163 @@
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Requirement already satisfied: huggingface_hub in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (0.19.4)
+Requirement already satisfied: filelock in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface_hub) (3.13.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface_hub) (2023.10.0)
+Requirement already satisfied: requests in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface_hub) (2.31.0)
+Requirement already satisfied: tqdm>=4.42.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface_hub) (4.66.1)
+Requirement already satisfied: pyyaml>=5.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface_hub) (6.0.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface_hub) (4.5.0)
+Requirement already satisfied: packaging>=20.9 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface_hub) (23.2)
+Requirement already satisfied: charset-normalizer<4,>=2 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests->huggingface_hub) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests->huggingface_hub) (2.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests->huggingface_hub) (1.26.18)
+Requirement already satisfied: certifi>=2017.4.17 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests->huggingface_hub) (2023.7.22)
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Collecting asteroid
+  Downloading http://mirrors.aliyun.com/pypi/packages/88/d2/38076c2afc81500b5c2f43c06d3976bdcedb0bcaa84d736faf3ffef19d4f/asteroid-0.7.0-py3-none-any.whl (156 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 156.4/156.4 kB 3.0 MB/s eta 0:00:00
+Requirement already satisfied: numpy>=1.16.4 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid) (1.24.4)
+Requirement already satisfied: scipy>=1.10.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid) (1.10.1)
+Requirement already satisfied: torch>=2.0.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid) (2.1.2)
+Requirement already satisfied: asteroid-filterbanks>=0.4.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid) (0.4.0)
+Requirement already satisfied: SoundFile>=0.10.2 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid) (0.12.1)
+Requirement already satisfied: huggingface-hub>=0.0.2 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid) (0.19.4)
+Requirement already satisfied: PyYAML>=5.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid) (6.0.1)
+Requirement already satisfied: pandas>=0.23.4 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid) (2.0.3)
+Requirement already satisfied: pytorch-lightning>=2.0.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid) (2.1.2)
+Collecting torchmetrics<=0.11.4 (from asteroid)
+  Downloading http://mirrors.aliyun.com/pypi/packages/fb/47/6e9f9b41c48750a45ad07cc6d43a2979bfc09e6989656aece97cc59cbef1/torchmetrics-0.11.4-py3-none-any.whl (519 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 519.2/519.2 kB 2.9 MB/s eta 0:00:00
+Requirement already satisfied: torchaudio>=0.5.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid) (2.1.1)
+Collecting pb-bss-eval>=0.0.2 (from asteroid)
+  Downloading http://mirrors.aliyun.com/pypi/packages/b2/d5/2825e46367d810dda650655a818fb8185147628f16ee85dd54aaa4dac8b0/pb_bss_eval-0.0.2-py3-none-any.whl (14 kB)
+Collecting torch-stoi>=0.1.2 (from asteroid)
+  Downloading http://mirrors.aliyun.com/pypi/packages/28/1a/43b141e6ecbe04354cc8e2690db6393d1d7b2f4fb82bf0cfb67cb8138af6/torch_stoi-0.2.0-py3-none-any.whl (7.8 kB)
+Collecting torch-optimizer<0.2.0,>=0.0.1a12 (from asteroid)
+  Downloading http://mirrors.aliyun.com/pypi/packages/af/0f/bc49a0f714a1896b80f31db9ba82eebcb2bad9e0f5757184574f8ecfe2f1/torch_optimizer-0.1.0-py3-none-any.whl (72 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.5/72.5 kB 2.8 MB/s eta 0:00:00
+Requirement already satisfied: julius in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid) (0.2.7)
+Requirement already satisfied: typing-extensions in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from asteroid-filterbanks>=0.4.0->asteroid) (4.5.0)
+Requirement already satisfied: filelock in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface-hub>=0.0.2->asteroid) (3.13.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface-hub>=0.0.2->asteroid) (2023.10.0)
+Requirement already satisfied: requests in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface-hub>=0.0.2->asteroid) (2.31.0)
+Requirement already satisfied: tqdm>=4.42.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface-hub>=0.0.2->asteroid) (4.66.1)
+Requirement already satisfied: packaging>=20.9 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface-hub>=0.0.2->asteroid) (23.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from pandas>=0.23.4->asteroid) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from pandas>=0.23.4->asteroid) (2023.3.post1)
+Requirement already satisfied: tzdata>=2022.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from pandas>=0.23.4->asteroid) (2023.3)
+Collecting cached-property (from pb-bss-eval>=0.0.2->asteroid)
+  Downloading http://mirrors.aliyun.com/pypi/packages/48/19/f2090f7dad41e225c7f2326e4cfe6fff49e57dedb5b53636c9551f86b069/cached_property-1.5.2-py2.py3-none-any.whl (7.6 kB)
+Requirement already satisfied: einops in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from pb-bss-eval>=0.0.2->asteroid) (0.7.0)
+Collecting pystoi (from pb-bss-eval>=0.0.2->asteroid)
+  Downloading http://mirrors.aliyun.com/pypi/packages/ab/8b/109f67651d0a606a21e51dcb7ce6cfaa624395f2572dc5ecec2bf5ca8ea8/pystoi-0.4.0-py2.py3-none-any.whl (8.1 kB)
+Collecting mir-eval (from pb-bss-eval>=0.0.2->asteroid)
+  Downloading http://mirrors.aliyun.com/pypi/packages/6b/4b/2cf10b8f0b4bbd9206d871d591d4b5ab4909c1193644df9656d57d6cf978/mir_eval-0.7.tar.gz (90 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.7/90.7 kB 7.3 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pesq (from pb-bss-eval>=0.0.2->asteroid)
+  Downloading http://mirrors.aliyun.com/pypi/packages/22/e6/f8bdcef3238ac10fb3ce37d150e9b03a152d971febd681f088c6e5e17d8e/pesq-0.0.4.tar.gz (38 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: lightning-utilities>=0.8.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from pytorch-lightning>=2.0.0->asteroid) (0.10.0)
+Requirement already satisfied: cffi>=1.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from SoundFile>=0.10.2->asteroid) (1.16.0)
+Requirement already satisfied: sympy in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (1.12)
+Requirement already satisfied: networkx in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (3.1)
+Requirement already satisfied: jinja2 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (3.1.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (12.1.105)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==8.9.2.26 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (8.9.2.26)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (12.1.3.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (11.0.2.54)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (10.3.2.106)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (11.4.5.107)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.18.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (2.18.1)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (12.1.105)
+Requirement already satisfied: triton==2.1.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from torch>=2.0.0->asteroid) (2.1.0)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch>=2.0.0->asteroid) (12.3.101)
+Collecting pytorch-ranger>=0.1.1 (from torch-optimizer<0.2.0,>=0.0.1a12->asteroid)
+  Downloading http://mirrors.aliyun.com/pypi/packages/0d/70/12256257d861bbc3e176130d25be1de085ce7a9e60594064888a950f2154/pytorch_ranger-0.1.1-py3-none-any.whl (14 kB)
+Collecting torch>=2.0.0 (from asteroid)
+  Downloading http://mirrors.aliyun.com/pypi/packages/9b/d9/8508dcdf4b7d81bf48d6f8cc0db4fd979ee1204de62ddb93b36f6b8577ea/torch-2.1.1-cp38-cp38-manylinux1_x86_64.whl (670.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 670.2/670.2 MB 3.6 MB/s eta 0:00:00
+Requirement already satisfied: pycparser in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from cffi>=1.0->SoundFile>=0.10.2->asteroid) (2.21)
+Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from fsspec[http]>2021.06.0->pytorch-lightning>=2.0.0->asteroid) (3.9.1)
+Requirement already satisfied: setuptools in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from lightning-utilities>=0.8.0->pytorch-lightning>=2.0.0->asteroid) (68.0.0)
+Requirement already satisfied: six>=1.5 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas>=0.23.4->asteroid) (1.16.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from jinja2->torch>=2.0.0->asteroid) (2.1.3)
+Collecting future (from mir-eval->pb-bss-eval>=0.0.2->asteroid)
+  Downloading http://mirrors.aliyun.com/pypi/packages/8f/2e/cf6accf7415237d6faeeebdc7832023c90e0282aa16fd3263db0eb4715ec/future-0.18.3.tar.gz (840 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 840.9/840.9 kB 182.7 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: charset-normalizer<4,>=2 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests->huggingface-hub>=0.0.2->asteroid) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests->huggingface-hub>=0.0.2->asteroid) (2.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests->huggingface-hub>=0.0.2->asteroid) (1.26.18)
+Requirement already satisfied: certifi>=2017.4.17 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests->huggingface-hub>=0.0.2->asteroid) (2023.7.22)
+Requirement already satisfied: mpmath>=0.19 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from sympy->torch>=2.0.0->asteroid) (1.3.0)
+Requirement already satisfied: attrs>=17.3.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch-lightning>=2.0.0->asteroid) (23.1.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch-lightning>=2.0.0->asteroid) (6.0.4)
+Requirement already satisfied: yarl<2.0,>=1.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch-lightning>=2.0.0->asteroid) (1.9.3)
+Requirement already satisfied: frozenlist>=1.1.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch-lightning>=2.0.0->asteroid) (1.4.0)
+Requirement already satisfied: aiosignal>=1.1.2 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch-lightning>=2.0.0->asteroid) (1.3.1)
+Requirement already satisfied: async-timeout<5.0,>=4.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]>2021.06.0->pytorch-lightning>=2.0.0->asteroid) (4.0.3)
+Building wheels for collected packages: mir-eval, pesq, future
+  Building wheel for mir-eval (setup.py): started
+  Building wheel for mir-eval (setup.py): finished with status 'done'
+  Created wheel for mir-eval: filename=mir_eval-0.7-py3-none-any.whl size=100703 sha256=81d2284ef15a2f3c7ff840e039b46cb7acbfec9785ae3f5ceee2f106a8294f15
+  Stored in directory: /root/autodl-tmp/.cache/pip/wheels/5f/e0/8b/915288023bf0ebd837ad18d61c1886ea6538b29f5ea1073044
+  Building wheel for pesq (setup.py): started
+  Building wheel for pesq (setup.py): finished with status 'done'
+  Created wheel for pesq: filename=pesq-0.0.4-cp38-cp38-linux_x86_64.whl size=330429 sha256=10aa12cd613534dfacf06d037f1788c5ecbb26a37e38b503dc3989b05588131a
+  Stored in directory: /root/autodl-tmp/.cache/pip/wheels/2a/fb/1d/307b936c1ae2593805feaaa5a56f38d1083b64ae725c3dc4ba
+  Building wheel for future (setup.py): started
+  Building wheel for future (setup.py): finished with status 'done'
+  Created wheel for future: filename=future-0.18.3-py3-none-any.whl size=492024 sha256=b5925285257ef04f84df05966707af063b985a59345e1a116b51a92440ab75cf
+  Stored in directory: /root/autodl-tmp/.cache/pip/wheels/d6/16/c3/446e86546ea4e6f218702c330e7e320575b71b597f95f78108
+Successfully built mir-eval pesq future
+Installing collected packages: pesq, cached-property, future, pystoi, mir-eval, torch, pb-bss-eval, torchmetrics, pytorch-ranger, torch-stoi, torch-optimizer, asteroid
+  Attempting uninstall: torch
+    Found existing installation: torch 2.1.2
+    Uninstalling torch-2.1.2:
+      Successfully uninstalled torch-2.1.2
+  Attempting uninstall: torchmetrics
+    Found existing installation: torchmetrics 1.2.0
+    Uninstalling torchmetrics-1.2.0:
+      Successfully uninstalled torchmetrics-1.2.0
+Successfully installed asteroid-0.7.0 cached-property-1.5.2 future-0.18.3 mir-eval-0.7 pb-bss-eval-0.0.2 pesq-0.0.4 pystoi-0.4.0 pytorch-ranger-0.1.1 torch-2.1.1 torch-optimizer-0.1.0 torch-stoi-0.2.0 torchmetrics-0.11.4
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Requirement already satisfied: datasets in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (2.15.0)
+Requirement already satisfied: numpy>=1.17 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (1.24.4)
+Requirement already satisfied: pyarrow>=8.0.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (14.0.1)
+Requirement already satisfied: pyarrow-hotfix in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (0.6)
+Requirement already satisfied: dill<0.3.8,>=0.3.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (0.3.7)
+Requirement already satisfied: pandas in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (2.0.3)
+Requirement already satisfied: requests>=2.19.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (2.31.0)
+Requirement already satisfied: tqdm>=4.62.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (4.66.1)
+Requirement already satisfied: xxhash in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (3.4.1)
+Requirement already satisfied: multiprocess in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (0.70.15)
+Requirement already satisfied: fsspec<=2023.10.0,>=2023.1.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from fsspec[http]<=2023.10.0,>=2023.1.0->datasets) (2023.10.0)
+Requirement already satisfied: aiohttp in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (3.9.1)
+Requirement already satisfied: huggingface-hub>=0.18.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (0.19.4)
+Requirement already satisfied: packaging in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (23.2)
+Requirement already satisfied: pyyaml>=5.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from datasets) (6.0.1)
+Requirement already satisfied: attrs>=17.3.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp->datasets) (23.1.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp->datasets) (6.0.4)
+Requirement already satisfied: yarl<2.0,>=1.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp->datasets) (1.9.3)
+Requirement already satisfied: frozenlist>=1.1.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp->datasets) (1.4.0)
+Requirement already satisfied: aiosignal>=1.1.2 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp->datasets) (1.3.1)
+Requirement already satisfied: async-timeout<5.0,>=4.0 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from aiohttp->datasets) (4.0.3)
+Requirement already satisfied: filelock in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface-hub>=0.18.0->datasets) (3.13.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from huggingface-hub>=0.18.0->datasets) (4.5.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests>=2.19.0->datasets) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests>=2.19.0->datasets) (2.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests>=2.19.0->datasets) (1.26.18)
+Requirement already satisfied: certifi>=2017.4.17 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from requests>=2.19.0->datasets) (2023.7.22)
+Requirement already satisfied: python-dateutil>=2.8.2 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from pandas->datasets) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from pandas->datasets) (2023.3.post1)
+Requirement already satisfied: tzdata>=2022.1 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from pandas->datasets) (2023.3)
+Requirement already satisfied: six>=1.5 in /root/autodl-tmp/conda-envs/py38/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas->datasets) (1.16.0)
+Testing started.
+Testing case [1/3] started.
