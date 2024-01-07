@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # 指定要遍历的文件夹
-base_dir="output/hf-eval-data-v4_3"
+base_dir="output/hf-eval-data-v4-valid-result/codellama-7b-python-eval"
 cd ${base_dir}
 
 # 设置计数器
 count=0
 
 # 遍历文件夹，找到后缀为 .py 的文件
-for file in ./*.py; do
+for file in *.py; do
     # 提取文件名前缀
     prefix=$(basename "$file" .py)
     echo ${prefix}
@@ -18,6 +18,8 @@ for file in ./*.py; do
         echo "Output file ${prefix}.out already exists. Skipping file ${file}."
         continue
     fi
+    
+    echo "exec..."
     
     # 安装必要的包
     # pip install -r ${prefix}.txt

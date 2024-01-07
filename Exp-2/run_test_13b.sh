@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # 指定要遍历的文件夹
-base_dir="output/hf-eval-data-v3-reuslt-13b-eval"
+base_dir="output/hf-eval-data-v4-valid-result/codellama-13b-python-eval"
 cd ${base_dir}
 
 # 设置计数器
 count=0
 
 # 遍历文件夹，找到后缀为 .py 的文件
-for file in ./*.py; do
+for file in *.py; do
     # 提取文件名前缀
     prefix=$(basename "$file" .py)
     echo ${prefix}
@@ -19,8 +19,10 @@ for file in ./*.py; do
         continue
     fi
     
-    # 安装必要的包
-    pip install -r ${prefix}.txt
+    echo "exec..."
+    
+    # # 安装必要的包
+    # pip install -r ${prefix}.txt
 
     # 运行 _test.py 文件，输出到 output/{prefix}_test.out，错误输出到 output/{prefix}_test.err
     python ${file} > ${prefix}.out 2> ${prefix}.err
